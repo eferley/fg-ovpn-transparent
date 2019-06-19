@@ -5,7 +5,7 @@ This document will describe a solution for GMs \(Game Masters\) to publish their
 ## When do you need a VPN for FG ?
 
 {% hint style="success" %}
-**Most GMs do not need to use a VPN** to successfully open thair virtual table for players.
+**Most GMs do not need to use a VPN** to successfully share their virtual table for players.
 {% endhint %}
 
 {% hint style="success" %}
