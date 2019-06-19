@@ -6,30 +6,11 @@ description: >-
 
 # Introduction
 
-## When do you need a VPN for FG ?
-
-**Most GMs do not need to use a VPN** to successfully open thair virtual table for players.
-
-But there are situations where **a VPN may be needed** :
-
-1. **temporary connection from a "public" internet facility** \(hotel room, etc\)
-2. country/ISP setup makes **unique public IPv4 address unavailable**
-3. **proper port forwarding rule not possible** for one \(or more\) routers
-
-```
-$ give me super-powers
-```
+## What is the problem ?
 
 {% hint style="info" %}
- Super-powers are granted randomly so please submit an issue if you're not happy with yours.
+**For a GM, the FG program needs to be reachable from the players on this port : TCP 1802**
 {% endhint %}
 
-Once you're strong enough, save the world:
-
-```
-// Ain't no code for that yet, sorry
-echo 'You got to trust me on this, I saved the world'
-```
-
-
+As a Game Master, hosting on game on a virtual table implies that the table \(= actually the FG program\) has to be reachable from the players' FG programs running on distant computers.
 
