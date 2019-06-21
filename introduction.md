@@ -49,7 +49,7 @@ A demo version of FG on the second machine is ok for this kind of test.
 
 #### Barrier 1 😡 : Windows 10 "public/private" network setting
 
-Windows 10 has a setting to classify each network it is connected to as either "pubic" \(read : "not safe"\) or "private" \(read: "safe"\) and W10 will prevent incoming connections for "public" networks, including Fantasy Grounds, so **be sure to tag your current W10 network connection as "public"**, or else... 👎 
+Windows 10 has a setting to classify each network it is connected to as either "pubic" \(read : "not safe"\) or "private" \(read: "safe"\) and W10 will prevent incoming connections for "public" networks, including Fantasy Grounds, so be sure to 👍 **tag your current W10 network connection as "public"**, or else... 👎 
 
 _**TODO : W10 screenshots needed here**_
 
@@ -67,7 +67,7 @@ _**TODO : Other screenshots needed here**_
 
 #### Barrier 3 👹 : Third-party protection software
 
-If you are using a third-party anti-malware, anti-virus or any other kind anti-xxx protection software, chances are **you also need to** 👍 **enable incoming communications for FG in these**, or else... 👎 
+If you are using a third-party anti-malware, anti-virus or any other kind anti-xxx protection software, chances are you also need to 👍 **enable incoming communications for FG in these**, or else... 👎 
 
 
 
