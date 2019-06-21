@@ -67,7 +67,7 @@ _**TODO : Other screenshots needed here**_
 
 ### Barrier 3 👹 : Third-party protection software
 
-If you are using a third-party anti-malware, anti-virus or any other kind anti-xxx protection software, chances are you also need to 👍 **enable incoming communications for FG in these**, or else... 👎 
+If you are using a third-party anti-malware, anti-virus or any other kind of anti-something protection software, chances are you also need to 👍 **enable incoming communications for FG in these**, or else... 👎 
 
 ## Internet connection barriers
 
