@@ -33,7 +33,9 @@ Be aware of the above **distinct requirements for player connection from the Int
 
 ## What can go wrong ?
 
-Let's have a quick look at all the barriers between your players and your shiny new virtual table, starting from your own GM Fantasy Grounds outwards...
+There are multiple points where security features or technical niceties may prevent incoming connections from players to your GM FG program.
+
+So let's have a quick look at all the barriers between your players and your shiny new virtual table, starting from your own GM Fantasy Grounds outwards...
 
 {% hint style="info" %}
 This can also be used as a reminder / check-list for every GM out there...
@@ -44,8 +46,6 @@ You can **test the first 3 "barriers" locally with 2** _**different**_ **machine
 
 A demo version of FG on the second machine is ok for this kind of test.
 {% endhint %}
-
-There are multiple points where security features or technical niceties may prevent incoming connections from players to your GM FG program :
 
 ## GM's machine barriers
 
