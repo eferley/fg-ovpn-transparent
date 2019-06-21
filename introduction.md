@@ -45,7 +45,7 @@ You can **test the first 3 "barriers" locally with 2** _**different**_ **machine
 A demo version of FG on the second machine is ok for this kind of test.
 {% endhint %}
 
-There are multiple points where security features or technical niceties may come into play to prevent incoming connections from players to your GM FG program :
+There are multiple points where security features or technical niceties may prevent incoming connections from players to your GM FG program :
 
 ## GM's machine barriers
 
