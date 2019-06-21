@@ -22,7 +22,11 @@ But there are situations where **a VPN may be needed \(from the GM's point of vi
 Also, **if you are a player and your GM is using some VPN offers like Hamachi, you will have to be in the same VPN as the GM.**
 {% endhint %}
 
-{% hint style="info" %}
-This document presents a **"transparent" VPN solution**, where only the GM uses a VPN and the players do not have to install/use any kind of VPN or custom IP routing software.
+{% hint style="success" %}
+This document presents a **"transparent" VPN solution**, where :
+
+* **only the GM** uses a VPN
+* the VPN is used to **forward FG traffic only** \(TCP 1802\)
+* the **players do not have to install/use any kind of VPN** or custom IP routing software.
 {% endhint %}
 
