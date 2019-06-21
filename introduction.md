@@ -12,7 +12,7 @@ description: >-
 
 _This document focuses on FG "Classic"_ \(as opposed to the future release of FG "Unity", currently planned for the end of 2019\).
 
-The current release of FG \("Classic"\) as of this writing is v3.3.7 \(for the "Live" branch, v3.3.8 for the "Test" branch\), but **all versions of FG "Classic"** should work in the same way.
+The current release of FG \("Classic"\) as of this writing is v3.3.7 \(for the "Live" branch, v3.3.8 for the "Test" branch\), but **all versions of FG "Classic" should work in the same way**.
 
 {% hint style="info" %}
 As a Game Master, **hosting a virtual table** implies that the table \(= actually the FG program\) has to be **reachable from the the players**' FG programs running on distant computers.
@@ -30,6 +30,8 @@ The IP\(v4\) address used will be one of :
 {% hint style="warning" %}
 Be aware of the above **distinct requirements for player connection from the Internet / from the in-house network** \(same ethernet LAN or wireless access point\).
 {% endhint %}
+
+## 
 
 Let's have a look at all the barriers between your players and your shiny new virtual table, starting from your own GM Fantasy Grounds outwards...
 

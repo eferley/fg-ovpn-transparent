@@ -27,6 +27,6 @@ This document presents a **"transparent" VPN solution**, where :
 
 * **only the GM** uses a VPN
 * the VPN is used to **forward FG traffic only** \(TCP 1802\)
-* the **players do not have to install/use any kind of VPN** or custom IP routing software.
+* the **players do not have to install/use any kind of VPN** or custom IP routing software
 {% endhint %}
 
