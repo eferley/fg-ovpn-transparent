@@ -35,6 +35,28 @@ Be aware of the above **distinct requirements for player connection from the Int
 
 Let's have a look at all the barriers between your players and your shiny new virtual table, starting from your own GM Fantasy Grounds outwards...
 
+{% hint style="success" %}
+You can **test the first 3 "barriers" locally with 2 different machines**, one being the GM sharing the virtual tabe and the other acting as a "local" player : a player on a different machine than the GM, but on the same \(W\)LAN; a demo version of FG on the second machine is ok for this.
+{% endhint %}
+
+### Barrier 1 😡 : Windows 10 "public/private" network setting
+
+
+
+### Barrier 2 👿 : OS-managed firewall
+
+
+
+### Barrier 3 👹 : Third-party protection software
+
+
+
+### Barrier 4 👺 : Crossing the NAT/PAT on the Internet router
+
+
+
+### Barrier 5 💩 : Cascading routers
+
 
 
 
