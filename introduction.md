@@ -45,15 +45,17 @@ You can **test the first 3 "barriers" locally with 2** _**different**_ **machine
 A demo version of FG on the second machine is ok for this kind of test.
 {% endhint %}
 
-### GM's machine barriers
+There are multiple points where security features or technical niceties may come into play to prevent incoming connections from players to your GM FG program :
 
-#### Barrier 1 😡 : Windows 10 "public/private" network setting
+## GM's machine barriers
+
+### Barrier 1 😡 : Windows 10 "public/private" network setting
 
 Windows 10 has a setting to classify each network it is connected to as either "pubic" \(read : "not safe"\) or "private" \(read: "safe"\) and W10 will prevent incoming connections for "public" networks, including Fantasy Grounds, so be sure to 👍 **tag your current W10 network connection as "public"**, or else... 👎 
 
 _**TODO : W10 screenshots needed here**_
 
-#### Barrier 2 👿 : OS-managed firewall
+### Barrier 2 👿 : OS-managed firewall
 
 Be sure to 👍 **allow incoming communications to your TCP 1802, or better yet to your Fantasy Grounds** software in your operating system-integrated firewall or else... 👎 
 
@@ -63,19 +65,19 @@ _Here is an example of Windows 7 firewall rules authorizing **all** types of inc
 
 _**TODO : Other screenshots needed here**_
 
-### Internet connection barriers
-
-#### Barrier 3 👹 : Third-party protection software
+### Barrier 3 👹 : Third-party protection software
 
 If you are using a third-party anti-malware, anti-virus or any other kind anti-xxx protection software, chances are you also need to 👍 **enable incoming communications for FG in these**, or else... 👎 
 
-
-
-#### Barrier 4 👺 : Crossing the NAT/PAT frontier on the Internet router
+## Internet connection barriers
 
 
 
-#### Barrier 5 💩 : Cascading routers
+### Barrier 4 👺 : Crossing the NAT/PAT frontier on the Internet router
+
+
+
+### Barrier 5 💩 : Cascading routers
 
 
 
