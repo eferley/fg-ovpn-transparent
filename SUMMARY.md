@@ -1,6 +1,6 @@
 # Table of contents
 
-* [A "transparent" OpenVPN for Fantasy Grounds](README.md)
+* [A "transparent" OpenVPN setup for Fantasy Grounds](README.md)
 * [Introduction](introduction.md)
 * [Acronyms and definitions](acronyms-and-definitions.md)
 
