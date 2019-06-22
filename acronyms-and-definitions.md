@@ -8,6 +8,12 @@
 
 **Dungeons & Dragons** : the most famous tabletop RPG
 
+## DHCP
+
+**Dynamic Host Configuration Protocol** : a protocol used to automatically distribute networking parameters to devices on a network, including an IP address.
+
+The usual basic parameters managed by DHCP servers are : IP address, network mask, default router/gateway IP, and the IP\(s\) of DNS server\(s\)
+
 ## DM
 
 Depending on context :
@@ -38,6 +44,10 @@ The **most widely used communication protocols, based on IP** at the "network" l
 {% hint style="warning" %}
 **Fantasy Grounds "Classic"** uses **IPv4** and specifically **TCP port 1802**
 {% endhint %}
+
+## **ISP**
+
+**Internet Service Provider**
 
 ## LAN
 
