@@ -2,7 +2,7 @@
 
 This document will describe a solution for GMs \(Game Masters\) to publish their virtual table through an ad-hoc VPN hosted on AWS \(Amazon Web Services\).
 
-## Do you really need a VPN for ![](.gitbook/assets/fg35.png) Fantasy Grounds ![](.gitbook/assets/fg35.png) ?
+## Do you _really_ need a VPN for ![](.gitbook/assets/fg35.png) Fantasy Grounds ![](.gitbook/assets/fg35.png) ?
 
 {% hint style="success" %}
 **Most GMs do not need to use a VPN** to successfully share their virtual table for players

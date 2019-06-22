@@ -35,7 +35,7 @@ Be aware of the above **distinct requirements for player connection from the Int
 
 There are multiple points where security features or technical niceties may prevent incoming connections from players to your GM FG program.
 
-So let's have a quick look at all the barriers between your players and your shiny new virtual table, starting from your own GM Fantasy Grounds outwards...
+So let's have a quick look at all the barriers between your players and your shiny new virtual table, starting from your own GM Fantasy Grounds outwards, and with "Barrier 4" we'll go into the "**Port Forwarding**" subject many GMs are afraid of.
 
 {% hint style="info" %}
 This can also be used as a reminder / check-list for every GM out there...
@@ -47,7 +47,13 @@ You can **test the first 3 "barriers" locally with 2** _**different**_ **machine
 A demo version of FG on the second machine is ok for this kind of test.
 {% endhint %}
 
+Then we'll talk about some no-go situations that relate to the last 2 barriers and are "out of reach" for the GM.
+
+And finally we'll introduce VPN solutions and more specifically the non-intrusive "transparent" setup we present in the rest of this document, and how it enables a GM to overcome these barriers.
+
 ## GM's machine barriers
+
+These first 3 points relate to the configuration of the GM's machine/OS :
 
 ### Barrier 1 😡 : Windows 10 "public/private" network setting
 
@@ -71,13 +77,25 @@ If you are using a third-party anti-malware, anti-virus or any other kind of ant
 
 ## Internet connection barriers
 
-
+The next barriers are related to the general subject of "IP address sharing", generally implemented at NAT/PAT on Internet end-user routers : multiple devices in your home must have access to the Internet through a single Internet connection device, which only has a single "public IP" address.
 
 ### Barrier 4 👺 : Crossing the NAT/PAT frontier on the Internet router
 
 
 
 ### Barrier 5 💩 : Cascading routers
+
+
+
+## Some NO-GO Situations
+
+
+
+## VPN solutions
+
+
+
+## Non-intrusive VPN-based Port Forwarding
 
 
 
