@@ -21,6 +21,10 @@ Depending on context :
 * **Dungeon Master** = the GM in a D&D game.
 * **Direct Message** \(also called PM=Private Message\) on forums and on-line chat platform
 
+## DNS
+
+**Domain Name System** : the way machines are named in the Internet
+
 ## FG
 
 **Fantasy Grounds** 😁 - Soon to be called **FG "Classic"** when **FG "Unity"** is released.
