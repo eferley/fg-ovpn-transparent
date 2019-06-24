@@ -35,7 +35,7 @@ This document presents a **"transparent" VPN solution**, where :
 
 To find out about **everything you ever wanted to learn about Fantasy Grounds, and more**, go visit :
 
-### ![](.gitbook/assets/fgc-banner_w200.png) **Fantasy Grounds College** ![](.gitbook/assets/fgc-banner_w200.png) 
+### ![](.gitbook/assets/fgc-banner_w40.png) **Fantasy Grounds College** ![](.gitbook/assets/fgc-banner_w40.png) 
 
 ![](.gitbook/assets/fgc-banner_w200.png)
 
@@ -46,7 +46,7 @@ FGC is a fantastic group of FG fans \(GMs and players\) providing voluntary help
 
 
 
-### ![](.gitbook/assets/teameutransition2.png) FGC Team EU Lair at ZeFerby's ![](.gitbook/assets/teameutransition2.png) :
+### ![](.gitbook/assets/teameutransition40.png) FGC Team EU Lair at ZeFerby's ![](.gitbook/assets/teameutransition40.png) :
 
 ![](.gitbook/assets/teameutransition200.png)
 
