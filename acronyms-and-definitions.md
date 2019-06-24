@@ -85,6 +85,10 @@ Your "home" network is a LAN \(and most likely a WLAN\).
 
 **StarFinder** : a well known RPG
 
+## SSL/TLS
+
+**Secure Sockets Layer/Transport Layer Security** :  cryptographic protocols providing communications security. 
+
 ## SW
 
 **Savage Worlds** : a well known RPG

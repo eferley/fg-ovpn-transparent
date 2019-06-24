@@ -1,4 +1,4 @@
-# "Transparent" OpenVPN solution presentation
+# Non-intrusive, "transparent" VPN-based Port Forwarding
 
 x
 

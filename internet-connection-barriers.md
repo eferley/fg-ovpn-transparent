@@ -6,7 +6,7 @@ The last 3 points relate to your Internet connection itself.
 **Most GMs** have a single "Internet router" and **do not have to bother about Barrier 6**
 {% endhint %}
 
-## Barrier 4 👺 : Crossing the NAT/PAT frontier on the Internet router
+## Barrier 4 👺 : The NAT/PAT frontier on the Internet router
 
 Most home Internet connections are delivered through a single all-in-one device we'll call an "Internet router", which actually does several jobs at once :
 

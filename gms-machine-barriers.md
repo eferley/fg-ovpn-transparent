@@ -2,7 +2,9 @@
 
 These first 3 points relate to the configuration of the GM's machine/OS.
 
+{% hint style="info" %}
 _**Breaking these barriers** should be enough to **successfully host a game for players** located **in your own home network**, even if you are in a no-go situation for remote player access._
+{% endhint %}
 
 ## Barrier 1 😡 : Windows 10 "public/private" network setting
 

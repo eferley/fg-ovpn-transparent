@@ -46,26 +46,10 @@ A demo version of FG on the second machine is ok for this kind of test.
 {% endhint %}
 
 {% hint style="warning" %}
-If a test "Player" FG on a second machine in your local network is unable to connect to your "GM" FG, then first clear the first 3 barriers, because each of these is also a show stopper for remote player connections.
+If a test "Player" FG on a second machine in your local network is unable to connect to your "GM" FG, then **begin with clearing the first 3 barriers**, because each of these is also a show stopper for remote player connections.
 {% endhint %}
 
-## 
 
-## 
-
-## VPN solutions 🙌 
-
-Thankfully, as long as your can establish outgoing connections to the Internet, you should be able to use some kind of VPN-based solution.
-
-There are multiple commercial offers for VPN services available nowadays.
-
-Most of them are targetted at either hiding your own public IP address, or being able to benefit from a full access to the Internet in countries where the government imposes harsh restrictions.
-
-Some offers \(like [Hamachi](https://www.vpn.net/) which is well knwown in the gaming sphere\) enable setting up up "closed VPN" where only members of the same VPN as this created by the GM are able to connect to the GM.
-
-My personnal preference as a GM is to avoid using that kind of offer, because it implies that all players install the same VPN software and setup their access to the game/GM VPN
-
-## Non-intrusive, "transparent" VPN-based Port Forwarding 😍 
 
 
 

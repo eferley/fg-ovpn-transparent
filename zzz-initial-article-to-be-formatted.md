@@ -1,4 +1,4 @@
-# ZZZ-Initial article to be formatted
+# ZZZ-Initial raw article to be formatted
 
 A small OpenVPN virtual server on AWS to publish Fantasy Grounds through a 1-DM-only VPN By ZeFerby
 
