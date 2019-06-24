@@ -29,6 +29,17 @@ Depending on context :
 
 **Fantasy Grounds** 😁 - Soon to be called **FG "Classic"** when **FG "Unity"** is released.
 
+## FGC
+
+Depending on context :
+
+* **Fantasy Grounds College** : a fantastic group of FG fans \(GMs and players\) providing voluntary help about FG
+* **Fantasy Grounds "Classic"** : the current major version of FG \(v3.x\)
+
+## FGU
+
+**Fantasy Grounds "Unity"** : the next major version of FG planned to be released at the end of 2019
+
 ## Gateway
 
 See **Router**
