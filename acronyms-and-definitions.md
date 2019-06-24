@@ -104,6 +104,10 @@ Your "home" network is a LAN \(and most likely a WLAN\).
 
 **Savage Worlds** : a well known RPG
 
+## TLS
+
+**See SSL/TLS**
+
 ## VLAN
 
 **Virtual LAN**

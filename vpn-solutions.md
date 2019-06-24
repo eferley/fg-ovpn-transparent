@@ -15,33 +15,68 @@ Others provide one or multiple kinds of "real" VPNs functionnality like "closed 
 {% hint style="info" %}
 I have not actively tested commercial VPN offers other than Hamachi.
 
-Hamachi is a very neat solution for "closed VPNs" with multiple options for network setup and it supports mobile platforms.
+Hamachi is a very neat solution for "closed VPNs" with multiple options for network setup and it supports Windows, Mac, Linux and mobile platforms.
 
 Their free tier is very good and quite sufficient for FG-like requirements \(you can host 4 players in a free VPN and create multiple VPNs simultaneously for more players if needed\).
+
+If you want to try out Hamachi, you'll find them at : [https://www.vpn.net/](https://www.vpn.net/)
+
+**Be sure to read the Getting Started document** available at : [https://secure.logmein.com/welcome/documentation/EN/pdf/Hamachi/LogMeIn\_Hamachi\_GettingStarted.pdf](https://secure.logmein.com/welcome/documentation/EN/pdf/Hamachi/LogMeIn_Hamachi_GettingStarted.pdf)
 {% endhint %}
 
 ## "Closed" VPNs
 
-Some offers \(like the free Hamachi offer\) enable setting up a "closed VPN" where **only members of the VPN created by the GM are able to connect** to the GM's machine \(or to each other, depending on the networking options you choose\).
+Some offers \(like the free Hamachi offer\) enable setting up a "closed" VPN where **only members of the VPN created by the GM are able to connect** to the GM's machine \(or to each other, depending on the networking options you choose\).
 
 {% hint style="info" %}
-"Closed VPNs" are actually what VPN technology was initially designed for.
+"Closed" VPNs are actually what VPN technology was initially designed for.
 {% endhint %}
 
 My personnal preference, both as a GM and as a player, is to avoid using that kind of offer, because :
 
 * **it implies that all players install the same VPN software and setup their access to the specific game or GM VPN**
-* _for Hamachi specifically_ : it maintains a permanent set of networking parameters in my machine, even when not in active use, that sometimes interfere with my own \(rather complex\) network settings: i am often connected to 2 or 3 other VPNs at a time for work, and my laptop also supports local networks for virtual machines at the same time
+* _for Hamachi specifically_ : it maintains a permanent set of networking parameters in my machine, even when not in active use, that sometimes interfere with my own \(rather complex\) network settings: i am often connected to 2 or 3 other VPNs at a time for work, and my laptop also supports local networks for virtual machines all the while...
 * I have my own VPN servers 🤣 
 
-But **closed VPNs are a very valid option for a GM**, and have some advantages :
+But "**closed" VPNs are a very valid option for a GM** :
 
-* you can select what players will be able to access your game by including / excluding people from your own VPN\(s\)
-* with some "network topologies" \(like the Hamachi "hub-and-spoke"\) you can maintain network isolation between players, enabling them to reach only the "hub" \(your GM FG machine\)
+* you can select the players who will be able to access your game by including / excluding people from your own VPN\(s\), or close/create new VPNs at will 
+* with some "network topologies" \(like the Hamachi "hub-and-spoke"\) you can maintain network isolation between players \("spokes"\), enabling them to reach only the "hub" \(your GM FG machine\)
 
+## Other VPN offers
 
+Given the new popularity of VPN services, **this is a battlefield** ! Just google "VPN Services" to find out...
 
+{% hint style="warning" %}
+Be cautious about several points :
+{% endhint %}
 
+* subscribing to any VPN service offer implies _**some trust**_ from you in the service company...
+* VPN service offers **do not mandatorily have an available/reliable free tier**
+* VPN service offers **do not mandatorily support forwarding TCP 1802**
+
+## Your own VPN server based on industry standards
+
+What we propose in the following sections is creating your own VPN server to "break barriers 4-6" :
+
+* based on **SSL/TLS with** [**OpenVPN Community**](https://openvpn.net/community/) edition
+* hosted on a **minimalist Linux virtual server at AWS** \(Amazon Web Services\)
+* **mono-client** : the GM \(you\) only
+* with pre-installed **FG-only port forwarding**
+* for a **cost of $0 or a neglectable cost** if are not elligible for the free tier or already exceed its bounds due to other usage of AWS
+* **"transparent" for the players**
+* **non-intrusive for the GM's machine**
+* **100% under your own control** : **you** are the VPN service provider, and you are your **only** client 😁 
+
+It does require some initial setup effort, which then makes it a no-brainer to start/stop.
+
+{% hint style="info" %}
+If you want to discover more/advanced options, **OpenVPN has nearly endless possibilities**.
+
+I have now used it since 2004 both for professional and personal usage and it is **to this day my preferred VPN foundation, including for mobile platforms**.
+
+Quite a number of commercial VPN offers either rely on, or support OpenVPN.
+{% endhint %}
 
 
 
