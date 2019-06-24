@@ -51,6 +51,8 @@ It means you usually have to :
 A large info repository on many "Internet router" brands/models is available at [https://portforward.com/router.htm](https://portforward.com/router.htm) where you may find more step-by-step instructions for your own specific model. _**Just be wary of all the links inciting you to purchase tools and/or subscriptions there !**_
 {% endhint %}
 
+_**TODO : A point about static private IP**_
+
 {% hint style="warning" %}
 **If your home network has Internet access via 2 or more cascaded routers, check "Barrier 6".**
 {% endhint %}
