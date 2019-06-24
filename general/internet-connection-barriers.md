@@ -1,6 +1,6 @@
 # Internet connection barriers
 
-The last 3 points relate to your Internet connection itself.
+The last 3 points relate to your Internet connection.
 
 {% hint style="info" %}
 **Most GMs** have a single "Internet router" and **do not have to bother about Barrier 6**

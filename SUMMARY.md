@@ -21,5 +21,5 @@
 
 ## To be rewritten
 
-* [ZZZ-Initial raw article to be formatted](to-be-rewritten/zzz-initial-article-to-be-formatted.md)
+* [ZZZ-Initial raw article to be re-written](to-be-rewritten/zzz-initial-article-to-be-formatted.md)
 
