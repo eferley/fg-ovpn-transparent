@@ -49,7 +49,9 @@ So keep this in mind :
 
 ### Shrinking AWS costs when you go outside the Free Tier
 
-1 year after account creation, the bonuses from the Free Tier expire, thtat enabled running our proposed setup for free.  So the cost will mandatorily be &gt;$0 /month.
+{% hint style="warning" %}
+**1 year after account creation, some bonuses from the AWS Free Tier expire, including those that enabled running our proposed setup for free.  So the cost will mandatorily be &gt;$0 /month.**
+{% endhint %}
 
 {% hint style="success" %}
 **However this solution is designed to be lightweight, and that reflects in it's potential cost when NOT operating free of charge :**
