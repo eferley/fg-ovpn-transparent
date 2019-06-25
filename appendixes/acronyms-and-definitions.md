@@ -42,7 +42,7 @@ Depending on context :
 
 ## FGU
 
-**Fantasy Grounds "Unity"** : the next major version of FG planned to be released at the end of 2019. See the FGU KickStarter project at [https://www.kickstarter.com/projects/smiteworks/fantasy-grounds-unity](https://www.kickstarter.com/projects/smiteworks/fantasy-grounds-unity)
+**Fantasy Grounds "Unity"** : the next major version of FG planned to be released at the end of 2019. See the **very** successful launch of the FGU KickStarter project at [https://www.kickstarter.com/projects/smiteworks/fantasy-grounds-unity](https://www.kickstarter.com/projects/smiteworks/fantasy-grounds-unity)
 
 ## Gateway
 
