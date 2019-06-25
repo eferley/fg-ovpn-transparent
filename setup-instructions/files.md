@@ -2,7 +2,7 @@
 
 
 
-### AWS "UserData" script : my-fg-ovpn-UserData.txt
+#### AWS "UserData" script : my-fg-ovpn-UserData.txt
 
 {% hint style="danger" %}
 **Please edit this bloc of 3 lines \(lines 4 to 6\) in my-fg-ovpn-UserData.txt to reflect your choices :**
