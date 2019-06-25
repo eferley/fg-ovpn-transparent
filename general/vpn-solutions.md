@@ -72,7 +72,7 @@ What we propose in the following sections is :
 * **non-intrusive for the GM's machine**
 * **100% under your own control** : **you** are the VPN service provider, and you are your **only** client 😁 
 
-It does require some initial setup effort, which then makes it a no-brainer to start/stop/destroy/recreate.
+It does require some initial setup effort, which then makes it a no-brainer to start/stop/destroy/recreate **your very own Amazing Port-Forwarding OpenVPN-Powered Fantasy Grounds Hosting solution** 🙃 
 
 {% hint style="info" %}
 If you want to discover more/advanced options, the **OpenVPN + Linux IPTables combination has nearly endless possibilities**.
