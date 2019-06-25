@@ -79,7 +79,7 @@ _For Linux-like environments, Easy-RSA 3 can be downloaded from :_ [_https://git
 
 #### CloudBerry Explorer for Amazon S3 \(free version\)
 
-CBE for S3 is a very useful tool to **transfer files between your own machine and your Amazon S3 buckets**, with a familiar Windows Explorer -like GUI \(it is able to manage all sorts of cloud storage providers\) : 
+CBE for S3 is a very useful tool to **transfer files between your own machine and your Amazon S3 buckets**, with a familiar Windows Explorer -like GUI : 
 
 ![CloudBerry Explorer for Amazon S3 : GUI](https://www.cloudberrylab.com/img/modules/product-tour/explorer/amazon-s3/2.png)
 
