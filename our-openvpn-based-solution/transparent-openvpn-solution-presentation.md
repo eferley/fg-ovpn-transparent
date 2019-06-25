@@ -112,7 +112,7 @@ Some **important security parameters will be stored there**, so make sure **NOT*
 {% endhint %}
 
 {% hint style="warning" %}
-If you want to manage the contents of your S3 bucket with the **free version of CloudBerry Explorer for S3**, you must **not enable encryption** on your bucket.
+If you want to manage the contents of your S3 bucket with the **free version of CloudBerry Explorer for S3** \(see [Tools](tools.md)\), you must **not enable encryption** on your bucket.
 {% endhint %}
 
 {% hint style="info" %}
