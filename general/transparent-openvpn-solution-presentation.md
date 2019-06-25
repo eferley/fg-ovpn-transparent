@@ -24,6 +24,7 @@ Relying on **a hosted virtual machine which can accept TCP 1802** incoming conne
 * **most possible versatile solution** : OpenVPN, when you have administrative of both the VPN server and client, enables you to taylor the solution according to you exact wishes
 * "owned" security : **You have absolute authority** on your whole setup and **you don't need to "share" any security info with anyone**
 * fully "destroyable" : **you can easily get rid** of your whole VPN infrastructure at any time
+* **no "permanent route" added** : can be used on machines with complex network settings without impacting the other connections
 
 ### Drawbacks
 
@@ -52,6 +53,8 @@ That helps **bringing the running costs down to nearly $0 even if you are outsid
 If you prefer, you can also **start/stop the virtual server**, keeping its "hard disk" storage between multiple uses instead of having it destroyed, but if you are outside of the AWS free tier you may incurr a small monthly cost, and this server should not store any data anyway, so...
 {% endhint %}
 
+
+
 ## Tools
 
 We'll use several tools during the setup process; OpenVPN + EasyRSA are mandatory and the rest is very helpful.
@@ -62,7 +65,7 @@ We'll use several tools during the setup process; OpenVPN + EasyRSA are mandator
 
 You can select and download the latest version \(v2.4.7 as of this writing\), corresponding to your own OS, here : [https://openvpn.net/community-downloads/](https://openvpn.net/community-downloads/)
 
-![](../.gitbook/assets/image%20%284%29.png)
+![](../.gitbook/assets/image%20%288%29.png)
 
 ### Easy-RSA \(free\)
 
@@ -92,7 +95,9 @@ This tool should not be required, but **if you want to open a command line termi
 
 PuTTY is available from : [https://www.putty.org/](https://www.putty.org/)
 
-![](../.gitbook/assets/image%20%282%29.png)
+![](../.gitbook/assets/image%20%285%29.png)
+
+
 
 ## AWS : Amazon Web Services
 

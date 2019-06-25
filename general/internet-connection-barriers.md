@@ -41,7 +41,8 @@ This is called a **Port Forwarding rule**.
 Setting up port forwarding for FG means you usually have to :
 
 * enter the administration/setup facility of your "Internet router" \(and you probably need the proper administrative username + password for that\)
-* locate the Port Forwarding features, which may be called by many different names depending on the device brand;  you will generally find them under a "NAT" or "PAT" or "Advanced" section...
+* Best practice \(may be required for your model\) : **assign a Static Private IP address to your machine** ⚠ _**See the Dynamic/Static Private IP point below**_  ⚠ 
+* locate the Port Forwarding features, which may be called by many different names depending on the device brand;  you will generally find them under a "NAT" / "PAT" / "Advanced" section...
 * enter a rule for Fantasy Grounds with basically :
   * \(potentially\) a name
   * the public / external port : **TCP 1802** _This is the port on which the Router will "listen" for connection requests incoming from remote FG players_
@@ -49,9 +50,13 @@ Setting up port forwarding for FG means you usually have to :
   * the destination / private / internal port : **TCP 1802** _This is the port of your GM FG machine on which FG listens to incoming player connections_
 * for some models you also will have to "Save the configuration"
 
-{% hint style="warning" %}
-_Dynamic/Static **Private** IP address_
+**As an example**, here is the rule i use at one of my network locations \(my current W7 machine is called AST7NBEF, selected from a dropdown list, and I simply called the rule "FG"\) :
 
+![](../.gitbook/assets/image%20%2812%29.png)
+
+### Dynamic/Static Private IP address
+
+{% hint style="warning" %}
 If your model of router records a port forwarding rule target as an IP address you should **assign your GM FG machine a Static Private IP address in the router DHCP section.**
 
 **It is a** 👍 **good practice even if your router does not require it explicitely.**
@@ -61,16 +66,20 @@ This way, every time **your GM FG machine** will reconnect to your local "home" 
 Otherwise it will get a \(random\) **Dynamic Private IP address** when reconnecting, and after a few hours/days being off-line that new private IP **may not be the same as what you entered in your port forwarding rule**, which would then not work any more... 😩 
 {% endhint %}
 
+As an example, here is the network setup at the same location as above :
+
+![](../.gitbook/assets/image.png)
+
+And here is the bottom of the page with the static IP reservation part, where you can see I have the private IP 172.30.131.11 reserved for my W7 and it will always get this private IP every time I come to this place :
+
+![](../.gitbook/assets/image%20%2810%29.png)
+
 {% hint style="info" %}
 This has **NOTHING to do with your Public IP**, which can also be either _dynamic or static_ depending on your Internet connection subscription.
 {% endhint %}
 
 {% hint style="info" %}
 A large info repository on many "Internet router" brands/models is available at [https://portforward.com/router.htm](https://portforward.com/router.htm) where you may find more step-by-step instructions for your own specific model. _**Just be wary of all the links inciting you to purchase tools and/or subscriptions there !**_
-{% endhint %}
-
-{% hint style="warning" %}
-**If your home network has Internet access via 2 or more cascaded routers, you'l have to also check "Barrier 6".**
 {% endhint %}
 
 ## Barrier 5 🤔 : "Internet router" integrated firewall

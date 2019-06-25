@@ -6,7 +6,7 @@ Unfortunately there are **situations where you can't break some of barriers 4 to
 **Most of them come down to the inability to have the proper port forwarding rule applied on ALL NAT/PAT routers between you and the Internet.**
 {% endhint %}
 
-### No unique IPv4 address per subscriber \("IPv6 Internet connection"\)
+### No unique IPv4 public address per subscriber \("IPv6 Internet connection"\)
 
 Some ISPs and countries rely on a **purely IPv6 infrastructure, down to the subscriber endpoint**. In that case **they already use a form of NAT/PAT in the ISP network** to **share a public IPv4 address between multiple subscribers**.
 
