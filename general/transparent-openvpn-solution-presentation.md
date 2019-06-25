@@ -34,14 +34,14 @@ Relying on **a hosted virtual machine which can accept TCP 1802** incoming conne
 
 ## Implementation
 
-With the following steps, you will setup :
+In the following steps, we'll use a Windows machine to setup our 1-GM VPN.  We'll setup :
 
 * **a Certificate Authority** on your own machine \(to keep the core security off-line from the VPN server itself\) with which you'll manage the certificates identifying the VPN server and the VPN clients. _Actually you'll probably need only one client certificate : your own GM FG machine_
 * **a private AWS storage space \(called an "AWS S3 bucket"\)**, to store some security parameters and startup scripts for the VPN server
 * a small **AWS virtual server to run OpenVPN \(server mode\) and TCP 1802 port forwarding**, **auto-configured at startup \(**using the security parameters and startup script files stored in the S3 bucket\)
 
 {% hint style="success" %}
-This technique \(keeping parameters and scripts in S3\) **enables you to destroy \(AWS calls that "terminate"\) and re-create your virtual server at will.**
+Keeping parameters and scripts in S3 **enables you to destroy \(AWS calls that "terminate"\) and re-create your virtual server at will.**
 {% endhint %}
 
 {% hint style="info" %}
@@ -50,9 +50,11 @@ That helps **bringing the running costs down to nearly $0 even if you are outsid
 If you prefer, you can also **start/stop the virtual server**, keeping its "hard disk" storage between multiple uses instead of having it destroyed, but if you are outside of the AWS free tier you may incurr a small monthly cost, and this server should not store any data anyway, so...
 {% endhint %}
 
+## Tools
 
+We'll use several tools during the setup process, some of them being helpful
 
-
+## AWS : Amazon Web Services
 
 
 

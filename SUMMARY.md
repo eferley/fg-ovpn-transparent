@@ -18,7 +18,7 @@
 ## Appendixes
 
 * [Acronyms and definitions](appendixes/acronyms-and-definitions.md)
-* [FG Web](https://www.fantasygrounds.com/)
+* [Fantasy Grounds Web](https://www.fantasygrounds.com/)
 * [FG Discord](https://discord.gg/dbuQvgG)
 * [FG College Discord](https://discord.gg/Ew6nYyw)
 * [Our Discord](https://discord.gg/6s6WCuZ)
