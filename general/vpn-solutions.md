@@ -80,6 +80,8 @@ If you want to discover more/advanced options, the **OpenVPN + Linux IPTables co
 I have used **OpenVPN** since 2004 both for professional and personal usage in various server and/or client configurations \(with some machines being both multi-servers and multi-clients\), on Linux/Windows/Android, and it is **to this day by far my preferred VPN foundation**, including for mobile platforms.
 
 Quite a number of commercial VPN offers either rely on, or support OpenVPN.
+
+If you want to know more about OpenVPN, read the Howto at [https://openvpn.net/community-resources/how-to/](https://openvpn.net/community-resources/how-to/) and more generally browse the useful docs and articles available at [https://openvpn.net/community-resources/](https://openvpn.net/community-resources/)
 {% endhint %}
 
 {% hint style="danger" %}
