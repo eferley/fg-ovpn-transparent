@@ -9,11 +9,13 @@
 * [Internet connection barriers](general/internet-connection-barriers.md)
 * [Some NO-GO Situations](general/some-no-go-situations.md)
 * [VPN solutions](general/vpn-solutions.md)
-* [Non-intrusive, "transparent" VPN-based Port Forwarding](general/transparent-openvpn-solution-presentation.md)
+* [Our own "transparent" VPN-based Port Forwarding](general/transparent-openvpn-solution-presentation.md)
 
 ## Setup instructions
 
+* [Setup process overview](setup-instructions/setup-process-overview.md)
 * [Step-by-step setup](setup-instructions/step-by-step-setup.md)
+* [ZZZ-Initial raw article to be re-written](setup-instructions/zzz-initial-article-to-be-formatted.md)
 
 ## Appendixes
 
@@ -25,8 +27,4 @@
 * [FG Discord](https://discord.gg/dbuQvgG)
 * [FG College Discord](https://discord.gg/Ew6nYyw)
 * [Our Discord](https://discord.gg/6s6WCuZ)
-
-## To be rewritten
-
-* [ZZZ-Initial raw article to be re-written](to-be-rewritten/zzz-initial-article-to-be-formatted.md)
 

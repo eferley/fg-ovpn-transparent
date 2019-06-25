@@ -1,17 +1,19 @@
 # Some NO-GO Situations
 
-Unfortunately there are **situations where you can't break barriers 4 and/or 5.** Some common ones are listed below :
+Unfortunately there are **situations where you can't break some of barriers 4 to 6 "as is".** Some common ones are listed below :
 
 {% hint style="info" %}
 **Most of them come down to the inability to have the proper port forwarding rule applied on ALL NAT/PAT routers between you and the Internet.**
 {% endhint %}
 
-### No unique IPv4 address per subscriber
+### No unique IPv4 address per subscriber \("IPv6 Internet connection"\)
 
-Some ISPs and countries rely on a **purely IPv6 infrastructure, down to the subscriber endpoint**. In that case they already use a form of NAT/PAT in the ISP network to **share the same public IPv4 address between multiple subscribers**.
+Some ISPs and countries rely on a **purely IPv6 infrastructure, down to the subscriber endpoint**. In that case **they already use a form of NAT/PAT in the ISP network** to **share a public IPv4 address between multiple subscribers**.
 
 {% hint style="danger" %}
-There is **no way to have a port forwarding rule applied**, for one specific subscriber, within the ISP network infrastructure itself, so **that situation is a NO-GO for FG game hosting**.
+In this situation, there is **no way to have a port forwarding rule applied**, for one specific subscriber, within the ISP network infrastructure itself.
+
+**That is a NO-GO for FG "Classic" game hosting**.
 {% endhint %}
 
 ### No administrative acces to an "Internet router\(s\)"

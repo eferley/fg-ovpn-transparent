@@ -1,7 +1,7 @@
 # VPN solutions
 
 {% hint style="success" %}
-Thankfully, if you find yourself in a NO-GO situation, and **as long as your can establish outgoing connections** to the Internet, **you should be able to use some kind of VPN-based solution**.
+Thankfully, if you find yourself in a NO-GO situation, and **as long as your can establish outgoing connections** to the Internet, **you should be able to use a VPN-based solution**.
 {% endhint %}
 
 There are **multiple commercial offers for VPN \(=Virtual Private Network\) services** available nowadays.

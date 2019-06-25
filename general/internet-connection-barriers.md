@@ -45,18 +45,32 @@ Setting up port forwarding for FG means you usually have to :
 * enter a rule for Fantasy Grounds with basically :
   * \(potentially\) a name
   * the public / external port : **TCP 1802** _This is the port on which the Router will "listen" for connection requests incoming from remote FG players_
-  * the destination machine : either choose from a list of devices, or enter an IP address _**This must be your GM FG machine \(private IP\) !**_  ⚠ _**See the dynamic/static private IP point below**_  ⚠ 
+  * the destination machine : either choose from a list of devices, or enter an IP address _**This must be your GM FG machine \(private IP\) !**_  ⚠ _**See the Dynamic/Static Private IP point below**_  ⚠ 
   * the destination / private / internal port : **TCP 1802** _This is the port of your GM FG machine on which FG listens to incoming player connections_
 * for some models you also will have to "Save the configuration"
+
+{% hint style="warning" %}
+_Dynamic/Static **Private** IP address_
+
+If your model of router records a port forwarding rule target as an IP address you should **assign your GM FG machine a Static Private IP address in the router DHCP section.**
+
+**It is a** 👍 **good practice even if your router does not require it explicitely.**
+
+This way, every time **your GM FG machine** will reconnect to your local "home" network, it **will always have the same Private IP address**.
+
+Otherwise it will get a \(random\) **Dynamic Private IP address** when reconnecting, and after a few hours/days being off-line that new private IP **may not be the same as what you entered in your port forwarding rule**, which would then not work any more... 😩 
+{% endhint %}
+
+{% hint style="info" %}
+This has **NOTHING to do with your Public IP**, which can also be either _dynamic or static_ depending on your Internet connection subscription.
+{% endhint %}
 
 {% hint style="info" %}
 A large info repository on many "Internet router" brands/models is available at [https://portforward.com/router.htm](https://portforward.com/router.htm) where you may find more step-by-step instructions for your own specific model. _**Just be wary of all the links inciting you to purchase tools and/or subscriptions there !**_
 {% endhint %}
 
-_**TODO : A point about dynamic/static private IP vs PF rule**_
-
 {% hint style="warning" %}
-**If your home network has Internet access via 2 or more cascaded routers, check "Barrier 6".**
+**If your home network has Internet access via 2 or more cascaded routers, you'l have to also check "Barrier 6".**
 {% endhint %}
 
 ## Barrier 5 🤔 : "Internet router" integrated firewall
