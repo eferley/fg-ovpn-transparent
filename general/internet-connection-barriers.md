@@ -74,7 +74,7 @@ So be sure to check your **Internet router settings to** 👍 **remove firewalli
 
 **then :**
 
-**You should be OK** 👌 **to host games on Fantasy Grounds !** 😺 
+**You should be OK** 👌 **to host games on Fantasy Grounds !** 😺 **without needing a VPN** 😄 
 {% endhint %}
 
 ## Barrier 6 😩 : Cascaded devices with NAT/PAT
