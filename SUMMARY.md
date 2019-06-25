@@ -9,14 +9,18 @@
 * [Internet connection barriers](general/internet-connection-barriers.md)
 * [Some NO-GO Situations](general/some-no-go-situations.md)
 * [VPN solutions](general/vpn-solutions.md)
-* [Our own "transparent" VPN-based Port Forwarding](general/transparent-openvpn-solution-presentation.md)
 
-## Setup instructions
+## Our OpenVPN-based Solution
+
+* ["Transparent" OpenVPN-based Port Forwarding](our-openvpn-based-solution/transparent-openvpn-solution-presentation.md)
+* [Tools](our-openvpn-based-solution/tools.md)
+* [Amazon Web Services](our-openvpn-based-solution/amazon-web-services.md)
+
+## Setup instructions - WIP <a id="setup-instructions"></a>
 
 * [Setup process overview](setup-instructions/setup-process-overview.md)
 * [Step-by-step setup](setup-instructions/step-by-step-setup.md)
 * [Files](setup-instructions/files.md)
-* [ZZZ-Initial raw article to be re-written](setup-instructions/zzz-initial-article-to-be-formatted.md)
 
 ## Appendixes
 

@@ -64,20 +64,20 @@ What we propose in the following sections is :
 {% endhint %}
 
 * based on **SSL/TLS with** [**OpenVPN Community**](https://openvpn.net/community/) edition
-* hosted on a **minimalist Linux virtual server at AWS** \(Amazon Web Services\)
-* **mono-client** : the GM \(you\) only
-* with pre-installed **FG-only port forwarding** \(this is independant of the VPN itself\)
+* hosted on a **minimalist Linux virtual server at** [**AWS**](https://aws.amazon.com/) \(Amazon Web Services\)
+* **mono-client** : 1 GM \(you\) only
+* with pre-installed **FG-only port forwarding** \(this is actually independant of the VPN itself\)
 * for a **cost of $0 \(or a neglectable cost** if you are not elligible for the free tier or already exceed its bounds due to other usage of AWS\)
 * **"transparent" for the players**
 * **non-intrusive for the GM's machine**
 * **100% under your own control** : **you** are the VPN service provider, and you are your **only** client 😁 
 
-It does require some initial setup effort, which then makes it a no-brainer to start/stop.
+It does require some initial setup effort, which then makes it a no-brainer to start/stop/destroy/recreate.
 
 {% hint style="info" %}
-If you want to discover more/advanced options, **OpenVPN has nearly endless possibilities**.
+If you want to discover more/advanced options, the **OpenVPN + Linux IPTables combination has nearly endless possibilities**.
 
-I have now used it since 2004 both for professional and personal usage in various server and clients configurations, on Linux/Windows/Android, and it is **to this day my preferred VPN foundation, including for mobile platforms**.
+I have used **OpenVPN** since 2004 both for professional and personal usage in various server and/or client configurations \(with some machines being both multi-servers and multi-clients\), on Linux/Windows/Android, and it is **to this day by far my preferred VPN foundation**, including for mobile platforms.
 
 Quite a number of commercial VPN offers either rely on, or support OpenVPN.
 {% endhint %}

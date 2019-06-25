@@ -1,5 +1,9 @@
 # Acronyms and definitions
 
+## CA
+
+**Certificate Authority** : the top-most entity of a _Public Key Infrastructure_ \(**see PKI**\)
+
 ## CoC
 
 **Call of Cthulhu** : a well known RPG
@@ -33,7 +37,7 @@ Depending on context :
 
 Depending on context :
 
-* **Fantasy Grounds College** : a fantastic group of FG fans \(GMs and players\) providing voluntary help about FG
+* **Fantasy Grounds College** : a fantastic group of FG fans \(GMs and players\) providing voluntary help about FG \(see the [More Help](https://zeferby.gitbook.io/transparent-openvpn-for-fantasy-grounds/#fantasy-grounds-college) topic\)
 * **Fantasy Grounds "Classic"** : the current major version of FG \(v3.x\)
 
 ## FGU
