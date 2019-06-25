@@ -30,6 +30,7 @@
 
 * [Fantasy Grounds Web](https://www.fantasygrounds.com/)
 * [FG Discord](https://discord.gg/dbuQvgG)
+* [FG College Web](https://fantasygroundscollege.net/)
 * [FG College Discord](https://discord.gg/Ew6nYyw)
 * [Our Discord](https://discord.gg/6s6WCuZ)
 
