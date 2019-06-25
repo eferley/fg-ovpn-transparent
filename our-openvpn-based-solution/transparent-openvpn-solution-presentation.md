@@ -12,7 +12,7 @@ _**We will make our way slowly, and I'll insist on the security aspects, so that
 #### For 1 GM, ability to host FG games even in a "NO-GO situation"
 {% endhint %}
 
-Relying on **a hosted virtual machine which can accept TCP 1802** incoming connections from the Internet, **forward "transparently" all TCP 1802 traffic to and from the GM's machine** on a VPN-secured private connection.
+Relying on **a hosted virtual machine which can accept TCP 1802** incoming connections from the Internet, **forward "transparently" all TCP 1802 traffic to and from the GM's machine** on a VPN-secured private connection **across barriers 4-6.**
 
 ### Secondary objectives
 
