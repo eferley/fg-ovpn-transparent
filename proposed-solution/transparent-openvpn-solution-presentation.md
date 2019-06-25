@@ -123,7 +123,7 @@ If you manage your S3 bucket contents with a **licenced version of CloudBerry Ex
 
 * startup scripts for the AWS Linux/OpenVPN server
 * your own OpenVPN server configuration options
-* the minimal amount of security parameters, ⚠ _**including the OpenVPN server "public certificate" and "private key"**_ ⚠ so, once again, in case you didn't hear me, make sure that you...
+* the minimal amount of security parameters, ⚠ _**including the OpenVPN server "public certificate" and "private key"**_ ⚠ so, once again, in case you didn't hear me \(ICYMI\), make sure that you...
 
 {% hint style="danger" %}
 **&lt;shout mode on&gt; KEEP THIS S3 STORAGE "BUCKET" PRIVATE !!! &lt;shout mode off&gt;**

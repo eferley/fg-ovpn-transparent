@@ -10,11 +10,11 @@
 * [Some NO-GO Situations](general/some-no-go-situations.md)
 * [VPN solutions](general/vpn-solutions.md)
 
-## Our OpenVPN-based Solution
+## Proposed Solution
 
-* ["Transparent" OpenVPN-based Port Forwarding](our-openvpn-based-solution/transparent-openvpn-solution-presentation.md)
-* [Tools](our-openvpn-based-solution/tools.md)
-* [Amazon Web Services](our-openvpn-based-solution/amazon-web-services.md)
+* ["Transparent" OpenVPN-based Port Forwarding](proposed-solution/transparent-openvpn-solution-presentation.md)
+* [Tools](proposed-solution/tools.md)
+* [Amazon Web Services](proposed-solution/amazon-web-services.md)
 
 ## Setup instructions - WIP <a id="setup-instructions"></a>
 
