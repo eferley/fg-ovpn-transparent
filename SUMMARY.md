@@ -15,6 +15,7 @@
 
 * [Setup process overview](setup-instructions/setup-process-overview.md)
 * [Step-by-step setup](setup-instructions/step-by-step-setup.md)
+* [Files](setup-instructions/files.md)
 * [ZZZ-Initial raw article to be re-written](setup-instructions/zzz-initial-article-to-be-formatted.md)
 
 ## Appendixes
