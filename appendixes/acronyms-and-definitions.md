@@ -80,6 +80,12 @@ Your "home" network is a LAN \(and most likely a WLAN\).
 
 **Operating System** : A version or distribution of Windows / MacOS / Linux
 
+## PKI
+
+**Public Key Infrastructure** : From [https://en.wikipedia.org/wiki/Public\_key\_infrastructure](https://en.wikipedia.org/wiki/Public_key_infrastructure)
+
+> _A **public key infrastructure** \(**PKI**\) is a set of roles, policies, and procedures needed to create, manage, distribute, use, store & revoke_ [_digital certificates_](https://en.wikipedia.org/wiki/Digital_certificates) _and manage public-key encryption._
+
 ## PF
 
 **PathFinder** : a well known RPG
