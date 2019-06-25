@@ -52,6 +52,16 @@ See **Router**
 
 **Game Master** \(usually called DM for D&D\).
 
+## **IaaS / PaaS / SaaS**
+
+**3 types of cloud hosting services :**
+
+**Infrastructure as a Service** : a cloud offer where customers can create virtual environments "from the ground up" and have full control of the networks and servers
+
+**Platform as a Service** : a cloud offer where customers get access to pre-installed core software installations on servers that they can customize up to a point
+
+**Software as a Service** : a coud offer where customers subscribe to a specific software usage without managing servers and generally without installing software on individual computers
+
 ## IP
 
 **Internet Protocol**.
@@ -63,14 +73,6 @@ The **most widely used communication protocols, based on IP** at the "network" l
 {% hint style="warning" %}
 **Fantasy Grounds "Classic"** uses **IPv4** and specifically **TCP port 1802**
 {% endhint %}
-
-## **IaaS / PaaS / SaaS**
-
-**Infrastructure as a Service** : a cloud offering where customers can create virtual environments "from the ground up" and has full control of the networks and servers
-
-**Platform as a Service** : a cloud offering where customers get access to pre-installed core software installations on servers that they can customize up to a point
-
-**Software as a Service** : a coud offering where customers subscribe to a specific software usage without managing servers
 
 ## **ISP**
 
