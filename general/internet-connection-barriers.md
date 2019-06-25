@@ -36,7 +36,9 @@ When an incoming communication request comes in from a remote FG player, the Rou
 
 This is called a **Port Forwarding rule**.
 
-It means you usually have to :
+### Port Forwarding
+
+Setting up port forwarding for FG means you usually have to :
 
 * enter the administration/setup facility of your "Internet router" \(and you probably need the proper administrative username + password for that\)
 * locate the Port Forwarding features, which may be called by many different names depending on the device brand;  you will generally find them under a "NAT" or "PAT" or "Advanced" section...
