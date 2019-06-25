@@ -1,6 +1,6 @@
 # Non-intrusive, "transparent" VPN-based Port Forwarding
 
-We already gave the salient points about the kind of setup we propose in the previous paragraph, so let's have a closer look at the Why's and How's...
+We already gave the salient points about the kind of setup we propose in the [previous paragraph](https://zeferby.gitbook.io/transparent-openvpn-for-fantasy-grounds/general/vpn-solutions#your-own-1-gm-only-vpn-server-based-on-industry-standards), so let's have a closer look at the Why's and How's...
 
 ## Objectives
 
@@ -34,18 +34,18 @@ Relying on **a hosted virtual machine which can accept TCP 1802** incoming conne
 
 ## Implementation
 
-You will build :
+With the following steps, you will setup :
 
-* **a Certificate Authority** on your own machine \(to keep the core security off-line from the VPN server itself\) with which you'll manage the certificates identifying the VPN server and the VPN clients. _Actually you'll need only one client certificate : your own GM FG machine_
+* **a Certificate Authority** on your own machine \(to keep the core security off-line from the VPN server itself\) with which you'll manage the certificates identifying the VPN server and the VPN clients. _Actually you'll probably need only one client certificate : your own GM FG machine_
 * **a private AWS storage space \(called an "AWS S3 bucket"\)**, to store some security parameters and startup scripts for the VPN server
-* a small **AWS virtual server to run the VPN and TCP 1802 port forwarding**, **auto-configured at startup \(**using the security parameters and startup script files stored in the S3 bucket\)
+* a small **AWS virtual server to run OpenVPN \(server mode\) and TCP 1802 port forwarding**, **auto-configured at startup \(**using the security parameters and startup script files stored in the S3 bucket\)
 
 {% hint style="success" %}
 This technique \(keeping parameters and scripts in S3\) **enables you to destroy \(AWS calls that "terminate"\) and re-create your virtual server at will.**
 {% endhint %}
 
 {% hint style="info" %}
-That helps **bringing the running costs down to nearly $0 even if you are outside of the AWS free tier bounds**, and the server startup delay is neglectable.
+That helps **bringing the running costs down to nearly $0 even if you are outside of the AWS free tier bounds**, and the server startup delay \(create vs. start\) is very small.
 
 If you prefer, you can also **start/stop the virtual server**, keeping its "hard disk" storage between multiple uses instead of having it destroyed, but if you are outside of the AWS free tier you may incurr a small monthly cost, and this server should not store any data anyway, so...
 {% endhint %}

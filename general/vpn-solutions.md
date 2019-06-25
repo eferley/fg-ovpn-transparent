@@ -57,7 +57,11 @@ Be cautious about several points :
 
 ## Your own 1 GM-only VPN server based on industry standards
 
-What we propose in the following sections is creating your own VPN server to "break barriers 4-6" :
+What we propose in the following sections is :
+
+{% hint style="success" %}
+**Creating your own small VPN server to "break barriers 4-6"**
+{% endhint %}
 
 * based on **SSL/TLS with** [**OpenVPN Community**](https://openvpn.net/community/) edition
 * hosted on a **minimalist Linux virtual server at AWS** \(Amazon Web Services\)
@@ -78,5 +82,7 @@ I have now used it since 2004 both for professional and personal usage in variou
 Quite a number of commercial VPN offers either rely on, or support OpenVPN.
 {% endhint %}
 
-
+{% hint style="danger" %}
+Remember that _whatever your network setup is_, **you still have to check your GM FG machine for barriers 1-3 !**
+{% endhint %}
 
