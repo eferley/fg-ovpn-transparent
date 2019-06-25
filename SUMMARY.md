@@ -20,7 +20,7 @@
 
 * [Setup process overview](setup-instructions/setup-process-overview.md)
 * [Step-by-step setup](setup-instructions/step-by-step-setup.md)
-* [Files](setup-instructions/files.md)
+* [Utility files ans scripts](setup-instructions/files.md)
 
 ## Appendixes
 

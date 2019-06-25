@@ -1,5 +1,43 @@
 # Step-by-step setup
 
+## Download and install
+
+
+
+## Create your own Public Key Infrastructure
+
+
+
+## Prepare your OpenVPN connection
+
+
+
+## Configure AWS network security settings, create an S3 bucket and an IAM role
+
+
+
+## Finalize all configuration elements
+
+
+
+## Create your FG-OpenVPN Linux server in your AWS Virtual Private Cloud
+
+
+
+## Connect your VPN and enjoy...
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ====================================================================================================

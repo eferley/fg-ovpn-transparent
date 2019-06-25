@@ -2,6 +2,8 @@
 
 We already gave the salient points about the kind of setup we propose in the [previous paragraph](https://zeferby.gitbook.io/transparent-openvpn-for-fantasy-grounds/general/vpn-solutions#your-own-1-gm-only-vpn-server-based-on-industry-standards), so let's have a closer look at the Why's and How's...
 
+We will make our way slowly, insisting on the security aspects, so that you don't inadvertently create security "holes" in your own setup.
+
 ## Objectives
 
 ### Primary objective
@@ -15,8 +17,8 @@ Relying on **a hosted virtual machine which can accept TCP 1802** incoming conne
 ### Secondary objectives
 
 * **do NOT require a VPN connection on the players side** : by handling all port forwarding aspects on a single "point of contact" \(the VPN server for the GM is also the GM's FG address as seen from the players\)
-* provide the **least possible "intrusiveness" to the GM's machine configuration**
-* **minimize costs for the GM** to $0 or at most &lt; $10/year
+* be the **most "non-intrusive" possible vs. the GM's machine configuration**
+* **minimize costs for the GM** to $0 \(or a neglectable amount, if you are out of the AWS free tier bounds\)
 * introduce **NO dependancy for the GM on any external company/organization** \(except of course the need of virtual server hosting\)
 
 ### Other benefits
@@ -89,15 +91,76 @@ To quote from the OpenVPN web site "How-To" at :
 
 We'll take advantage of these benefits to keep the core security off-line from the VPN server itself : we'll **create the PKI entirely on your own machine**, in a "safe place" of your choice, and **only put the minimum required certificates on the VPN server and client\(s\)**.
 
-All of that will be done with Easy-RSA 2 which should come bundled with OpenVPN \(see Tools\)
+Building the PKI will be done with **Easy-RSA 2** which should come bundled with OpenVPN \(see [Tools](https://zeferby.gitbook.io/transparent-openvpn-for-fantasy-grounds/our-openvpn-based-solution/tools)\).
+
+**You will choose a "safe place" \(a folder\) on your machine** where Easy-RSA commands wil generate the certificates and keys we'll need.
+
+{% hint style="info" %}
+You can backup or transfer the contents of your PKI folder to another storage after it is complete.  I find it convenient to keep it in my machine in case i need to quickly disable some certificates to deny acces to an existing certificate
+{% endhint %}
+
+
 
 ### The AWS S3 Bucket
+
+We'll create this "bucket", which is **simply a storage space**, on the AWS S3 service.  It can done either with the AWS management console, or with CloudBerry Explorer for S3 \(see [Tools](tools.md)\).
+
+Some **important security parameters will be stored there**, so make sure **NOT** to check any option to make it publicly accessible !  _The AWS management console shows some clear warnings when a bucket content is "at risk"_.
+
+{% hint style="danger" %}
+**Keep this S3 storage "bucket" PRIVATE !**
+{% endhint %}
+
+{% hint style="warning" %}
+If you want to manage the contents of your S3 bucket with the **free version of CloudBerry Explorer for S3**, you must **not enable encryption** on your bucket.
+{% endhint %}
+
+{% hint style="info" %}
+If you manage your S3 bucket contents with a **licenced version of CloudBerry Explorer for S3, and/or** with the **AWS management console, you can use encryption**.
+{% endhint %}
+
+**What will the S3 bucket contain ?**
+
+* startup scripts for the AWS Linux/OpenVPN server
+* your own OpenVPN server configuration options
+* the minimal amount of security parameters, ⚠ _**including the OpenVPN server "public certificate" and "private key"**_ ⚠ so, once again, in case you didn't hear me, make sure that you...
+
+{% hint style="danger" %}
+**&lt;shout mode on&gt; KEEP THIS S3 STORAGE "BUCKET" PRIVATE !!! &lt;shout mode off&gt;**
+{% endhint %}
+
+🧐 **You've been warned... Don't come back crying...** 😭 
+
+_If you want to store other data in there, we advise you to create a second private S3 bucket for that._
 
 
 
 ### OpenVPN on an AWS Linux virtual server
 
+This virtual server will be hosted at Amazon Web Services, a.k.a. AWS.
 
+**Check the** [**Amazon Web Services**](amazon-web-services.md) **section for an overview of what that means.** Some quick facts :
+
+If you have a new AWS account you'll be able to **run a small server for free 24x7 for one year** from account creation thanks to the **AWS Free Tier**.
+
+**If you are out of the free tier bounds** \(account older than 1 year or multiple AWS servers running, whatever\), **you will incurr small running costs for your server and storage, but this solution is designed so that these costs are minimal, and probably neglectable for most.**
+
+Choosing the cheapest AWS server type, which is quite adequate :
+
+* **if you need to run it 24x7, which is VERY unlikely**, it can cost you in the **range of $5 to $10 /month, depending on the AWS region** of the world where you run it.
+* if you want to host games for **3x 4H a week**, which gives around 50 H/month, the cost would be in the **range of $0.3-$0.6 /month, depending on the region**.
+
+We'll create an AWS virtual server :
+
+* using a "free tier elligible" type of server
+* to run the basic "Amazon Linux AMI 2018.xx.y" distribution
+* giving it permission to access the S3 bucket for the parameters and scripts it needs
+* giving it network access rules to accept incoming connections both for OpenVPN \(for you, the GM\) and for FG traffic \(for the players\)
+* giving it a small bootstrap script that will do all the OpenVPN \(+some tools +port forwarding\) installation and configuration work for you
+
+{% hint style="success" %}
+After 2 or 3 minutes, when the server "**Instance state**" is "**running**" and "**Status Checks**" shows the green "**passed**" tick, you can enjoy !
+{% endhint %}
 
 
 

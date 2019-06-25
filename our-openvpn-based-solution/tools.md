@@ -1,6 +1,6 @@
 # Tools
 
-We'll use several tools during the setup process; OpenVPN + EasyRSA are mandatory and the rest is very helpful.
+We'll use several free tools during the setup process; OpenVPN + Easy-RSA are mandatory and the rest is very helpful.
 
 ## Open VPN Community \(free\)
 
@@ -39,6 +39,12 @@ This tool should not be required, but **if you want to open a command line termi
 PuTTY is available from : [https://www.putty.org/](https://www.putty.org/)
 
 ![](../.gitbook/assets/image%20%285%29.png)
+
+### Your text editor of choice
+
+Avoid Notepad for it's poor customization options and lack of support for Linux-style End-Of-Lines.
+
+A good lightweight but feature-rich editor is **Notepad++** that you can find at : [https://notepad-plus-plus.org/download](https://notepad-plus-plus.org/download)
 
 
 
