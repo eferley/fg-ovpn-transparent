@@ -6,7 +6,13 @@
 
 
 
+AWS provides cloud hosting services starting at the **IaaS** \(Infrastructure as a Service\) level.
 
+That means you can create your virtual environment in the cloud hosted within AWS, exactly the way you want : networks, subnets, private or public, in multipe geographic locations, with servers of all sizes with or without Internet access, with network traffic filtering, etc...
+
+"exactly the way you want" implies some measure of "do it yourself" and entails a not-so-easy learning curve to master the ins and outs of the AWS platform \(like other IaaS providers\).
+
+AWS uses a "pay as you go" economic model, and provides a nice Free Tier.
 
 ### Create an AWS account
 

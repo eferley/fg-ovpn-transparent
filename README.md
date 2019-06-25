@@ -2,6 +2,8 @@
 
 This document will describe a solution for GMs \(Game Masters\) to publish their FG virtual table to remote players through an ad-hoc "GM-only" VPN hosted on a small AWS \(Amazon Web Services\) Linux server.
 
+But first...
+
 ## Do you _really_ need a VPN for ![](.gitbook/assets/fg35.png) Fantasy Grounds ![](.gitbook/assets/fg35.png) ?
 
 {% hint style="success" %}
@@ -12,7 +14,7 @@ This document will describe a solution for GMs \(Game Masters\) to publish their
 **Players generally do not need to use a VPN**
 {% endhint %}
 
-But there are situations where **a VPN may be needed \(from the GM's point of view\)** :
+There are however situations where **a VPN may be needed on the GM's side** :
 
 1. **temporary connection from a "public" internet facility** \(hotel room, etc\)
 2. country/ISP setup makes a **unique public IPv4 address unavailable**

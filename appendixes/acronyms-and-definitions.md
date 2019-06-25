@@ -42,7 +42,7 @@ Depending on context :
 
 ## FGU
 
-**Fantasy Grounds "Unity"** : the next major version of FG planned to be released at the end of 2019
+**Fantasy Grounds "Unity"** : the next major version of FG planned to be released at the end of 2019. See the FGU KickStarter project at [https://www.kickstarter.com/projects/smiteworks/fantasy-grounds-unity](https://www.kickstarter.com/projects/smiteworks/fantasy-grounds-unity)
 
 ## Gateway
 
@@ -64,6 +64,14 @@ The **most widely used communication protocols, based on IP** at the "network" l
 **Fantasy Grounds "Classic"** uses **IPv4** and specifically **TCP port 1802**
 {% endhint %}
 
+## **IaaS / PaaS / SaaS**
+
+**Infrastructure as a Service** : a cloud offering where customers can create virtual environments "from the ground up" and has full control of the networks and servers
+
+**Platform as a Service** : a cloud offering where customers get access to pre-installed core software installations on servers that they can customize up to a point
+
+**Software as a Service** : a coud offering where customers subscribe to a specific software usage without managing servers
+
 ## **ISP**
 
 **Internet Service Provider**
@@ -84,6 +92,10 @@ Your "home" network is a LAN \(and most likely a WLAN\).
 
 **Operating System** : A version or distribution of Windows / MacOS / Linux
 
+## **PaaS**
+
+**See : IaaS / PaaS / SaaS**
+
 ## PKI
 
 **Public Key Infrastructure** : From [https://en.wikipedia.org/wiki/Public\_key\_infrastructure](https://en.wikipedia.org/wiki/Public_key_infrastructure)
@@ -101,6 +113,10 @@ Your "home" network is a LAN \(and most likely a WLAN\).
 ## RPG
 
 **Role-Playing Game** 😁 
+
+## **SaaS**
+
+**See : IaaS / PaaS / SaaS**
 
 ## SF
 
