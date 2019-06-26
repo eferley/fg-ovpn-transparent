@@ -124,6 +124,10 @@ Your "home" network is a LAN \(and most likely a WLAN\).
 
 **StarFinder** : a well known RPG
 
+##  **SSH**
+
+**Secure Shell** : Cryptographic protocol mainly used to open a command line terminal on a remote server in an encrypted channel.
+
 ## SSL/TLS
 
 **Secure Sockets Layer/Transport Layer Security** :  cryptographic protocols providing communications security. 

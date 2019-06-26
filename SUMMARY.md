@@ -15,6 +15,7 @@
 * ["Transparent" OpenVPN-based Port Forwarding](proposed-solution/transparent-openvpn-solution-presentation.md)
 * [Tools](proposed-solution/tools.md)
 * [Amazon Web Services](proposed-solution/amazon-web-services.md)
+* [Future possible developments](proposed-solution/future-possible-developments.md)
 
 ## Setup instructions - WIP <a id="setup-instructions"></a>
 

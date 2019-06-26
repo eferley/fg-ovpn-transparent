@@ -26,13 +26,13 @@ The critical elements here are the **Router** and **DHCP Server** features of yo
 
 So **ALL your devices**, when communicating with the Internet via the Router, are seen as the same **single PUBLIC IP address** as the Router itself, and **your FG machine** \(the GM's one\) **is only one of many** such devices "using" the same public IP.
 
-When an incoming communication request comes in from a remote FG player, the Router needs to know specifically where to route that request \(i.e. to your GM FG machine, not to your SmartTV ! 😛 \); otherwise the Router will just ignore the communication request.
+When an **incoming communication request** comes in from a remote FG player, **the Router needs to know** specifically **where to route that request** \(i.e. to your GM FG machine, not to your SmartTV ! 😛 \); **otherwise the Router will just ignore** the communication request.
 
 {% hint style="warning" %}
 #### This is where **Port Forwarding** comes into play !
 {% endhint %}
 
-**You have to** **give the Router a rule to accept TCP 1802 packets coming in on the single public IP from the Internet and to forward them to your GM FG machine \(on its private IP\), still on port TCP 1802**.
+**You have to** **give the Router a rule to accept TCP 1802 packets coming in on the single public IP from the Internet, and to forward them to your GM FG machine \(on its private IP\), still on port TCP 1802**.
 
 This is called a **Port Forwarding rule**.
 

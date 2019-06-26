@@ -16,33 +16,34 @@ Relying on **a hosted virtual machine which can accept TCP 1802** incoming conne
 
 ### Secondary objectives
 
-* **do NOT require a VPN connection on the players side** : by handling all port forwarding aspects on a single "point of contact" \(the VPN server for the GM is also the GM's FG address as seen from the players\)
-* be the **most "non-intrusive" possible vs. the GM's machine configuration**
-* **minimize costs for the GM** to $0 \(or a neglectable amount, if you are out of the AWS free tier bounds\)
-* introduce **NO dependancy for the GM on any external company/organization** \(except of course the need of virtual server hosting\)
+1. **do NOT require a VPN connection on the players side** : by handling all port forwarding aspects on a single "point of contact" \(the VPN server for the GM is also the GM's FG address as seen from the players\)
+2. be the **most "non-intrusive" possible vs. the GM's machine configuration**
+3. **minimize costs for the GM** to $0 \(or a neglectable amount, if you are out of the AWS free tier bounds\)
+4. introduce **NO dependancy for the GM on any external company/organization** \(except of course the need of virtual server hosting\)
+5. provide a **mostly automated startup process**
 
 ### Other benefits
 
-* **most possible versatile solution** : OpenVPN, when you have administrative of both the VPN server and client, enables you to taylor the solution according to you exact wishes
+* **most possible versatile solution** : OpenVPN, since you have administrative access on the VPN server, enables you to taylor the solution according to you exact wishes
 * "owned" security : **You have absolute authority** on your whole setup and **you don't need to "share" any security info with anyone**
 * fully "destroyable" : **you can easily get rid** of your whole VPN infrastructure at any time
-* **no "permanent route" added** : can be used on machines with complex network settings without impacting the other connections
+* **no "permanent route" added on the GM's machine** : can be used on machines with complex network settings without impacting the other connections
 
 ### Drawbacks
 
-* **Initial setup effort** : we'll mitigate that with step-by-step instructions on the whole process
-* **FG Alias and "Connection test" will not work** \(like most other VPN-based solutions\) : you'll have to either rely on DNS or give the public IP of your VPN server to your players instead of an alias
-* **1 GM-at-a-time** : with this setup, having **only 1 public IP address**, only 1 GM at a time can be the target of the port forwarding rule \(using such a server for multiple GMs can be done with some kind of bookings/schedule\)
+* **Initial setup effort** : we'll try to mitigate that with step-by-step instructions on the whole process
+* **FG Alias and "Connection test" will not work** \(like most other VPN-based solutions\) : you'll have to either rely on DNS, or give the public IP of your VPN server to your players, instead of an FG alias
+* **1 GM-at-a-time** : with this setup having **only 1 public IP address**, only **1 GM at a time can be the target of the port forwarding rule** \(using such a server for multiple GMs, still 1 at a time, can be done with "time sharing", using any kind of booking/scheduling, but it still remains "1-at-a-time"\)
 
 
 
 ## Implementation
 
-In the following steps, we'll use a Windows 7 machine \(I managed to avoid W10 until now...\) to setup our port forwarding VPN.
+In the following steps, we'll use a Windows 7 machine \(I managed to avoid W10 until now...\) to setup our "port forwarding VPN".
 
 We'll setup :
 
-* **a Certificate Authority** on your own machine to have full control of security, with which you'll manage the certificates identifying the VPN server and the VPN clients. _Actually you'll probably need only one client certificate for your own GM FG machine_
+* **a Certificate Authority on your own machine** to have **full control of security**, with which you'll manage the certificates identifying the VPN server and the VPN clients. _Actually you'll probably need only one client certificate for your own GM FG machine_
 * **a private AWS storage space \(called an "AWS S3 bucket"\)**, to store some security + booting parameters and startup scripts for the VPN server
 * a small **AWS virtual server to run OpenVPN \(server mode\) and TCP 1802 port forwarding**, **auto-configured at startup \(**using the parameters and startup script files stored in the S3 bucket\)
 
@@ -159,7 +160,7 @@ We'll create an AWS virtual server :
 * giving it a small bootstrap script that will do all the OpenVPN \(+some tools +port forwarding\) installation and configuration work for you
 
 {% hint style="success" %}
-After 2 or 3 minutes, when the server "**Instance state**" is "**running**" and "**Status Checks**" shows the green "**passed**" tick, you can enjoy !
+After 2 or 3 minutes, when the server "**Instance state**" is "**running**" and "**Status Checks**" shows the green "**passed**" tick in the AWS management console, you can enjoy !
 {% endhint %}
 
 
