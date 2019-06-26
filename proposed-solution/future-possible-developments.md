@@ -1,4 +1,4 @@
-# Future possible developments
+# Possible future developments
 
 ## FG "Unity"
 
