@@ -10,13 +10,21 @@ You can select and download the latest version \(v2.4.7 as of this writing\), co
 
 ![](../.gitbook/assets/image%20%288%29.png)
 
+
+
 ## Easy-RSA \(free\)
 
 Easy-RSA is also managed by the OpenVPN team; it is the tool we'll use to create our **PKI** \(**Public Key Infrastructure**\) with its **CA** \(**Certificate Autority**\), to create and manage our **Digital Certificates.**
 
-**Easy-RSA 2 should already be included in OpenVPN Windows installers**, but here is it's GitHub download location : [https://github.com/OpenVPN/easy-rsa-old/releases](https://github.com/OpenVPN/easy-rsa-old/releases)
+**Easy-RSA 2 should already be included in OpenVPN Windows installers**, but here is the GitHub download location : [https://github.com/OpenVPN/easy-rsa-old/releases](https://github.com/OpenVPN/easy-rsa-old/releases)
 
 _For Linux-like environments, Easy-RSA 3 can be downloaded from :_ [_https://github.com/OpenVPN/easy-rsa/releases_](https://github.com/OpenVPN/easy-rsa/releases)\_\_
+
+{% hint style="warning" %}
+If you use Easy-RSA 3, check the docs as the commands have changed from Easy-RSA 2
+{% endhint %}
+
+
 
 ## Optional tools
 
@@ -31,6 +39,8 @@ This tool has a free version and a commercial version; however, **only the comme
 {% endhint %}
 
 You can grab the software here : [https://www.cloudberrylab.com/explorer/amazon-s3.aspx](https://www.cloudberrylab.com/explorer/amazon-s3.aspx)
+
+
 
 ### PuTTY \(free\)
 

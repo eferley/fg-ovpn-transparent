@@ -10,11 +10,11 @@ _I won't go into the war between these competitors \(and others\).  Being an AWS
 
 "_exactly the way you want_" implies some measure of "do it yourself" and entails a **not-so-easy learning curve** to master the ins and outs of the AWS platform \(just like other IaaS providers\).
 
-**AWS uses a "pay as you go" economic model, and provides a nice 1 year Free Tier including + some on-going goodies after the first year.**
+**AWS uses a "pay as you go" economic model, and provides a nice 1 year Free Tier + some on-going goodies after the first year.**
 
 All the details about the **AWS Free Tier and it's limits** can be found at [https://aws.amazon.com/free](https://aws.amazon.com/free)
 
-To become an AWS user you have to create an account \(even if only to use the Free Tier\).
+To become an AWS user you have to **create an account** \(even if only to use the Free Tier\).
 
 ### How to create an AWS account
 
@@ -50,19 +50,19 @@ So keep this in mind :
 ### Shrinking AWS costs when you go outside the Free Tier
 
 {% hint style="warning" %}
-**1 year after account creation, some bonuses from the AWS Free Tier expire, including those that enabled running our proposed setup for free.  So the cost will mandatorily be &gt;$0 /month.**
+**1 year after account creation, some bonuses from the AWS Free Tier expire, including those that enabled running our proposed setup for free.  So the cost will mandatorily become &gt;$0 /month.**
 {% endhint %}
 
 {% hint style="success" %}
 **However this solution is designed to be lightweight, and that reflects in it's potential cost when NOT operating free of charge :**
 {% endhint %}
 
-* the total permanent volume of S3 sorage is around 20KB, which should remain virtually free \(maybe $0.01 if you have a lot of startups/boots in a month ?\)
-* with the **"destroy when not used" tactic,** and a minimal virtual disk size \(8GB\), you should extremely reduce both EC2 and EBS storage costs \(EC2=Elastic Compute Cloud : your CPU\(s\)+RAM and EBS=Elastic Block Store : your virtual disks\)
-* OpenVPN requirements are extremely low : you can run it with the cheapest EC2 instance type
+* the total permanent volume of **S3 sorage** is around 20KB, which **should remain virtually free** \(maybe $0.01 if you have a lot of startups/boots in a month ?\)
+* with the **"destroy when not used" strategy,** and a **minimal virtual disk** size \(8GB\), you should **extremely reduce** both **EC2 and EBS costs** \(EC2=Elastic Compute Cloud : your CPU\(s\)+RAM and EBS=Elastic Block Store : your virtual disks\)
+* OpenVPN requirements are extremely low : you can run it with the **cheapest EC2 instance type**
 
 {% hint style="info" %}
-Overall, **without the Free Tier goodies**, you should be able to run your VPN server for **50 Hours per month for less than $0.5 /month and a permanently running \(24x7\) server should cost $5 to $10 depending on the world region**
+Overall, **WITHOUT the Free Tier goodies**, you should be able to run your VPN server for **50 Hours per month for less than $0.5 /month and a permanently running \(24x7\) server should cost $5 to $10 depending on the world region**
 {% endhint %}
 
 
