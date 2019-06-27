@@ -2,19 +2,23 @@
 
 [AWS](https://aws.amazon.com/) provides cloud hosting services at the **IaaS** \(**Infrastructure as a Service**\) level. Leading rivals in that area include the [Google Compute Engine](https://cloud.google.com/compute/) and [Microsoft Azure](https://azure.microsoft.com/) offers.
 
-_I won't go into the war between these competitors \(and others\).  Being an AWS user since 2014, I am proficient enough  with that platform to design a reliable "end-user" setup.  Competing offers can provide the equivalent of what I'll show here but I'm not proficient enough with them..._
-
-
+> _I won't go into the war between these competitors \(and others\).  Being an AWS user since 2014, I am proficient enough  with the AWS platform to design a reliable and secure "end-user" setup.  Competing offers can provide the equivalent of what I'll show here but I'm not proficient enough with them..._
 
 **IaaS** means you can create your virtual environment in the cloud, hosted within AWS infrastructure, "exactly" the way you want : networks, subnets, private or public, in multipe geographic locations, with servers and databases of all sizes and types, with or without Internet access, network traffic filtering, etc...
 
-"_exactly the way you want_" implies some measure of "do it yourself" and entails a **not-so-easy learning curve** to master the ins and outs of the AWS platform \(just like other IaaS providers\).
+"_exactly the way you want_" implies some measure of "do it yourself" and entails a **not-so-easy learning curve** to master the ins and outs of the AWS platform \(just like other IaaS providers\).  So we'll use a **simple but secure setup**.
 
 **AWS uses a "pay as you go" economic model, and provides a nice 1 year Free Tier + some on-going goodies after the first year.**
 
+{% hint style="info" %}
 All the details about the **AWS Free Tier and it's limits** can be found at [https://aws.amazon.com/free](https://aws.amazon.com/free)
+{% endhint %}
 
+{% hint style="warning" %}
 To become an AWS user you have to **create an account** \(even if only to use the Free Tier\).
+{% endhint %}
+
+
 
 ### How to create an AWS account
 

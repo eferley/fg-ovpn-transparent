@@ -19,6 +19,7 @@
 ## Setup instructions - WIP <a id="setup-instructions"></a>
 
 * [Setup process overview](setup-instructions/setup-process-overview.md)
+* [Step 0 : Preparation](setup-instructions/step-0-preparation.md)
 * [Step 1 : Install OpenVPN + Easy-RSA 2](setup-instructions/step-1-install-openvpn-+-easy-rsa-2.md)
 * [Step 2 : Create your PKI](setup-instructions/step-2-create-your-pki.md)
 * [Step 3 : Prepare your OpenVPN connection](setup-instructions/step-3-prepare-your-openvpn-connection.md)

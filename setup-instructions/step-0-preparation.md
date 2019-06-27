@@ -1,0 +1,45 @@
+# Step 0 : Preparation
+
+Let's begin with 2 things : 
+
+## **Create/have an** [**account available on AWS**](../proposed-solution/amazon-web-services.md#how-to-create-an-aws-account)\*\*\*\*
+
+## Check that you know :
+
+* [how to open a command line](https://www.digitalcitizen.life/7-ways-launch-command-prompt-windows-7-windows-8) with your version of Windows
+* [how to show file extensions](https://www.howtohaven.com/system/show-file-extensions-in-windows-explorer.shtml) in Windows Explorer
+
+**It may also be a good idea to know** [how to show hidden/system files](https://helpx.adobe.com/x-productkb/global/show-hidden-files-folders-extensions.html) in Windows Explorer as well...
+
+## **Prepare a "safe" place on your own machine.**
+
+**If you can, create that on another drive than your system C: drive, and of course NOT in a kind of "recovery" drive/partition.**
+
+Create an empty folder to store your whole "reference materials", then empty sub-folders in it by category :
+
+* downloaded installation packages
+* docs, articles, infos you may also download in case you need to look them up years later
+* your own FG OpenVPN setup, containing :
+  * ⚠ **\[Important\]** ⚠ **your own PKI** \(Public Key Infrastructure\)
+  *  **\[Recommended\]**  a ready-to-duplicate "new-PKI" folder
+  *  **\[Recommended\]**  AWS / OpenVPN startup parameters and scripts
+  *  **\[Recommended\]**  OpenVPN connection parameters+certificates+key for each client
+* a separate sub-folder for tests and temporary things
+
+_It is always easier to have multiple sub-folders that you can rename/move/copy/zip/etc...independently, rather than a bunch of more or less related files in a single directory !_
+
+**I suggest an organization like this one** \(in this example i prepared sub-dirs for 2 GMs, just in case\) :
+
+![Organization example - general, own setup, full tree](../.gitbook/assets/image%20%285%29.png)
+
+In this sample setup we use **`my-fg-ovpn`** to store **own FG OpenVPN setup**, with these sub-dirs:
+
+* **`my-fg-ovpn-clients`** will store the **complete set** of parameter/security files needed **for each VPN client** \(in their own sub-dirs\)
+* **`my-fg-ovpn-s3`** will store the **source files we'll transfer to the AWS S3 bucket** for server auto-initialization
+* **`my-fg-ovpn-server`** will store **files you may want to copy from your OpenVPN server** when it's running
+* **`MY-FG-OVPN-PKI`** will be the **"safe" storage for our entire PKI**, ready to use if we need to create additional certificates or revoke a certificate. **I NAMED IT IN CAPITAL LETTERS BECAUSE IT IS YOUR MOST PRECIOUS REPOSITORY**.
+
+{% embed url="https://youtu.be/Iz-8CSa9xj8" %}
+
+
+

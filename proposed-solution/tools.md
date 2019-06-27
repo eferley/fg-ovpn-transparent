@@ -4,11 +4,15 @@ We'll use several free tools during the setup process; OpenVPN + Easy-RSA are ma
 
 ## Open VPN Community \(free\)
 
+**OpenVPN is an "SSL/TLS VPN" that is very mature and very widely used.**
+
+It can operate on any unused TCP or UDP port and can **easily cross all kinds of firewalls and NAT-PAT routers**, even in generally adverse situations like mobile devices.
+
 [OpenVPN](https://openvpn.net/) now has commercial offers but we'll use the **free** [**Community**](https://openvpn.net/community/) **edition** for our "do it yourself" installation.
 
 You can select and download the latest version \(v2.4.7 as of this writing\), corresponding to your own OS, here : [https://openvpn.net/community-downloads/](https://openvpn.net/community-downloads/)
 
-![](../.gitbook/assets/image%20%288%29.png)
+![](../.gitbook/assets/image%20%2811%29.png)
 
 
 
@@ -52,15 +56,27 @@ This tool should not be required, but **if you want to open a command line termi
 
 PuTTY is available from : [https://www.putty.org/](https://www.putty.org/)
 
-![](../.gitbook/assets/image%20%285%29.png)
+![](../.gitbook/assets/image%20%286%29.png)
 
 ### Your text editor of choice
 
-Avoid Notepad for it's poor customization options and lack of support for Linux-style End-Of-Lines.
+_**Avoid Windows basic Notepad**_ for its lack of customization options, no support for Linux-style "End-Of-Lines", etc.
 
 A good lightweight but feature-rich editor is **Notepad++** that you can find at : [https://notepad-plus-plus.org](https://notepad-plus-plus.org/)
 
-![](../.gitbook/assets/image%20%2812%29.png)
+![](../.gitbook/assets/image%20%2818%29.png)
+
+**More powerful** \(but more complex\) editing tools are **available for free** like :
+
+* [Microsoft Visual Studio Code](https://code.visualstudio.com/)
+
+![](../.gitbook/assets/image%20%2814%29.png)
+
+* [GitHub Atom](https://atom.io/)
+
+![](../.gitbook/assets/image%20%2817%29.png)
+
+
 
 
 
