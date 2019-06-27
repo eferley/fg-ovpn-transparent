@@ -1,4 +1,4 @@
-# Step 1 : Install OpenVPN + Easy-RSA 2
+# Step 1 : Install OpenVPN + Easy-RSA
 
 As exposed in the [Tools](../proposed-solution/tools.md) section, we absolutely need 2 pieces of software :
 
