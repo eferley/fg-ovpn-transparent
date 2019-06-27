@@ -1,7 +1,10 @@
-# Files
+# Utility files ans scripts
 
 
-### AWS UserData script : my-fg-ovpn-UserData.txt
+
+#### AWS "UserData" script :
+
+#### my-fg-ovpn-UserData.txt
 
 {% hint style="danger" %}
 **Please edit this bloc of 3 lines \(lines 4 to 6\) in my-fg-ovpn-UserData.txt to reflect your choices :**
@@ -54,12 +57,13 @@ echo 'echo `date` "MY_FGVPN --- S3 Deploy URL : ${MY_FGVPN_S3_DEPLOY_URL}"' >> /
 echo `date` "UserData script running ${MY_STARTUP_CONFIG_NAME}-init.sh"
 /usr/local/${MY_STARTUP_CONFIG_NAME}/init/${MY_STARTUP_CONFIG_NAME}-init.sh
 echo `date` "UserData script finished"
-
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-### OpenVPN Client parameter file : my-fg-ovpn-single-dm.ovpn
+#### OpenVPN Client parameter file : 
+
+#### my-fg-ovpn-single-dm.ovpn
 
 {% code-tabs %}
 {% code-tabs-item title="my-fg-ovpn-single-dm.ovpn" %}
@@ -84,12 +88,13 @@ ns-cert-type server
 tls-auth my-fg-ovpn-ta.key 1
 comp-lzo
 verb 4
-
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-### Server auto-configuration shell script : my-fg-ovpn-init.sh
+#### Server auto-configuration shell script : 
+
+#### my-fg-ovpn-init.sh
 
 {% code-tabs %}
 {% code-tabs-item title="my-fg-ovpn-init.sh" %}
@@ -157,8 +162,11 @@ echo ". /usr/local/${MY_STARTUP_CONFIG_NAME}/conf-specs" >> /usr/local/${MY_FGVP
 echo ". /usr/local/${MY_FGVPN_CONFIG_NAME}/${MY_FGVPN_CONFIG_NAME}-source-aws-vars" >> /usr/local/${MY_FGVPN_CONFIG_NAME}/boot/ipfw_pat.sh
 echo 'echo 1 > /proc/sys/net/ipv4/ip_forward && echo 0 > /proc/sys/net/ipv4/conf/eth0/send_redirects' >> /usr/local/${MY_FGVPN_CONFIG_NAME}/boot/ipfw_pat.sh
 echo 'echo "Activating MASQUERADE"' >> /usr/local/${MY_FGVPN_CONFIG_NAME}/boot/ipfw_pat.sh
+echo '# That enables proxying just for our own private IP' >> /usr/local/${MY_FGVPN_CONFIG_NAME}/boot/ipfw_pat.sh
 echo '/sbin/iptables -t nat -A POSTROUTING -o eth0 -s ${MY_FGVPN_PRIVATE_IP}/32 -j MASQUERADE' >> /usr/local/${MY_FGVPN_CONFIG_NAME}/boot/ipfw_pat.sh
+echo '# That would enable proxying to the Internet for the whole VPC CIDR' >> /usr/local/${MY_FGVPN_CONFIG_NAME}/boot/ipfw_pat.sh
 echo '# /sbin/iptables -t nat -A POSTROUTING -o eth0 -s ${MY_FGVPN_VPC_CIDR_RANGE} -j MASQUERADE' >> /usr/local/${MY_FGVPN_CONFIG_NAME}/boot/ipfw_pat.sh
+echo '# That would enalbe proxying to the Internet for VPN clients' >> /usr/local/${MY_FGVPN_CONFIG_NAME}/boot/ipfw_pat.sh
 echo '# /sbin/iptables -t nat -A POSTROUTING -o eth0 -s ${MY_FGVPN_VPNSubNet} -j MASQUERADE' >> /usr/local/${MY_FGVPN_CONFIG_NAME}/boot/ipfw_pat.sh
 echo 'echo "Finished ipfw_pat.sh script"' >> /usr/local/${MY_FGVPN_CONFIG_NAME}/boot/ipfw_pat.sh
 
@@ -313,10 +321,7 @@ echo `date` "+++ $0 OPENVPN INSTALLED AND STARTED"
 echo `date` "+++ $0 finished - Args : $@"
 
 exit 0
-
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
-
-
 
