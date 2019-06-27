@@ -52,7 +52,7 @@ Setting up port forwarding for FG means you usually have to :
 
 **As an example**, here is the rule i use at one of my network locations \(my current W7 machine is called AST7NBEF, selected from a dropdown list, and I simply called the rule "FG"\) :
 
-![](../.gitbook/assets/image%20%2812%29.png)
+![](../.gitbook/assets/image%20%2813%29.png)
 
 ### Dynamic/Static Private IP address
 

@@ -16,9 +16,13 @@ You can select and download the latest version \(v2.4.7 as of this writing\), co
 
 Easy-RSA is also managed by the OpenVPN team; it is the tool we'll use to create our **PKI** \(**Public Key Infrastructure**\) with its **CA** \(**Certificate Autority**\), to create and manage our **Digital Certificates.**
 
-**Easy-RSA 2 should already be included in OpenVPN Windows installers**, but here is the GitHub download location : [https://github.com/OpenVPN/easy-rsa-old/releases](https://github.com/OpenVPN/easy-rsa-old/releases)
+{% hint style="info" %}
+**Easy-RSA 2 should already be included in OpenVPN Windows installers**
+{% endhint %}
 
-_For Linux-like environments, Easy-RSA 3 can be downloaded from :_ [_https://github.com/OpenVPN/easy-rsa/releases_](https://github.com/OpenVPN/easy-rsa/releases)\_\_
+Here is the GitHub download location : [https://github.com/OpenVPN/easy-rsa-old/releases](https://github.com/OpenVPN/easy-rsa-old/releases)
+
+_For Linux-like environments, you can also choose Easy-RSA 3, downloaded from :_ [_https://github.com/OpenVPN/easy-rsa/releases_](https://github.com/OpenVPN/easy-rsa/releases)\_\_
 
 {% hint style="warning" %}
 If you use Easy-RSA 3, check the docs as the commands have changed from Easy-RSA 2
@@ -54,7 +58,9 @@ PuTTY is available from : [https://www.putty.org/](https://www.putty.org/)
 
 Avoid Notepad for it's poor customization options and lack of support for Linux-style End-Of-Lines.
 
-A good lightweight but feature-rich editor is **Notepad++** that you can find at : [https://notepad-plus-plus.org/download](https://notepad-plus-plus.org/download)
+A good lightweight but feature-rich editor is **Notepad++** that you can find at : [https://notepad-plus-plus.org](https://notepad-plus-plus.org/)
+
+![](../.gitbook/assets/image%20%2812%29.png)
 
 
 

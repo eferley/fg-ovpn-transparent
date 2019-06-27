@@ -19,8 +19,18 @@
 ## Setup instructions - WIP <a id="setup-instructions"></a>
 
 * [Setup process overview](setup-instructions/setup-process-overview.md)
+* [Step 1 : Install OpenVPN + Easy-RSA 2](setup-instructions/step-1-install-openvpn-+-easy-rsa-2.md)
+* [Step 2 : Create your PKI](setup-instructions/step-2-create-your-pki.md)
+* [Step 3 : Prepare your OpenVPN connection](setup-instructions/step-3-prepare-your-openvpn-connection.md)
+* [Step 4 : Configure your AWS environment](setup-instructions/step-4-configure-your-aws-environment.md)
+* [Step 5 : Check, Finalize, Transfer files to S3](setup-instructions/step-5-check-finalize-transfer-files-to-s3.md)
+* [Step 6 : Launch time !](setup-instructions/step-6-launch-time.md)
 * [Step-by-step setup](setup-instructions/step-by-step-setup.md)
 * [Utility files ans scripts](setup-instructions/files.md)
+
+## Manage your server
+
+* [Untitled](manage-your-server/untitled.md)
 
 ## Appendixes
 

@@ -2,13 +2,13 @@
 
 The overall process follows here.
 
-We'll detail a step-by-step setup in the following pages, starting at Step 2.
+We'll detail a step-by-step setup in the following pages.
 
 **\(local\)** steps are things done entirely in your own local machine.
 
 
 
-**Step 0** : Have an [account available on AWS](../proposed-solution/amazon-web-services.md)
+**Step 0** : Have an [account available on AWS](../proposed-solution/amazon-web-services.md#how-to-create-an-aws-account)
 
 **Step 1** : Download and install [**OpenVPN \(+ Easy-RSA\)**](../proposed-solution/tools.md#open-vpn-community-free) on your Windows machine \(+[optional Tools](../proposed-solution/tools.md#optional-tools) if you want\)
 

@@ -1,43 +1,5 @@
 # Step-by-step setup
 
-## Download and install
-
-
-
-## Create your own Public Key Infrastructure
-
-
-
-## Prepare your OpenVPN connection
-
-
-
-## Configure AWS network security settings, create an S3 bucket and an IAM role
-
-
-
-## Finalize all configuration elements
-
-
-
-## Create your FG-OpenVPN Linux server in your AWS Virtual Private Cloud
-
-
-
-## Connect your VPN and enjoy...
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ====================================================================================================
@@ -102,13 +64,42 @@ Details for Step 5 : Finalize all configuration elements
 
 I suggest your create a hierarchy of subfolders in your "CA safe storage" \(\) to store parameter/security files. All the names I use are example names, bu sure to use your own and edit appropriately ! I provide a zip file to initialize this hierarchy, that you'll have to complete with your own files :
 
-My-CA-for-FG-OVPN\my-fg-ovpn-single-dm Must contain : my-fg-ovpn-ca.crt \(from step 2.4.5\) my-fg-ovpn-ta.key \(from step 3.3\) my-fg-ovpn-single-dm.ovpn \(from zip file or listing below\) single-dm.crt + single-dm.key \(from step 2.4.8\) My-CA-for-FG-OVPN\my-very-own-fg-ovpn-bucket My-CA-for-FG-OVPN\my-very-own-fg-ovpn-bucket\deploy Can contain \(optional, not directly used by the linux box\) : my-fg-ovpn-UserData.txt My-CA-for-FG-OVPN\my-very-own-fg-ovpn-bucket\deploy\init Must contain : my-fg-ovpn-init.sh \(from zip file or listing below\) My-CA-for-FG-OVPN\my-very-own-fg-ovpn-bucket\deploy\conf My-CA-for-FG-OVPN\my-very-own-fg-ovpn-bucket\deploy\conf\my-fg-ovpn Must contain : my-fg-ovpn-ca.crt \(from step 2.4.5\) my-fg-ovpn-dh2048.pem \(from step 2.4.6\) my-fg-ovpn.crt + my-fg-ovpn.csr + my-fg-ovpn.key \(from step 2.4.7\) my-fg-ovpn-ta.key \(from step 3.3\) My-CA-for-FG-OVPN\my-very-own-fg-ovpn-bucket\deploy\refresh My-CA-for-FG-OVPN\my-very-own-fg-ovpn-bucket\deploy\refresh\my-fg-ovpn My-CA-for-FG-OVPN\my-very-own-fg-ovpn-bucket\deploy\refresh\my-fg-ovpn\crl Must contain : my-fg-ovpn-crl.pem \(from step 2.4.9\)
+```text
+My-CA-for-FG-OVPN\my-fg-ovpn-single-dm\
+  Must contain :
+    my-fg-ovpn-ca.crt (from step 2.4.5)
+    my-fg-ovpn-ta.key (from step 3.3)
+    my-fg-ovpn-single-dm.ovpn (from zip file or listing below)
+    single-dm.crt + single-dm.key (from step 2.4.8)
+My-CA-for-FG-OVPN\my-very-own-fg-ovpn-bucket\
+My-CA-for-FG-OVPN\my-very-own-fg-ovpn-bucket\deploy\
+  Can contain (optional, not directly used by the linux box) :
+    my-fg-ovpn-UserData.txt
+My-CA-for-FG-OVPN\my-very-own-fg-ovpn-bucket\deploy\init\
+  Must contain :
+    my-fg-ovpn-init.sh (from zip file or listing below)
+My-CA-for-FG-OVPN\my-very-own-fg-ovpn-bucket\deploy\conf\
+My-CA-for-FG-OVPN\my-very-own-fg-ovpn-bucket\deploy\conf\my-fg-ovpn\
+  Must contain :
+    my-fg-ovpn-ca.crt (from step 2.4.5)
+    my-fg-ovpn-dh2048.pem (from step 2.4.6)
+    my-fg-ovpn.crt + my-fg-ovpn.csr + my-fg-ovpn.key (from step 2.4.7)
+    my-fg-ovpn-ta.key (from step 3.3)
+My-CA-for-FG-OVPN\my-very-own-fg-ovpn-bucket\deploy\refresh\
+My-CA-for-FG-OVPN\my-very-own-fg-ovpn-bucket\deploy\refresh\my-fg-ovpn\
+My-CA-for-FG-OVPN\my-very-own-fg-ovpn-bucket\deploy\refresh\my-fg-ovpn\crl\
+  Must contain :
+    my-fg-ovpn-crl.pem (from step 2.4.9)
 
-5.2- Edit + transfer to AWS S3 bucket Please edit this bloc of 3 lines \(lines 4 to 6\) in my-fg-ovpn-UserData.txt to reflect your choices : export MY\_STARTUP\_CONFIG\_NAME=my-fg-ovpn export MY\_STARTUP\_VPNSubNet=10.10.10.0/24 export MY\_STARTUP\_S3\_BUCKET=my-very-own-fg-ovpn-bucket Then use "Cloudberry Explorer for Amazon S3" to transfer the whole deploy folder to your S3 bucket.
+```
+
+5.2- Edit + transfer to AWS S3 bucket 
+
+Please edit this bloc of 3 lines \(lines 4 to 6\) in my-fg-ovpn-UserData.txt to reflect your choices : export MY\_STARTUP\_CONFIG\_NAME=my-fg-ovpn export MY\_STARTUP\_VPNSubNet=10.10.10.0/24 export MY\_STARTUP\_S3\_BUCKET=my-very-own-fg-ovpn-bucket Then use "Cloudberry Explorer for Amazon S3" to transfer the whole deploy folder to your S3 bucket.
 
 5.3- Copy the contents of My-CA-for-FG-OVPN\my-fg-ovpn-single-dm to your \config subdirectory
 
-5.4- If OpenVPN GUI is already started, then exit it and restart it AS AN ADMINISTRATOR. Then let it sleep as a notification icon for the moment...
+5.4- If OpenVPN GUI is already started, then exit it and restart it AS AN ADMINISTRATOR. Then let it sleep as a notification bar icon for the moment...
 
 ====================================================================================================
 
