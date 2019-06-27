@@ -2,7 +2,9 @@
 
 
 
-#### AWS "UserData" script : my-fg-ovpn-UserData.txt
+#### AWS "UserData" script :
+
+#### my-fg-ovpn-UserData.txt
 
 {% hint style="danger" %}
 **Please edit this bloc of 3 lines \(lines 4 to 6\) in my-fg-ovpn-UserData.txt to reflect your choices :**
@@ -59,7 +61,9 @@ echo `date` "UserData script finished"
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-#### OpenVPN Client parameter file : my-fg-ovpn-single-dm.ovpn
+#### OpenVPN Client parameter file : 
+
+#### my-fg-ovpn-single-dm.ovpn
 
 {% code-tabs %}
 {% code-tabs-item title="my-fg-ovpn-single-dm.ovpn" %}
@@ -88,7 +92,9 @@ verb 4
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-#### Server auto-configuration shell script : my-fg-ovpn-init.sh
+#### Server auto-configuration shell script : 
+
+#### my-fg-ovpn-init.sh
 
 {% code-tabs %}
 {% code-tabs-item title="my-fg-ovpn-init.sh" %}
