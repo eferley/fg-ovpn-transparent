@@ -27,6 +27,7 @@
 * [Step 5 : Check, Finalize, Transfer files to S3](setup-instructions/step-5-check-finalize-transfer-files-to-s3.md)
 * [Step 6 : Launch time !](setup-instructions/step-6-launch-time.md)
 * [Step 7 : Connect and enjoy](setup-instructions/step-7-connect-and-enjoy.md)
+* [Step 8 : Destroy/"Terminate" after use](setup-instructions/step-8-destroy-terminate-after-use.md)
 * [Step-by-step setup](setup-instructions/step-by-step-setup.md)
 * [Utility files ans scripts](setup-instructions/files.md)
 
@@ -38,6 +39,7 @@
 
 * [Acronyms and definitions](appendixes/acronyms-and-definitions.md)
 * [Possible future developments](appendixes/future-possible-developments.md)
+* [AWS terminology](appendixes/aws-terminology.md)
 
 ## Links
 

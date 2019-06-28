@@ -12,7 +12,7 @@ It can operate on any unused TCP or UDP port and can **easily cross all kinds of
 
 You can select and download the latest version \(v2.4.7 as of this writing\), corresponding to your own OS, here : [https://openvpn.net/community-downloads/](https://openvpn.net/community-downloads/)
 
-![](../.gitbook/assets/image%20%285%29.png)
+![](../.gitbook/assets/image%20%286%29.png)
 
 
 
@@ -24,9 +24,9 @@ Easy-RSA is also managed by the OpenVPN team; it is the tool we'll use to create
 **Easy-RSA 2 should already be included in OpenVPN Windows installers**
 {% endhint %}
 
-Here is the GitHub download location : [https://github.com/OpenVPN/easy-rsa-old/releases](https://github.com/OpenVPN/easy-rsa-old/releases)
+If needed, here is the GitHub download location : [https://github.com/OpenVPN/easy-rsa-old/releases](https://github.com/OpenVPN/easy-rsa-old/releases)
 
-_For Linux-like environments, you can also choose Easy-RSA 3, downloaded from :_ [_https://github.com/OpenVPN/easy-rsa/releases_](https://github.com/OpenVPN/easy-rsa/releases)\_\_
+_For Linux-like environments, you can also choose Easy-RSA 3; download from :_ [_https://github.com/OpenVPN/easy-rsa/releases_](https://github.com/OpenVPN/easy-rsa/releases)\_\_
 
 {% hint style="warning" %}
 If you use Easy-RSA 3, check the docs as the commands have changed from Easy-RSA 2
@@ -56,7 +56,7 @@ This tool should not be required, but **if you want to open a command line termi
 
 PuTTY is available from : [https://www.putty.org/](https://www.putty.org/)
 
-![](../.gitbook/assets/image%20%284%29.png)
+![](../.gitbook/assets/image%20%285%29.png)
 
 ### Your text editor of choice
 
@@ -64,17 +64,17 @@ _**Avoid Windows basic Notepad**_ for its lack of customization options, no supp
 
 A good lightweight but feature-rich editor is **Notepad++** that you can find at : [https://notepad-plus-plus.org](https://notepad-plus-plus.org/)
 
-![](../.gitbook/assets/image%20%2810%29.png)
+![](../.gitbook/assets/image%20%2811%29.png)
 
 **More powerful** \(but more complex\) editing tools are **available for free** like :
 
 * [Microsoft Visual Studio Code](https://code.visualstudio.com/)
 
-![](../.gitbook/assets/image%20%288%29.png)
+![](../.gitbook/assets/image%20%289%29.png)
 
 * [GitHub Atom](https://atom.io/)
 
-![](../.gitbook/assets/image%20%289%29.png)
+![](../.gitbook/assets/image%20%2810%29.png)
 
 
 

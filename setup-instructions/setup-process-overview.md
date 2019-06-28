@@ -12,7 +12,7 @@ We'll detail a step-by-step setup in the following pages, and add some more tech
 
 
 
-The overall process :
+## One-time setup process
 
 **Step 0** : **Preparation** : Have an [account available on AWS](../proposed-solution/amazon-web-services.md#how-to-create-an-aws-account) and prepare a "safe" place on your own machine
 
@@ -22,11 +22,17 @@ The overall process :
 
 **Step 3** : \(local\) [Setup your OpenVPN client](step-3-prepare-your-openvpn-connection.md) with the required certificates and keys into the config directory
 
-**Step 4** : \(AWS\) [Configure your AWS environment](step-4-configure-your-aws-environment.md) : VPC \(Virtual Private Cloud\), networks, security settings, create an S3 bucket and an IAM role
+**Step 4** : \(AWS\) [Configure your AWS environment](step-4-configure-your-aws-environment.md) : VPC \(Virtual Private Cloud\), networks, security settings, create an S3 bucket and an IAM user and IAM role \(IAM=Identity and Access Management\)
 
 **Step 5** : \(local+AWS\) [Check your settings, Finalize all](step-5-check-finalize-transfer-files-to-s3.md) configuration elements and transfer files to AWS S3
 
+
+
+## Repeatable usage process
+
 **Step 6** : \(AWS\) [Launch your FG-OpenVPN Linux server](step-6-launch-time.md) in your AWS Virtual Private Cloud
 
-**Step 7** : Connect your VPN and enjoy...
+**Step 7** : [Connect your VPN and enjoy...](step-7-connect-and-enjoy.md)
+
+**Step 8** : \(AWS\) [Destroy \(="Terminate"\)](step-8-destroy-terminate-after-use.md) your server
 

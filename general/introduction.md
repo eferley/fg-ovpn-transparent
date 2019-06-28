@@ -2,7 +2,7 @@
 
 ## Fantasy Grounds \("Classic"\) communications
 
-_This document focuses on FG "Classic"_ \(as opposed to the future release of FG "Unity", currently planned for the end of 2019\).
+**This document focuses on FG "Classic"** \(as opposed to the future release of FG "Unity", currently planned for the end of 2019\) on a Microsoft **Windows machine**.
 
 The current release of FG \("Classic"\) as of this writing is v3.3.7 \(for the "Live" branch, v3.3.8 for the "Test" branch\), but **all versions of FG "Classic" should work in the same way**.
 

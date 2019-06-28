@@ -40,30 +40,33 @@ The AWS Free tiers provides a new subscriber with everything needed to run this 
 
 It is extremely easy to create I.T. "resources" on AWS with a few clicks...which implies that you may try things out and not check if they remain within the Free Tier bounds.
 
-_On the other hand it enables people to try out some high-end configurations for several hours at a low one-time cost without a large upfront investment, provided they destroy \("terminate"\) these resources after the test to avoid ongoing costs._
+_On the other hand, associated with the "pay as you go" pricing, it offers the opportunity to test high-end configurations for a short time at a low cost without a large upfront investment - provided you remember to destroy \("terminate"\) these resources after that to avoid ongoing costs._
 
 So keep this in mind :
 
 * the _Free Tier **bounds**_ are specified, detailed by service, at : [https://aws.amazon.com/free](https://aws.amazon.com/free)
 * **always check the cost structure for any service you may want to test** \(free part/billable part/invoicing criteria\)
 * **ALL pricing info is available** per service, or from the "umbrella" pricing page : [https://aws.amazon.com/pricing/](https://aws.amazon.com/pricing/)
-* **Each AWS Region \(geographical area\) has it's own costs.** From what i saw, _South America is currently \(mid 2019\) more expensive than other regions_.  You may take this into account when choosing the place where you'll run your own server.
+* **Each AWS Region \(geographical area\) has it's own costs.** From what i saw, _South America is currently \(mid 2019\) more expensive than other regions_.  You may take this into account when choosing the place where you'll run your own server
+* **Periodically check** your month-to-date actuals and month-total estimated values in your **Billing Dashboard** in the AWS Management Console.  They are updated at intervals of 6 to 8 hours : 
+
+![Billing Dashboard shortcut, near the top-right corner in the AWS console](../.gitbook/assets/image%20%281%29.png)
 
 
 
-### Shrinking AWS costs when you go outside the Free Tier
+### Shrinking AWS costs when you step outside the Free Tier
 
 {% hint style="warning" %}
 **1 year after account creation, some bonuses from the AWS Free Tier expire, including those that enabled running our proposed setup for free.  So the cost will mandatorily become &gt;$0 /month.**
 {% endhint %}
 
 {% hint style="success" %}
-**However this solution is designed to be lightweight, and that reflects in it's potential cost when NOT operating free of charge :**
+**However this solution is designed to be lightweight, and that reflects in it's potential running cost when NOT operating free of charge :**
 {% endhint %}
 
-* the total permanent volume of **S3 sorage** is around 20KB, which **should remain virtually free** \(maybe $0.01 if you have a lot of startups/boots in a month ?\)
-* with the **"destroy when not used" strategy,** and a **minimal virtual disk** size \(8GB\), you should **extremely reduce** both **EC2 and EBS costs** \(EC2=Elastic Compute Cloud : your CPU\(s\)+RAM and EBS=Elastic Block Store : your virtual disks\)
-* OpenVPN requirements are extremely low : you can run it with the **cheapest EC2 instance type**
+* the total permanent volume of **S3 sorage** is around 20KB, which **should remain virtually free** _\(maybe $0.01 if you have A LOT of startups/boots in a month ?\)_
+* with the **"destroy when not used" strategy,** and a **minimal virtual disk** size \(8GB\), you should **extremely reduce** both **EC2 and EBS costs** \(EC2=Elastic Compute Cloud : your CPU\(s\)+RAM, and EBS=Elastic Block Store : your virtual disk\(s\)\)
+* **OpenVPN requirements are extremely low** : you can run it with the **cheapest EC2 instance type**
 
 {% hint style="info" %}
 Overall, **WITHOUT the Free Tier goodies**, you should be able to run your VPN server for **50 Hours per month for less than $0.5 /month and a permanently running \(24x7\) server should cost $5 to $10 depending on the world region**

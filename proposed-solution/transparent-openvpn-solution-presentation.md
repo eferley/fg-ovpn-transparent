@@ -39,11 +39,9 @@ Relying on **a hosted virtual machine which can accept TCP 1802** incoming conne
 
 ## Implementation
 
-In the following steps, we'll use a Windows 7 machine \(I managed to avoid W10 until now...\) to setup our "port forwarding VPN".
+### What we'll setup
 
-We'll setup :
-
-* **a Certificate Authority on your own machine** to have **full control of security**, with which you'll manage the certificates identifying the VPN server and the VPN clients. _Actually you'll probably need only one client certificate for your own GM FG machine_
+* **a Certificate Authority \(CA\) on your own machine** to have **full control of security**, with which you'll manage the certificates+keys identifying the VPN server and VPN clients. _Actually you'll probably need only one active client certificate, for your own GM FG machine_
 * **a private AWS storage space \(called an "AWS S3 bucket"\)**, to store some security + booting parameters and startup scripts for the VPN server
 * a small **AWS virtual server to run OpenVPN \(server mode\) and TCP 1802 port forwarding**, **auto-configured at startup \(**using the parameters and startup script files stored in the S3 bucket\)
 
@@ -63,16 +61,16 @@ If you prefer, you can also **start/stop the virtual server**, keeping its "hard
 
 ### The CA / PKI
 
-Using a **Public Key Infrastructure is the best option for security**.  It adds a bit of overhead to our setup process, but it brings so many advantages...
+Using a **Public Key Infrastructure \(PKI\) with its own Certificate Authority \(CA\) is the best option for security**.  It adds some overhead to our setup process, but it brings many advantages...
 
-To quote from the OpenVPN web site "How-To" at :   
+If you are wary about security issues, read this excerpt from the OpenVPN web site "How-To" at :   
 [https://openvpn.net/community-resources/how-to/\#setting-up-your-own-certificate-authority-ca-and-generating-certificates-and-keys-for-an-openvpn-server-and-multiple-clients](https://openvpn.net/community-resources/how-to/#setting-up-your-own-certificate-authority-ca-and-generating-certificates-and-keys-for-an-openvpn-server-and-multiple-clients)
 
 > ### SETTING UP YOUR OWN CERTIFICATE AUTHORITY \(CA\) AND GENERATING CERTIFICATES AND KEYS FOR AN OPENVPN SERVER AND MULTIPLE CLIENTS <a id="setting-up-your-own-certificate-authority-ca-and-generating-certificates-and-keys-for-an-openvpn-server-and-multiple-clients"></a>
 >
 > #### Overview <a id="overview"></a>
 >
-> The first step in building an OpenVPN 2.x configuration is to establish a PKI \(public key infrastructure\). The PKI consists of:
+> **The first step** in building an OpenVPN 2.x configuration is to **establish a PKI** \(public key infrastructure\). The PKI consists of:
 >
 > * a separate certificate \(also known as a public key\) and private key for the server and each client, and
 > * a master Certificate Authority \(CA\) certificate and key which is used to sign each of the server and client certificates.
@@ -90,11 +88,9 @@ To quote from the OpenVPN web site "How-To" at :
 >
 > _Note that the server and client clocks need to be roughly in sync or certificates might not work properly._
 
-We'll take advantage of these benefits to keep the core security off-line from the VPN server itself : we'll **create the PKI entirely on your own machine**, in a "safe place" of your choice, and **only put the minimum required certificates on the VPN server and client\(s\)**.
+We'll take advantage of these benefits to keep the core security off-line from the VPN server itself : we'll **create the PKI entirely on your own machine**, in a **"safe place" of your choice**, and **only put the minimum required certificates on the VPN server and client\(s\)**.
 
 Building the PKI will be done with **Easy-RSA 2** which should come bundled with OpenVPN \(see [Tools](https://zeferby.gitbook.io/transparent-openvpn-for-fantasy-grounds/our-openvpn-based-solution/tools)\).
-
-**You will choose a "safe place" \(a folder\) on your machine** where Easy-RSA commands wil generate the certificates and keys we'll need.
 
 {% hint style="info" %}
 You can backup or transfer the contents of your PKI folder to another storage after it is complete.  I find it convenient to keep it in my machine in case i need to quickly disable some certificates to deny acces to an existing certificate
@@ -120,7 +116,7 @@ If you want to manage the contents of your S3 bucket with the **free version of 
 If you manage your S3 bucket contents with a **licenced version of CloudBerry Explorer for S3, and/or** with the **AWS management console, you can use encryption**.
 {% endhint %}
 
-**What will the S3 bucket contain ?**
+#### **What will the S3 bucket contain ?**
 
 * startup scripts for the AWS Linux/OpenVPN server
 * your own OpenVPN server configuration options
@@ -132,7 +128,9 @@ If you manage your S3 bucket contents with a **licenced version of CloudBerry Ex
 
 🧐 **You've been warned... Don't come back crying...** 😭 
 
-_If you want to store other data in there, we advise you to create a second private S3 bucket for that._
+{% hint style="warning" %}
+If you want to store **other data in S3**, please **create a second private S3 bucket** for that !
+{% endhint %}
 
 
 
@@ -142,16 +140,24 @@ This virtual server will be hosted at Amazon Web Services, a.k.a. AWS.
 
 **Check the** [**Amazon Web Services**](amazon-web-services.md) **section for an overview of what that means.** Some quick facts :
 
+{% hint style="success" %}
 If you have a new AWS account you'll be able to **run a small server for free 24x7 for one year** from account creation thanks to the **AWS Free Tier**.
+{% endhint %}
 
-**If you are out of the free tier bounds** \(account older than 1 year or multiple AWS servers running, whatever\), **you will incurr small running costs for your server and storage, but this solution is designed so that these costs are minimal, and probably neglectable for most.**
+#### **If you venture out of the AWS Free Tier bounds** :
 
-Choosing the cheapest AWS server type, which is quite adequate :
+If your AWS account is older than 1 year or you have multiple AWS servers running, whatever...
+
+**Then you will incurr small running costs for your server and storage, but this solution is designed so that these costs are minimal, and probably neglectable for most.**
+
+Choosing the **cheapest AWS server type**, which **is more than adequate** for that task :
 
 * **if you need to run it 24x7, which is VERY unlikely**, it can cost you in the **range of $5 to $10 /month, depending on the AWS region** of the world where you run it.
-* if you want to host games for **3x 4H a week**, which gives around 50 H/month, the cost would be in the **range of $0.3-$0.6 /month, depending on the region**.
+* if you want to host games for **3x 4H a week**, which gives around 50 H/month, the cost should be in the **range of $0.3-$0.6 /month, depending on the region**  _\(I don't know if AWS bothers to produce invoices for such low amounts...\)_
 
-We'll create an AWS virtual server :
+
+
+#### We'll create an AWS virtual server :
 
 * using a "free tier elligible" type of server
 * to run the basic "Amazon Linux AMI 2018.xx.y" distribution

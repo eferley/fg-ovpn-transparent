@@ -38,6 +38,8 @@ Details for Step 3 : Setup your Windows machine with OpenVPN and put the require
 
 Details for Step 4 : Configure AWS network security settings, create an S3 bucket and an IAM role
 
+ADD IAM USER
+
 4.1- Security Groups Without trying to replace the AWS documentation, let's just say AWS Security Groups are like firewall rules. Within the AWS EC2 console, you can dynamically assign Security Groups to machine instances, change the rules of existing Security Groups, etc... Note: If you follow the method given here with the auto-configuring scripts, SSH access will not be needed... You will need to authorize inbound network traffic to your OpenVPN virtual server :
 
 * for your SSH connection into Linux \(TCP 22\) : at least from your own home public IP \(but this IP may change over time\)
