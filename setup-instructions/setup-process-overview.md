@@ -1,7 +1,5 @@
 # Setup process overview
 
-The overall process follows here.
-
 We'll detail a step-by-step setup in the following pages, and add some more technical blocks of info that non tech-savvy readers can ignore 😝 :
 
 > **Tech Blurb**
@@ -13,6 +11,8 @@ We'll detail a step-by-step setup in the following pages, and add some more tech
 **\(local\)** steps are things done entirely in your own local machine.
 
 
+
+The overall process :
 
 **Step 0** : **Preparation** : Have an [account available on AWS](../proposed-solution/amazon-web-services.md#how-to-create-an-aws-account) and prepare a "safe" place on your own machine
 
@@ -28,5 +28,5 @@ We'll detail a step-by-step setup in the following pages, and add some more tech
 
 **Step 6** : \(AWS\) [Launch your FG-OpenVPN Linux server](step-6-launch-time.md) in your AWS Virtual Private Cloud
 
-Connect your VPN and enjoy...
+**Step 7** : Connect your VPN and enjoy...
 

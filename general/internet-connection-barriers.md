@@ -50,9 +50,11 @@ Setting up port forwarding for FG means you usually have to :
   * the destination / private / internal port : **TCP 1802** _This is the port of your GM FG machine on which FG listens to incoming player connections_
 * for some models you also will have to "Save the configuration"
 
-**As an example**, here is the rule i use at one of my network locations \(my current W7 machine is called AST7NBEF, selected from a dropdown list, and I simply called the rule "FG"\) :
+**As an example**, here is the rule i use at one of my network locations \(my current W7 machine is called AST7NBEF, selected from a dropdown list, and I simply added a "custom" rule that I called "FG"\) :
 
-![](../.gitbook/assets/image%20%2819%29.png)
+![FG Port Forwarding rule](../.gitbook/assets/image%20%2811%29.png)
+
+
 
 ### Dynamic/Static Private IP address
 
@@ -60,27 +62,29 @@ Setting up port forwarding for FG means you usually have to :
 If your model of router records a port forwarding rule target as an IP address you should **assign your GM FG machine a Static Private IP address in the router DHCP section.**
 
 **It is a** 👍 **good practice even if your router does not require it explicitely.**
-
-This way, every time **your GM FG machine** will reconnect to your local "home" network, it **will always have the same Private IP address**.
-
-Otherwise it will get a \(random\) **Dynamic Private IP address** when reconnecting, and after a few hours/days being off-line that new private IP **may not be the same as what you entered in your port forwarding rule**, which would then not work any more... 😩 
 {% endhint %}
+
+This way, every time **your GM FG machine** will reconnect to your local "home" network, it **will always get the same Private IP address**.
+
+**Otherwise** it gets a \(random\) **Dynamic Private IP** address when reconnecting, and after a few hours/days being off-line that new Private IP **may not be the same as what you specified in your port forwarding rule**, which would then be useless... 😩 
 
 As an example, here is the network setup at the same location as above :
 
-![](../.gitbook/assets/image.png)
+![Private IP addresses in the DHCP settings](../.gitbook/assets/image.png)
 
-And here is the bottom of the page with the static IP reservation part, where you can see I have the private IP 172.30.131.11 reserved for my W7 and it will always get this private IP every time I come to this place :
+And here is the bottom of the page with the **static IP reservation** part, where you can see I have the private IP 172.30.131.11 reserved for my W7 and it will always get this private IP every time I come to this place :
 
-![](../.gitbook/assets/image%20%2813%29.png)
+![Static Private IP address](../.gitbook/assets/image%20%287%29.png)
 
-{% hint style="info" %}
-This has **NOTHING to do with your Public IP**, which can also be either _dynamic or static_ depending on your Internet connection subscription.
+{% hint style="warning" %}
+This has **NOTHING TO DO with your PUBLIC IP**, which can also be either _dynamic or static_ depending on your Internet connection subscription.
 {% endhint %}
 
 {% hint style="info" %}
 A large info repository on many "Internet router" brands/models is available at [https://portforward.com/router.htm](https://portforward.com/router.htm) where you may find more step-by-step instructions for your own specific model. _**Just be wary of all the links inciting you to purchase tools and/or subscriptions there !**_
 {% endhint %}
+
+
 
 ## Barrier 5 🤔 : "Internet router" integrated firewall
 
@@ -100,9 +104,13 @@ So be sure to check your **Internet router settings to** 👍 **remove firewalli
 **You should be OK** 👌 **to host games on Fantasy Grounds !** 😺 **without needing a VPN** 😄 
 {% endhint %}
 
+
+
 ## Barrier 6 😩 : Cascaded devices with NAT/PAT
 
 Bad news !
 
 **Each and every "layer"** from the most "outer" \(= Internet\) side **has to Port-Forward TCP 1802 to the next "inner" layer** : from router to router until the last one, which must port-forward to the GM FG machine as above.
+
+
 

@@ -26,6 +26,7 @@
 * [Step 4 : Configure your AWS environment](setup-instructions/step-4-configure-your-aws-environment.md)
 * [Step 5 : Check, Finalize, Transfer files to S3](setup-instructions/step-5-check-finalize-transfer-files-to-s3.md)
 * [Step 6 : Launch time !](setup-instructions/step-6-launch-time.md)
+* [Step 7 : Connect and enjoy](setup-instructions/step-7-connect-and-enjoy.md)
 * [Step-by-step setup](setup-instructions/step-by-step-setup.md)
 * [Utility files ans scripts](setup-instructions/files.md)
 
