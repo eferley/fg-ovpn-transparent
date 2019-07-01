@@ -2,7 +2,7 @@
 
 We already gave the salient points about the kind of setup we propose in the [previous paragraph](https://zeferby.gitbook.io/transparent-openvpn-for-fantasy-grounds/general/vpn-solutions#your-own-1-gm-only-vpn-server-based-on-industry-standards), so let's have a closer look at the Why's and How's...
 
-_**We will make our way slowly, and I'll insist on the security aspects, so that you don't inadvertently create security "holes" in your own setup.**_
+_**We'll make our way SLOWLY, and I'll annoyingly insist on the security aspects, so that you don't inadvertently create security "holes" in your own setup or risk to break it down.**_
 
 ## Objectives
 
