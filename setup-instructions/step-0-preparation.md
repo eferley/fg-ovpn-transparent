@@ -27,7 +27,7 @@ _It is always easier to have multiple sub-folders that you can independently ren
 
 ![](../.gitbook/assets/image%20%284%29.png)
 
-In the **T:** drive, at the upper level under **`fg-ovpn`**, we have :
+In the **T:** drive, I created **`fg-ovpn`**, with :
 
 * **`docs`** for docs, articles, infos you may also download in case you need to look them up years later...
 * ⚠ **`MY-FG-OVPN`** for **our own FG OpenVPN setup** ⚠ 
