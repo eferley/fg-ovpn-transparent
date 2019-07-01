@@ -24,26 +24,26 @@ _Easy-RSA 2 is developed by the same team as OpenVPN._
 
 
 
-So, we download and save the installer for our version of Windows into **`T:\fg-ovpn\source-install`** :
+So, we download and save the installer from [https://openvpn.net/community-downloads/](https://openvpn.net/community-downloads/) for our version of Windows \(I have built a small temporary Windows 2012R2 to "impersonate" the GM FG machine for this demo\) into the folder we previously created at **`T:\fg-ovpn\source-install`** :
 
-![](../.gitbook/assets/image%20%286%29.png)
+![](../.gitbook/assets/image%20%288%29.png)
 
 ...and we execute, authorizing it to do its job through the **Yes** on the "User Access Control" dialog...  
 
 
-![](../.gitbook/assets/image%20%283%29.png)
+![](../.gitbook/assets/image%20%284%29.png)
 
 ...making sure to **select "Easy-RSA 2 Certificate Management Scripts"** :
 
-![](../.gitbook/assets/image%20%289%29.png)
+![](../.gitbook/assets/image%20%2812%29.png)
 
 ...AND **allowing the creation of the virtual network card** with the "**Install**" button :
 
-![](../.gitbook/assets/image%20%288%29.png)
+![](../.gitbook/assets/image%20%2811%29.png)
 
 Finally, we'll have our complete installation result looking like this \(depends on Windows version AND the version of OpenVPN\) :
 
-![](../.gitbook/assets/image%20%2812%29.png)
+![](../.gitbook/assets/image%20%2815%29.png)
 
 {% hint style="info" %}
 **Note the "TAP-Windows" group above :**
@@ -55,25 +55,34 @@ If you need multiple OpenVPN connected VPNs at the same time \(i often have 2 or
 
 Let's have a look at the installation folders in **`Program Files`** :
 
-![](../.gitbook/assets/image%20%2810%29.png)
+![](../.gitbook/assets/image%20%2813%29.png)
 
 
 
+We now have the whole required "prime materials" on disk.  Let's immediately create a source to initialize autonomous blank Public Key Infrastructures in our **`new-PKI`** folder :
+
+## Prepare the new-PKI folder contents
+
+This folder will be a ready-to-duplicate source folder to create a brand new PKI.  We'll keep the current version of the Easy-RSA script files and the associate binary programs with the current installed version.
+
+We'll then use it to initialize our own PKI in its own folder .  This way, even if we break/uninstall/lose our installation directory for whatever reason, we'll still be able to manage our VPN security \(create/revoke certificates\), and we'll have the right version of every program available.
+
+> **Tech Blurb :**
+>
+> Also by creating every \(only one needed for our setup\) PKIs by duplicating this source folder content later on, we have the ability to tweak script files or even the openssl configuration file, **used for that specific PKI** if needed, without impacting others.
 
 
 
+1. copy all files from **`<OpenVPN Installation>\easy-rsa`** to your **`new-PKI`** folder
+2. then copy these \(or all, if you want\) files from **`<OpenVPN Installation>\bin`** to **`new-PKI`** as well
 
-## =============== CONTINUE WORK HERE ================
+![Copy from easy-rsa to new-PKI](../.gitbook/assets/image%20%285%29.png)
+
+![Copy from bin to new-PKI](../.gitbook/assets/image%20%2810%29.png)
+
+**Your autonomous "ready-to-duplicate" `new-PKI` folder is now complete :**
+
+![](../.gitbook/assets/image%20%282%29.png)
 
 
-
-I usually try to keep a complete copy of Easy-RSA 2 directly in the "safe" folders where I create PKIs because :
-
-* all my PKIs are "off-line" PKIs for remote OpenVPN servers and i prefer a safer place to keep them than the Windows system drive...
-* i can edit the default settings specifically for each PKI and keep these customized files
-
-I encourage you to do the same and have a "blank PKI" folder ready to be duplicated to easily initialize new PKIs :
-
-* create/locate a **`new-PKI`** subdirectory somewhere in your safe place
-* copy the all files from the **`<OpenVPN Installation>\easy-rsa`** subdirectory to your target **`new-pki`** folder
 

@@ -10,6 +10,12 @@ We'll detail a step-by-step setup in the following pages, and add some more tech
 
 **\(local\)** steps are things done entirely in your own local machine.
 
+{% hint style="warning" %}
+Note : All our screenshots of Windows Explorer have been done with **visible file extensions**, and we also use some **command prompt windows** now and then, so :
+
+Refer to the "Check that you know" helper links in Step 0 about these if needed.
+{% endhint %}
+
 
 
 ## One-time setup process
