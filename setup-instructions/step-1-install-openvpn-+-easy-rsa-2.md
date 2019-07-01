@@ -24,6 +24,45 @@ _Easy-RSA 2 is developed by the same team as OpenVPN._
 
 
 
+So, we download and save the installer for our version of Windows into **`T:\fg-ovpn\source-install`** :
+
+![](../.gitbook/assets/image%20%286%29.png)
+
+...and we execute, authorizing it to do its job through the **Yes** on the "User Access Control" dialog...  
+
+
+![](../.gitbook/assets/image%20%283%29.png)
+
+...making sure to **select "Easy-RSA 2 Certificate Management Scripts"** :
+
+![](../.gitbook/assets/image%20%289%29.png)
+
+...AND **allowing the creation of the virtual network card** with the "**Install**" button :
+
+![](../.gitbook/assets/image%20%288%29.png)
+
+Finally, we'll have our complete installation result looking like this \(depends on Windows version AND the version of OpenVPN\) :
+
+![](../.gitbook/assets/image%20%2812%29.png)
+
+{% hint style="info" %}
+**Note the "TAP-Windows" group above :**
+
+OpenVPN uses a virtual network card/adapter to "connect" a VPN.
+
+If you need multiple OpenVPN connected VPNs at the same time \(i often have 2 or 3\), you'll need to "Add a new TAP...", but **this is not required for our purpose on the GM FG machine.**
+{% endhint %}
+
+Let's have a look at the installation folders in **`Program Files`** :
+
+![](../.gitbook/assets/image%20%2810%29.png)
+
+
+
+
+
+
+
 ## =============== CONTINUE WORK HERE ================
 
 
