@@ -61,7 +61,7 @@ To avoid accidentally keeping a \(wrong\) default value for **2 important fields
 
 
 
-So we edit vars.bat in a text editor \(_Right click + Edit_ opens Windows Notepad which is sufficient for good old **`.bat`** windows-only command files\) as follows.
+So we edit vars.bat in a text editor \(even _Right click + Edit_ with the very limited Windows Notepad is sufficient for good old **`.bat`** windows-only command files\) as follows.
 
 Supposing you start **from the original content below** \(sample as of OpenVPN v2.4.7\),
 

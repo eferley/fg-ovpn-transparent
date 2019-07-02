@@ -33,13 +33,13 @@
 
 ## Manage your server
 
-* [Untitled](manage-your-server/untitled.md)
+* [CRL refresh, AWS instance start/stop/launch/terminate, storage, etc](manage-your-server/untitled.md)
 
 ## Appendixes
 
 * [Acronyms and definitions](appendixes/acronyms-and-definitions.md)
-* [Possible future developments](appendixes/future-possible-developments.md)
 * [AWS terminology](appendixes/aws-terminology.md)
+* [Possible future developments](appendixes/future-possible-developments.md)
 
 ## Links
 

@@ -60,13 +60,17 @@ PuTTY is available from : [https://www.putty.org/](https://www.putty.org/)
 
 ### Your text editor of choice
 
-_**Avoid Windows basic Notepad**_ for its lack of customization options, no support for Linux-style "End-Of-Lines", etc.
+_**Avoid the very basic Windows Notepad**_ for its lack of customization options, no support for Linux-style "End-Of-Lines", etc.  If you paste in Windows Notepad file contents from these web pages, they will look like garbage.
 
-A good lightweight but feature-rich editor is **Notepad++** that you can find at : [https://notepad-plus-plus.org](https://notepad-plus-plus.org/)
+**ABSOLUTELY DON'T USE ANY MICROSOFT WORD-LIKE SOFTWARE !!!**
+
+Here are 3 very common good quality free text editors \(initially created for developers, they support much more than simple text editing, but this is out of our scope\) :
+
+* A good **lightweight but feature-rich free editor** is **Notepad++** that you can find at : [https://notepad-plus-plus.org](https://notepad-plus-plus.org/)
 
 ![](../.gitbook/assets/image%20%2843%29.png)
 
-**More powerful** \(but more complex\) editing tools are **available for free** like :
+**More powerful** \(but also more complex\) text editing environments are **available for free** like :
 
 * [Microsoft Visual Studio Code](https://code.visualstudio.com/)
 

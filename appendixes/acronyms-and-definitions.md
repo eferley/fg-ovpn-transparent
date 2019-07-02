@@ -1,5 +1,9 @@
 # Acronyms and definitions
 
+Here is a list of numerous acronyms used throughout this document.
+
+AWS-specific acronyms and terminology is developed in a [separate topic](aws-terminology.md).
+
 ## CA
 
 **Certificate Authority** : the top-most entity of a _Public Key Infrastructure_ \(**see PKI**\)
@@ -147,6 +151,10 @@ Your "home" network is a LAN \(and most likely a WLAN\).
 ## VPN
 
 **Virtual Private Network**
+
+## **VTT**
+
+**Virtual TableTop software : Fantasy Grounds is the best !** 😁 
 
 ## WAN
 
