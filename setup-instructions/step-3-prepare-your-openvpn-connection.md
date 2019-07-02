@@ -1,2 +1,2 @@
-# Step 3 : Prepare your OpenVPN connection
+# Step 3 : Prepare your GM OpenVPN connection
 

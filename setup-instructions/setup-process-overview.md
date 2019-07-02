@@ -26,11 +26,11 @@ Note : All our screenshots of Windows Explorer have been done with **visible fil
 
 **Step 2** : \(local\) [Create a Pubic Key Infrastructure](step-2-create-your-pki.md) with its Certificate Authority and the public certificates + private keys for the OpenVPN server and at least one VPN client \(= the GM\)
 
-**Step 3** : \(local\) [Setup your OpenVPN client](step-3-prepare-your-openvpn-connection.md) with the required certificates and keys into the config directory
+**Step 3** : \(local\) [Setup your GM OpenVPN client](step-3-prepare-your-openvpn-connection.md) with the required certificates and keys into the config directory
 
 **Step 4** : \(AWS\) [Configure your AWS environment](step-4-configure-your-aws-environment.md) : VPC \(Virtual Private Cloud\), networks, security settings, create an S3 bucket and an IAM user and IAM role \(IAM=Identity and Access Management\)
 
-**Step 5** : \(local+AWS\) [Check your settings, Finalize all](step-5-check-finalize-transfer-files-to-s3.md) configuration elements and transfer files to AWS S3
+**Step 5** : \(local+AWS\) [Check your settings, Finalize all](step-5-check-finalize-transfer-files-to-s3.md) configuration elements and transfer files to AWS S3 for server auto-configuration at launch time
 
 
 
