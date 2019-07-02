@@ -1,2 +1,2 @@
-# Step 7 : Connect and enjoy
+# Step 7 : Connect and enjoy -WIP
 

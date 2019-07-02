@@ -20,7 +20,7 @@ We'll now more or less follow the instructions you can read in the README.txt fi
 * **we'll add some safeguarding to the most dangerous command scripts**
 {% endhint %}
 
-### MY-FG-OVPN-PKI-KEYS sub-folder
+### Create the keys sub-folder
 
 Let's create a sub-folder into our own PKI folder, to store this particular PKI's "database" of certificates and keys, that we'll call **`MY-FG-OVPN-PKI-KEYS`** :
 
@@ -35,7 +35,7 @@ You can double-click **init-config.bat** in **`MY-FG-OVPN-PKI`** to run this com
 {% hint style="danger" %}
 The init-config.bat command **should not be reused later on, as it would ERASE the customizations** we are about to do in the vars.bat file.
 
-So we'll **rename init-config.bat** to **DONE-DANGER-init-config.bat**
+So we'll **rename init-config.bat** to **DONE-DANGER-init-config.bat and FORGET about it.**
 {% endhint %}
 
 ![Renaming a &quot;once only&quot; command](../.gitbook/assets/image%20%283%29.png)
@@ -44,20 +44,18 @@ So we'll **rename init-config.bat** to **DONE-DANGER-init-config.bat**
 
 ### Edit vars.bat
 
-We now have to **edit the vars.bat file** for it to suit our requirements :
+We now have to **edit the vars.bat file for it to conform to our requirements** :
 
-* we **comment out \(or delete\)** the lines playing with the **PATH** to ensure the commands use the versions of executable binary programs we have in our PKI folder and none other \(lines 7 and 10 below; only line 7 needs editing since line 10 is already commented out with "**`rem`** "\)
+* we **comment out \(or delete\)** the lines playing with the **PATH** to ensure the commands use the versions of executable binary programs that we have in our PKI folder, and none other \(lines 7 and 10 below; only line 7 needs editing since line 10 is already commented out with "**`rem`** "\)
 * we set **HOME** to the full path of the root folder for our PKI; everything the Easy-RSA commands will do later on will happen from that location : this is the **`T:\fg-ovpn\MY-FG_OVPN\MY_FG_OVPN_PKI`** folder \(line 12 below\)
-* we set **KEY\_DIR** to the name of the subfolder where we want our certificates and keys to be stored : this is the **`MY-FG-OVPN-PKI-KEYS`** we created earlier
+* we set **KEY\_DIR** to the name of the sub-folder where we want our certificates and keys to be stored : this is the **`MY-FG-OVPN-PKI-KEYS`** we created earlier
 * we give some default values for our future certificates in the list of **set KEY\_xxxx** commands at the end of the file.
 
 {% hint style="warning" %}
-To avoid accidentally keeping a \(wrong\) default value for **2 important fields** of our certificates, we'll put a clear **prompt for action as their default value** :
-
-**KEY\_CN** and **KEY\_NAME**
+To avoid accidentally keeping a \(wrong\) default value for **2 important fields** of our certificates, we'll put a **prompt for action as their default value** : **KEY\_CN** and **KEY\_NAME**
 {% endhint %}
 
-* we can **keep or delete all the comment lines** \(= lines starting with "**`rem`** "\)
+* we can **keep or delete all the commented lines** \(= lines starting with "**`rem`** "\)
 
 
 
@@ -125,11 +123,13 @@ set PKCS11_PIN=1234
 ...then you should **end up with this kind of minimal final result** :
 
 {% hint style="warning" %}
-**ALL the other lines** you may want to keep for reference in the **vars.bat** file should be **commented out** with **"rem " as seen above**
+**ALL the other lines** you may want to keep for reference in the **vars.bat** file should be **commented out** with **"rem " as seen above.**
+
+**Here, i chose to delete them.**
 {% endhint %}
 
 {% hint style="info" %}
-_**Of course the HOME full path to your own PKI may be different than mine, as well as your choices for the KEY\_COUNTRY etc... default values at the end**_
+_**Of course the HOME full path to your own PKI may be different than this demo, as well as your KEY\_COUNTRY etc... default values at the end of the file**_
 {% endhint %}
 
 {% code-tabs %}

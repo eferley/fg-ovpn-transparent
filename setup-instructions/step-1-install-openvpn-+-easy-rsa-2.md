@@ -41,7 +41,9 @@ So, we download and save the installer from [https://openvpn.net/community-downl
 
 ![](../.gitbook/assets/image%20%2824%29.png)
 
-Finally, we'll have our complete installation result looking like this \(depends on Windows version AND the version of OpenVPN\) :
+{% hint style="success" %}
+Finally, we'll have our **complete installation result** looking like this \(depends on Windows version AND the version of OpenVPN\) :
+{% endhint %}
 
 ![](../.gitbook/assets/image%20%2832%29.png)
 
@@ -57,7 +59,7 @@ Let's have a look at the installation folders in **`Program Files`** :
 
 
 
-We now have the whole required "prime materials" on disk.  Let's immediately create a source to initialize autonomous blank Public Key Infrastructures in our **`new-PKI`** folder :
+We now have the whole required "prime materials" on disk.  Let's immediately create a source to initialize "autonomous" blank Public Key Infrastructures in our **`new-PKI`** folder :
 
 ## Prepare the new-PKI folder contents
 
@@ -78,7 +80,9 @@ We'll then use it to initialize our own PKI in its own folder .  This way, even 
 
 ![Copy from bin to new-PKI](../.gitbook/assets/image%20%2822%29.png)
 
+{% hint style="success" %}
 **Your autonomous "ready-to-duplicate" `new-PKI` folder is now complete :**
+{% endhint %}
 
 ![](../.gitbook/assets/image%20%286%29.png)
 

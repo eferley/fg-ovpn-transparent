@@ -1,2 +1,2 @@
-# Step 8 : Destroy/"Terminate" after use
+# Step 8 : Destroy/"Terminate" after use -WIP
 

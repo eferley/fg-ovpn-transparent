@@ -1,26 +1,43 @@
 # Setup process overview
 
-We'll detail a step-by-step setup in the following pages, and add some more technical blocks of info that non tech-savvy readers can ignore 😝 :
+We'll detail a ~~_boring_~~ step-by-step complete setup process in the following sections, and add some more technical blocks of info that non tech-savvy readers can safely ignore 😝 :
 
 > **Tech Blurb**
 >
-> blah blah
+> nerd blah blah
 
+Blocs of "code" like these 2 samples can be copy/pasted with the small button at the top-right corner.  
+⚠ Use a [proper text editor](../proposed-solution/tools.md#your-text-editor-of-choice) to paste, **not Windows Notepad** ⚠ 
 
+{% code-tabs %}
+{% code-tabs-item title="Plain text sample.txt" %}
+```text
+This is a 
+sample block of plain text "code"
+```
+{% endcode-tabs-item %}
 
-**\(local\)** steps are things done entirely in your own local machine.
+{% code-tabs-item title="Linux shell script sample.sh" %}
+```bash
+#!/bin/bash
+/usr/local/my-awesome-script.sh
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+**\(local\)** steps are things done entirely in your own local machine. We'll begin playing with AWS at Step 4.
 
 {% hint style="warning" %}
 Note : All our screenshots of Windows Explorer have been done with **visible file extensions**, and we also use some **command prompt windows** now and then, so :
 
-**Refer to the "Check that you know/learn" helper links in Step 0** if needed.
+Refer to the **"**[**Check that you know/learn**](step-0-preparation.md#check-that-you-know-learn)**"** helper links if needed...
 {% endhint %}
 
 
 
 ## One-time setup process
 
-**Step 0** : **Preparation** : Have an [account available on AWS](../proposed-solution/amazon-web-services.md#how-to-create-an-aws-account) and prepare a "safe" place on your own machine
+**Step 0** : **Preparation** : Have an [account available on AWS](../proposed-solution/amazon-web-services.md#how-to-create-an-aws-account), prepare a "safe" place on your own machine, check you have a proper text editor
 
 **Step 1** : \(local\) [Download and install](step-1-install-openvpn-+-easy-rsa-2.md) **OpenVPN \(+ Easy-RSA\)** on your Windows machine \(+optional Tools if you want\)
 

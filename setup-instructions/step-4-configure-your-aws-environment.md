@@ -1,2 +1,2 @@
-# Step 4 : Configure your AWS environment
+# Step 4 : Configure your AWS environment -WIP
 
