@@ -13,7 +13,7 @@ We'll detail a step-by-step setup in the following pages, and add some more tech
 {% hint style="warning" %}
 Note : All our screenshots of Windows Explorer have been done with **visible file extensions**, and we also use some **command prompt windows** now and then, so :
 
-**Refer to the "Check that you know" helper links in Step 0** if needed.
+**Refer to the "Check that you know/learn" helper links in Step 0** if needed.
 {% endhint %}
 
 

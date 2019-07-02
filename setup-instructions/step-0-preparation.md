@@ -6,7 +6,7 @@ Let's begin with 2 things :
 
 ...as previously explained.
 
-## Check that you know :
+## Check that you know/learn :
 
 * [how to open a command line](https://www.digitalcitizen.life/7-ways-launch-command-prompt-windows-7-windows-8) with your version of Windows
 * [how to show file extensions](https://www.howtohaven.com/system/show-file-extensions-in-windows-explorer.shtml) in Windows Explorer
@@ -25,7 +25,7 @@ _It is always easier to have multiple sub-folders that you can independently ren
 
 **I suggest an organization like this one** \(in this example i prepared sub-folders for 2 GMs, just in case\) :
 
-![](../.gitbook/assets/image%20%289%29.png)
+![](../.gitbook/assets/image%20%2817%29.png)
 
 In the **T:** drive, I created **`fg-ovpn`**, with :
 
