@@ -4,6 +4,8 @@ Acronyms
 
 AWS
 
+AZ
+
 EBS
 
 EBS volume
