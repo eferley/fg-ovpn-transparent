@@ -27,7 +27,7 @@ _It is always easier to have multiple sub-folders that you can independently ren
 
 **I suggest an organization like this one** \(in this example i prepared sub-folders for 2 GMs = VPN "clients"\) :
 
-![](../.gitbook/assets/image%20%2820%29.png)
+![](../.gitbook/assets/image%20%2831%29.png)
 
 In the **T:** drive, I created **`fg-ovpn`**, with :
 
