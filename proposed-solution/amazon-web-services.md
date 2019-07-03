@@ -55,7 +55,7 @@ So keep this in mind :
 * **Each AWS Region \(geographical area\) has it's own costs.** From what i saw, _South America is currently \(mid 2019\) more expensive than other regions_.  You may take this into account when choosing the place where you'll run your own server
 * **Periodically check** your month-to-date actuals and month-total estimated values in your **Billing Dashboard** in the AWS Management Console.  They are updated at intervals of 6 to 8 hours : 
 
-![Billing Dashboard shortcut, near the top-right corner in the AWS console](../.gitbook/assets/image%20%287%29.png)
+![Billing Dashboard shortcut, near the top-right corner in the AWS console](../.gitbook/assets/image%20%289%29.png)
 
 
 
@@ -76,6 +76,14 @@ So keep this in mind :
 {% hint style="info" %}
 Overall, **WITHOUT the Free Tier goodies**, you should be able to run your VPN server for **50 Hours per month for less than $0.5 /month and a permanently running \(24x7\) server should cost $5 to $10 depending on the world region**
 {% endhint %}
+
+
+
+### Mobile Management App
+
+This is something I like : when on the move I can use the mobile app to check statues or start/stop AWS servers etc...
+
+It does **not** provide _everything_ you can do with the main AWS Management Console, though.
 
 
 

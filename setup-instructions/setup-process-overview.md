@@ -6,8 +6,7 @@ We'll detail a ~~_boring_~~ step-by-step complete setup process in the following
 >
 > nerd blah blah
 
-Blocs of "code" like these 2 samples can be copy/pasted with the small button at the top-right corner.  
-⚠ Use a [proper text editor](../proposed-solution/tools.md#your-text-editor-of-choice) to paste, **not Windows Notepad** ⚠ 
+Blocs of "code" like these 2 samples below can be copy/pasted with the small button at the top-right corner.⚠ Use a [proper text editor](../proposed-solution/tools.md#your-text-editor-of-choice) to paste, **not Windows Notepad if you want to avoid pain !** ⚠ 
 
 {% code-tabs %}
 {% code-tabs-item title="Plain text sample.txt" %}

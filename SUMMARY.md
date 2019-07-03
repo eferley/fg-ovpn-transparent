@@ -16,7 +16,7 @@
 * [Tools](proposed-solution/tools.md)
 * [Amazon Web Services](proposed-solution/amazon-web-services.md)
 
-## Setup instructions - WIP <a id="setup-instructions"></a>
+## Step-by-step instructions <a id="setup-instructions"></a>
 
 * [Setup process overview](setup-instructions/setup-process-overview.md)
 * [Step 0 : Preparation](setup-instructions/step-0-preparation.md)
