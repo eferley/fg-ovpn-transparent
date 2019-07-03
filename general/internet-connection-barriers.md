@@ -52,7 +52,7 @@ Setting up port forwarding for FG means you usually have to :
 
 **As an example**, here is the rule i use at one of my network locations \(my current W7 machine is called AST7NBEF, selected from a dropdown list, and I simply added a "custom" rule that I called "FG"\) :
 
-![FG Port Forwarding rule](../.gitbook/assets/image%20%2846%29.png)
+![FG Port Forwarding rule](../.gitbook/assets/image%20%2847%29.png)
 
 
 
@@ -74,7 +74,7 @@ As an example, here is the network setup at the same location as above :
 
 And here is the bottom of the page with the **static IP reservation** part, where you can see I have the private IP 172.30.131.11 reserved for my W7 and it will always get this private IP every time I come to this place :
 
-![Static Private IP address](../.gitbook/assets/image%20%2839%29.png)
+![Static Private IP address](../.gitbook/assets/image%20%2840%29.png)
 
 {% hint style="warning" %}
 This has **NOTHING TO DO with your PUBLIC IP**, which can also be either _dynamic or static_ depending on your Internet connection subscription.
