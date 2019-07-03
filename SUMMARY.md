@@ -28,7 +28,7 @@
 * [Step 6 : Launch time ! -WIP](setup-instructions/step-6-launch-time.md)
 * [Step 7 : Connect and enjoy -WIP](setup-instructions/step-7-connect-and-enjoy.md)
 * [Step 8 : Destroy/"Terminate" after use -WIP](setup-instructions/step-8-destroy-terminate-after-use.md)
-* [Utility files ans scripts -WIP](setup-instructions/files.md)
+* [Utility files and scripts -WIP](setup-instructions/files.md)
 * [Step-by-step setup -OLD](setup-instructions/step-by-step-setup.md)
 
 ## Manage your server

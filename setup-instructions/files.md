@@ -1,4 +1,4 @@
-# Utility files ans scripts -WIP
+# Utility files and scripts -WIP
 
 
 

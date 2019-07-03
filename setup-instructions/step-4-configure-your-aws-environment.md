@@ -32,7 +32,7 @@ _**I'll now wait for you to come back with your shiny admin login to this brand 
 
 😁 **Ah ! There you are ! And you're an Admin ! And you're at the AWS Management Console ! Great !**
 
-![The AWS Management Console](../.gitbook/assets/image%20%2837%29.png)
+![The AWS Management Console](../.gitbook/assets/image%20%2840%29.png)
 
 This is the "home" of your management console : you can **manage your account** with the menu titled with your "IAM username" @ "account name", **choose an "AWS Region"** with the menu to the right of it, access to the management of all sorts of AWS services.
 
@@ -55,7 +55,7 @@ Many AWS services operate at the AWS Region level and you can have very differen
 
 
 
-### IAM Role for your server
+### IAM Role \(region-agnostic\)
 
 The first "service console" we'll open is the **IAM console** where you'll find the "**Role**" option in the menu to the left :
 
@@ -63,7 +63,7 @@ The first "service console" we'll open is the **IAM console** where you'll find 
 
 Choose this link, then use the big blue "**Create Role**" button at the top...
 
-![](../.gitbook/assets/image%20%2855%29.png)
+![](../.gitbook/assets/image%20%2861%29.png)
 
 Click :
 
@@ -72,13 +72,15 @@ Click :
 
 Then click the big blue "**Next: Permissions**" button at the bottom...
 
-![](../.gitbook/assets/image%20%2845%29.png)
+![](../.gitbook/assets/image%20%2834%29.png)
+
+_I already have some policies and roles defined in this account, which is why I had to blur specifics_
 
 Use the search filter box above the list of **permission policies** to locate and **put a check mark** on these 2 policies provided by AWS :
 
 * **AmazonEC2FullAccess** \(search for "ec2fu"\)
 
-![](../.gitbook/assets/image%20%2851%29.png)
+![](../.gitbook/assets/image%20%2857%29.png)
 
 * **AmazonS3FullAccess** \(search for "s3fu"\)
 
@@ -86,11 +88,11 @@ Use the search filter box above the list of **permission policies** to locate an
 
 Then click the blue "**Next: Tags**" button at the bottom...
 
-![](../.gitbook/assets/image%20%2840%29.png)
+![](../.gitbook/assets/image%20%2844%29.png)
 
 We don't need tagging, so just click the blue "**Next: Review**" button at the bottom...
 
-![](../.gitbook/assets/image%20%2857%29.png)
+![](../.gitbook/assets/image%20%2863%29.png)
 
 **Give a name** to your new role : i suggest **`my-fg-ovpn-ec2role`** as shown above.
 
@@ -108,12 +110,69 @@ Your server will need that to :
 
 * auto-configure itself during startup \(setting network options in the EC2 service\)
 * download configuration parameters and scripts from S3
+* without the need of passwords \(=&gt; 👍 **safe parameter files and scripts** 👍 \)
 
-_**Note:** This role could have much more restricted custom-specified permissions, both in EC2 and S3, than "Full Access", but that would be too complex to explain here.  Also if you connect to your server in an interactive terminal, you'll be happy to access the full EC2 and S3 APIs without restriction or needing an access key._
+_**Note:** This IAM Role could have been defined with restricted custom-specified permissions, both in EC2 and S3, rather than "Full Access", but that would be too complex to explain here.  Also if you connect to your server in an interactive terminal, you'll be happy to access the full EC2 and S3 APIs from there without restriction or needing an access key or password._
 
 
 
+### Choosing the AWS Region
 
+Starting from here, let's choose an AWS Region as our playground.  The **geographically closest to you** is the best because that will usually give **minimal latency** \(=delay\) in network traffic between you and your server.
+
+For this demo I'll choose Stockholm, an AWS region which is "virgin territory" for me \(I have never used it before\) :
+
+![](../.gitbook/assets/image%20%2853%29.png)
+
+
+
+### S3 bucket
+
+Let's first create our storage space for parameters and scripts : an S3 bucket.
+
+{% hint style="danger" %}
+**KEEP IT PRIVATE !!   KEEP IT PRIVATE !!   KEEP IT PRIVATE !!   KEEP IT PRIVATE !!**   
+{% endhint %}
+
+👆 _Do you need me to repeat, or is that clear enough ?_👆 
+
+So let's go to the **S3 console** \(S3 is in the _**Storage**_ section on the main console listing all services\) :
+
+![](../.gitbook/assets/image%20%2849%29.png)
+
+You can guess we'll click the blue "Create bucket" button...
+
+![](../.gitbook/assets/image%20%2864%29.png)
+
+**Step 1 : Give it a name,** which must conform to some name restrictions, and be unique \(so you may need to change it if your preferred name is already used by someone else\), check the **region**, then hit "**Next**"...
+
+![](../.gitbook/assets/image%20%2832%29.png)
+
+**Step 2 :** let's **NOT** use any option for now and simply click "**Next**"...
+
+![](../.gitbook/assets/image%20%2835%29.png)
+
+👇 _If you already forgot..._ 👇 
+
+{% hint style="danger" %}
+**KEEP IT PRIVATE !!   KEEP IT PRIVATE !!   KEEP IT PRIVATE !!   KEEP IT PRIVATE !!**   
+{% endhint %}
+
+**Step 3 :** So let's **keep the security tight** and "**Block** _**all**_ **public access**" as is the default, and hit "**Next**"...
+
+![](../.gitbook/assets/image%20%2845%29.png)
+
+A quick review of our choices, then click "**Create bucket**"...
+
+![](../.gitbook/assets/image%20%2843%29.png)
+
+{% hint style="success" %}
+**...and here is your own private bucket, reporting for duty !**
+{% endhint %}
+
+
+
+### Virtual Private Cloud : a quick overview
 
 
 
