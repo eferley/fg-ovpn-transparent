@@ -10,7 +10,7 @@ As first step we'll duplicate the whole contents of our **`new-PKI`** folder int
 
 ![Copy all from the source](../.gitbook/assets/image%20%2824%29.png)
 
-![Paste to the target](../.gitbook/assets/image%20%2846%29.png)
+![Paste to the target](../.gitbook/assets/image%20%2847%29.png)
 
 {% hint style="info" %}
 We'll now more or less follow the instructions you can read in the README.txt file, except that :
@@ -256,7 +256,7 @@ dir
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-![Looks like we&apos;re in the right place !](../.gitbook/assets/image%20%2844%29.png)
+![Looks like we&apos;re in the right place !](../.gitbook/assets/image%20%2845%29.png)
 
 Then once we know we have arrived at the right place, **the VERY FIRST COMMAND** we'll type is :
 
@@ -301,7 +301,7 @@ Let's use **the "killer" command script**, give **the Y answer THIS ONE TIME**, 
 
 ![THE ONE TIME : &quot;Y&quot; answer](../.gitbook/assets/image%20%2822%29.png)
 
-![](../.gitbook/assets/image%20%2858%29.png)
+![](../.gitbook/assets/image%20%2859%29.png)
 
 
 
@@ -324,7 +324,7 @@ Let's call our CA : **my-fg-ovpn-ca**, keeping our good prefixing habit.
 
 This creates the PKI Certificate Authority's own self-signed certificate \(**ca.crt**\) and private key \(**ca.key**\) in the **`MY-FG-OVPN-PKI-KEYS`** sub-folder.
 
-![](../.gitbook/assets/image%20%2854%29.png)
+![](../.gitbook/assets/image%20%2855%29.png)
 
 Since we are here within our own PKI, we only have one CA so these simple filenames are fine. But when we'll use our CA certificate elsewhere, many multiple CAs may be involved so :
 
@@ -352,7 +352,7 @@ Easy, but may take a long time depending on your computer !
 .\build-dh.bat
 ```
 
-![Beginning of the DH file creation](../.gitbook/assets/image%20%2838%29.png)
+![Beginning of the DH file creation](../.gitbook/assets/image%20%2839%29.png)
 
 ...time passes...finally :
 
@@ -360,7 +360,7 @@ Easy, but may take a long time depending on your computer !
 
 This has generated the [**Diffie-Hellman-Merkel key exchange**](https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange) parameter file that will be used to initiate encryption sessions.
 
-![](../.gitbook/assets/image%20%2852%29.png)
+![](../.gitbook/assets/image%20%2853%29.png)
 
 {% hint style="warning" %}
 We'll also keep a **uniquely named copy of dh2048.pem** : **my-fg-ovpn-dh2048.pem**
@@ -406,7 +406,7 @@ This creates 3 files in your keys folder, with the name you typed on the command
 * **my-fg-ovpn-srv.key** : the server private key
 * **my-fg-ovpn-srv.csr** : the "certificate signing request" used during the process
 
-![](../.gitbook/assets/image%20%2860%29.png)
+![](../.gitbook/assets/image%20%2861%29.png)
 
 These files should **already be uniquely named**, so we'll keep them as they are.
 
@@ -421,15 +421,15 @@ Being used to D&D, i already called my clients subfolders my-fg-ovpn-dm01/02, so
 .\build-key.bat my-fg-ovpn-dm01
 ```
 
-![Create, sign, commit : my-fg-ovpn-dm01 for one GM](../.gitbook/assets/image%20%2857%29.png)
+![Create, sign, commit : my-fg-ovpn-dm01 for one GM](../.gitbook/assets/image%20%2858%29.png)
 
 **Do the same thing with my-fg-ovpn-dm02...**
 
-![Create, sign, commit : my-fg-ovpn-dm02 for a second GM](../.gitbook/assets/image%20%2845%29.png)
+![Create, sign, commit : my-fg-ovpn-dm02 for a second GM](../.gitbook/assets/image%20%2846%29.png)
 
 You should now have :
 
-![](../.gitbook/assets/image%20%2841%29.png)
+![](../.gitbook/assets/image%20%2842%29.png)
 
 
 
@@ -450,7 +450,7 @@ But to create that CRL, **we need at least one client certificate to be revoked,
 .\revoke-full my-fg-ovpn-dm02
 ```
 
-![Revoke poor DM02 !](../.gitbook/assets/image%20%2853%29.png)
+![Revoke poor DM02 !](../.gitbook/assets/image%20%2854%29.png)
 
 You can see on the above screenshot :
 
@@ -507,7 +507,7 @@ We'll create this key in our keys sub-folder :
 openvpn.exe --genkey --secret MY-FG-OVPN-PKI-KEYS\my-fg-ovpn-ta.key
 ```
 
-![](../.gitbook/assets/image%20%2840%29.png)
+![](../.gitbook/assets/image%20%2841%29.png)
 
 Nothing fancy, it just creates the last key file we were missing in our security arsenal. Here is the complete list of files in our keys sub-folder :
 

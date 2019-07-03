@@ -4,9 +4,9 @@
 
 > _I won't go into the war between these competitors \(and others\).  Being an AWS user since 2014, I am proficient enough  with the AWS platform to design a reliable and secure "end-user" setup.  Competing offers can provide the equivalent of what I'll show here but I'm not proficient enough with them..._
 
-**IaaS** means you can create your virtual environment in the cloud, hosted within AWS infrastructure, "exactly" the way you want : networks, subnets, private or public, in multipe geographic locations, with servers and databases of all sizes and types, with or without Internet access, network traffic filtering, etc...
+**IaaS** means you can create your virtual environment in the cloud, hosted within AWS infrastructure, **"exactly" the way you want** : networks, subnets, private or public, in multipe geographic locations, with servers and databases of all sizes and types, with or without Internet access, network traffic filtering, etc...
 
-"_exactly the way you want_" implies some measure of "do it yourself" and entails a **not-so-easy learning curve** to master the ins and outs of the AWS platform \(just like other IaaS providers\).  So we'll use a **simple but secure setup**.
+"_exactly the way you want_" implies some measure of **"do it yourself"** and entails a **not-so-easy learning curve** to master the ins and outs of the AWS platform \(just like all other IaaS providers\).  So we'll use a **simple but secure setup**.
 
 **AWS uses a "pay as you go" economic model, and provides a nice 1 year Free Tier + some on-going goodies after the first year.**
 
@@ -24,7 +24,12 @@ To become an AWS user you have to **create an account** \(even if only to use th
 
 Go check and follow the process here : [https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/)
 
-Or simply cick "Sign up" on the main AWS page at : [https://aws.amazon.com](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/)
+Or simply click "**Create Free Account**" at the bottom of the main AWS page at : [https://aws.amazon.com](https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/)
+
+Also here is a link to a[ recent enough video showing both](https://youtu.be/W-udN-8qTHE) :
+
+* new AWS account creation
+* first IAM user creation in the new account
 
 
 

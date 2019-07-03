@@ -1,4 +1,4 @@
-# Step 3 : Setup GM OpenVPN connections -WIP
+# Step 3 : Setup OpenVPN connections
 
 We'll now prepare sets of security and parameter files per OpenVPN client \(GM in our context\) so that they can be distributed to the relevant people/machines.
 
@@ -10,7 +10,7 @@ But we'll also do it for "my-fg-ovpn-dm02" so you can test both, and see the con
 
 
 
-In the first part we are looking at things _**as the PKI owner.**_  Then we'll switch to the _**VPN user point of view**_ when we being using _**OpenVPN GUI.**_
+In the first part we are looking at things _**as the PKI owner.**_  Then we'll switch to the _**VPN user point of view**_ when we being playing with _**OpenVPN GUI.**_
 
 
 
@@ -68,7 +68,7 @@ So we'll save the .ovpn file above to **`T:\fg-ovpn\MY-FG-OVPN\my-fg-ovpn-client
 
 Which gives :
 
-![OpenVPN Client parameters for my-fg-ovpn-dm01](../.gitbook/assets/image%20%2837%29.png)
+![OpenVPN Client parameters for my-fg-ovpn-dm01](../.gitbook/assets/image%20%2838%29.png)
 
 {% hint style="success" %}
 **Your "distribution folder" for my-fg-ovpn-dm01 is complete...**
@@ -143,7 +143,7 @@ Actually this is an excellent thing : OpenVPN will stay as inconspicuous as poss
 
 Ok, let's move on to the **notification icons** on the bottom right of the desktop, where you'll finally discover something new :
 
-![](../.gitbook/assets/image%20%2850%29.png)
+![](../.gitbook/assets/image%20%2851%29.png)
 
 I choose to have this notification icon always visible, so it will now always be on my taskbar.
 
@@ -171,7 +171,7 @@ Now let's have a look at the folders in my Windows personal storage \(that we se
 
 ![Let&apos;s copy from the client distributions...](../.gitbook/assets/image%20%2819%29.png)
 
-![...to our own &quot;live&quot; client setup.](../.gitbook/assets/image%20%2851%29.png)
+![...to our own &quot;live&quot; client setup.](../.gitbook/assets/image%20%2852%29.png)
 
 {% hint style="success" %}
 **There we are ! All set and ready to connect :**
@@ -179,15 +179,16 @@ Now let's have a look at the folders in my Windows personal storage \(that we se
 
 ![](../.gitbook/assets/image%20%2812%29.png)
 
+When your OpenVPN server is on-line and you know its **Public IP** :
 
+* you'll use the "**Edit config**" option to write the **public IP at line 6** of the config, save and close the file,
+* then right-click OpenVPN GUI again, this time choosing "**Connect**"
 
+🎆 **Done !** 🎆 ****
 
-
-
-
-
-
-
+{% hint style="info" %}
+Note : the **config files** you edit when using "**Edit Config**" of **OpenVPN GUI** are the ones stored in your **OpenVPN personal folder.**
+{% endhint %}
 
 
 
