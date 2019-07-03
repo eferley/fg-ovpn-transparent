@@ -8,9 +8,9 @@ Properly creating the PKI is the **fundamental anchor of your setup's security !
 
 As first step we'll duplicate the whole contents of our **`new-PKI`** folder into **our own PKI** sub-folder named **`MY-FG-OVPN-PKI`** : select **all files**, then **Copy**, go to the **target folder** then **Paste**
 
-![Copy all from the source](../.gitbook/assets/image%20%2814%29.png)
+![Copy all from the source](../.gitbook/assets/image%20%2815%29.png)
 
-![Paste to the target](../.gitbook/assets/image%20%2830%29.png)
+![Paste to the target](../.gitbook/assets/image%20%2832%29.png)
 
 {% hint style="info" %}
 We'll now more or less follow the instructions you can read in the README.txt file, except that :
@@ -24,7 +24,7 @@ We'll now more or less follow the instructions you can read in the README.txt fi
 
 Let's create a sub-folder into our own PKI folder, to store this particular PKI's "database" of certificates and keys, that we'll call **`MY-FG-OVPN-PKI-KEYS`** :
 
-![](../.gitbook/assets/image%20%289%29.png)
+![](../.gitbook/assets/image%20%2810%29.png)
 
 
 
@@ -209,7 +209,7 @@ This way, when we run this "killer" command script file, we'll have a **warning 
 
 ...and just to be safe, we'll **rename `clean-all.bat` to `NEVER-AGAIN-DANGER-clean-all.bat`** !
 
-![Renaming THE &quot;killer&quot; command](../.gitbook/assets/image%20%288%29.png)
+![Renaming THE &quot;killer&quot; command](../.gitbook/assets/image%20%289%29.png)
 
 {% hint style="info" %}
 _What ? Sorry ? Are you kidding me ? **Did I ever fall into that trap**, instantly killing a PKI that had been used for 3 years with 50+ certificates ? With an out of date backup ?..._
@@ -256,7 +256,7 @@ dir
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-![Looks like we&apos;re in the right place !](../.gitbook/assets/image%20%2828%29.png)
+![Looks like we&apos;re in the right place !](../.gitbook/assets/image%20%2830%29.png)
 
 Then once we know we have arrived at the right place, **the VERY FIRST COMMAND** we'll type is :
 
@@ -299,9 +299,9 @@ Let's use **the "killer" command script**, give **the Y answer THIS ONE TIME**, 
 
 **This deletes any pre-existing data in your PKI keys folder and initializes the PKI "database" :**
 
-![THE ONE TIME : &quot;Y&quot; answer](../.gitbook/assets/image%20%2812%29.png)
+![THE ONE TIME : &quot;Y&quot; answer](../.gitbook/assets/image%20%2813%29.png)
 
-![](../.gitbook/assets/image%20%2840%29.png)
+![](../.gitbook/assets/image%20%2842%29.png)
 
 
 
@@ -320,11 +320,11 @@ Easy !
 Let's call our CA : **my-fg-ovpn-ca**, keeping our good prefixing habit.
 {% endhint %}
 
-![Same simple name on the 2 name fields](../.gitbook/assets/image%20%2817%29.png)
+![Same simple name on the 2 name fields](../.gitbook/assets/image%20%2818%29.png)
 
 This creates the PKI Certificate Authority's own self-signed certificate \(**ca.crt**\) and private key \(**ca.key**\) in the **`MY-FG-OVPN-PKI-KEYS`** sub-folder.
 
-![](../.gitbook/assets/image%20%2836%29.png)
+![](../.gitbook/assets/image%20%2838%29.png)
 
 Since we are here within our own PKI, we only have one CA so these simple filenames are fine. But when we'll use our CA certificate elsewhere, many multiple CAs may be involved so :
 
@@ -335,7 +335,7 @@ We'll **copy+paste+rename these 2 files to have unique names :**
 * **ca.key** copied to **my-fg-ovpn-ca.key**
 {% endhint %}
 
-![Uniquely named copy of ca.crt + ca.key](../.gitbook/assets/image%20%2815%29.png)
+![Uniquely named copy of ca.crt + ca.key](../.gitbook/assets/image%20%2816%29.png)
 
 {% hint style="warning" %}
 **Do NOT rename the original files directly, keep uniquely named copies !**
@@ -352,7 +352,7 @@ Easy, but may take a long time depending on your computer !
 .\build-dh.bat
 ```
 
-![Beginning of the DH file creation](../.gitbook/assets/image%20%2823%29.png)
+![Beginning of the DH file creation](../.gitbook/assets/image%20%2824%29.png)
 
 ...time passes...finally :
 
@@ -360,7 +360,7 @@ Easy, but may take a long time depending on your computer !
 
 This has generated the [**Diffie-Hellman-Merkel key exchange**](https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange) parameter file that will be used to initiate encryption sessions.
 
-![](../.gitbook/assets/image%20%2834%29.png)
+![](../.gitbook/assets/image%20%2836%29.png)
 
 {% hint style="warning" %}
 We'll also keep a **uniquely named copy of dh2048.pem** : **my-fg-ovpn-dh2048.pem**
@@ -398,7 +398,7 @@ Since our **server should boot up in unattended mode** without anyone to enter a
 * **commit ?** ==&gt; YES !
 {% endhint %}
 
-![Create, sign, commit : OpenVPN server](../.gitbook/assets/image%20%2813%29.png)
+![Create, sign, commit : OpenVPN server](../.gitbook/assets/image%20%2814%29.png)
 
 This creates 3 files in your keys folder, with the name you typed on the command line :
 
@@ -406,7 +406,7 @@ This creates 3 files in your keys folder, with the name you typed on the command
 * **my-fg-ovpn-srv.key** : the server private key
 * **my-fg-ovpn-srv.csr** : the "certificate signing request" used during the process
 
-![](../.gitbook/assets/image%20%2841%29.png)
+![](../.gitbook/assets/image%20%2843%29.png)
 
 These files should **already be uniquely named**, so we'll keep them as they are.
 
@@ -421,15 +421,15 @@ Being used to D&D, i already called my clients subfolders my-fg-ovpn-dm01/02, so
 .\build-key.bat my-fg-ovpn-dm01
 ```
 
-![Create, sign, commit : my-fg-ovpn-dm01 for one GM](../.gitbook/assets/image%20%2839%29.png)
+![Create, sign, commit : my-fg-ovpn-dm01 for one GM](../.gitbook/assets/image%20%2841%29.png)
 
 **Do the same thing with my-fg-ovpn-dm02...**
 
-![Create, sign, commit : my-fg-ovpn-dm02 for a second GM](../.gitbook/assets/image%20%2829%29.png)
+![Create, sign, commit : my-fg-ovpn-dm02 for a second GM](../.gitbook/assets/image%20%2831%29.png)
 
 You should now have :
 
-![](../.gitbook/assets/image%20%2825%29.png)
+![](../.gitbook/assets/image%20%2827%29.png)
 
 
 
@@ -450,7 +450,7 @@ But to create that CRL, **we need at least one client certificate to be revoked,
 .\revoke-full my-fg-ovpn-dm02
 ```
 
-![Revoke poor DM02 !](../.gitbook/assets/image%20%2835%29.png)
+![Revoke poor DM02 !](../.gitbook/assets/image%20%2837%29.png)
 
 You can see on the above screenshot :
 
@@ -475,7 +475,7 @@ _**After all, DM01 was here first, and he's not a sharer...**_
 
 As soon as you have revoked the \(_probably innocent_\) my-fg-ovpn-dm02 during the previous step, your PKI \(re-\)generated the CRL under the basic name of **crl.pem :**
 
-![](../.gitbook/assets/image%20%2819%29.png)
+![](../.gitbook/assets/image%20%2820%29.png)
 
 As always I prefer to keep a **uniquey named** file.  So let's **copy/paste/rename our crl.pem** as usual, this time to **my-fg-ovpn-crl.pem :**
 
@@ -483,7 +483,7 @@ As always I prefer to keep a **uniquey named** file.  So let's **copy/paste/rena
 
 
 
-### **PKI reporting for duty, Sir !**
+### **PKI ready !**
 
 {% hint style="success" %}
 **Congratulations !**
@@ -491,11 +491,27 @@ As always I prefer to keep a **uniquey named** file.  So let's **copy/paste/rena
 **Your own PKI is now complete, with clear enough filenames** so that you know who is what, in case they happen to be used on OpenVPN servers/clients managing/using multiple independent VPNs.
 {% endhint %}
 
-We'll see in the following sections how these files are put to use, first on the OpenVPN client, then later on the server.
+We'll see in the following sections how these files are put to use, first on the OpenVPN client, then on the server.
 
 
 
+### **Just one more key for OpenVPN** tls-auth = TLS Authentication
 
+While we are in our PKI root folder \(**`T:\fg-ovpn\MY-FG_OVPN\MY_FG_OVPN_PKI`**\) at the command prompt, let's have OpenVPN generate a static secret key.
+
+That key will be used by OpenVPN "TLS Authentication" feature to protect initial key negociations when OpenVPN clients connect to the server.  You can read about **tls-auth** [here](https://openvpn.net/community-resources/hardening-openvpn-security/).
+
+We'll create this key in our keys sub-folder :
+
+```text
+openvpn.exe --genkey --secret MY-FG-OVPN-PKI-KEYS\my-fg-ovpn-ta.key
+```
+
+![](../.gitbook/assets/image%20%2826%29.png)
+
+Nothing fancy, it just creates the last key file we were missing in our security arsenal. Here is the complete list of files in our keys sub-folder :
+
+![](../.gitbook/assets/image%20%287%29.png)
 
 
 

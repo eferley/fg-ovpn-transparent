@@ -12,7 +12,7 @@ It can operate on any unused TCP or UDP port and can **easily cross all kinds of
 
 You can select and download the latest version \(v2.4.7 as of this writing\), corresponding to your own OS, here : [https://openvpn.net/community-downloads/](https://openvpn.net/community-downloads/)
 
-![](../.gitbook/assets/image%20%2831%29.png)
+![](../.gitbook/assets/image%20%2833%29.png)
 
 
 
@@ -56,7 +56,7 @@ This tool should not be required, but **if you want to open a command line termi
 
 PuTTY is available from : [https://www.putty.org/](https://www.putty.org/)
 
-![](../.gitbook/assets/image%20%2821%29.png)
+![](../.gitbook/assets/image%20%2822%29.png)
 
 ### Your text editor of choice
 
@@ -68,17 +68,17 @@ Here are 3 very common good quality free text editors \(initially created for de
 
 * A good **lightweight but feature-rich free editor** is **Notepad++** that you can find at : [https://notepad-plus-plus.org](https://notepad-plus-plus.org/)
 
-![](../.gitbook/assets/image%20%2843%29.png)
+![](../.gitbook/assets/image%20%2845%29.png)
 
 **More powerful** \(but also more complex\) text editing environments are **available for free** like :
 
 * [Microsoft Visual Studio Code](https://code.visualstudio.com/)
 
-![](../.gitbook/assets/image%20%2838%29.png)
+![](../.gitbook/assets/image%20%2840%29.png)
 
 * [GitHub Atom](https://atom.io/)
 
-![](../.gitbook/assets/image%20%2842%29.png)
+![](../.gitbook/assets/image%20%2844%29.png)
 
 
 

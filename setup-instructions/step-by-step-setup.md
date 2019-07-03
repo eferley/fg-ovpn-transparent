@@ -30,7 +30,9 @@ Details for Step 3 : Setup your Windows machine with OpenVPN and put the require
 
   3.3.1- Start a command line \(cmd.exe\) as administrator and go into your 
 
-  3.3.2- Generate a TLS authentication key by running this command : openvpn --genkey --secret my-fg-ovpn-ta.key
+  3.3.2- Generate a TLS authentication key by running this command : 
+
+* openvpn --genkey --secret my-fg-ovpn-ta.key
 
   3.3.3- Move the resulting key file to your \config subdirectory and keep a copy of it to send to your server \(for example in a sub-folder of \)
 
