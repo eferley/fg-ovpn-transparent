@@ -55,7 +55,7 @@ So keep this in mind :
 * **Each AWS Region \(geographical area\) has it's own costs.** From what i saw, _South America is currently \(mid 2019\) more expensive than other regions_.  You may take this into account when choosing the place where you'll run your own server
 * **Periodically check** your month-to-date actuals and month-total estimated values in your **Billing Dashboard** in the AWS Management Console.  They are updated at intervals of 6 to 8 hours : 
 
-![Billing Dashboard shortcut, near the top-right corner in the AWS console](../.gitbook/assets/image%20%289%29.png)
+![Billing Dashboard shortcut, near the top-right corner in the AWS console](../.gitbook/assets/image%20%2812%29.png)
 
 
 

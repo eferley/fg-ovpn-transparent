@@ -1,12 +1,12 @@
 # Setup process overview
 
-We'll detail a ~~_boring_~~ step-by-step complete setup process in the following sections, and add some more technical blocks of info that non tech-savvy readers can safely ignore 😝 :
+We'll detail a ~~_boring_~~ step-by-step complete setup process in the following sections, and add some more technical blocks of info here and there, that non tech-savvy readers can safely ignore 😝 :
 
 > **Tech Blurb**
 >
 > nerd blah blah
 
-Blocs of "code" like these 2 samples below can be copy/pasted with the small button at the top-right corner.⚠ Use a [proper text editor](../proposed-solution/tools.md#your-text-editor-of-choice) to paste, **not Windows Notepad if you want to avoid pain !** ⚠ 
+Blocs of "code", like the 2 sample tabs below, can be copy/pasted with the small button at the top-right corner.⚠ Use a [proper text editor](../proposed-solution/tools.md#your-text-editor-of-choice) to paste, **not Windows Notepad if you want to avoid pain !** ⚠ 
 
 {% code-tabs %}
 {% code-tabs-item title="Plain text sample.txt" %}
@@ -27,7 +27,7 @@ sample block of plain text "code"
 **\(local\)** steps are things done entirely in your own local machine. We'll begin playing with AWS at Step 4.
 
 {% hint style="warning" %}
-Note : All our screenshots of Windows Explorer have been done with **visible file extensions**, and we also use some **command prompt windows** now and then, so :
+Note : All our screenshots of Windows Explorer have been done with **visible file extensions**, and we also use some **command prompt windows**, so :
 
 Refer to the **"**[**Check that you know/learn**](step-0-preparation.md#check-that-you-know-learn)**"** helper links if needed...
 {% endhint %}

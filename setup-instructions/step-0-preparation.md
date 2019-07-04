@@ -4,7 +4,7 @@ Let's begin with 2 things :
 
 ## **Create/have an** [**account available on AWS**](../proposed-solution/amazon-web-services.md#how-to-create-an-aws-account)\*\*\*\*
 
-...as already explained 👆 
+...as explained there... 👆 
 
 ## Check that you know/learn :
 
@@ -27,7 +27,7 @@ _It is always easier to have multiple sub-folders that you can independently ren
 
 **I suggest an organization like this one** \(in this example i prepared sub-folders for 2 GMs = VPN "clients"\) :
 
-![](../.gitbook/assets/image%20%2837%29.png)
+![](../.gitbook/assets/image%20%2843%29.png)
 
 In the **T:** drive, I created **`fg-ovpn`**, with :
 
@@ -44,7 +44,11 @@ We also have a **separate `Tests` folder for tests and messing around with tempo
 We'll see later on how it helps managing multiple setups.
 {% endhint %}
 
-In this sample setup we use **`MY-FG-OVPN`** to store **our own FG OpenVPN setup**, with these sub-dirs:
+{% hint style="warning" %}
+This name **will be used by configuration scripts** as the "**configuration name**".
+{% endhint %}
+
+In this sample setup we use "**my-fg-ovpn**" for our name, and we create the **`MY-FG-OVPN`** folder to store **our own FG OpenVPN setup**, with these sub-dirs:
 
 * **`my-fg-ovpn-clients`** will store the **complete set** of parameter/security files needed **for each VPN client** \(with **a sub-folder for each**\), ready to be zipped/copied/emailed
 * **`my-fg-ovpn-s3`** will store the **source files we'll transfer to the AWS S3 bucket** for server auto-initialization
@@ -52,7 +56,7 @@ In this sample setup we use **`MY-FG-OVPN`** to store **our own FG OpenVPN setup
 * **`MY-FG-OVPN-PKI`** will be the **"safe" storage for our entire PKI**, ready to use at any time if we need to create additional certificates or revoke an existing certificate.
 
 {% hint style="warning" %}
-I suggest you **ONLY** use **capital** letters on your **local Windows** machine, to be reminded of the **folders you NEED TO KEEP SAFE**, and use **lowercase for all folder and file names you will transfer to AWS and the server**.
+I suggest you **ONLY** use **CAPITAL** letters on your **local Windows** machine, to be reminded of the **folders you NEED TO KEEP SAFE**, and use **lowercase for all folder and file names you will transfer to AWS and the server**.
 
 **Your OpenVPN server** will be Linux-based, which implies **case-sensitive** !
 {% endhint %}
