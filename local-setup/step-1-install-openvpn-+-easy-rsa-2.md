@@ -63,13 +63,13 @@ We now have the whole required "prime materials" on disk.  Let's immediately cre
 
 ## Prepare the new-PKI folder contents
 
-This folder will be a ready-to-duplicate source folder to create a brand new PKI.  We'll keep the current version of the Easy-RSA script files and the associate binary programs with the current installed version.
+This folder will be a ready-to-duplicate source folder to create a brand new PKI.  We'll keep there both the current version of the Easy-RSA script files and the associated binary programs.
 
 We'll then use it to initialize our own PKI in its own folder .  This way, even if we break/uninstall/lose our installation directory for whatever reason, we'll still be able to manage our VPN security \(create/revoke certificates\), and we'll have the right version of required programs available for that.
 
 > **Tech Blurb :**
 >
-> Also by creating every \(only one needed for our setup\) PKIs by duplicating this source folder content later on, we have the ability to tweak script files or even the openssl configuration file, **used for that specific PKI** if needed, without impacting others.
+> Also by creating all PKIs \(only 1 is needed for our setup\) by duplicating this source folder content later on, we have the ability to tweak script files or even the openssl configuration file **used for that specific PKI** if needed, without impacting others.
 
 
 
