@@ -39,18 +39,18 @@ In the **T:** drive, I created **`fg-ovpn`**, with :
 We also have a **separate `Tests` folder for tests and messing around with temporary things**.
 
 {% hint style="info" %}
-**Choose a simple name for your setup**, and try to **use it to prefix/idenfity** all related things.
-
-We'll see later on how it helps managing multiple setups.
+**Choose a simple "configuration name" for your setup**, and try to **use it to prefix/idenfity** all related things.
 {% endhint %}
 
 {% hint style="danger" %}
-**This "configuration name" is VERY important : it will be used by configuration scripts; many of the files you will create later on MUST start with it.**
+**This "configuration name" is VERY important : it will be used by configuration scripts; many of the files you will create later on MUST start with it as a prefix.**
 {% endhint %}
 
+{% hint style="warning" %}
+In this sample setup we use "**my-fg-ovpn**" for our configuration name...
+{% endhint %}
 
-
-In this sample setup we use "**my-fg-ovpn**" for our name, and we create the **`MY-FG-OVPN`** folder to store **our own FG OpenVPN setup**, with these sub-dirs:
+...and we create the **`MY-FG-OVPN`** folder \(in capitals to remember it must be kept safe\) to store **our own FG OpenVPN setup**, with these sub-dirs:
 
 * **`my-fg-ovpn-clients`** will store the **complete set** of parameter/security files needed **for each VPN client** \(with **a sub-folder for each**\), ready to be zipped/copied/emailed
 * **`my-fg-ovpn-s3`** will store the **source files we'll transfer to the AWS S3 bucket** for server auto-initialization

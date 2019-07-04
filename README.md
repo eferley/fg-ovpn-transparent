@@ -22,7 +22,7 @@ There are however situations where **a VPN may be needed on the GM's side** :
 4. **upstream "closed" firewall**
 
 {% hint style="warning" %}
-Also remember : **if you are a player and your GM is using a "closed VPN" offer like Hamachi, you will have to be a member of the same VPN as the GM.**
+Also : **if you are a player and your GM is using a "closed VPN" offer like Hamachi, you will have to be a member of the same VPN as the GM to join his game.**
 {% endhint %}
 
 {% hint style="success" %}
