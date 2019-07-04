@@ -1,9 +1,9 @@
 # Step 3 : Setup OpenVPN connections
 
-We'll now prepare sets of security and parameter files per OpenVPN client \(GM in our context\) so that they can be distributed to the relevant people/machines.
+We'll now prepare a complete set of security and parameter files per OpenVPN client \(GM in our context\) so that they can be easily distributed to the relevant people/machines.
 
 {% hint style="info" %}
-**You will likely only need one such set, for yourself : my-fg-ovpn-dm01**
+**At the end of the process, you will only need one such set, for yourself : my-fg-ovpn-dm01**
 {% endhint %}
 
 But we'll also do it for "my-fg-ovpn-dm02" so you can test both, and see the connection **working for dm01** and **failing for dm02** \(we _**revoked**_ this guy earlier\), which will prove that the [CRL](step-2-create-your-pki.md#your-initial-crl-the-certification-revocation-list) is taken into account.
@@ -90,7 +90,7 @@ You can :
 
 * copy/paste + **rename and edit** \("dm01"-&gt;"dm02"\) the **`.ovpn`** text file from dm01's to dm02's sub-folder
 * then copy/paste the 2 "client-invariant" files : CA certificate and TLS-Auth key
-* and copy/paste the 2 "client-specific" files : dm02's certificate+key from the PKI keys sub-folder.
+* and copy/paste the 2 "client-specific" files : dm02's certificate+key **from the PKI keys sub-folder**.
 
 _**DM02's setup :**_
 
@@ -133,19 +133,19 @@ Let's now switch to the _**user view of OpenVPN**_, which is what you'll use in 
 
 ![](../.gitbook/assets/image%20%2829%29.png)
 
-When we use it for **the first time**, the result is "a bit" **anticlimatic**...
+When we use it for **the first time**, the result is "a bit" **anticlimatic**... 😬 
 
 ![](../.gitbook/assets/image%20%2846%29.png)
 
-After you close this dialog, you don't see anything new about OpenVPN on your screen.
+After you close this dialog, you don't see anything new about OpenVPN on your screen. 😡 
 
-Actually this is an excellent thing : OpenVPN will stay as inconspicuous as possible, whether connected to 0, 1, or more servers.
+**Actually this is an excellent thing** : OpenVPN will stay as inconspicuous as possible, whether connected to 0, 1, or more servers.
 
 Ok, let's move on to the **notification icons** on the bottom right of the desktop, where you'll finally discover something new :
 
 ![](../.gitbook/assets/image%20%2877%29.png)
 
-I choose to have this notification icon always visible, so it will now always be on my taskbar.
+I'll choose to have this notification icon _always visible_, so it will now always be on my taskbar.
 
 Let's **Right-click** it :
 
@@ -159,7 +159,7 @@ A quick look at the default settings :
 
 ![Note : the personal folders above have just been created](../.gitbook/assets/image%20%2825%29.png)
 
-I'll just change 2 options according to **my own preference** : to have it _always running_ discreetly in the taskbar, and have a _notification balloon_ also when a "reconnect" happens :
+I'll just change 2 options according to **my own preference** : to have it _always running_ \(discreetly, in the taskbar\), and have a _notification balloon_ also when a "reconnect" happens :
 
 ![Updating settings / personal preference](../.gitbook/assets/image%20%2839%29.png)
 
@@ -167,14 +167,14 @@ Now let's have a look at the folders in my Windows personal storage \(that we se
 
 ![](../.gitbook/assets/image%20%2810%29.png)
 
-**Let's bring some configs there ! We'll copy/paste our 2 shiny "distribution folders"** for dm01 and dm02 from our "PKI owner" storage : we are "distributing" to ourselves...
+**Let's bring some configs there ! We'll copy/paste our 2 shiny "distribution folders"** for dm01 and dm02, from our "PKI owner" storage : we are "distributing" to ourselves...
 
 ![Let&apos;s copy from the client distributions...](../.gitbook/assets/image%20%2828%29.png)
 
-![...to our own &quot;live&quot; client setup.](../.gitbook/assets/image%20%2878%29.png)
+![...and paste to our own &quot;live&quot; client setup.](../.gitbook/assets/image%20%2878%29.png)
 
 {% hint style="success" %}
-**There we are ! All set and ready to connect :**
+**There we are ! All set and ready to connect. Just right-click the OpenVPN GUI again :**
 {% endhint %}
 
 ![](../.gitbook/assets/image%20%2819%29.png)
@@ -187,7 +187,7 @@ When your OpenVPN server is on-line and you know its **Public IP** :
 🎆 **Done !** 🎆 ****
 
 {% hint style="info" %}
-Note : the **config files** you edit when using "**Edit Config**" of **OpenVPN GUI** are the ones stored in your **OpenVPN personal folder.**
+Note : the **config files** you edit when using "**Edit Config**" of **OpenVPN GUI** are the ones stored **in your OpenVPN personal folder.**
 {% endhint %}
 
 
