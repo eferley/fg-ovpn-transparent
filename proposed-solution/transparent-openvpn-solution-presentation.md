@@ -2,7 +2,7 @@
 
 We already gave the salient points about the kind of setup we propose in the [previous paragraph](https://zeferby.gitbook.io/transparent-openvpn-for-fantasy-grounds/general/vpn-solutions#your-own-1-gm-only-vpn-server-based-on-industry-standards), so let's have a closer look at the Why's and How's...
 
-_**We'll make our way SLOWLY, and I'll annoyingly insist on the security aspects, so that you don't inadvertently create security "holes" in your own setup or risk to break it down.**_
+_**We'll make our way SLOWLY, and I'll**_ ~~_**annoyingly**_~~ _**insist on the security aspects, so that you don't inadvertently create security "holes" in your own setup, or risk to break it down.**_
 
 ## Objectives
 
@@ -19,12 +19,12 @@ Relying on **a hosted virtual machine which can accept TCP 1802** incoming conne
 1. **do NOT require a VPN connection on the players side** : by handling all port forwarding aspects on a single "point of contact" \(the VPN server for the GM is also the GM's FG address as seen from the players\)
 2. be the **most "non-intrusive" possible vs. the GM's machine configuration**
 3. **minimize costs for the GM** to $0 \(or a neglectable amount, if you are out of the AWS free tier bounds\)
-4. introduce **NO dependancy for the GM on any external company/organization** \(except of course the need of virtual server hosting\)
-5. provide a **mostly automated startup process**
+4. introduce **NO dependancy for the GM on any external company/organization** \(except of course the need for virtual server hosting\)
+5. provide a **mostly automated startup process** for easy regular usage
 
 ### Other benefits
 
-* **most possible versatile solution** : OpenVPN, since you have administrative access on the VPN server, enables you to taylor the solution according to you exact wishes
+* **most possible versatile solution** : OpenVPN, since you have administrative access on the VPN server, enables you to taylor the solution according to you exact wishes \(_if you know what you're doing !_ 🤪\) 
 * "owned" security : **You have absolute authority** on your whole setup and **you don't need to "share" any security info with anyone**
 * fully "destroyable" : **you can easily get rid** of your whole VPN infrastructure at any time
 * **no "permanent route" added on the GM's machine** : can be used on machines with complex network settings without impacting the other connections
@@ -88,24 +88,24 @@ If you are wary about security issues, read this excerpt from the OpenVPN web si
 >
 > _Note that the server and client clocks need to be roughly in sync or certificates might not work properly._
 
-We'll take advantage of these benefits to keep the core security off-line from the VPN server itself : we'll **create the PKI entirely on your own machine**, in a **"safe place" of your choice**, and **only put the minimum required certificates on the VPN server and client\(s\)**.
+We'll take advantage of these benefits to keep the core security \(the PKI\) off-line from the VPN server itself : we'll **create the PKI entirely on your own machine**, in a **"safe place" of your choice**, and **only put the minimum required certificates on the VPN server and client\(s\)**.
 
 Building the PKI will be done with **Easy-RSA 2** which should come bundled with OpenVPN \(see [Tools](https://zeferby.gitbook.io/transparent-openvpn-for-fantasy-grounds/our-openvpn-based-solution/tools)\).
 
 {% hint style="info" %}
-You can backup or transfer the contents of your PKI folder to another storage after it is complete.  I find it convenient to keep it in my machine in case i need to quickly disable some certificates to deny acces to an existing certificate
+You can backup or transfer the contents of your PKI folder to another storage after it is complete.  I find it convenient to also keep it in my own machine in case i need to quickly disable some certificates to deny acces to an existing certificate
 {% endhint %}
 
 
 
 ### The AWS S3 Bucket
 
-We'll create this "bucket", which is **simply a storage space**, on the AWS S3 service.  It can done either with the AWS management console, or with CloudBerry Explorer for S3 \(see [Tools](tools.md)\).
+We'll create this "bucket", which is **simply a passive storage space**, on the AWS S3 service.  It can done either with the AWS management console, or with CloudBerry Explorer for S3 \(see [Tools](tools.md)\).
 
 Some **important security parameters will be stored there**, so make sure **NOT** to check any option to make it publicly accessible !  _The AWS management console shows some clear warnings when a bucket content is "at risk"_.
 
 {% hint style="danger" %}
-**Keep this S3 storage "bucket" PRIVATE !**
+**Keep this S3 storage "bucket" PRIVATE ! DON'T allow public access !**
 {% endhint %}
 
 {% hint style="warning" %}
@@ -120,16 +120,16 @@ If you manage your S3 bucket contents with a **licenced version of CloudBerry Ex
 
 * startup scripts for the AWS Linux/OpenVPN server
 * your own OpenVPN server configuration options
-* the minimal amount of security parameters, ⚠ _**including the OpenVPN server "public certificate" and "private key"**_ ⚠ so, once again, in case you didn't hear me \(ICYMI\), make sure that you...
+* the minimal amount of **security parameters**, ⚠ _**including the OpenVPN server** "public certificate" and **"private key"**_ ⚠ so, once again, in case you didn't hear me, make sure that you...
 
 {% hint style="danger" %}
-**&lt;shout mode on&gt; KEEP THIS S3 STORAGE "BUCKET" PRIVATE !!! &lt;shout mode off&gt;**
+📢 **KEEP THIS S3 STORAGE "BUCKET" PRIVATE !!!** 📢 
 {% endhint %}
 
 🧐 **You've been warned... Don't come back crying...** 😭 
 
 {% hint style="warning" %}
-If you want to store **other data in S3**, please **create a second private S3 bucket** for that !
+If you want to store _**other**_ **data in S3**, please **create a** _**second**_ **S3 bucket** for that !
 {% endhint %}
 
 
@@ -160,10 +160,10 @@ Choosing the **cheapest AWS server type**, which **is more than adequate** for t
 #### We'll create an AWS virtual server :
 
 * using a "free tier elligible" type of server
-* to run the basic "Amazon Linux AMI 2018.xx.y" distribution
+* to run the basic "Amazon Linux AMI 2018.xx.y" distribution \(currently : 2018.03.0\)
 * giving it permission to access the S3 bucket for the parameters and scripts it needs
-* giving it network access rules to accept incoming connections both for OpenVPN \(for you, the GM\) and for FG traffic \(for the players\)
-* giving it a small bootstrap script that will do all the OpenVPN \(+some tools +port forwarding\) installation and configuration work for you
+* giving it network access rules to accept incoming Internet connections both for OpenVPN \(for you, the GM\) and for FG traffic \(for the players\)
+* giving it a bootstrap script that will do all the OpenVPN \(+some tools +port forwarding\) installation and configuration work for you
 
 {% hint style="success" %}
 After 2 or 3 minutes, when the server "**Instance state**" is "**running**" and "**Status Checks**" shows the green "**passed**" tick in the AWS management console, you can enjoy !

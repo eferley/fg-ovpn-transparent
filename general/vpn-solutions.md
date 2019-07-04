@@ -88,3 +88,7 @@ If you want to know more about OpenVPN, read the Howto at [https://openvpn.net/c
 Remember that _whatever your network setup is_, **you still have to check your GM FG machine for barriers 1-3 !**
 {% endhint %}
 
+![](../.gitbook/assets/zeferby_dino_64%20%281%29.png) _**Don't worry, I know you'll have forgotten by the time you test ZeSolution ! I'll remind you...**_ 👆 
+
+
+

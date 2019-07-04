@@ -46,9 +46,13 @@ We also have a **separate `Tests` folder for tests and messing around with tempo
 **This "configuration name" is VERY important : it will be used by configuration scripts; many of the files you will create later on MUST start with it as a prefix.**
 {% endhint %}
 
+![](../.gitbook/assets/zeferby_dino_64%20%281%29.png) _**Read this again !**_ 👆 
+
 {% hint style="warning" %}
 In this sample setup we use "**my-fg-ovpn**" for our configuration name...
 {% endhint %}
+
+![](../.gitbook/assets/zeferby_dino_64%20%281%29.png) _**Got it ?**_ 👆 
 
 ...and we create the **`MY-FG-OVPN`** folder \(in capitals to remember it must be kept safe\) to store **our own FG OpenVPN setup**, with these sub-dirs:
 

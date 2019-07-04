@@ -352,7 +352,7 @@ Ok, after playing with rules for a moment, let's just clean up and finish with *
 {% endhint %}
 
 {% hint style="success" %}
-_\*\*\*\*_![](../.gitbook/assets/zeferby_dino_64%20%281%29.png) _**Ze Summary for our Security Group Rulez :**_
+_\*\*\*\*_![](../.gitbook/assets/zeferby_dino_64%20%282%29.png) _**Ze Summary for our Security Group Rulez :**_
 
 * **Outbound** : **ALL** Traffic **to ALL** IPv4
 * **Inbound** : **TCP 1802 from ALL** IPv4 \(for FG\)
