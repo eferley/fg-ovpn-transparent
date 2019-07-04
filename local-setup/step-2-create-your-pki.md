@@ -19,7 +19,7 @@ As first step we'll duplicate the whole contents of our **`new-PKI`** folder int
 {% hint style="info" %}
 We'll now more or less follow the instructions you can read in the README.txt file, except that :
 
-* **I'll bore you considerably more than the short orignal README** \(_Hi tech guys !_\)
+* **I'll bore you considerably more than the short orignal README** \(_Hi tech guys !_ ![](../.gitbook/assets/zeferby_dino_64%20%281%29.png) \)
 * **we'll adapt to the "autonomous" PKI location**
 * **we'll add some safeguarding to the most dangerous command scripts**
 {% endhint %}
@@ -37,7 +37,7 @@ Let's create a sub-folder into our own PKI folder, to store this particular PKI'
 You can double-click **init-config.bat** in **`MY-FG-OVPN-PKI`** to run this command, and that will initialize the **new vars.bat command script file** from a sample file.
 
 {% hint style="danger" %}
-The init-config.bat command **should not be reused later on, as it would ERASE the customizations** we are about to do in the vars.bat file.
+The init-config.bat command **should not be re-used later on, as it would ERASE the customizations** we are about to do in the vars.bat file.
 
 So we'll **rename init-config.bat** to **DONE-DANGER-init-config.bat and FORGET about it.**
 {% endhint %}
@@ -48,9 +48,9 @@ So we'll **rename init-config.bat** to **DONE-DANGER-init-config.bat and FORGET 
 
 ### Edit vars.bat
 
-We now have to **edit the vars.bat file for it to conform to our requirements** :
+We now have to **edit the vars.bat file for it to meet our requirements** :
 
-* we **comment out \(or delete\)** the lines playing with the **PATH** to ensure the commands use the versions of executable binary programs that we have in our PKI folder, and none other \(lines 7 and 10 below; only line 7 needs editing since line 10 is already commented out with "**`rem`** "\)
+* we **comment out \(or delete\)** the lines playing with the **PATH** to ensure the commands use the version of executable binary programs that we have in our PKI folder, and none other \(lines 7 and 10 below; only line 7 needs editing since line 10 is already commented out with "**`rem`** "\)
 * we set **HOME** to the full path of the root folder for our PKI; everything the Easy-RSA commands will do later on will happen from that location : this is the **`T:\fg-ovpn\MY-FG_OVPN\MY_FG_OVPN_PKI`** folder \(line 12 below\)
 * we set **KEY\_DIR** to the name of the sub-folder where we want our certificates and keys to be stored : this is the **`MY-FG-OVPN-PKI-KEYS`** we created earlier
 * we give some default values for our future certificates in the list of **set KEY\_xxxx** commands at the end of the file.
@@ -133,7 +133,7 @@ set PKCS11_PIN=1234
 {% endhint %}
 
 {% hint style="info" %}
-_**Of course the HOME full path to your own PKI may be different than this demo, as well as your KEY\_COUNTRY etc... default values at the end of the file**_
+_\*\*\*\*_![](../.gitbook/assets/zeferby_dino_64%20%281%29.png) 🇫🇷 😛 _**Of course ! The HOME full path to your own PKI may be different than this demo, as well as your KEY\_COUNTRY etc... default values at the end of the file**_
 {% endhint %}
 
 {% code-tabs %}
@@ -209,14 +209,14 @@ copy serial.start %d%\serial.
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-This way, when we run this "killer" command script file, we'll have a **warning and Y/N choice**, with the "No I don't want to kill my own PKI" answer selected by default after 10 seconds...
+This way, when we run this "killer" command script file, we'll have a **warning and Y/N choice**, with the "No I don't want to kill my own innocent PKI" answer selected by default after 10 seconds...
 
 ...and just to be safe, we'll **rename `clean-all.bat` to `NEVER-AGAIN-DANGER-clean-all.bat`** !
 
 ![Renaming THE &quot;killer&quot; command](../.gitbook/assets/image%20%2820%29.png)
 
 {% hint style="info" %}
-_What ? Sorry ? Are you kidding me ? **Did I ever fall into that trap**, instantly killing a PKI that had been used for 3 years with 50+ certificates ? With an out of date backup ?..._
+\_\_![](../.gitbook/assets/zeferby_dino_64%20%281%29.png) _What ? Sorry ? Are you kidding me ? **Did I ever fall into that trap**, instantly killing a PKI that had been used for 3 years with 50+ certificates ? With an out of date backup ?..._
 
 _**OF COURSE NOT !!!**_
 
@@ -228,7 +228,7 @@ _...Well..._~~_maybe once but i don't really remember, you see, so :_~~ _**let's
 ### Going to command line mode
 
 {% hint style="warning" %}
-📢 **YOU in the background ! WAKE UP ! This is important !** 📢 
+\*\*\*\*![](../.gitbook/assets/zeferby_dino_64%20%281%29.png) 📢 **YOU in the background ! WAKE UP ! This is important !** 📢 
 {% endhint %}
 
 {% hint style="danger" %}
@@ -279,7 +279,7 @@ This will setup the "**environment variables**" that you specified earlier, and 
 {% hint style="danger" %}
 **If you need to open a new command prompt window**, **remember to re-position to the right folder and use ".\vars.bat" command FIRST !**
 
-**Remember that when you come back days or months later to add a new client certificate or revoke an existing one.**
+**Remember that, when you come back days or months later, to add a new client certificate or revoke an existing one.**
 
 **Try to build up your keyboard "muscle memory" with the following tip :**
 {% endhint %}
@@ -319,9 +319,9 @@ Easy !
 ```
 
 {% hint style="info" %}
-**Answer the prompts**, just hitting "Enter/Return" to keep default values **EXCEPT FOR Common Name and Name. Use the same simple name withour spaces for the 2 fields.**
+**Answer the prompts**, just hitting "Enter/Return" to keep default values **EXCEPT FOR Common Name and Name. Use the SAME simple name without spaces for the 2 fields.**
 
-Let's call our CA : **my-fg-ovpn-ca**, keeping our good prefixing habit.
+Let's call our CA : **my-fg-ovpn-ca**, _keeping our good prefixing habit_.
 {% endhint %}
 
 ![Same simple name on the 2 name fields](../.gitbook/assets/image%20%2837%29.png)
@@ -347,8 +347,8 @@ Since we are here within our own PKI, we only have one CA so these simple filena
 
 ![Uniquely named copy of ca.crt + ca.key](../.gitbook/assets/image%20%2834%29.png)
 
-{% hint style="warning" %}
-**Do NOT rename the original files directly, keep properly named copies !**
+{% hint style="danger" %}
+**Do NOT rename the original files directly, but keep properly named copies !**
 {% endhint %}
 
 
@@ -391,25 +391,25 @@ This has generated the [**Diffie-Hellman-Merkel key exchange**](https://en.wikip
 Easy again !
 
 {% hint style="danger" %}
-**Our server will need to have his certificate file named "configuration name".crt \(and similarly for the key and certificate request\)**
+**Our server will need to have his certificate file named "configuration name"-srv.crt \(and similarly for the key and certificate request\)**
 
 **\("configuration name" = my-fg-ovpn in this demo\)**
 {% endhint %}
 
 {% hint style="info" %}
-**Answer the prompts**, just hitting "Enter/Return" to keep default values **EXCEPT FOR Common Name and Name. Use the same simple name withour spaces for the 2 fields.**
+**Answer the prompts**, just hitting "Enter/Return" to keep default values **EXCEPT FOR Common Name and Name. Use the SAME simple name without spaces for the 2 fields.**
 
-Let's call our _**OpenVPN server the same name as our configuration**_ : **my-fg-ovpn**, to satisfy the above requirement.
+Let's call our **OpenVPN server** _****_: **my-fg-ovpn-srv**, to _satisfy the above requirement_.
 {% endhint %}
 
 ```text
 .\vars.bat
-.\build-key-server.bat my-fg-ovpn
+.\build-key-server.bat my-fg-ovpn-srv
 ```
 
-Since our **server should boot up in unattended mode** without anyone to enter a password :
+Since our **server should boot up in unattended mode** \(without anyone to enter a password\) :
 
-{% hint style="warning" %}
+{% hint style="danger" %}
 **Do NOT enter a challenge password**
 {% endhint %}
 
@@ -424,16 +424,16 @@ Since our **server should boot up in unattended mode** without anyone to enter a
 
 This creates 3 files in your keys folder, with the name you typed on the command line :
 
-* **my-fg-ovpn.crt** : the server public certificate
-* **my-fg-ovpn.key** : the server private key
-* **my-fg-ovpn.csr** : the "certificate signing request" used during the process
+* **my-fg-ovpn-srv.crt** : the server public certificate
+* **my-fg-ovpn-srv.key** : the server private key
+* **my-fg-ovpn-srv.csr** : the "certificate signing request" used during the process
 
 ![](../.gitbook/assets/image%20%2887%29.png)
 
 {% hint style="info" %}
 These files should **already be properly named**, so we'll keep them as they are:
 
-**"configuration-name".crt, .csr and .key**
+**"configuration-name"-srv.crt, .csr and .key**
 {% endhint %}
 
 
@@ -469,18 +469,18 @@ The **CRL** will be your way of ensuring that older **certificates**, that you m
 
 
 
-But to create that CRL, **we need at least one client certificate to be revoked, so "DM02" is our victim !** 🔫 
+But to create that CRL, **we need one client certificate to be revoked, so "DM02" is our victim !** 🔫 🗡 
 
 ```text
 .\vars.bat
-.\revoke-full my-fg-ovpn-dm02
+.\revoke-full.bat my-fg-ovpn-dm02
 ```
 
 ![Revoke poor DM02 !](../.gitbook/assets/image%20%2880%29.png)
 
 You can see on the above screenshot :
 
-* **why we kept the original ca.crt and ca.key files, visibly used up there...** 👀 
+* _**why we kept the original ca.crt and ca.key files, visibly used there...**_ 👀 
 * the Easy-RAS utility checking that a session negociation initiated on behalf of **my-fg-ovpn-dm02** **actually fails because the certificate is revoked, which is what we want !** 👍 
 
 {% hint style="info" %}
@@ -533,7 +533,7 @@ We'll see in the following sections how these files are put to use, first on the
 
 While we are in our PKI root folder \(**`T:\fg-ovpn\MY-FG_OVPN\MY_FG_OVPN_PKI`**\) at the command prompt, let's have OpenVPN generate a static secret key.
 
-That key will be used by OpenVPN "TLS Authentication" feature to protect initial key negociations when OpenVPN clients connect to the server.  You can read about **tls-auth** [here](https://openvpn.net/community-resources/hardening-openvpn-security/).
+That key will be used by OpenVPN "**TLS Authentication**" feature to protect initial key negociations when OpenVPN clients connect to the server.  You can read about **tls-auth** [here](https://openvpn.net/community-resources/hardening-openvpn-security/).
 
 {% hint style="danger" %}
 **Our server will need to have the TLS-Auth file named as "configuration name"-ta.key**
