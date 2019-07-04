@@ -28,7 +28,7 @@ If needed, here is the GitHub download location : [https://github.com/OpenVPN/ea
 
 _For Linux-like environments, you can also choose Easy-RSA 3; download from :_ [_https://github.com/OpenVPN/easy-rsa/releases_](https://github.com/OpenVPN/easy-rsa/releases)\_\_
 
-{% hint style="warning" %}
+{% hint style="danger" %}
 If you use Easy-RSA 3, check the docs as the commands have changed from Easy-RSA 2
 {% endhint %}
 
@@ -52,7 +52,7 @@ You can grab the software here : [https://www.cloudberrylab.com/explorer/amazon-
 
 ### PuTTY \(free\)
 
-This tool should not be required, but **if you want to open a command line terminal to your Linux VPN server**, then PuTTY is the way to go for the Windows platform.
+This tool should not be generally required, but **if you want to open a command line terminal to your Linux VPN server**, then PuTTY is the way to go for the Windows platform.
 
 PuTTY is available from : [https://www.putty.org/](https://www.putty.org/)
 
@@ -60,9 +60,9 @@ PuTTY is available from : [https://www.putty.org/](https://www.putty.org/)
 
 ### Your text editor of choice
 
-_**Avoid the very basic Windows Notepad**_ for its lack of customization options, no support for Linux-style "End-Of-Lines", etc.  If you paste in Windows Notepad file contents from these web pages, they will look like garbage.
+_**Avoid the very basic Windows Notepad**_ for its lack of customization options, **no support for Unix-style "End-Of-Lines"**, etc.  If you paste in Windows Notepad some file contents from these web pages, they will look like garbage...
 
-**ABSOLUTELY DON'T USE ANY MICROSOFT WORD-LIKE SOFTWARE !!!**
+**ABSOLUTELY DON'T USE ANY MICROSOFT-WORD-LIKE "WORD PROCESSING" SOFTWARE !!!**
 
 Here are 3 very common good quality free text editors \(initially created for developers, they support much more than simple text editing, but this is out of our scope\) :
 
@@ -70,7 +70,7 @@ Here are 3 very common good quality free text editors \(initially created for de
 
 ![](../.gitbook/assets/image%20%2890%29.png)
 
-**More powerful** \(but also more complex\) text editing environments are **available for free** like :
+**More powerful** \(but also more complex\) environments are **available for free** like :
 
 * [Microsoft Visual Studio Code](https://code.visualstudio.com/)
 
