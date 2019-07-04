@@ -67,9 +67,10 @@ _This "personal infrastructure" will be **extremely simple** but **we'll take pr
 * have a quick look at your AWS "**Default VPC**"
 * create an AWS "**Key pair**" \(similar to our \[certificate+key\] pairs in our own PKI\), for you to access your server interactively if you need
 * create an AWS "**Security Group**" for your server \(a kind of firewall rule\)
-* record several **important choices** for our setup
-* "**fill the bucket**" : transfer our security and configuration files into the S3 bucket
+* "**fill the bucket**" : organize and transfer our security and configuration files into the S3 bucket
 * create an AWS EC2 "**Launch Template**" : a set of option choices defining a kind of "server model", that you'll use later on, to repeatedly launch the server itself in the quickest possible way \(since you'll "terminate" =destroy the server after each session\)
+
+Then we'll be ready to test our setup.
 
 
 
@@ -358,18 +359,12 @@ _\*\*\*\*_![](../.gitbook/assets/zeferby_dino_64%20%281%29.png) _**Ze Summary fo
 * **Inbound** : **UDP 1194 from ALL** IPv4 \(for OpenVPN\)
 {% endhint %}
 
-{% hint style="info" %}
-IF you want, you **can** restrict OpenVPN inbound rule to your own Public IPv4, **BUT** you must **be prepared to update your inbound rule** :
+{% hint style="warning" %}
+IF you absolutely want to, you **can** restrict OpenVPN inbound rule to your own Public IPv4, **BUT then** you must **be prepared to update your OpenVPN inbound rule** :
 
-* every time your public IPv4 address changes
-* every time you want to host a game from some other place \(hotel, etc...\)
+* every time your **home public IPv4 address changes**
+* every time you want to **host a game from any other place** \(hotel, etc...\)
 {% endhint %}
-
-
-
-### Choices, decisions...
-
-
 
 
 
