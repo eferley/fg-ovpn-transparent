@@ -23,8 +23,6 @@
 * [Step 1 : Install OpenVPN + Easy-RSA](local-setup/step-1-install-openvpn-+-easy-rsa-2.md)
 * [Step 2 : Create your PKI](local-setup/step-2-create-your-pki.md)
 * [Step 3 : Setup OpenVPN connections](local-setup/step-3-prepare-your-openvpn-connection.md)
-* [Utility files and scripts -WIP](local-setup/files.md)
-* [Step-by-step setup -OLD](local-setup/step-by-step-setup.md)
 
 ## AWS Setup - Step-by-step
 
@@ -33,6 +31,8 @@
 ## Finalization - Step-by-step
 
 * [Step 5 : Check, Finalize, Transfer files to S3 -WIP](finalization-step-by-step/step-5-check-finalize-transfer-files-to-s3.md)
+* [Step-by-step setup -OLD](finalization-step-by-step/step-by-step-setup.md)
+* [Utility files and scripts -WIP](finalization-step-by-step/files.md)
 
 ## Using it - Step-by-step
 
