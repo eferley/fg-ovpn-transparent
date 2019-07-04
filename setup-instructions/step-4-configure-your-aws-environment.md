@@ -34,7 +34,7 @@ _I'll now wait for you to come back with your shiny **admin login** to this bran
 
 😁 **Ah ! There you are ! And you're an Admin ! And you're at the AWS Management Console ! Great !**
 
-![The AWS Management Console](../.gitbook/assets/image%20%2846%29.png)
+![The AWS Management Console](../.gitbook/assets/image%20%2848%29.png)
 
 This is the "home" of your AWS management console : you can **manage your account** with the menu titled with your "IAM username" @ "account name", **choose an "AWS Region"** with the menu to the right of it, and access the management consoles for all AWS services.
 
@@ -78,7 +78,7 @@ The first "service console" we'll open is the **IAM console** where you'll find 
 
 Choose this link, then use the big blue "**Create Role**" button at the top...
 
-![](../.gitbook/assets/image%20%2868%29.png)
+![](../.gitbook/assets/image%20%2871%29.png)
 
 Click :
 
@@ -87,7 +87,7 @@ Click :
 
 Then click the big blue "**Next: Permissions**" button at the bottom...
 
-![](../.gitbook/assets/image%20%2840%29.png)
+![](../.gitbook/assets/image%20%2841%29.png)
 
 _I already have some policies and roles defined in this account, which is why I had to blur specifics_
 
@@ -95,7 +95,7 @@ Use the search filter box above the list of **permission policies** to locate an
 
 * **AmazonEC2FullAccess** \(search for "ec2fu"\)
 
-![](../.gitbook/assets/image%20%2863%29.png)
+![](../.gitbook/assets/image%20%2866%29.png)
 
 * **AmazonS3FullAccess** \(search for "s3fu"\)
 
@@ -103,11 +103,11 @@ Use the search filter box above the list of **permission policies** to locate an
 
 Then click the blue "**Next: Tags**" button at the bottom...
 
-![](../.gitbook/assets/image%20%2850%29.png)
+![](../.gitbook/assets/image%20%2852%29.png)
 
 We don't need tagging, so just click the blue "**Next: Review**" button at the bottom...
 
-![](../.gitbook/assets/image%20%2870%29.png)
+![](../.gitbook/assets/image%20%2874%29.png)
 
 **Give a name** to your new role : i suggest **`my-fg-ovpn-ec2role`** as shown above.
 
@@ -137,7 +137,7 @@ Starting from here, let's choose an AWS Region as our playground.  **The geograp
 
 For this demo I'll choose Stockholm \(called eu-north-1\), an AWS region which is "virgin territory" for me \(I have never used it before\) :
 
-![](../.gitbook/assets/image%20%2859%29.png)
+![](../.gitbook/assets/image%20%2861%29.png)
 
 
 
@@ -153,19 +153,19 @@ Let's first create our storage space for parameters and scripts : an S3 bucket.
 
 So let's go to the **S3 console** \(S3 is in the _**Storage**_ section on the main console listing all services\) :
 
-![](../.gitbook/assets/image%20%2855%29.png)
+![](../.gitbook/assets/image%20%2857%29.png)
 
 You can guess we'll click the blue "Create bucket" button...
 
-![](../.gitbook/assets/image%20%2871%29.png)
+![](../.gitbook/assets/image%20%2875%29.png)
 
 **Step 1 : Give it a name,** which must conform to some name restrictions, and be unique \(so you may need to change it if your preferred name is already used by someone else\), check the **region**, then hit "**Next**"...
 
-![](../.gitbook/assets/image%20%2837%29.png)
+![](../.gitbook/assets/image%20%2838%29.png)
 
 **Step 2 :** let's **NOT** use any option for now and simply click "**Next**"...
 
-![](../.gitbook/assets/image%20%2841%29.png)
+![](../.gitbook/assets/image%20%2843%29.png)
 
 👇 _If you already forgot..._ 👇 
 
@@ -175,11 +175,11 @@ You can guess we'll click the blue "Create bucket" button...
 
 **Step 3 :** So let's **keep the security tight** and "**Block** _**all**_ **public access**" as is the default, and hit "**Next**"...
 
-![](../.gitbook/assets/image%20%2851%29.png)
+![](../.gitbook/assets/image%20%2853%29.png)
 
 A quick review of our choices, then click "**Create bucket**"...
 
-![](../.gitbook/assets/image%20%2849%29.png)
+![](../.gitbook/assets/image%20%2851%29.png)
 
 {% hint style="success" %}
 **...and here is your own private bucket, reporting for duty !**
@@ -190,6 +190,10 @@ A quick review of our choices, then click "**Create bucket**"...
 ### Virtual Private Cloud
 
 #### Quick overview 🚁 
+
+> **This is mostly Tech blurb...**
+>
+> **If you want to skip, jump to "Default VPC"**
 
 A VPC is a set of private IP networks all part of the same private "address space" that belongs to you :
 
@@ -242,7 +246,7 @@ If you don't intend to interactively connect to your server, you will not use it
 
 So let's go to "**Key Pairs**", and click the tempting "**Create Key Pair**" button :
 
-![](../.gitbook/assets/image%20%2884%29.png)
+![](../.gitbook/assets/image%20%2888%29.png)
 
 Enter a **Key pair name** of your choice as above and click "**Create**"...
 
@@ -274,9 +278,11 @@ We'l create a specific **Security Group** for our **OpenVPN + Fantasy Grounds** 
 
 Give it a **Security group name** and a **Description**, your \(only\) default VPC should already be selected, and then let's have a look at the **Security group rules** panel.
 
+
+
 #### **Outbound rules** tab :
 
-![Authorized Outbound traffic : All / Anywhere](../.gitbook/assets/image%20%2865%29.png)
+![Authorized Outbound traffic : All / Anywhere](../.gitbook/assets/image%20%2868%29.png)
 
 This shows that the members \(virtual servers\) of that Security Group will be authorized to **send network packets of any kind, to anywhere** : no restriction, freedom, Yeah ! 🆓 
 
@@ -289,27 +295,72 @@ This shows that the members \(virtual servers\) of that Security Group will be a
 >
 > **The only "known" thingies here will be on this server's side**
 
+
+
 #### Inbound rules tab :
 
-Using the "**Add Rule**" button, let's add 2 inbound rules, to authorize incoming network traffic, one using the "Custom TCP rule" type for FG, and the other the "Custom UDP rule" type for OpenVPN :
+Using the "**Add Rule**" button, let's add 2 inbound rules, to authorize incoming network traffic, one using the "**Custom TCP rule**" type for FG, and the other the "**Custom UDP rule**" type for OpenVPN, like this :
 
-![](../.gitbook/assets/image%20%2839%29.png)
+![](../.gitbook/assets/image%20%2840%29.png)
 
 ...and let's click the blue "**Create**" button.
 
 {% hint style="success" %}
-You now have a "working" dedicated **Security Group** for your FG-OpenVPN setup...
+You now have a "working" dedicated **Security Group** for your FG-OpenVPN setup - _which also works if you are in a hotel room, etc..._
 {% endhint %}
 
-_...but it's not perfect, so let's modify it..._
+...but it's not perfect, so **let's modify it.**
+
+
 
 #### You can always change the rules...
 
 ._**..EVEN when they are currently in use by running servers**_ \(which is cool for tests, by the way\).
 
+If we look at the Inbound rules for our newly created Security Group :
 
+![](../.gitbook/assets/image%20%2862%29.png)
 
+We find some IPv6 rules there \(Source = ::/0\) that we don't want \(that's because we used the "Anywhere" destination or source, which is both IPv4 + IPv6\). So we'd like to **delete** these 2 lines.
 
+Also maybe we would like to **add** an authorization rule for ourselves \(the current Public IPv4 of our home Internet access\) to access our server for interactive terminal connection through SSH \(=TCP 22\).
+
+So let's click the "**Edit**" button on the **Inbound** tab...We can do all of that here :
+
+![Red: delete rule, Orange : add rule, Blue : change some details](../.gitbook/assets/image%20%2873%29.png)
+
+Let's delete the 2 useless IPv6 rules, and add an SSH rule \(Type=SSH =&gt; TCP 22\) for "My IP"...
+
+![](../.gitbook/assets/image%20%2842%29.png)
+
+As soon as you select "**My IP**" as a source or destination, it is replaced with your **current Public IPv4 as seen from the Internet**, which is why I blurred mine, _even though it's actually not a risk..._
+
+Ok, after playing with rules for a moment, let's just clean up and finish with **our required Security Group Rules** for **FG + OpenVPN access from any IPv4 address**, then finally click the "**Save**" button :
+
+![Our required S.G. rules for FG + OpenVPN from any IPv4](../.gitbook/assets/image%20%2827%29.png)
+
+{% hint style="info" %}
+**You can always come back to change Security Group Inbound and Outbound rules**.
+{% endhint %}
+
+{% hint style="warning" %}
+**Just don't delete the Security Group itself**, so that references to it **continue to be valid** \(see the _**Launch Template**_ further on\).
+{% endhint %}
+
+{% hint style="success" %}
+_\*\*\*\*_![](../.gitbook/assets/zeferby_dino_64%20%281%29.png) _**Ze Summary for our Security Group Rulez :**_
+
+* **Outbound** : **ALL** Traffic **to ALL** IPv4
+* **Inbound** : **TCP 1802 from ALL** IPv4 \(for FG\)
+* **Inbound** : **UDP 1194 from ALL** IPv4 \(for OpenVPN\)
+{% endhint %}
+
+{% hint style="info" %}
+IF you want, you **can** restrict OpenVPN inbound rule to your own Public IPv4, **BUT** you must **be prepared to update your inbound rule** :
+
+* every time your public IPv4 address changes
+* every time you want to host a game from some other place \(hotel, etc...\)
+{% endhint %}
 
 
 
@@ -319,7 +370,7 @@ _...but it's not perfect, so let's modify it..._
 
 
 
-### Filing the bucket
+### Filling the bucket
 
 
 

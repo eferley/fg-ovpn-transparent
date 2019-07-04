@@ -27,7 +27,7 @@ _It is always easier to have multiple sub-folders that you can independently ren
 
 **I suggest an organization like this one** \(in this example i prepared sub-folders for 2 GMs = VPN "clients"\) :
 
-![](../.gitbook/assets/image%20%2843%29.png)
+![](../.gitbook/assets/image%20%2845%29.png)
 
 In the **T:** drive, I created **`fg-ovpn`**, with :
 
@@ -44,9 +44,11 @@ We also have a **separate `Tests` folder for tests and messing around with tempo
 We'll see later on how it helps managing multiple setups.
 {% endhint %}
 
-{% hint style="warning" %}
-This name **will be used by configuration scripts** as the "**configuration name**".
+{% hint style="danger" %}
+**This "configuration name" is VERY important : it will be used by configuration scripts; many of the files you will create later on MUST start with it.**
 {% endhint %}
+
+
 
 In this sample setup we use "**my-fg-ovpn**" for our name, and we create the **`MY-FG-OVPN`** folder to store **our own FG OpenVPN setup**, with these sub-dirs:
 
