@@ -32,7 +32,8 @@ _I'll now wait for you to come back with your shiny **admin login** to this bran
 
 ...
 
-😁 **Ah ! There you are ! And you're an Admin ! And you're at the AWS Management Console ! Great !**
+😁 **Ah ! There you are ! And you're an Admin ! And you're at the AWS Management Console !  
+Great ! \(also, but**©**Zacchaeus : Jolly Good !\)**
 
 ![The AWS Management Console](../.gitbook/assets/image%20%2848%29.png)
 
@@ -44,7 +45,7 @@ Many AWS services operate at the "AWS Region" level and you can choose very diff
 
 
 
-**We're going to prepare once and for all your \(extremely simple\) "personal virtual infrastructure"** inside the AWS cloud, using several AWS services, mainly :
+**We're going to prepare once and for all your "personal virtual infrastructure"** inside the AWS cloud, using several AWS services, mainly :
 
 * **IAM = Identity & Access Management** : this service is used by all others to manage permissions
 * **EC2 = Elastic Cloud Computing** : your virtual servers
@@ -53,6 +54,8 @@ Many AWS services operate at the "AWS Region" level and you can choose very diff
 We'll also indirectly use this service, which you won't need to check because the defaults are ok for us.
 
 * **VPC = Virtual Private Cloud** : your own networks, which together form a "private cloud" in the AWS cloud
+
+_This "personal infrastructure" will be **extremely simple** but **we'll take precautions** to avoid introducing any "security hole"..._
 
 
 
@@ -91,7 +94,7 @@ Then click the big blue "**Next: Permissions**" button at the bottom...
 
 _I already have some policies and roles defined in this account, which is why I had to blur specifics_
 
-Use the search filter box above the list of **permission policies** to locate and **put a check mark** on these 2 policies provided by AWS :
+Use the search filter box above the list of **permission policies** to locate and **put a** ✅ **check mark** on these 2 policies provided by AWS :
 
 * **AmazonEC2FullAccess** \(search for "ec2fu"\)
 
@@ -109,7 +112,7 @@ We don't need tagging, so just click the blue "**Next: Review**" button at the b
 
 ![](../.gitbook/assets/image%20%2874%29.png)
 
-**Give a name** to your new role : i suggest **`my-fg-ovpn-ec2role`** as shown above.
+**Give a name** to your new role \(i suggest **`"configuration name"-ec2role`** as shown above\) and verify you have selected the right policies.
 
 {% hint style="success" %}
 Then hit the blue "**Creale Role**" button and you're done.
@@ -118,7 +121,7 @@ Then hit the blue "**Creale Role**" button and you're done.
 ![Your shiny new IAM Role](../.gitbook/assets/image%20%286%29.png)
 
 {% hint style="info" %}
-You have just created an **IAM Role**, that you'll **assign to your OpenVPN server** later on, so that it can **access the EC2 and S3 services on your behalf, without restriction**.
+You have just created an **IAM Role**, that you'll **assign to your OpenVPN server** later on, so that it can **access the EC2 and S3 services on your behalf at startup, without restriction**.
 {% endhint %}
 
 Your server will need that to :
@@ -133,7 +136,7 @@ _**Note:** This IAM Role could have been defined with restricted custom-specifie
 
 ### Choosing the AWS Region
 
-Starting from here, let's choose an AWS Region as our playground.  **The geographically closest to you is the best because that will usually give minimal latency** \(=delay\) **in network traffic** between you and your server.
+Starting from here, let's choose an AWS Region as our playground.  **The geographically closest to you is usually the best because it should give minimal latency** \(=delay\) **in network traffic** between you and your server.
 
 For this demo I'll choose Stockholm \(called eu-north-1\), an AWS region which is "virgin territory" for me \(I have never used it before\) :
 
@@ -143,7 +146,7 @@ For this demo I'll choose Stockholm \(called eu-north-1\), an AWS region which i
 
 ### Creating the S3 bucket
 
-Let's first create our storage space for parameters and scripts : an S3 bucket.
+Let's create our storage space for parameters and scripts : an S3 bucket.
 
 {% hint style="danger" %}
 **KEEP IT PRIVATE !!   KEEP IT PRIVATE !!   KEEP IT PRIVATE !!   KEEP IT PRIVATE !!**   
@@ -155,15 +158,15 @@ So let's go to the **S3 console** \(S3 is in the _**Storage**_ section on the ma
 
 ![](../.gitbook/assets/image%20%2857%29.png)
 
-You can guess we'll click the blue "Create bucket" button...
+You can guess 🙄 we'll click the blue "**Create bucket**" button...
 
 ![](../.gitbook/assets/image%20%2875%29.png)
 
-**Step 1 : Give it a name,** which must conform to some name restrictions, and be unique \(so you may need to change it if your preferred name is already used by someone else\), check the **region**, then hit "**Next**"...
+**Step 1 : Give it a name,** which must conform to some name restrictions, and be **unique** \(so you may need to change it if your preferred name is already used by someone else\), check the **region**, then hit "**Next**"...
 
 ![](../.gitbook/assets/image%20%2838%29.png)
 
-**Step 2 :** let's **NOT** use any option for now and simply click "**Next**"...
+**Step 2 :** let's **NOT** use any option and simply click "**Next**"...
 
 ![](../.gitbook/assets/image%20%2843%29.png)
 
@@ -173,7 +176,7 @@ You can guess we'll click the blue "Create bucket" button...
 **KEEP IT PRIVATE !!   KEEP IT PRIVATE !!   KEEP IT PRIVATE !!   KEEP IT PRIVATE !!**   
 {% endhint %}
 
-**Step 3 :** So let's **keep the security tight** and "**Block** _**all**_ **public access**" as is the default, and hit "**Next**"...
+**Step 3 :** Let's **keep the security tight** and "**Block** _**all**_ **public access**" as is the default, and hit "**Next**"...
 
 ![](../.gitbook/assets/image%20%2853%29.png)
 
@@ -182,7 +185,7 @@ A quick review of our choices, then click "**Create bucket**"...
 ![](../.gitbook/assets/image%20%2851%29.png)
 
 {% hint style="success" %}
-**...and here is your own private bucket, reporting for duty !**
+**...and here is your own** _**private**_ **bucket, reporting for duty !**
 {% endhint %}
 
 
@@ -250,11 +253,11 @@ So let's go to "**Key Pairs**", and click the tempting "**Create Key Pair**" but
 
 Enter a **Key pair name** of your choice as above and click "**Create**"...
 
-AWS will create a random public+private key pair for you and your browser should automatically download the file to your machine :
+AWS will create a random public+private key pair for you, and your web browser should automatically download the file to your machine :
 
 ![](../.gitbook/assets/image%20%283%29.png)
 
-{% hint style="info" %}
+{% hint style="warning" %}
 **Lets move it** from our _Downloads_ folder _****_**to somewhere we have a chance to find it in the future !**...
 {% endhint %}
 
@@ -270,9 +273,9 @@ We do not plan to use it, but if needed, it's safe here !
 
 Back to the **AWS EC2 Console**, let's go to the "**Security Groups**" area...it's the **equivalent of a set of firewall rules** for your VPC. \(_the AWS infrastructure acts like a gigantic NAT/PAT router and firewall in front of your virtual servers in any AWS region/VPC/private network_\)
 
-You will find a "default VPC security group" there, which authorizes all network internal traffic within your VPC \("source" = every member of the security group itself\), and outbound traffic to anywhere \("destination" = 0.0.0.0/0\).
+You will find a "_default VPC security group_" there, which authorizes all internal network traffic within your VPC \("source" = every member of the security group itself\), and outbound traffic to anywhere \("destination" = 0.0.0.0/0\).
 
-We'l create a specific **Security Group** for our **OpenVPN + Fantasy Grounds** requirements \(and SSH access if you whish\), using the big "**Create Security Group**" blue button :
+We'll create a _**specific**_ **Security Group** for our **OpenVPN + Fantasy Grounds** requirements \(and SSH access if you whish\), using the big blue "**Create Security Group**" button :
 
 ![](../.gitbook/assets/image%20%2823%29.png)
 
@@ -293,7 +296,7 @@ This shows that the members \(virtual servers\) of that Security Group will be a
 > * from its own TCP 1802 port to your players on unknown/volatile TCP ports at unknown/volatile IPs
 > * from its own UDP 1194 port to you : unknown/volatile UDP port, probably unknown/volatile IP
 >
-> **The only "known" thingies here will be on this server's side**
+> **The only "known" thingies here are on this server's side**
 
 
 
@@ -315,7 +318,7 @@ You now have a "working" dedicated **Security Group** for your FG-OpenVPN setup 
 
 #### You can always change the rules...
 
-._**..EVEN when they are currently in use by running servers**_ \(which is cool for tests, by the way\).
+._**..even when they are currently in use by running servers**_ \(which is cool for tests, by the way\).
 
 If we look at the Inbound rules for our newly created Security Group :
 
