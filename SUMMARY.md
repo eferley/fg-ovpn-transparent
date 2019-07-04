@@ -15,10 +15,10 @@
 * ["Transparent" OpenVPN-based Port Forwarding](proposed-solution/transparent-openvpn-solution-presentation.md)
 * [Tools](proposed-solution/tools.md)
 * [Amazon Web Services](proposed-solution/amazon-web-services.md)
+* [Setup process overview](proposed-solution/setup-process-overview.md)
 
 ## Step-by-step instructions <a id="setup-instructions"></a>
 
-* [Setup process overview](setup-instructions/setup-process-overview.md)
 * [Step 0 : Preparation](setup-instructions/step-0-preparation.md)
 * [Step 1 : Install OpenVPN + Easy-RSA](setup-instructions/step-1-install-openvpn-+-easy-rsa-2.md)
 * [Step 2 : Create your PKI](setup-instructions/step-2-create-your-pki.md)
