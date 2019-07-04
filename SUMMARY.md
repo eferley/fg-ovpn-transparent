@@ -23,9 +23,6 @@
 * [Step 1 : Install OpenVPN + Easy-RSA](local-setup/step-1-install-openvpn-+-easy-rsa-2.md)
 * [Step 2 : Create your PKI](local-setup/step-2-create-your-pki.md)
 * [Step 3 : Setup OpenVPN connections](local-setup/step-3-prepare-your-openvpn-connection.md)
-* [Step 6 : Launch time ! -WIP](local-setup/step-6-launch-time.md)
-* [Step 7 : Connect and enjoy -WIP](local-setup/step-7-connect-and-enjoy.md)
-* [Step 8 : Destroy/"Terminate" after use -WIP](local-setup/step-8-destroy-terminate-after-use.md)
 * [Utility files and scripts -WIP](local-setup/files.md)
 * [Step-by-step setup -OLD](local-setup/step-by-step-setup.md)
 
@@ -36,6 +33,12 @@
 ## Finalization - Step-by-step
 
 * [Step 5 : Check, Finalize, Transfer files to S3 -WIP](finalization-step-by-step/step-5-check-finalize-transfer-files-to-s3.md)
+
+## Using it - Step-by-step
+
+* [Step 6 : Launch time ! -WIP](using-it-step-by-step/step-6-launch-time.md)
+* [Step 7 : Connect and enjoy -WIP](using-it-step-by-step/step-7-connect-and-enjoy.md)
+* [Step 8 : Destroy/"Terminate" after use -WIP](using-it-step-by-step/step-8-destroy-terminate-after-use.md)
 
 ## Manage your server
 

@@ -58,9 +58,9 @@ Refer to the **"**[**Check that you know/learn**](../local-setup/step-0-preparat
 
 ## Repeatable usage process
 
-**Step 6** : \(AWS\) [Launch your FG-OpenVPN Linux server](../local-setup/step-6-launch-time.md) in your AWS Virtual Private Cloud
+**Step 6** : \(AWS\) [Launch your FG-OpenVPN Linux server](../using-it-step-by-step/step-6-launch-time.md) in your AWS Virtual Private Cloud
 
-**Step 7** : [Connect your VPN and enjoy...](../local-setup/step-7-connect-and-enjoy.md)
+**Step 7** : [Connect your VPN and enjoy...](../using-it-step-by-step/step-7-connect-and-enjoy.md)
 
-**Step 8** : \(AWS\) [Destroy \(="Terminate"\)](../local-setup/step-8-destroy-terminate-after-use.md) your server
+**Step 8** : \(AWS\) [Destroy \(="Terminate"\)](../using-it-step-by-step/step-8-destroy-terminate-after-use.md) your server
 

@@ -1,12 +1,12 @@
 # Step 0 : Preparation
 
-Let's begin with 2 things : 
+Let's begin with : 
 
-## **Create/have an** [**account available on AWS**](../proposed-solution/amazon-web-services.md#how-to-create-an-aws-account)\*\*\*\*
+### **Create/have an** [**account available on AWS**](../proposed-solution/amazon-web-services.md#how-to-create-an-aws-account)\*\*\*\*
 
 ...as explained there... 👆 
 
-## Check that you know/learn :
+### Check that you know/learn :
 
 * [how to open a command line](https://www.digitalcitizen.life/7-ways-launch-command-prompt-windows-7-windows-8) with your version of Windows
 * [how to show file extensions](https://www.howtohaven.com/system/show-file-extensions-in-windows-explorer.shtml) in Windows Explorer
@@ -15,21 +15,21 @@ Let's begin with 2 things :
 
 _**...and remember you'll end up needing a**_ [_**proper text editor**_](../proposed-solution/tools.md#your-text-editor-of-choice) _**at some point !**_
 
-## **Prepare a "safe" place on your own machine.**
+### **Prepare a "safe" place on your own machine.**
 
 {% hint style="warning" %}
 Create that on **another drive than your system C: drive if you can, mandatorily** in a place where you have **Read+Write permissions...and of course NOT in a "recovery" drive/partition.**
 {% endhint %}
 
-We'll create an empty folder to store your whole "reference materials", then empty sub-folders in it to store different types of files by category.
+We'll create an empty folder to store your whole thing, then empty sub-folders in it to store different types of files by category.
 
-_It is always easier to have multiple sub-folders that you can independently rename/move/copy/zip/etc..., rather than a bunch of "more or less" related files in a single folder !_
+_It is always easier to have multiple sub-folders that you can independently rename/move/copy/zip/etc..., rather than a messy bunch of "more or less" related files in a single folder !_
 
 **I suggest an organization like this one** \(in this example i prepared sub-folders for 2 GMs = VPN "clients"\) :
 
 ![](../.gitbook/assets/image%20%2845%29.png)
 
-In the **T:** drive, I created **`fg-ovpn`**, with :
+In the **T:** drive, I created the **`fg-ovpn`** root folder, with :
 
 * **`docs`** for docs & infos you may download in case you need to look them up years later...
 * ⚠ **`MY-FG-OVPN`** for **our own FG OpenVPN setup** ⚠ 
@@ -43,7 +43,7 @@ We also have a **separate `Tests` folder for tests and messing around with tempo
 {% endhint %}
 
 {% hint style="danger" %}
-**This "configuration name" is VERY important : it will be used by configuration scripts; many of the files you will create later on MUST start with it as a prefix.**
+**This "configuration name" is VERY important : it will be used by configuration scripts; many of the files you will create later on MUST start with it as a prefix, so : better get used to it !**
 {% endhint %}
 
 ![](../.gitbook/assets/zeferby_dino_64%20%281%29.png) _**Read this again !**_ 👆 
