@@ -6,7 +6,7 @@ We'll now prepare a complete set of security and parameter files per OpenVPN cli
 **At the end of the process, you will only need one such set, for yourself : my-fg-ovpn-dm01**
 {% endhint %}
 
-But we'll also do it for "my-fg-ovpn-dm02" so you can test both, and see the connection **working for dm01** and **failing for dm02** \(we _**revoked**_ this guy earlier\), which will prove that the [CRL](step-2-create-your-pki.md#your-initial-crl-the-certification-revocation-list) is taken into account.
+But we'll **also do it for \(revoked\) "my-fg-ovpn-dm02"** so you can test both, and see the connection **working for dm01** and **failing for dm02** \(we _**revoked**_ this guy earlier\), which will verify that the [CRL](step-2-create-your-pki.md#your-initial-certification-revocation-list) is taken into account.
 
 
 
@@ -14,9 +14,9 @@ In the first part we are looking at things _**as the PKI owner.**_  Then we'll s
 
 
 
-### OpenVPN client parameters
+## OpenVPN client parameters
 
-#### my-fg-ovpn-dm01
+### my-fg-ovpn-dm01
 
 So, let's head over to **`T:\fg-ovpn\MY-FG-OVPN\my-fg-ovpn-clients\my-fg-ovpn-dm01`**, one of the folders we prepared long ago.  It should currently be empty :
 
@@ -84,7 +84,7 @@ I prefer to stay with the "old way" and keep files separate as it maintains comp
 
 
 
-#### Rinse and repeat for my-fg-ovpn-dm02
+### Rinse and repeat for my-fg-ovpn-dm02
 
 You can :
 
@@ -125,7 +125,7 @@ verb 4
 
 
 
-### OpenVPN GUI
+## OpenVPN GUI
 
 Let's now switch to the _**user view of OpenVPN**_, which is what you'll use in the future : the **OpenVPN GUI**, that you can find in the OpenVPN group, "pin to Start", etc...
 
@@ -187,7 +187,7 @@ When your OpenVPN server is on-line and you know its **Public IP** :
 🎆 **Done !** 🎆 ****
 
 {% hint style="info" %}
-Note : the **config files** you edit when using "**Edit Config**" of **OpenVPN GUI** are the ones stored **in your OpenVPN personal folder.**
+The **`.ovpn`** **config files** that you edit when using the "**Edit Config**" menu item of **OpenVPN GUI** are the ones stored **in your OpenVPN personal folder.**
 {% endhint %}
 
 
