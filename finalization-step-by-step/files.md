@@ -1,4 +1,4 @@
-# Utility files and scripts -WIP
+# Utility files and scripts -OLD
 
 
 
@@ -213,7 +213,7 @@ echo "/usr/local/${MY_FGVPN_CONFIG_NAME}/boot/${MY_FGVPN_CONFIG_NAME}-boot.sh $@
 echo "" >> /etc/rc.d/rc.local
 
 
-# ---------------------------- INSTALL OPENVPN + OVPN SERVER CONFIGS ---------------------------------
+# ---------------------------- INSTALL CONNTRACK-TOOLS + OPENVPN + OVPN SERVER CONFIGS ---------------------------------
 
 echo `date` "+++ $0 INSTALLING conntrack-tools"
 yum -y install conntrack-tools
@@ -236,9 +236,9 @@ mkdir ${OVPNSRVPATH}/${OVPNSRVNAME}-ccd/
 aws s3 cp ${MY_FGVPN_S3_DEPLOY_URL}/conf/${MY_FGVPN_CONFIG_NAME}/${MY_FGVPN_CONFIG_NAME}-ca.crt ${OVPNCAPATH}/
 aws s3 cp ${MY_FGVPN_S3_DEPLOY_URL}/conf/${MY_FGVPN_CONFIG_NAME}/${MY_FGVPN_CONFIG_NAME}-ta.key ${OVPNCAPATH}/
 aws s3 cp ${MY_FGVPN_S3_DEPLOY_URL}/conf/${MY_FGVPN_CONFIG_NAME}/${MY_FGVPN_CONFIG_NAME}-dh2048.pem ${OVPNCAPATH}/
-aws s3 cp ${MY_FGVPN_S3_DEPLOY_URL}/conf/${MY_FGVPN_CONFIG_NAME}/${OVPNSRVNAME}.crt ${OVPNSRVPATH}/
-aws s3 cp ${MY_FGVPN_S3_DEPLOY_URL}/conf/${MY_FGVPN_CONFIG_NAME}/${OVPNSRVNAME}.csr ${OVPNSRVPATH}/
-aws s3 cp ${MY_FGVPN_S3_DEPLOY_URL}/conf/${MY_FGVPN_CONFIG_NAME}/${OVPNSRVNAME}.key ${OVPNSRVPATH}/
+aws s3 cp ${MY_FGVPN_S3_DEPLOY_URL}/conf/${MY_FGVPN_CONFIG_NAME}/${OVPNSRVNAME}-srv.crt ${OVPNSRVPATH}/
+aws s3 cp ${MY_FGVPN_S3_DEPLOY_URL}/conf/${MY_FGVPN_CONFIG_NAME}/${OVPNSRVNAME}-srv.csr ${OVPNSRVPATH}/
+aws s3 cp ${MY_FGVPN_S3_DEPLOY_URL}/conf/${MY_FGVPN_CONFIG_NAME}/${OVPNSRVNAME}-srv.key ${OVPNSRVPATH}/
 
 # The CRL must be regularly refreshed !
 aws s3 cp ${MY_FGVPN_S3_DEPLOY_URL}/refresh/${MY_FGVPN_CONFIG_NAME}/crl/${MY_FGVPN_CONFIG_NAME}-crl.pem ${OVPNCAPATH}/
@@ -272,15 +272,15 @@ dev tun
 ca ${OVPNCAPATH}/${MY_FGVPN_CONFIG_NAME}-ca.crt
 dh ${OVPNCAPATH}/${MY_FGVPN_CONFIG_NAME}-dh2048.pem
 crl-verify ${OVPNCAPATH}/${MY_FGVPN_CONFIG_NAME}-crl.pem
-cert ${OVPNSRVPATH}/${OVPNSRVNAME}.crt
-key ${OVPNSRVPATH}/${OVPNSRVNAME}.key
+cert ${OVPNSRVPATH}/${OVPNSRVNAME}-srv.crt
+key ${OVPNSRVPATH}/${OVPNSRVNAME}-srv.key
 ; topology subnet
 server ${MY_FGVPN_VPNSubNet:0:${#MY_FGVPN_VPNSubNet}-3} 255.255.255.0
 ifconfig-pool-persist ${OVPNSRVPATH}/${OVPNSRVNAME}-ipp.txt
 client-config-dir ${OVPNSRVPATH}/${OVPNSRVNAME}-ccd
 # CIDR for this VPN
 push "route ${MY_FGVPN_VPNSubNet:0:${#MY_FGVPN_VPNSubNet}-3} 255.255.255.0"
-# CIDR for this server private IP in the VPC (not the full VPC since is not needed for FG)
+# CIDR for this server private IP in the VPC (not the full VPC since it is not needed for FG)
 push "route ${MY_FGVPN_PRIVATE_IP} 255.255.255.255"
 route ${MY_FGVPN_PRIVATE_IP} 255.255.255.255
 # CIDRs for other networks available through this server

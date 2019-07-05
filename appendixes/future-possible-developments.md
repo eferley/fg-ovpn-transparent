@@ -85,7 +85,7 @@ So : no satisfying free workaround on my side for the moment...
 
 **...are welcome !** 😁 
 
-
+* _**useful ???**_ Diag.tools, common commands
 
 
 
