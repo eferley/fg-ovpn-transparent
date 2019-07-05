@@ -13,9 +13,10 @@
 #!/bin/bash
 echo `date` "UserData script starting - Args : $@"
 
-export MY_STARTUP_CONFIG_NAME=my-fg-ovpn
+export MY_STARTUP_CONFIG_NAME=your-configuration-name
+export MY_STARTUP_S3_BUCKET=your-s3-bucket-name
 export MY_STARTUP_VPNSubNet=10.10.10.0/24
-export MY_STARTUP_S3_BUCKET=my-very-own-fg-ovpn-bucket
+
 ```
 {% endhint %}
 
@@ -25,9 +26,9 @@ export MY_STARTUP_S3_BUCKET=my-very-own-fg-ovpn-bucket
 #!/bin/bash
 echo `date` "UserData script starting - Args : $@"
 
-export MY_STARTUP_CONFIG_NAME=my-fg-ovpn
+export MY_STARTUP_CONFIG_NAME=your-configuration-name
+export MY_STARTUP_S3_BUCKET=your-s3-bucket-name
 export MY_STARTUP_VPNSubNet=10.10.10.0/24
-export MY_STARTUP_S3_BUCKET=my-very-own-fg-ovpn-bucket
 
 export MY_STARTUP_S3_DEPLOY_URL=s3://${MY_STARTUP_S3_BUCKET}/deploy
 
