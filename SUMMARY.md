@@ -26,9 +26,9 @@
 
 ## AWS Setup - Step-by-step
 
-* [Step 4 : Configure your AWS environment -WIP](aws-setup-step-by-step/step-4-configure-your-aws-environment.md)
+* [Step 4 : Your AWS environment](aws-setup-step-by-step/step-4-configure-your-aws-environment.md)
 * [4.1-Creating the IAM Role](aws-setup-step-by-step/4.1-creating-the-iam-role.md)
-* [4.2-AWS Region](aws-setup-step-by-step/4.2-aws-region.md)
+* [4.2-Choosing the AWS Region](aws-setup-step-by-step/4.2-aws-region.md)
 * [4.3-Creating the S3 bucket](aws-setup-step-by-step/4.3-creating-the-s3-bucket.md)
 * [4.4-Virtual Private Cloud - Default VPC](aws-setup-step-by-step/4.4-virtual-private-cloud-default-vpc.md)
 * [4.5-Creating an AWS Key Pair](aws-setup-step-by-step/4.5-creating-an-aws-key-pair.md)

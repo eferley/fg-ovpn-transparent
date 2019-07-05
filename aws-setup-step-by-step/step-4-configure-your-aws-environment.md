@@ -1,6 +1,6 @@
-# Step 4 : Configure your AWS environment -WIP
+# Step 4 : Your AWS environment
 
-### ![](../.gitbook/assets/zeferby_dino_64.png) Welcome to Ze cloud 🌥 ⛈ 🌤 
+## ![](../.gitbook/assets/zeferby_dino_64.png) Welcome to Ze cloud 🌥 ⛈ 🌤 
 
 {% hint style="warning" %}
 If you have not already done so, here comes the time for you to follow that [account creation process info](../proposed-solution/amazon-web-services.md#how-to-create-an-aws-account), and especially take a few minutes to watch the small video linked there, **including the part for creating your first IAM user** \(**IAM** = Identity & Access Management\).
@@ -16,11 +16,11 @@ If you have not already done so, here comes the time for you to follow that [acc
 _That's an "AWS best practice" for a reason..._
 {% endhint %}
 
-There are _**hundreds of videos and articles all over the Internet**_ about that "_create aws account_" topic, so feel free to watch and compare...just beware to select recent enough ones \( &lt; 1 year old is usually ok\).
+There are [_**hundreds of videos**_](https://www.youtube.com/results?search_query=create+aws+account) _**and articles all over the Internet**_ about that "_create aws account_" topic, so feel free to watch and compare...just beware to select recent enough ones \( &lt; 1 year old is usually ok\).
 
 
 
-_I'll now wait for you to come back with your shiny **admin login** to this brand new **AWS account**...._
+\_\_![](../.gitbook/assets/zeferby_dino_64%20%281%29.png) _I'll now wait for you to come back with your shiny **admin login** to this brand new **AWS account**...._
 
 ...
 
@@ -33,11 +33,11 @@ _I'll now wait for you to come back with your shiny **admin login** to this bran
 ...
 
 😁 **Ah ! There you are ! And you're an Admin ! And you're at the AWS Management Console !  
-Great ! \(also, but**©**Zacchaeus : Jolly Good !\)**
+Great ! \(**_**also, but**_©_**Zacchaeus : Jolly Good !**_**\)**
 
 ![The AWS Management Console](../.gitbook/assets/image%20%2850%29.png)
 
-This is the "home" of your AWS management console : you can **manage your account** with the menu titled with your "IAM username" @ "account name", **choose an "AWS Region"** with the menu to the right of it, and access the management consoles for all AWS services.
+This is the "home" of your AWS management console : you can **manage your account** with the menu titled with your "IAM username" @ "account name", **choose an "AWS Region"** with the menu to the right of it, and **access the service management consoles** for all AWS services.
 
 Each AWS service has its own "console" and you can have **multiple "service consoles" in different tabs** of your web browser, **which is convenient**, especially if you have to copy/paste or cross-check infos from one to the other.
 
@@ -59,10 +59,10 @@ _This "personal infrastructure" will be **extremely simple** but **we'll take pr
 
 
 
-### What we'll do in this section :
+## What we'll do in this section :
 
 1. create an AWS "**IAM Role**" for your server to access AWS services during startup
-2. choose an "**AWS Region**"
+2. choose an "**AWS Region**" to build our mini-infrastructure
 3. create an AWS "**S3 bucket**" for your server to auto-configure during startup
 4. have a quick look at your AWS "**Default VPC**"
 5. create an AWS "**Key pair**" \(similar to our \[certificate+key\] pairs in our own PKI\), for you to access your server interactively if you need
@@ -70,58 +70,11 @@ _This "personal infrastructure" will be **extremely simple** but **we'll take pr
 7. "**fill the bucket**" : organize and transfer our security and configuration files into the S3 bucket
 8. create an AWS EC2 "**Launch Template**" : a set of option choices defining a kind of "server model", that you'll use later on, to repeatedly launch the server itself in the quickest possible way \(since you'll "terminate" =destroy the server after each session\)
 
-Then we'll be ready to test our setup.
+**Then we'll be ready to test our setup.**
 
 
 
 
-
-### Virtual Private Cloud
-
-#### Quick overview 🚁 
-
-> **This is mostly Tech blurb...**
->
-> **If you want to skip, jump to "Default VPC"**
-
-A VPC is a set of private IP networks all part of the same private "address space" that belongs to you :
-
-* in **one AWS Region** \(Stockholm : eu-north1\)
-* spread over **several AZs = AWS "Availability Zones"** \(Stockholm : 3 AZs = eu-north-1a/1b/1c\)
-* sharing some of their security and network settings
-* with or without public IPs attached to the servers in the networks
-
-The "private address space" mentioned above means that all your networks in a VPC will be part of a contiguous large range of private IP addresses belonging to you _\(recently added AWS feature : you can now even add more ranges of private IPs if the first one is not enough\)_
-
-The **VPC private IP range** is a block \(of max. "/16" = 64K = 65536 IPs\) **contained within one of these** :
-
-* **192.168.0.0 to 192.168.255.255**, which is noted **192.168.0.0/16** \(that's called a "CIDR block"\)
-* **172.16.0.0 to 172.31.255.255**, which is noted **172.16.0.0/12**
-* **10.0.0.0 to 10.255.255.255**, which is noted **10.0.0.0/8**
-
-An **AWS Region** is made of **several AZs = AWS Availability Zones** which you can consider as multiple distinct datacenters, near enough each other that they are all **interconnected on VERY high speed** fiber optics connections.
-
-So a VPC in one region is split in multiple interconnected IP "sub-networks" \(at least 1 for each AZ\). When you create a VPC, you can also choose to split it into more subnets, each with some specific characteristics :
-
-* with/without Internet access
-* reachable from the Internet, or not \(servers also get a public IP, or they don't\)
-* etc...
-
-If you want to know more about AWS VPCs, please [browse the docs](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html).
-
-#### Default VPC
-
-When you created your AWS account, your were automatically provided a Default VPC in each region, and you can see how it is defined in the "**VPC Console**" \(in the _**Networking & Content Delivery**_ section\).
-
-{% hint style="success" %}
-**We'll use the most possible basic setup, relying on the Default VPC that AWS automatically provides for you in any AWS Region.**
-{% endhint %}
-
-This default AWS VPC in your region of choice perfectly fits the bill to host our lonely little OpenVPN server, so we'll use it "as is".
-
-For the moment, just use the "VPC Console" to **take a quick look at your default VPC and make a note of its private IPv4 block** :
-
-![Note your Default VPC IPv4 CIDR block](../.gitbook/assets/image%20%282%29.png)
 
 
 

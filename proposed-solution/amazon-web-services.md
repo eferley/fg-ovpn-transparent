@@ -31,6 +31,8 @@ Also here is a link to a[ recent enough video showing both](https://youtu.be/W-u
 * new AWS account creation
 * first IAM user creation in the new account
 
+AWS Account creation videos : [https://www.youtube.com/results?search\_query=create+aws+account](https://www.youtube.com/results?search_query=create+aws+account)
+
 
 
 ### AWS Free Tier
