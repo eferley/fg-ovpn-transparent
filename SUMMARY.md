@@ -24,7 +24,7 @@
 * [Step 2 : Create your own PKI](local-setup/step-2-create-your-pki.md)
 * [Step 3 : Setup OpenVPN connections](local-setup/step-3-prepare-your-openvpn-connection.md)
 
-## AWS Setup - Step-by-step
+## AWS Setup - Click-by-Click <a id="aws-setup-step-by-step"></a>
 
 * [Step 4 : Your AWS environment](aws-setup-step-by-step/step-4-configure-your-aws-environment.md)
 * [4.1-Creating the IAM Role](aws-setup-step-by-step/4.1-creating-the-iam-role.md)
@@ -32,6 +32,9 @@
 * [4.3-Creating the S3 bucket](aws-setup-step-by-step/4.3-creating-the-s3-bucket.md)
 * [4.4-Virtual Private Cloud - Default VPC](aws-setup-step-by-step/4.4-virtual-private-cloud-default-vpc.md)
 * [4.5-Creating an AWS Key Pair](aws-setup-step-by-step/4.5-creating-an-aws-key-pair.md)
+* [4.6-Creating an AWS Security Group](aws-setup-step-by-step/4.6-creating-an-aws-security-group.md)
+* [4.7-Filling the bucket](aws-setup-step-by-step/4.7-filling-the-bucket.md)
+* [4.8-Building the Launch Template](aws-setup-step-by-step/4.8-building-the-launch-template.md)
 
 ## Finalization - Step-by-step
 
