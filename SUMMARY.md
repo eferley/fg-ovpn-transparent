@@ -20,13 +20,18 @@
 ## Local setup - Step-by-step <a id="local-setup"></a>
 
 * [Step 0 : Preparation](local-setup/step-0-preparation.md)
-* [Step 1 : Install OpenVPN + Easy-RSA](local-setup/step-1-install-openvpn-+-easy-rsa-2.md)
-* [Step 2 : Create your PKI](local-setup/step-2-create-your-pki.md)
+* [Step 1 : OpenVPN + Easy-RSA & "new-PKI"](local-setup/step-1-install-openvpn-+-easy-rsa-2.md)
+* [Step 2 : Create your own PKI](local-setup/step-2-create-your-pki.md)
 * [Step 3 : Setup OpenVPN connections](local-setup/step-3-prepare-your-openvpn-connection.md)
 
 ## AWS Setup - Step-by-step
 
 * [Step 4 : Configure your AWS environment -WIP](aws-setup-step-by-step/step-4-configure-your-aws-environment.md)
+* [4.1-Creating the IAM Role](aws-setup-step-by-step/4.1-creating-the-iam-role.md)
+* [4.2-AWS Region](aws-setup-step-by-step/4.2-aws-region.md)
+* [4.3-Creating the S3 bucket](aws-setup-step-by-step/4.3-creating-the-s3-bucket.md)
+* [4.4-Virtual Private Cloud - Default VPC](aws-setup-step-by-step/4.4-virtual-private-cloud-default-vpc.md)
+* [4.5-Creating an AWS Key Pair](aws-setup-step-by-step/4.5-creating-an-aws-key-pair.md)
 
 ## Finalization - Step-by-step
 

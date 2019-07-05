@@ -70,7 +70,7 @@ This way, every time **your GM FG machine** will reconnect to your local "home" 
 
 As an example, here is the network setup at the same location as above :
 
-![Private IP addresses in the DHCP settings](../.gitbook/assets/image%20%287%29.png)
+![Private IP addresses in the DHCP settings](../.gitbook/assets/image%20%288%29.png)
 
 And here is the bottom of the page with the **static IP reservation** part, where you can see I have the private IP 172.30.131.11 reserved for my W7 and it will always get this private IP every time I come to this place :
 

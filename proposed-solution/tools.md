@@ -56,7 +56,7 @@ This tool should not be generally required, but **if you want to open a command 
 
 PuTTY is available from : [https://www.putty.org/](https://www.putty.org/)
 
-![](../.gitbook/assets/image%20%2850%29.png)
+![](../.gitbook/assets/image%20%2852%29.png)
 
 ### Your text editor of choice
 

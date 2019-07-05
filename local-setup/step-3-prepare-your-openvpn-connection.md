@@ -20,7 +20,7 @@ In the first part we are looking at things _**as the PKI owner.**_  Then we'll s
 
 So, let's head over to **`T:\fg-ovpn\MY-FG-OVPN\my-fg-ovpn-clients\my-fg-ovpn-dm01`**, one of the folders we prepared long ago.  It should currently be empty :
 
-![](../.gitbook/assets/image%20%2814%29.png)
+![](../.gitbook/assets/image%20%2815%29.png)
 
 We'll begin by creating the **OpenVPN connection parameter file** : **`my-fg-ovpn-dm01.ovpn`**
 
@@ -121,7 +121,7 @@ verb 4
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-![](../.gitbook/assets/image%20%2811%29.png)
+![](../.gitbook/assets/image%20%2812%29.png)
 
 
 
@@ -129,13 +129,13 @@ verb 4
 
 Let's now switch to the _**user view of OpenVPN**_, which is what you'll use in the future : the **OpenVPN GUI**, that you can find in the OpenVPN group, "pin to Start", etc...
 
-![](../.gitbook/assets/image%20%2836%29.png)
+![](../.gitbook/assets/image%20%2838%29.png)
 
-![](../.gitbook/assets/image%20%2829%29.png)
+![](../.gitbook/assets/image%20%2831%29.png)
 
 When we use it for **the first time**, the result is "a bit" **anticlimatic**... 😬 
 
-![](../.gitbook/assets/image%20%2846%29.png)
+![](../.gitbook/assets/image%20%2848%29.png)
 
 After you close this dialog, you don't see anything new about OpenVPN on your screen. 😡 
 
@@ -149,27 +149,27 @@ I'll choose to have this notification icon _always visible_, so it will now alwa
 
 Let's **Right-click** it :
 
-![](../.gitbook/assets/image%20%2844%29.png)
+![](../.gitbook/assets/image%20%2846%29.png)
 
 A quick look at the default settings :
 
-![](../.gitbook/assets/image%20%2826%29.png)
+![](../.gitbook/assets/image%20%2827%29.png)
 
-![](../.gitbook/assets/image%20%2824%29.png)
+![](../.gitbook/assets/image%20%2825%29.png)
 
-![Note : the personal folders above have just been created](../.gitbook/assets/image%20%2825%29.png)
+![Note : the personal folders above have just been created](../.gitbook/assets/image%20%2826%29.png)
 
 I'll just change 2 options according to **my own preference** : to have it _always running_ \(discreetly, in the taskbar\), and have a _notification balloon_ also when a "reconnect" happens :
 
-![Updating settings / personal preference](../.gitbook/assets/image%20%2839%29.png)
+![Updating settings / personal preference](../.gitbook/assets/image%20%2841%29.png)
 
 Now let's have a look at the folders in my Windows personal storage \(that we see on the "Advanced" tab of the Settings above\) :
 
-![](../.gitbook/assets/image%20%2810%29.png)
+![](../.gitbook/assets/image%20%2811%29.png)
 
 **Let's bring some configs there ! We'll copy/paste our 2 shiny "distribution folders"** for dm01 and dm02, from our "PKI owner" storage : we are "distributing" to ourselves...
 
-![Let&apos;s copy from the client distributions...](../.gitbook/assets/image%20%2828%29.png)
+![Let&apos;s copy from the client distributions...](../.gitbook/assets/image%20%2830%29.png)
 
 ![...and paste to our own &quot;live&quot; client setup.](../.gitbook/assets/image%20%2878%29.png)
 
@@ -177,7 +177,7 @@ Now let's have a look at the folders in my Windows personal storage \(that we se
 **There we are ! All set and ready to connect. Just right-click the OpenVPN GUI again :**
 {% endhint %}
 
-![](../.gitbook/assets/image%20%2819%29.png)
+![](../.gitbook/assets/image%20%2820%29.png)
 
 When your OpenVPN server is on-line and you know its **Public IP** :
 

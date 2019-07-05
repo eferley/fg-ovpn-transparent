@@ -1,4 +1,4 @@
-# Step 1 : Install OpenVPN + Easy-RSA
+# Step 1 : OpenVPN + Easy-RSA & "new-PKI"
 
 As exposed in the [Tools](../proposed-solution/tools.md) section, we absolutely need 2 pieces of software :
 
@@ -26,12 +26,12 @@ _Easy-RSA 2 is developed by the same team as OpenVPN._
 
 So, we download and save the installer from [https://openvpn.net/community-downloads/](https://openvpn.net/community-downloads/) for our version of Windows \(I have built a small temporary Windows 2012R2 to "impersonate" the GM FG machine for this demo\) into the folder we previously created at **`T:\fg-ovpn\source-install`** :
 
-![](../.gitbook/assets/image%20%2849%29.png)
+![](../.gitbook/assets/image%20%2851%29.png)
 
 ...and we execute, authorizing it to do its job through the **Yes** on the "User Access Control" dialog...  
 
 
-![](../.gitbook/assets/image%20%2822%29.png)
+![](../.gitbook/assets/image%20%2823%29.png)
 
 ...making sure to **select "Easy-RSA 2 Certificate Management Scripts"** :
 
@@ -76,7 +76,7 @@ We'll then use it to initialize our own PKI in its own folder .  This way, even 
 1. copy all files from **`<OpenVPN Installation>\easy-rsa`** to your **`new-PKI`** folder
 2. then copy these \(or all, if you want\) files from **`<OpenVPN Installation>\bin`** to **`new-PKI`** as well
 
-![Copy from easy-rsa to new-PKI](../.gitbook/assets/image%20%2830%29.png)
+![Copy from easy-rsa to new-PKI](../.gitbook/assets/image%20%2832%29.png)
 
 ![Copy from bin to new-PKI](../.gitbook/assets/image%20%2854%29.png)
 
@@ -84,7 +84,7 @@ We'll then use it to initialize our own PKI in its own folder .  This way, even 
 **Your autonomous "ready-to-duplicate" `new-PKI` folder is now complete :**
 {% endhint %}
 
-![](../.gitbook/assets/image%20%2813%29.png)
+![](../.gitbook/assets/image%20%2814%29.png)
 
 
 

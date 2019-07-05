@@ -35,13 +35,13 @@ _I'll now wait for you to come back with your shiny **admin login** to this bran
 😁 **Ah ! There you are ! And you're an Admin ! And you're at the AWS Management Console !  
 Great ! \(also, but**©**Zacchaeus : Jolly Good !\)**
 
-![The AWS Management Console](../.gitbook/assets/image%20%2848%29.png)
+![The AWS Management Console](../.gitbook/assets/image%20%2850%29.png)
 
 This is the "home" of your AWS management console : you can **manage your account** with the menu titled with your "IAM username" @ "account name", **choose an "AWS Region"** with the menu to the right of it, and access the management consoles for all AWS services.
 
-_Each AWS service has its own "console" and you can have **multiple "service consoles" in different tabs** of your web browser, **which is convenient**, especially if you have to copy/paste or cross-check infos from one to the other._
+Each AWS service has its own "console" and you can have **multiple "service consoles" in different tabs** of your web browser, **which is convenient**, especially if you have to copy/paste or cross-check infos from one to the other.
 
-Many AWS services operate at the "AWS Region" level and you can choose very different settings from region to region; some services like IAM or Billing are "global" and have no region selector.
+Many AWS services operate at the "AWS Region" level and you can choose very different settings from region to region; some **services like IAM or Billing are "global"** and have no region selector.
 
 
 
@@ -61,133 +61,18 @@ _This "personal infrastructure" will be **extremely simple** but **we'll take pr
 
 ### What we'll do in this section :
 
-* create an AWS "**IAM Role**" for your server to access AWS services during startup
-* choose an "**AWS Region**"
-* create an AWS "**S3 bucket**" for your server to auto-configure during startup
-* have a quick look at your AWS "**Default VPC**"
-* create an AWS "**Key pair**" \(similar to our \[certificate+key\] pairs in our own PKI\), for you to access your server interactively if you need
-* create an AWS "**Security Group**" for your server \(a kind of firewall rule\)
-* "**fill the bucket**" : organize and transfer our security and configuration files into the S3 bucket
-* create an AWS EC2 "**Launch Template**" : a set of option choices defining a kind of "server model", that you'll use later on, to repeatedly launch the server itself in the quickest possible way \(since you'll "terminate" =destroy the server after each session\)
+1. create an AWS "**IAM Role**" for your server to access AWS services during startup
+2. choose an "**AWS Region**"
+3. create an AWS "**S3 bucket**" for your server to auto-configure during startup
+4. have a quick look at your AWS "**Default VPC**"
+5. create an AWS "**Key pair**" \(similar to our \[certificate+key\] pairs in our own PKI\), for you to access your server interactively if you need
+6. create an AWS "**Security Group**" for your server \(a kind of firewall rule\)
+7. "**fill the bucket**" : organize and transfer our security and configuration files into the S3 bucket
+8. create an AWS EC2 "**Launch Template**" : a set of option choices defining a kind of "server model", that you'll use later on, to repeatedly launch the server itself in the quickest possible way \(since you'll "terminate" =destroy the server after each session\)
 
 Then we'll be ready to test our setup.
 
 
-
-### Creating the IAM Role \(region-agnostic\)
-
-The first "service console" we'll open is the **IAM console** where you'll find the "**Role**" option in the menu to the left :
-
-![](../.gitbook/assets/image%20%2816%29.png)
-
-Choose this link, then use the big blue "**Create Role**" button at the top...
-
-![](../.gitbook/assets/image%20%2871%29.png)
-
-Click :
-
-* the "**AWS service**" block under _**Select Type of trusted entity**_
-* the "**EC2**" block under _**Choose the service that will use this role**_
-
-Then click the big blue "**Next: Permissions**" button at the bottom...
-
-![](../.gitbook/assets/image%20%2841%29.png)
-
-_I already have some policies and roles defined in this account, which is why I had to blur specifics_
-
-Use the search filter box above the list of **permission policies** to locate and **put a** ✅ **check mark** on these 2 policies provided by AWS :
-
-* **AmazonEC2FullAccess** \(search for "ec2fu"\)
-
-![](../.gitbook/assets/image%20%2866%29.png)
-
-* **AmazonS3FullAccess** \(search for "s3fu"\)
-
-![](../.gitbook/assets/image%20%284%29.png)
-
-Then click the blue "**Next: Tags**" button at the bottom...
-
-![](../.gitbook/assets/image%20%2852%29.png)
-
-We don't need tagging, so just click the blue "**Next: Review**" button at the bottom...
-
-![](../.gitbook/assets/image%20%2874%29.png)
-
-**Give a name** to your new role \(i suggest **`"configuration name"-ec2role`** as shown above\) and verify you have selected the right policies.
-
-{% hint style="success" %}
-Then hit the blue "**Creale Role**" button and you're done.
-{% endhint %}
-
-![Your shiny new IAM Role](../.gitbook/assets/image%20%286%29.png)
-
-{% hint style="info" %}
-You have just created an **IAM Role**, that you'll **assign to your OpenVPN server** later on, so that it can **access the EC2 and S3 services on your behalf at startup, without restriction**.
-{% endhint %}
-
-Your server will need that to :
-
-* auto-configure itself during startup \(setting network options in the EC2 service\)
-* download configuration parameters and scripts from S3
-* without the need of passwords \(=&gt; 👍 **safe parameter files and scripts** 👍 \)
-
-_**Note:** This IAM Role could have been defined with restricted custom-specified permissions, both in EC2 and S3, rather than "Full Access", but that would be too complex to explain here.  Also if you connect to your server in an interactive terminal, you'll be happy to access the full EC2 and S3 APIs from there without restriction or needing an access key or password._
-
-
-
-### Choosing the AWS Region
-
-Starting from here, let's choose an AWS Region as our playground.  **The geographically closest to you is usually the best because it should give minimal latency** \(=delay\) **in network traffic** between you and your server.
-
-For this demo I'll choose Stockholm \(called eu-north-1\), an AWS region which is "virgin territory" for me \(I have never used it before\) :
-
-![](../.gitbook/assets/image%20%2861%29.png)
-
-
-
-### Creating the S3 bucket
-
-Let's create our storage space for parameters and scripts : an S3 bucket.
-
-{% hint style="danger" %}
-**KEEP IT PRIVATE !!   KEEP IT PRIVATE !!   KEEP IT PRIVATE !!   KEEP IT PRIVATE !!**   
-{% endhint %}
-
-👆 _Do you need me to repeat, or is that clear enough ?_👆 
-
-So let's go to the **S3 console** \(S3 is in the _**Storage**_ section on the main console listing all services\) :
-
-![](../.gitbook/assets/image%20%2857%29.png)
-
-You can guess 🙄 we'll click the blue "**Create bucket**" button...
-
-![](../.gitbook/assets/image%20%2875%29.png)
-
-**Step 1 : Give it a name,** which must conform to some name restrictions, and be **unique** \(so you may need to change it if your preferred name is already used by someone else\), check the **region**, then hit "**Next**"...
-
-![](../.gitbook/assets/image%20%2838%29.png)
-
-**Step 2 :** let's **NOT** use any option and simply click "**Next**"...
-
-![](../.gitbook/assets/image%20%2843%29.png)
-
-👇 _If you already forgot..._ 👇 
-
-{% hint style="danger" %}
-**KEEP IT PRIVATE !!   KEEP IT PRIVATE !!   KEEP IT PRIVATE !!   KEEP IT PRIVATE !!**   
-{% endhint %}
-
-**Step 3 :** Let's **keep the security tight** and "**Block** _**all**_ **public access**" as is the default, and hit "**Next**"...
-
-![](../.gitbook/assets/image%20%2853%29.png)
-
-A quick review of our choices, then click "**Create bucket**"...
-
-![](../.gitbook/assets/image%20%2851%29.png)
-
-{% hint style="success" %}
-**...and here is your own** _**private**_ **bucket, reporting for duty !**
-{% endhint %}
 
 
 
@@ -240,7 +125,7 @@ For the moment, just use the "VPC Console" to **take a quick look at your defaul
 
 
 
-### Creating the AWS Key Pair
+### Creating an AWS Key Pair
 
 An AWS key pair \(public+private key\) is mandatory to access a virtual server and must exist or be created at launch time.
 
@@ -264,7 +149,7 @@ AWS will create a random public+private key pair for you, and your web browser s
 
 I'll store it in my **`T:\fg-ovpn\MY-FG-OVPN`** folder :
 
-![Keeping our AWS key pair safe](../.gitbook/assets/image%20%2815%29.png)
+![Keeping our AWS key pair safe](../.gitbook/assets/image%20%2816%29.png)
 
 We do not plan to use it, but if needed, it's safe here !
 
@@ -278,7 +163,7 @@ You will find a "_default VPC security group_" there, which authorizes all inter
 
 We'll create a _**specific**_ **Security Group** for our **OpenVPN + Fantasy Grounds** requirements \(and SSH access if you whish\), using the big blue "**Create Security Group**" button :
 
-![](../.gitbook/assets/image%20%2823%29.png)
+![](../.gitbook/assets/image%20%2824%29.png)
 
 Give it a **Security group name** and a **Description**, your \(only\) default VPC should already be selected, and then let's have a look at the **Security group rules** panel.
 
@@ -305,7 +190,7 @@ This shows that the members \(virtual servers\) of that Security Group will be a
 
 Using the "**Add Rule**" button, let's add 2 inbound rules, to authorize incoming network traffic, one using the "**Custom TCP rule**" type for FG, and the other the "**Custom UDP rule**" type for OpenVPN, like this :
 
-![](../.gitbook/assets/image%20%2840%29.png)
+![](../.gitbook/assets/image%20%2842%29.png)
 
 ...and let's click the blue "**Create**" button.
 
@@ -335,13 +220,13 @@ So let's click the "**Edit**" button on the **Inbound** tab...We can do all of t
 
 Let's delete the 2 useless IPv6 rules, and add an SSH rule \(Type=SSH =&gt; TCP 22\) for "My IP"...
 
-![](../.gitbook/assets/image%20%2842%29.png)
+![](../.gitbook/assets/image%20%2844%29.png)
 
 As soon as you select "**My IP**" as a source or destination, it is replaced with your **current Public IPv4 as seen from the Internet**, which is why I blurred mine, _even though it's actually not a risk..._
 
 Ok, after playing with rules for a moment, let's just clean up and finish with **our required Security Group Rules** for **FG + OpenVPN access from any IPv4 address**, then finally click the "**Save**" button :
 
-![Our required S.G. rules for FG + OpenVPN from any IPv4](../.gitbook/assets/image%20%2827%29.png)
+![Our required S.G. rules for FG + OpenVPN from any IPv4](../.gitbook/assets/image%20%2828%29.png)
 
 {% hint style="info" %}
 **You can always come back to change Security Group Inbound and Outbound rules**.
