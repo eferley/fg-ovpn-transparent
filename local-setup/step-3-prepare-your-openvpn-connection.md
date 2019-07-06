@@ -68,7 +68,7 @@ So we'll save the .ovpn file above to **`T:\fg-ovpn\MY-FG-OVPN\my-fg-ovpn-client
 
 Which gives :
 
-![OpenVPN Client parameters for my-fg-ovpn-dm01](../.gitbook/assets/image%20%2866%29.png)
+![OpenVPN Client parameters for my-fg-ovpn-dm01](../.gitbook/assets/image%20%2867%29.png)
 
 {% hint style="success" %}
 **Your "distribution folder" for my-fg-ovpn-dm01 is complete...**
@@ -129,7 +129,7 @@ verb 4
 
 Let's now switch to the _**user view of OpenVPN**_, which is what you'll use in the future : the **OpenVPN GUI**, that you can find in the OpenVPN group, "pin to Start", etc...
 
-![](../.gitbook/assets/image%20%2845%29.png)
+![](../.gitbook/assets/image%20%2846%29.png)
 
 ![](../.gitbook/assets/image%20%2836%29.png)
 
@@ -143,13 +143,13 @@ After you close this dialog, you don't see anything new about OpenVPN on your sc
 
 Ok, let's move on to the **notification icons** on the bottom right of the desktop, where you'll finally discover something new :
 
-![](../.gitbook/assets/image%20%2894%29.png)
+![](../.gitbook/assets/image%20%2898%29.png)
 
 I'll choose to have this notification icon _always visible_, so it will now always be on my taskbar.
 
 Let's **Right-click** it :
 
-![](../.gitbook/assets/image%20%2853%29.png)
+![](../.gitbook/assets/image%20%2854%29.png)
 
 A quick look at the default settings :
 
@@ -161,7 +161,7 @@ A quick look at the default settings :
 
 I'll just change 2 options according to **my own preference** : to have it _always running_ \(discreetly, in the taskbar\), and have a _notification balloon_ also when a "reconnect" happens :
 
-![Updating settings / personal preference](../.gitbook/assets/image%20%2848%29.png)
+![Updating settings / personal preference](../.gitbook/assets/image%20%2849%29.png)
 
 Now let's have a look at the folders in my Windows personal storage \(that we see on the "Advanced" tab of the Settings above\) :
 
@@ -171,7 +171,7 @@ Now let's have a look at the folders in my Windows personal storage \(that we se
 
 ![Let&apos;s copy from the client distributions...](../.gitbook/assets/image%20%2835%29.png)
 
-![...and paste to our own &quot;live&quot; client setup.](../.gitbook/assets/image%20%2895%29.png)
+![...and paste to our own &quot;live&quot; client setup.](../.gitbook/assets/image%20%2899%29.png)
 
 {% hint style="success" %}
 **There we are ! All set and ready to connect. Just right-click the OpenVPN GUI again :**
