@@ -45,7 +45,7 @@ So, we download and save the installer from [https://openvpn.net/community-downl
 Finally, we'll have our **complete installation result** looking like this \(depends on Windows version AND the version of OpenVPN\) :
 {% endhint %}
 
-![](../.gitbook/assets/image%20%2873%29.png)
+![](../.gitbook/assets/image%20%2874%29.png)
 
 > **Tech Blurb :**
 >

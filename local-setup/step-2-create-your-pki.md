@@ -14,7 +14,7 @@ As first step we'll duplicate the whole contents of our **`new-PKI`** folder int
 
 ![Copy all from the source](../.gitbook/assets/image%20%2836%29.png)
 
-![Paste to the target](../.gitbook/assets/image%20%2870%29.png)
+![Paste to the target](../.gitbook/assets/image%20%2871%29.png)
 
 {% hint style="info" %}
 We'll now more or less follow the instructions you can read in the README.txt file, except that :
@@ -305,7 +305,7 @@ Let's use **the "killer" command script**, give **the Y answer THIS ONE TIME**, 
 
 ![THE ONE TIME : &quot;Y&quot; answer](../.gitbook/assets/image%20%2834%29.png)
 
-![](../.gitbook/assets/image%20%2887%29.png)
+![](../.gitbook/assets/image%20%2888%29.png)
 
 
 
@@ -328,7 +328,7 @@ Let's call our CA : **my-fg-ovpn-ca**, _keeping our good prefixing habit_.
 
 This creates the PKI Certificate Authority's own self-signed certificate \(**ca.crt**\) and private key \(**ca.key**\) in the **`MY-FG-OVPN-PKI-KEYS`** sub-folder.
 
-![](../.gitbook/assets/image%20%2883%29.png)
+![](../.gitbook/assets/image%20%2884%29.png)
 
 Since we are here within our own PKI, we only have one CA so these simple filenames are fine. But :
 
@@ -370,7 +370,7 @@ Easy, but may take a long time depending on your computer !
 
 This has generated the [**Diffie-Hellman-Merkel key exchange**](https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange) parameter file that will be used to initiate encryption sessions.
 
-![](../.gitbook/assets/image%20%2881%29.png)
+![](../.gitbook/assets/image%20%2882%29.png)
 
 {% hint style="danger" %}
 **Our server will need to have our DH file named as "configuration name"-dh2048.pem**
@@ -430,7 +430,7 @@ This creates 3 files in your keys folder, with the name you typed on the command
 * **my-fg-ovpn-srv.key** : the server private key
 * **my-fg-ovpn-srv.csr** : the "certificate signing request" used during the process
 
-![](../.gitbook/assets/image%20%2889%29.png)
+![](../.gitbook/assets/image%20%2890%29.png)
 
 {% hint style="info" %}
 These files should **already be properly named**, so we'll keep them as they are:
@@ -449,11 +449,11 @@ Being used to D&D, i already called my clients subfolders my-fg-ovpn-dm01/02, so
 .\build-key.bat my-fg-ovpn-dm01
 ```
 
-![Create, sign, commit : my-fg-ovpn-dm01 for one GM](../.gitbook/assets/image%20%2886%29.png)
+![Create, sign, commit : my-fg-ovpn-dm01 for one GM](../.gitbook/assets/image%20%2887%29.png)
 
 **Do the same thing with my-fg-ovpn-dm02...**
 
-![Create, sign, commit : my-fg-ovpn-dm02 for a second GM](../.gitbook/assets/image%20%2868%29.png)
+![Create, sign, commit : my-fg-ovpn-dm02 for a second GM](../.gitbook/assets/image%20%2869%29.png)
 
 You should now have :
 
@@ -478,7 +478,7 @@ But to create that CRL, **we need one client certificate to be revoked, so "DM02
 .\revoke-full.bat my-fg-ovpn-dm02
 ```
 
-![Revoke poor DM02 !](../.gitbook/assets/image%20%2882%29.png)
+![Revoke poor DM02 !](../.gitbook/assets/image%20%2883%29.png)
 
 You can see on the above screenshot :
 

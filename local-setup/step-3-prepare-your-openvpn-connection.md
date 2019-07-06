@@ -143,7 +143,7 @@ After you close this dialog, you don't see anything new about OpenVPN on your sc
 
 Ok, let's move on to the **notification icons** on the bottom right of the desktop, where you'll finally discover something new :
 
-![](../.gitbook/assets/image%20%2879%29.png)
+![](../.gitbook/assets/image%20%2880%29.png)
 
 I'll choose to have this notification icon _always visible_, so it will now always be on my taskbar.
 
@@ -171,7 +171,7 @@ Now let's have a look at the folders in my Windows personal storage \(that we se
 
 ![Let&apos;s copy from the client distributions...](../.gitbook/assets/image%20%2831%29.png)
 
-![...and paste to our own &quot;live&quot; client setup.](../.gitbook/assets/image%20%2880%29.png)
+![...and paste to our own &quot;live&quot; client setup.](../.gitbook/assets/image%20%2881%29.png)
 
 {% hint style="success" %}
 **There we are ! All set and ready to connect. Just right-click the OpenVPN GUI again :**

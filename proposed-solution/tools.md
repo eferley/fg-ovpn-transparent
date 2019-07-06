@@ -12,7 +12,7 @@ It can operate on any unused TCP or UDP port and can **easily cross all kinds of
 
 You can select and download the latest version \(v2.4.7 as of this writing\), corresponding to your own OS, here : [https://openvpn.net/community-downloads/](https://openvpn.net/community-downloads/)
 
-![](../.gitbook/assets/image%20%2871%29.png)
+![](../.gitbook/assets/image%20%2872%29.png)
 
 
 
@@ -68,17 +68,17 @@ Here are 3 very common good quality free text editors \(initially created for de
 
 * A good **lightweight but feature-rich free editor** is **Notepad++** that you can find at : [https://notepad-plus-plus.org](https://notepad-plus-plus.org/)
 
-![](../.gitbook/assets/image%20%2892%29.png)
+![](../.gitbook/assets/image%20%2893%29.png)
 
 **More powerful** \(but also more complex\) environments are **available for free** like :
 
 * [Microsoft Visual Studio Code](https://code.visualstudio.com/)
 
-![](../.gitbook/assets/image%20%2885%29.png)
+![](../.gitbook/assets/image%20%2886%29.png)
 
 * [GitHub Atom](https://atom.io/)
 
-![](../.gitbook/assets/image%20%2891%29.png)
+![](../.gitbook/assets/image%20%2892%29.png)
 
 
 
