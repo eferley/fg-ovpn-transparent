@@ -40,10 +40,10 @@ After closing the following "success" window, **go back to the "Instances" conso
 
 ![First instance during startup](../.gitbook/assets/image%20%28113%29.png)
 
-After a few seconds, you'll see \(highlighted in red above\) its **public IPv4** and **automatically assigned DNS name** : this is where :
+After a few seconds, you'll see the **Instance State** field at the top going from \(yellow dot\) _**pending**_ to \(green dot\) _**running**_, and its **public IPv4** and **automatically assigned public DNS name** \(highlighted in red above\); this is where, **during this session** :
 
-* **you** will **connect with OpenVPN**
-* **your players** will **connect with Fantasy Grounds** when you're ready to host a game
+* **you will connect with OpenVPN**
+* **your players will connect with Fantasy Grounds** when you're ready to host a game for them
 
 During the initialization process, when the server goes through its auto-configuration, you'll see the field \(highlighted in pink above\) "**Source/dest. check**" changing from _**True**_ to _**False**_ : this is **expected and required** !
 
@@ -54,7 +54,7 @@ After 1 or 2 minutes, you should see the **Status Checks** field at the top show
 {% endhint %}
 
 {% hint style="info" %}
-Just take 1 second to hover your mouse over the **Public IPv4** and use the small button on the right to "_**copy to clipboard**_".
+Just take 1 second to hover your mouse over the **IPv4 Public IP** or **Public DNS \(IPv4\)** and use the small button on the right to "_**copy to clipboard**_".
 {% endhint %}
 
 
