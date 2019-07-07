@@ -84,6 +84,8 @@ Quite a number of commercial VPN offers either rely on, or support OpenVPN.
 If you want to know more about OpenVPN, read the Howto at [https://openvpn.net/community-resources/how-to/](https://openvpn.net/community-resources/how-to/) and more generally browse the useful docs and articles available at [https://openvpn.net/community-resources/](https://openvpn.net/community-resources/)
 {% endhint %}
 
+## Always remember...
+
 {% hint style="danger" %}
 Remember that _whatever your network setup is_, **you still have to check your GM FG machine for barriers 1-3 !**
 {% endhint %}
