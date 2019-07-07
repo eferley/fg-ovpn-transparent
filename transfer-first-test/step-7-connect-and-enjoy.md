@@ -20,11 +20,11 @@ You'll see a log flowing in a window....🥁🥁 _...aaaannnnndddd..._ 🥁🥁
 
 ![Yeah !](../.gitbook/assets/image%20%2872%29.png)
 
-![](../.gitbook/assets/zeferby_dino_64%20%281%29.png) 👏 🎆🧨 Bravo ! Cheers ! CongratZ ! 🧨 🎆 👏 ![](../.gitbook/assets/zeferby_dino_64%20%281%29.png) 
+### ![](../.gitbook/assets/zeferby_dino_64%20%281%29.png) 👏 🎆🧨💃 🕺 **Bravo ! Cheers ! CongratZ !**  🕺 💃 🧨 🎆 👏 ![](../.gitbook/assets/zeferby_dino_64%20%281%29.png) 
 
 _**You are now officially a geek : you're both a VPN client AND a VPN operator in 1 person !**_ 
 
-So bookmark this and come back after you have properly celebrated this major event...
+_So bookmark this and come back after you have properly celebrated this major event in your life..._
 
 
 
