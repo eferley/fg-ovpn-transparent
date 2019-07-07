@@ -4,7 +4,7 @@ Let's begin with :
 
 ### **Create/have an** [**account available on AWS**](../proposed-solution/amazon-web-services.md#how-to-create-an-aws-account)\*\*\*\*
 
-...as explained there... 👆 
+...as explained there... 👆 ...and create your first admin user [like this](../appendixes/aws-user-with-api-keys.md) !
 
 ### Check that you know/learn :
 
@@ -27,7 +27,7 @@ _It is always easier to have multiple sub-folders that you can independently ren
 
 **I suggest an organization like this one** \(in this example i prepared sub-folders for 2 GMs = VPN "clients"\) :
 
-![](../.gitbook/assets/image%20%2855%29.png)
+![](../.gitbook/assets/image%20%2857%29.png)
 
 In the **T:** drive, I created the **`fg-ovpn`** root folder, with :
 

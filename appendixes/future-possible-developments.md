@@ -4,7 +4,7 @@
 
 ## FG "Unity"
 
-This is _**unknown territory for me**_ and will stay so until at least I can _**get the beta**_ "in my hands", and more probably until the _**official launch**_ of the product.
+This is _**unknown territory for me**_ and will stay so until at least I _**get the beta**_, and more probably until the _**official launch**_ of the product.
 
 There _**should remain a virtual table access/communication mode of the same kind as FG "Classic"**_,  but _**also some much awaited**_ "MMO-like" _**features**_ like a lobby, etc.., _**supposedly freeing the GMs from the port forwarding issue.**_
 
@@ -44,44 +44,57 @@ And finally, the "_create on use, destroy when finished_" strategy we use for th
 
 So, the only way i see to "mutliplex" is on the client side \(i.e. the player machine\), to introduce proxying and redirect an outbound connection to TCP 1802 towards another \(IP+\)port.  The best way to do that for a player is to use the localhost \(127.0.0.1\) address as the connection target, and intercept 127.0.0.1/TCP 1802 inbound connections to redirect them.
 
-{% hint style="info" %}
-I have **successfully tested** setups with the old [**rinetd**](https://boutell.com/rinetd/) utility with a very simple 1-line config file, and that is the "**best**" **\(least bad\) solution i found for Windows** : lightweight, simple, no permanent setting left behind.
+{% hint style="success" %}
+I have **successfully tested** setups with the old [**rinetd**](https://boutell.com/rinetd/) utility with a very simple 1-line config file, and that is the "**best**" **\(least bad\) solution i found for Windows** :
+
+**lightweight, simple, NO permanent setting left behind...**
 {% endhint %}
 
-It is also achievable with `netsh interface proxyport` on modern versions of Windows, but it is very awkward, needing Windows Admin access and creating a permanent redirect 👿 that you have to delete afterwards...
+It is also achievable with `netsh interface proxyport` on modern versions of Windows, but it is very awkward, needing Windows admin access and creating a _**permanent**_ redirect 👿 that you _**have to delete**_ afterwards...
 
-This is what I tested :
+**This is what I tested :**
 
-We can have n concurent GMs connected to the VPN server, each with his own **fixed VPN private IP** \(using the GMs' certificate identity and the **ccd**="client-config directory" ****feature of OpenVPN\) and with corresponding IPn-specific port forwarding rules installed in the VPN server :
+We can have **concurent GMs** connected to the VPN server, **each with his own fixed VPN private IP PrvIPnn** \(using the GMs' certificate identity and the **ccd**="_**client config directory**_" ****feature of OpenVPN\) and with corresponding **PrvIPn-specific port forwarding rules** installed in the VPN server :
 
-* **GM1** always gets private IP **IP1** in the VPN when connecting to OpenVPN \(configured in ccd\)
-* **GM2** always gets private IP **IP2** in the VPN when connecting to OpenVPN \(configured in ccd\)
-* the server listens to **ports P1 and P2** \(ex: 18021 and 18022\) on its unique public ****IP=**IPP**
-* 1 forwarding for **IPP/P1 &lt;=&gt; IP1/1802 : GM1**
-* 1 forwarding for **IPP/P2 &lt;=&gt; IP2/1802 : GM2**
+* **GM1** always gets private IP **PrvIP1** in the VPN when connecting to OpenVPN \(configured in ccd\)
+* **GM2** always gets private IP **PrvIP2** in the VPN when connecting to OpenVPN \(configured in ccd\)
+* the server listens to **ports p1 and p2** \(ex: 18021 and 18022\) on its **single public IP : PubIP**
+* 1 forwarding for **PubIP/p1 &lt;=&gt; PrvIP1/1802 for GM1**
+* 1 forwarding for **PubIP/p2 &lt;=&gt; PrvIP2/1802 for GM2**
 
-So the problem is to find a way to have, **for a session \(NOT permanently\)** :
+So the problem is to find a way, **for a session** \(**NOT permanently** : we don't want to "lock" players to a specific GM and we absolutely don't want to modify anything in the players' machine\), for :
 
-* **Players A, B and C** to have their FG connect to **IPP/P1** to get into **GM1**'s  virtual table
-* **Players X, Y and Z** to have their FG connect to **IPP/P2** to get into **GM2**'s  virtual table
+* **players A, B, C** to have their **FG connect to PubIP/P1** to get into **GM1**'s  virtual table
+* **players X, Y, Z** to have their **FG connect to PubIP/P2** to get into **GM2**'s  virtual table
 
-**Same unique public IP on the server but 2 different TCP ports =&gt; 2 FG virtual tables at a time, and that can be generalized to a higher number than 2 of course.**
+**Still only 1 public IP but 2 different TCP ports =&gt; 2 FG virtual tables at a time**, and that can be generalized to a higher number than 2 of course...
+
+{% hint style="success" %}
+**That can be achieved with the players running** [**rinetd**](https://boutell.com/rinetd/) **in a background command prompt window before they connect to their GM by using** _**localhost**_ **as the "host address" : their "player FG" will connect to 127.0.0.1:1802 and rinetd will redirect that according to its config :**
+
+* **config line for players A, B, C :** `127.0.0.1 1802 (PubIP) (p1)`
+* **config line for players X, Y, Z :** `127.0.0.1 1802 (PubIP) (p2)`
+
+**Then after the session, the players kill their rinetd / close their command prompt window.**
+
+**Done !**
+{% endhint %}
 
 {% hint style="warning" %}
-Unfortunately that **defeats our secondary objective N°1 : "transparency"**
+Unfortunately that **defeats our "transparency" objective :** 
 
-Even if it's not a VPN client install, it's still a specific config to manage for the players \(1 small exe + a 1-line config file to keep somewhere and run when needed\), so the solution becomes **"NOT transparent" for the players**. 👿 
+Even if it's not a VPN client install, it's still a specific config to manage for the players \(1 small exe + a 1-line config file to keep somewhere, and run when needed\), so the solution becomes **"NOT transparent" for the players**. 👿 
 {% endhint %}
 
 {% hint style="info" %}
-That _**could be**_ **acceptable for a regular group** \(GM + Players\) **for a whole campaign**
+That _**could be**_ ****❓ **acceptable for a regular group** \(GM + Players\) **for a whole campaign...**
 {% endhint %}
 
 {% hint style="danger" %}
-But it **would not be viable for temporary things like 1shot games, FGC classes, etc**...
+...But it **would not** 😡 **be viable for ephemeral things like 1shot games, FGC classes, etc**...
 {% endhint %}
 
-So : no _**satisfying**_ free workaround on my side for the moment...
+So : _no **satisfying \(transparent\)** free workaround on my side for the moment...sorry !_ ![](../.gitbook/assets/zeferby_dino_64%20%281%29.png) 
 
 
 
@@ -93,19 +106,19 @@ So : no _**satisfying**_ free workaround on my side for the moment...
 
 ### Discord helper bot
 
-I plan to build a small _**basic operations admin bot**_ for my own OpenVPN + Discord : launch, terminate, start, stop, reboot + getting the public IP \(+updating DNS in Route53\)
+After I finish this exhausting doc writing exercise🥵, I plan to build a small _**basic operations admin bot**_ for my own OpenVPN + Discord : launch, terminate, start, stop, reboot + getting the public IP \(+updating DNS name in Route53\)
 
-This will be based on ideas I found while [prowling GitHub](https://github.com/search?p=3&q=discord+bot+aws&type=Repositories)...[Discord.js](https://discord.js.org)...[Discord Dev portal](https://discordapp.com/developers)...
+This will be based on ideas I found while prowling the [FG forums](https://www.fantasygrounds.com/forums/)...[GitHub](https://github.com/search?q=discord+bot+aws&type=Repositories)...[Discord.js](https://discord.js.org)...[their Guide](https://discordjs.guide)...[Discord Dev portal](https://discordapp.com/developers)...and all unmentionable places where a role playing dino can lurk...
 
-### _**useful tools ???**_ 
+### **useful tools ???** 
 
 Diag.tools, common commands etc...
 
-Not sure it would be useful : there are already sooo many examples everywhere.....
+Not sure it would be useful : _**there are already sooo many examples everywhere**_.....
 
 ### Other ways of using OpenVPN
 
-If interest for own "_closed VPN"_ for example...
+If interest appears for "own _closed VPN"_ for example...
 
 
 

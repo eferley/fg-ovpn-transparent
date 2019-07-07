@@ -3,7 +3,7 @@
 ## ![](../.gitbook/assets/zeferby_dino_64.png) Welcome to Ze cloud 🌥 ⛈ 🌤 
 
 {% hint style="warning" %}
-If you have not already done so, here comes the time for you to follow that [account creation process info](../proposed-solution/amazon-web-services.md#how-to-create-an-aws-account), and especially take a few minutes to watch the small video linked there, **including the part for creating your first IAM user** \(**IAM** = Identity & Access Management\).
+If you have not already done so, here comes the time for you to follow that [account creation process info](../proposed-solution/amazon-web-services.md#how-to-create-an-aws-account), and especially take a few minutes to watch the small video linked there, **including the part for creating your first IAM user** \(**IAM** = Identity & Access Management\). I also included [this appendix](../appendixes/aws-user-with-api-keys.md)...
 {% endhint %}
 
 {% hint style="success" %}
@@ -11,7 +11,7 @@ If you have not already done so, here comes the time for you to follow that [acc
 {% endhint %}
 
 {% hint style="info" %}
-**PLEASE ! Create an administrative IAM user for yourself** in your new AWS account and **after that, avoid using your "AWS root account"** to manage your environment.
+**PLEASE ! Create an** [**administrative IAM user for yourself**](../appendixes/aws-user-with-api-keys.md) in your new AWS account and **after that, avoid using your "AWS root account"** to manage your environment.
 
 _That's an "AWS best practice" for a reason..._
 {% endhint %}
@@ -35,7 +35,7 @@ There are [_**hundreds of videos**_](https://www.youtube.com/results?search_quer
 😁 **Ah ! There you are ! And you're an Admin ! And you're at the AWS Management Console !  
 Great ! \(**_**also, but**_©_**Zacchaeus : Jolly Good !**_**\)**
 
-![The AWS Management Console](../.gitbook/assets/image%20%2858%29.png)
+![The AWS Management Console](../.gitbook/assets/image%20%2860%29.png)
 
 This is the "home" of your AWS management console : you can **manage your account** with the menu titled with your "IAM username" @ "account name", **choose an "AWS Region"** with the menu to the right of it, and **access the service management consoles** for all AWS services.
 

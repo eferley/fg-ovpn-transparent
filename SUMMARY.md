@@ -51,7 +51,7 @@
 
 * [Acronyms and definitions -WIP](appendixes/acronyms-and-definitions.md)
 * [AWS terminology -WIP](appendixes/aws-terminology.md)
-* [AWS User with API Keys](appendixes/aws-user-with-api-keys.md)
+* [AWS admin user + API access key](appendixes/aws-user-with-api-keys.md)
 * [Possible \(?\) developments](appendixes/future-possible-developments.md)
 * [Step-by-step setup -OLD](appendixes/step-by-step-setup.md)
 
