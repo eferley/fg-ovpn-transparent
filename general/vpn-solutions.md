@@ -67,12 +67,12 @@ What we propose in the following sections is :
 * hosted on a **minimalist Linux virtual server at** [**AWS**](https://aws.amazon.com/) \(Amazon Web Services\)
 * **mono-client** : 1 GM \(you\) only
 * with pre-installed **FG-only port forwarding** \(this is actually independant of the VPN itself\)
-* for a **cost of $0 \(or a neglectable cost** if you are not elligible for the free tier or already exceed its bounds due to other usage of AWS\)
+* for a **cost of $0 \(or a neglectable cost** if you already exceed the **Free Tier** bounds due to other usage of AWS\)
 * **"transparent" for the players**
 * **non-intrusive for the GM's machine**
-* **100% under your own control** : **you** are the VPN service provider, and you are your **only** client 😁 
+* **100% under your own control** : **you** are the VPN provider, and you are your **only** client 😁 
 
-It does require some initial setup effort, which then makes it a no-brainer to start/stop/destroy/recreate **your very own Amazing Port-Forwarding OpenVPN-Powered Fantasy Grounds Hosting solution** 🙃 
+It does require some initial setup effort, which then makes it a no-brainer to start/stop/destroy/recreate **your** _**very own Amazing Port-Forwarding OpenVPN-Powered Fantasy Grounds Hosting**_ **solution** 🙃 
 
 {% hint style="info" %}
 If you are tech-savvy and want to discover more/advanced options, the **OpenVPN + Linux iptables combination has nearly endless possibilities**.

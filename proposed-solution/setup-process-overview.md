@@ -48,19 +48,15 @@ Refer to the **"**[**Check that you know/learn**](../local-setup/step-0-preparat
 
 ### AWS setup
 
-**Step 4** : \(AWS\) [Configure your AWS environment](../aws-setup-step-by-step/step-4-configure-your-aws-environment.md) : VPC \(Virtual Private Cloud\), networks, security settings, create an S3 bucket and an IAM user and IAM role \(IAM=Identity and Access Management\)
+**Step 4** : \(AWS\) [Configure your AWS environment](../aws-setup-step-by-step/step-4-configure-your-aws-environment.md) : VPC \(Virtual Private Cloud\), networks, security settings, create an S3 bucket and an IAM user and IAM role \(IAM=Identity and Access Management\), prepare parameters and scripts
 
-### Finalization
+### Transfer & First Test
 
-**Step 5** : \(local+AWS\) [Check your settings, Finalize all](../finalization-step-by-step/step-5-check-finalize-transfer-files-to-s3.md) configuration elements and transfer files to AWS S3 for server auto-configuration at launch time
+**Step 5** : \(local+AWS\) [Transfer files to AWS S3 ](../transfer-first-test/step-5-check-finalize-transfer-files-to-s3.md)for server auto-configuration at launch time
 
+**Step 6** : \(AWS\) [Launch your FG-OpenVPN Linux server](../transfer-first-test/step-6-launch-time.md) in your AWS Virtual Private Cloud
 
+**Step 7** : [Connect your VPN and test...](../transfer-first-test/step-7-connect-and-enjoy.md)
 
-## Repeatable usage process
-
-**Step 6** : \(AWS\) [Launch your FG-OpenVPN Linux server](../using-it-step-by-step/step-6-launch-time.md) in your AWS Virtual Private Cloud
-
-**Step 7** : [Connect your VPN and enjoy...](../using-it-step-by-step/step-7-connect-and-enjoy.md)
-
-**Step 8** : \(AWS\) [Destroy \(="Terminate"\)](../using-it-step-by-step/step-8-destroy-terminate-after-use.md) your server
+**Step 8** : \(AWS\) [Destroy \(="Terminate"\)](../transfer-first-test/step-8-destroy-terminate-after-use.md) your server
 

@@ -36,27 +36,24 @@
 * [4.7-Filling the bucket](aws-setup-step-by-step/4.7-filling-the-bucket.md)
 * [4.8-Building the Launch Template](aws-setup-step-by-step/4.8-building-the-launch-template.md)
 
-## Finalization - Step-by-step - WIP <a id="finalization-step-by-step"></a>
+## Transfer & First Test - WIP <a id="transfer-first-test"></a>
 
-* [Step 5 : Check, Finalize, Transfer files to S3 - WIP](finalization-step-by-step/step-5-check-finalize-transfer-files-to-s3.md)
-* [Step-by-step setup -OLD](finalization-step-by-step/step-by-step-setup.md)
-* [Utility files and scripts -OLD](finalization-step-by-step/files.md)
+* [Step 5 : Transfer to S3 - WIP](transfer-first-test/step-5-check-finalize-transfer-files-to-s3.md)
+* [Step 6 : Launch time ! -WIP](transfer-first-test/step-6-launch-time.md)
+* [Step 7 : Connect and test -WIP](transfer-first-test/step-7-connect-and-enjoy.md)
+* [Step 8 : Destroy/"Terminate" after use -WIP](transfer-first-test/step-8-destroy-terminate-after-use.md)
 
-## Using it - Step-by-step
+## Use & Manage your server - WIP <a id="use-manage-your-server"></a>
 
-* [Step 6 : Launch time ! -WIP](using-it-step-by-step/step-6-launch-time.md)
-* [Step 7 : Connect and enjoy -WIP](using-it-step-by-step/step-7-connect-and-enjoy.md)
-* [Step 8 : Destroy/"Terminate" after use -WIP](using-it-step-by-step/step-8-destroy-terminate-after-use.md)
-
-## Manage your server - WIP <a id="manage-your-server"></a>
-
-* [WIP](manage-your-server/untitled.md)
+* [WIP](use-manage-your-server/untitled.md)
 
 ## Appendixes
 
 * [Acronyms and definitions -WIP](appendixes/acronyms-and-definitions.md)
 * [AWS terminology -WIP](appendixes/aws-terminology.md)
-* [Possible future developments](appendixes/future-possible-developments.md)
+* [AWS User with API Keys](appendixes/aws-user-with-api-keys.md)
+* [Possible \(?\) developments](appendixes/future-possible-developments.md)
+* [Step-by-step setup -OLD](appendixes/step-by-step-setup.md)
 
 ## Links
 
