@@ -305,7 +305,7 @@ Let's use **the "killer" command script**, give **the Y answer THIS ONE TIME**, 
 
 ![THE ONE TIME : &quot;Y&quot; answer](../.gitbook/assets/image%20%2847%29.png)
 
-![](../.gitbook/assets/image%20%28127%29.png)
+![](../.gitbook/assets/image%20%28128%29.png)
 
 
 
@@ -328,7 +328,7 @@ Let's call our CA : **my-fg-ovpn-ca**, _keeping our good prefixing habit_.
 
 This creates the PKI Certificate Authority's own self-signed certificate \(**ca.crt**\) and private key \(**ca.key**\) in the **`MY-FG-OVPN-PKI-KEYS`** sub-folder.
 
-![](../.gitbook/assets/image%20%28119%29.png)
+![](../.gitbook/assets/image%20%28120%29.png)
 
 Since we are here within our own PKI, we only have one CA so these simple filenames are fine. But :
 
@@ -370,7 +370,7 @@ Easy, but may take a long time depending on your computer !
 
 This has generated the [**Diffie-Hellman-Merkel key exchange**](https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange) parameter file that will be used to initiate encryption sessions.
 
-![](../.gitbook/assets/image%20%28115%29.png)
+![](../.gitbook/assets/image%20%28116%29.png)
 
 {% hint style="danger" %}
 **Our server will need to have our DH file named as "configuration name"-dh2048.pem**
@@ -430,7 +430,7 @@ This creates 3 files in your keys folder, with the name you typed on the command
 * **my-fg-ovpn-srv.key** : the server private key
 * **my-fg-ovpn-srv.csr** : the "certificate signing request" used during the process
 
-![](../.gitbook/assets/image%20%28132%29.png)
+![](../.gitbook/assets/image%20%28133%29.png)
 
 {% hint style="info" %}
 These files should **already be properly named**, so we'll keep them as they are:
@@ -449,7 +449,7 @@ Being used to D&D, i already called my clients subfolders my-fg-ovpn-dm01/02, so
 .\build-key.bat my-fg-ovpn-dm01
 ```
 
-![Create, sign, commit : my-fg-ovpn-dm01 for one GM](../.gitbook/assets/image%20%28126%29.png)
+![Create, sign, commit : my-fg-ovpn-dm01 for one GM](../.gitbook/assets/image%20%28127%29.png)
 
 **Do the same thing with my-fg-ovpn-dm02...**
 
@@ -478,7 +478,7 @@ But to create that CRL, **we need one client certificate to be revoked, so "DM02
 .\revoke-full.bat my-fg-ovpn-dm02
 ```
 
-![Revoke poor DM02 !](../.gitbook/assets/image%20%28117%29.png)
+![Revoke poor DM02 !](../.gitbook/assets/image%20%28118%29.png)
 
 You can see on the above screenshot :
 

@@ -2,7 +2,7 @@
 
 Ok let's create an AWS admin user with the AWS **IAM console** :
 
-![](../.gitbook/assets/image%20%28131%29.png)
+![](../.gitbook/assets/image%20%28132%29.png)
 
 We'll give AWS console acces to this ZeFerby guy, so he needs a _**console password**_.
 
@@ -18,7 +18,7 @@ Clicking on "**Next: Permissions**", we arrive at this screen where we click the
 
 Let's go on with "**Next: Tags**". I don't use tags here, so I click "**Next: Review**" :
 
-![](../.gitbook/assets/image%20%28139%29.png)
+![](../.gitbook/assets/image%20%28140%29.png)
 
 Here I check the details are what I want and click "**Create user**"...
 

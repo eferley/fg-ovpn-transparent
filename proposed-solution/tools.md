@@ -68,17 +68,17 @@ Here are 3 very common good quality free text editors \(initially created for de
 
 * A good **lightweight but feature-rich free editor** is **Notepad++** that you can find at : [https://notepad-plus-plus.org](https://notepad-plus-plus.org/)
 
-![](../.gitbook/assets/image%20%28136%29.png)
+![](../.gitbook/assets/image%20%28137%29.png)
 
 **More powerful** \(but also more complex\) environments are **available for free** like :
 
 * [Microsoft Visual Studio Code](https://code.visualstudio.com/)
 
-![](../.gitbook/assets/image%20%28123%29.png)
+![](../.gitbook/assets/image%20%28124%29.png)
 
 * [GitHub Atom](https://atom.io/)
 
-![](../.gitbook/assets/image%20%28135%29.png)
+![](../.gitbook/assets/image%20%28136%29.png)
 
 
 
