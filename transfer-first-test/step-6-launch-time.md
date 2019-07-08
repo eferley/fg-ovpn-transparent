@@ -6,29 +6,29 @@ Using the EC2 Console we have this big blue "**Launch Instance**" _button+arrow_
 
 * on the "_**Dashboard**_"
 
-![](../.gitbook/assets/image%20%28142%29.png)
+![](../.gitbook/assets/image%20%28156%29.png)
 
 * on the "_**Instances**_" console :
 
-![](../.gitbook/assets/image%20%2811%29.png)
+![](../.gitbook/assets/image%20%2812%29.png)
 
 
 
 Let's **use our Launch Template** by using the **down-pointing arrow** on the right of the button here :
 
-![](../.gitbook/assets/image%20%2891%29.png)
+![](../.gitbook/assets/image%20%28102%29.png)
 
 This gives you a form where you can select your **Launch Template** and its **version** :
 
-![](../.gitbook/assets/image%20%28110%29.png)
+![](../.gitbook/assets/image%20%28122%29.png)
 
 
 
-![](../.gitbook/assets/image%20%28111%29.png)
+![](../.gitbook/assets/image%20%28123%29.png)
 
 You will then see all the choices that were recorded in the template, that you can override at launch time if you whish to :
 
-![](../.gitbook/assets/image%20%28155%29.png)
+![](../.gitbook/assets/image%20%28170%29.png)
 
 Just check that your _**IAM instance profile**_ and _**User data**_ are populated by expanding the _**Advanced details**_ section, and click **Launch instance from template** at the bottom !
 
@@ -40,7 +40,7 @@ Just check that your _**IAM instance profile**_ and _**User data**_ are populate
 
 After closing the following "success" window, **go back to the "Instances" console** and select your "Instance" = your OpenVPN virtual server \(_by the way, don't bother trying to connect to the one below, it has long been terminated..._\) :
 
-![](../.gitbook/assets/image%20%28121%29.png)
+![](../.gitbook/assets/image%20%28135%29.png)
 
 There's a lot of infos on this screen :
 
@@ -62,15 +62,15 @@ This is actually **the graal you were seeking** 🙌 : a perfectly routable publ
 So : Just take 1 second to hover your mouse over the **IPv4 Public IP** and use the small button appearing to the right, to "_**copy to clipboard**_" !
 {% endhint %}
 
-![](../.gitbook/assets/image%20%2857%29.png)
+![](../.gitbook/assets/image%20%2864%29.png)
 
 ### Your own firewall rules = Security Groups
 
 In the left column of the _**Description**_ tab, you find the _**Security groups**_ assigned to this Instance \(you can have multiple SGs assigned\), and you can easily check the **Incoming and Outgoing authorizations**, and from what Security Group they come from :
 
-![View inbound rules](../.gitbook/assets/image%20%28127%29.png)
+![View inbound rules](../.gitbook/assets/image%20%28141%29.png)
 
-![View Outbound rules](../.gitbook/assets/image%20%28140%29.png)
+![View Outbound rules](../.gitbook/assets/image%20%28154%29.png)
 
 
 

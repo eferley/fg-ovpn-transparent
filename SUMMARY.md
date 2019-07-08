@@ -36,24 +36,24 @@
 * [4.7-Filling the bucket](aws-setup-step-by-step/4.7-filling-the-bucket.md)
 * [4.8-Building the Launch Template](aws-setup-step-by-step/4.8-building-the-launch-template.md)
 
-## Transfer & First Test - WIP <a id="transfer-first-test"></a>
+## Transfer & First Test <a id="transfer-first-test"></a>
 
 * [Step 5 : Transfer to S3](transfer-first-test/step-5-check-finalize-transfer-files-to-s3.md)
 * [Step 6 : Launch time !](transfer-first-test/step-6-launch-time.md)
-* [Step 7 : Connect, test, fix glitches -WIP](transfer-first-test/step-7-connect-and-enjoy.md)
-* [Step 8 : Destroy/"Terminate" after use -WIP](transfer-first-test/step-8-destroy-terminate-after-use.md)
+* [Step 7 : Connect, test, fix glitches](transfer-first-test/step-7-connect-and-enjoy.md)
+* [Step 8 : Destroy/"Terminate" after use](transfer-first-test/step-8-destroy-terminate-after-use.md)
 
-## Use & Manage your server - WIP <a id="use-manage-your-server"></a>
+## Use your server
 
-* [WIP](use-manage-your-server/untitled.md)
+* [Regular Usage Pattern](use-your-server/untitled.md)
 
 ## Appendixes
 
 * [Acronyms and definitions -WIP](appendixes/acronyms-and-definitions.md)
 * [AWS terminology -WIP](appendixes/aws-terminology.md)
 * [AWS admin user + API access key](appendixes/aws-user-with-api-keys.md)
+* [AWS and other considerations](appendixes/aws-and-other-considerations.md)
 * [Possible \(?\) developments](appendixes/future-possible-developments.md)
-* [Step-by-step setup -OLD](appendixes/step-by-step-setup.md)
 
 ## Links
 

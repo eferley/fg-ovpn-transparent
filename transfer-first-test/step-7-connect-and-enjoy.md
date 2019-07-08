@@ -1,4 +1,4 @@
-# Step 7 : Connect, test, fix glitches -WIP
+# Step 7 : Connect, test, fix glitches
 
 ## Connecting your OpenVPN client
 
@@ -6,19 +6,19 @@ You now know the Public IP for your server : you will use it to connect your Ope
 
 Right-click your OpenVPN GUI, and "Edit Config" on your connection menu :
 
-![Edit Config to write the public IP](../.gitbook/assets/image%20%2898%29.png)
+![Edit Config to write the public IP](../.gitbook/assets/image%20%28109%29.png)
 
 Remember the **`<OpenVPN Server Public IP or FQDN>`** placeholder at line 6 ? Replace it with your server's pubic IP that you copied previously in the EC2 Console :
 
-![](../.gitbook/assets/image%20%2824%29.png)
+![](../.gitbook/assets/image%20%2827%29.png)
 
 Now **close+save**, right-click again and "**Connect**" !
 
-![](../.gitbook/assets/image%20%2878%29.png)
+![](../.gitbook/assets/image%20%2888%29.png)
 
 You'll see a log flowing in a window....🥁🥁 _...aaaannnnndddd..._ 🥁🥁 
 
-![Yeah !](../.gitbook/assets/image%20%2885%29.png)
+![Yeah !](../.gitbook/assets/image%20%2896%29.png)
 
 ### ![](../.gitbook/assets/zeferby_dino_64%20%281%29.png) 👏 🎆🧨💃 🕺 **Bravo ! Cheers ! CongratZ !**  🕺 💃 🧨 🎆 👏 ![](../.gitbook/assets/zeferby_dino_64%20%281%29.png) 
 
@@ -52,13 +52,13 @@ Let's open a new command prompt window and try a few commands :
 
 Let's have a quick look at our server various IPs :
 
-![](../.gitbook/assets/image%20%28107%29.png)
+![](../.gitbook/assets/image%20%28119%29.png)
 
 **`ping 172.31.10.45`** : pings the server's ethernet LAN adapter **private IP in AWS**
 
 **`ping 13.53.45.99`** : pings the server's **Public IP**
 
-![First ping tests](../.gitbook/assets/image%20%2821%29.png)
+![First ping tests](../.gitbook/assets/image%20%2824%29.png)
 
 Hummm...The server does not reply to our ping on its Public IP. Why ? 🤔 
 
@@ -66,19 +66,19 @@ Because we [don't have a rule in our Security Group](step-6-launch-time.md#your-
 
 Let's add a rule to our Security Group : you can **click its name in the left column** of the EC2 instance _**Description**_ tab, then go to the **Inbound rules** tab of the **Security Group** and click **Edit**, then **Add Rule** :
 
-![](../.gitbook/assets/image%20%2817%29.png)
+![](../.gitbook/assets/image%20%2818%29.png)
 
 We want to authorized inbound ping requests, which are in reality ICMP echo requests, so our new rule will be typed "_**Custom ICMP rule - IPv4**_", with protocol "_**Echo Request**_", from source "_**0.0.0.0/0**_" :
 
-![](../.gitbook/assets/image%20%2855%29.png)
+![](../.gitbook/assets/image%20%2862%29.png)
 
 Let's **Save**, then go back to our EC2 instance details to check it applies :
 
-![Yep ! Now pingable from anywhere](../.gitbook/assets/image%20%2877%29.png)
+![Yep ! Now pingable from anywhere](../.gitbook/assets/image%20%2887%29.png)
 
 Let's retry our ping on the public IP to check we have the replies...ok ✅ 
 
-![ping to public IP is now ok](../.gitbook/assets/image%20%2847%29.png)
+![ping to public IP is now ok](../.gitbook/assets/image%20%2854%29.png)
 
 ### Fantasy Grounds
 
@@ -88,7 +88,7 @@ Now let's start Fantasy Grounds and **create a test campaign** with any ruleset 
 Let's **not** play with the _**server alias**_ : the _**Connection test**_ will keep failing, **that's expected !**
 {% endhint %}
 
-![](../.gitbook/assets/image%20%2852%29.png)
+![](../.gitbook/assets/image%20%2859%29.png)
 
 {% hint style="info" %}
 I had to switch to **my own FG machine** for that, so i :
@@ -100,13 +100,13 @@ I had to switch to **my own FG machine** for that, so i :
 This is a **Windows 7 \(FR\)** with an **older OpenVPN \(2.2.2, 32-bit\)**, but I'm connecting fine :
 {% endhint %}
 
-![An older OpenVPN \(2.2.2\)](../.gitbook/assets/image%20%2829%29.png)
+![An older OpenVPN \(2.2.2\)](../.gitbook/assets/image%20%2832%29.png)
 
-![ping results still ok on my Windows 7](../.gitbook/assets/image%20%28114%29.png)
+![ping results still ok on my Windows 7](../.gitbook/assets/image%20%28127%29.png)
 
 So here I am, connected to the VPN server and with Fantasy Grounds eagerly waiting for players to connect :
 
-![A &quot;blank&quot; D&amp;D5e virtual table](../.gitbook/assets/image%20%2841%29.png)
+![A &quot;blank&quot; D&amp;D5e virtual table](../.gitbook/assets/image%20%2847%29.png)
 
 Let's try this command in our command prompt :
 
@@ -114,7 +114,7 @@ Let's try this command in our command prompt :
 netstat -ano | find "1802"
 ```
 
-![FG process 16100 listening on ALL my connections](../.gitbook/assets/image%20%28158%29.png)
+![FG process 16100 listening on ALL my connections](../.gitbook/assets/image%20%28173%29.png)
 
 We can see above that our "**GM FG**" has the Windows Process ID 16100, and is **listening to TCP 1802 on ALL IPs from ALL connected network adapters \(the 0.0.0.0 on the left\),** _**including our VPN Private IP**_
 
@@ -122,77 +122,152 @@ We can see above that our "**GM FG**" has the Windows Process ID 16100, and is *
 
 Now let's open a _**second Fantasy Grounds as a player on the same machine**_, and _**Join Game**_ on _**localhost**_ as Host address \(**localhost means "myself" and is the special private IPv4 address 127.0.0.1**\)
 
-![Player connection to localhost](../.gitbook/assets/image%20%2890%29.png)
+![Player connection to localhost](../.gitbook/assets/image%20%28101%29.png)
 
-![](../.gitbook/assets/image%20%28134%29.png)
+![](../.gitbook/assets/image%20%28148%29.png)
 
 That works as expected : nothing fancy here, but if we retry our last command, we see how FG networking works :
 
-![FG : GM + 1 player](../.gitbook/assets/image%20%2863%29.png)
+![FG : GM + 1 player](../.gitbook/assets/image%20%2872%29.png)
 
-* the GM FG is still LISTENING on 0.0.0.0:1802 \(P.ID.16100, **line1**\)
+* the GM FG is still LISTENING on 0.0.0.0:1802 \(Process ID16100, **line1**\)
 * the player FG \(**line 3**\) :
   * has Windows Process ID 15428
-  * It connected from 127.0.0.1 \(using its port 55536\) to localhost=127.0.0.1 on port 1802, and the connection is still active \(ESTABLISHED\)
-* the GM FG has accepted the connection \(**line 2**\) and "maintains the dialog" \(ESTABLISHED\) from his own 127.0.0.1:1802 to the "remote player" at 127.0.0.1:55536
+  * It connected from 127.0.0.1 \(using dynamic port 55536\) to localhost=127.0.0.1 on port 1802, and the connection is still active \(ESTABLISHED\)
+* the GM FG has accepted the inbound connection \(**line 2**\) and "maintains the dialog" \(ESTABLISHED\) between his own 127.0.0.1:1802 and the "not-so-remote" player at 127.0.0.1:55536
 
-The **Player and GM FGs** see each other **both on the localhost 127.0.0.1** IP address, so they accept to work that way \(otherwise we would have a _**license key conflict**_\).
+The **Player and GM FGs** see each other **both on the localhost 127.0.0.1** IP address, so they accept to work that way \(otherwise we would have a _**license key conflict**_, as we'll soon witness\).
 
 Now let's **disconnect our player FG** and re-check :
 
-![After player leaves the virtual table](../.gitbook/assets/image%20%281%29.png)
+![After player leaves the virtual table](../.gitbook/assets/image%20%282%29.png)
 
-We still see our GM FG listening, and the port that was used by our player FG is now in TIME\_WAIT state, with no process ID, and will be completely free to re-use by Windows within 4 minutes.
+We still see our GM FG listening, and the dynamic port that was used by our player FG \(TCP 55536\) is now in TIME\_WAIT state, belongs to no process ID, and will be completely free to re-use by Windows within 4 minutes.
 
 ### Connecting a player FG to the server public IP
 
-This is all well and good, but what you want is players connecting to your server \(its public IP, currently 13.53.45.99 in this demo\) so that they auto-magically appear in your GM FG virtual table...
+This is all well and good, but what you want is **players connecting to your server** \(its public IP, currently 13.53.45.99 in this demo\) so that they **auto-magically appear in your GM FG virtual table**...
 
-Let's try !
+**Let's try !**
 
-![Connecting to the server as a player from the Internet](../.gitbook/assets/image%20%2825%29.png)
+![Connecting to the server as a player from the Internet](../.gitbook/assets/image%20%2828%29.png)
 
-_**Aarrgghh !!!...well, in fact Yeah ! It works ! \(though it looks disappointing...\)**_
+_\*\*\*\*_![](../.gitbook/assets/zeferby_dino_64%20%281%29.png) _**Aarrgghh !!!...Well, actually : Yeah !!!**_ 🎆👯💃🧨 _**It works !!!** \(though it looks disappointing...\)_
 
-![It looks like a Fail but it is a Pass !](../.gitbook/assets/image%20%2850%29.png)
+![It looks like a Fail but it is a Pass !](../.gitbook/assets/image%20%2857%29.png)
+
+## Houston, we have liftoff !
 
 {% hint style="success" %}
-Our **GM FG and Player FG were actually able to talk to each other...**
+**YES !** Our **GM FG and Player FG were actually able to talk to each other...**
 
-But they have **different IP addresses** and the **same license key =&gt;** **license key conflict.**
+_...but they have **DIFFERENT IPs** and the **SAME license key =&gt;** **LICENSE KEY CONLICT.**_
+
+**Your "REAL" players CAN now connect to your GM FG, using the server Public IP**
 {% endhint %}
 
-### What if it fails !
+And if you then retry our netstat command, you'll see all these connections arriving on your VN Private IP on port 1802, all coming in from the server Private IP / various ports.
 
-![](../.gitbook/assets/zeferby_dino_64%20%281%29.png) _**What ? You have a real failure ? Like this one ?**_
 
-![](../.gitbook/assets/image%20%2876%29.png)
 
-![](../.gitbook/assets/zeferby_dino_64%20%281%29.png) _**Ha Ha ! You forgot**_ [_**what you should always remember**_](../general/vpn-solutions.md#always-remember)_**...Ok,10 seconds to**_ 😭 _**and facepalm...**_
+**EDIT :** After some trial and errors, I was finally able to install the _Demo version of Fantasy Grounds on my temporary Windows 2012R2 machine_, even though I had some errors because it has no support for DirectX.
+
+So here is an example of 2 connections, **from 2 players with a Demo version of FG** to my GM FG virtual table **through the OpenVPN port-forwarding server** :
+
+![](../.gitbook/assets/image%20%28160%29.png)
+
+The player connections seen on my GM FG machine :
+
+![](../.gitbook/assets/image%20%2891%29.png)
 
 {% hint style="info" %}
-...Now recheck everything for your **GM machine's Barriers 1-3**, remembering that **FG inbound connections will come** to your GM FG **through the VPN**, which Windows \(rightfully\) considers to be a **DIFFERENT network from your usual home network.**
+Our GM FG sees **ALL the "port-forwarded" player connections** coming in :
 
-=&gt; for Windows 10, you have to mark the **VPN connection as PRIVATE !**
+* **from the server Private IPv4 address** \(172.31.10.45 in this demo\) from various TCP ports
+* **to our own VPN Private IP** \(10.10.10.6 in this demo\) always on our TCP 1802 port
 {% endhint %}
 
-_...and if you can't make this work, ask for help with the links at the beginning of this document._
+_Note : I have FG Ultimate license so I can host any combination of licensed/demo players; if you have FG Standard then you can host 1 demo **or** N licensed players.  This is the FG licensing scheme._
+
+
+
+### What if it fails ?
+
+![](../.gitbook/assets/zeferby_dino_64%20%281%29.png) _**What ? How ? When ? Where ? You have a real failure ? Like this one ?**_
+
+![](../.gitbook/assets/image%20%2886%29.png)
+
+![](../.gitbook/assets/zeferby_dino_64%20%281%29.png) _**Maybe you forgot**_ [_**what you should always remember**_](../general/vpn-solutions.md#always-remember) _**? Ok,10 seconds to**_ 😭_**...**_
+
+{% hint style="info" %}
+...Now **recheck everything for your GM machine's Barriers 1-3**, remembering that FG inbound connections will come to your GM FG through **the VPN connection**, which Windows \(rightfully\) considers to be a **DIFFERENT network than your usual home network.**
+
+=&gt; for Windows 10, you have to mark the **VPN connection as PRIVATE !**
+
+=&gt; don't forget to open some doors in all your **firewall-like thingies**...you'll probably need to do so for **both :**
+
+* your **VPN private IP network** \(10.10.10.0/24 in this demo\)
+* **AND** the server **Private IPv4** in your AWS VPC \(172.31.10.45 in this demo\)
+{% endhint %}
+
+_...and if you still can't make this work, then ask for help with the links at the beginning of this document..._
 
  _****_
 
-_\*\*\*\*_
+## A little fix to our AWS Launch Template
 
-T2/T3 Unlimited mode
+A little glitch caught my 👀 when we launched our server, that you'll find just below the pink highlight for Source/dest. check on the screenshots of the EC2 console :
 
-_\*\*\*\*_
+T2/T3 Unlimited mode : _**Enabled**_
 
-![](../.gitbook/assets/image%20%282%29.png)
+**This is not a setting we want for our use case**, as it may introduce costs \(though that is very unlikely, OpenVPN using a very low percentage of CPU\).
 
+Anyway, this came out because in the AWS region we used, we did not have the usual "free tier elligible" t2.micro instance type but the t3.micro instead, and i found this note in AWS EC2 documentation which explains this unexpected \(at least for me\) setting :
 
+![](../.gitbook/assets/image%20%283%29.png)
 
+So just to be sure, we'll disable this setting and that will give us an opportunity to do it by creating a new version of our Launch Template.
 
+### The Launch Template v2
 
+We go to the Launch Templates section of the EC2 Console and click "**Create launch template**" again, but this time we :
 
+* select _**Create a new template version**_
+* select our existing template
+* enter a version description
+* select the existing version as source
+
+![New template version, select our template...](../.gitbook/assets/image%20%2842%29.png)
+
+![...enter a version description and select original version as source](../.gitbook/assets/image%20%2878%29.png)
+
+Then we go to the bottom, expand **Advanced details** and put the **T2/T3 Unlimited** setting to _**Disabled**_ :
+
+![Disable T2/T3 Unlimited](../.gitbook/assets/image%20%28117%29.png)
+
+And now we can click the final "_**Create launch template**_" button :
+
+![](../.gitbook/assets/image%20%281%29.png)
+
+Here we are :
+
+![](../.gitbook/assets/image%20%28124%29.png)
+
+Now let's **make this new version the default** version of our Launch Template, because _**the original one is currently still the default one**_ :
+
+![](../.gitbook/assets/image%20%2849%29.png)
+
+So we check the line is selected \(blue square on the left\) and use the **Actions** button :
+
+![](../.gitbook/assets/image%20%2833%29.png)
+
+Nothing mysterious there...
+
+![](../.gitbook/assets/image%20%2868%29.png)
+
+Finally we're done :
+
+![](../.gitbook/assets/image%20%2835%29.png)
 
 
 
