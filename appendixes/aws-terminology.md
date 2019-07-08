@@ -21,6 +21,10 @@ See a nice interactive map at : [https://www.infrastructure.aws/](https://www.in
 **EC2 AMI** : an **EC2 Amazon Machine Image** is like a backup of the system disk from which you can create a new virtual server  
 **EC2 Instance** : a virtual server \(you create one or more from an EC2 AMI\)
 
+## EIP
+
+**Elastic IP** : a _**fixed**_ public IPv4 address exclusively _**reserved**_ for a specific account, in a **VPC**. Can be free only when attached to a running virtual server = **EC2 Instance**
+
 ## IAM
 
 **Identity & Access Management** : The cross-the-board service behind "all things security-related" in the AWS cloud

@@ -29,6 +29,10 @@ Depending on context :
 * **Dungeon Master** = the GM in a D&D game.
 * **Direct Message** \(also called **PM**=Private Message\) on forums and on-line chat platforms
 
+## DDNS
+
+**Dynamic DNS** : a service offer where you can manage one or more DNS names \(FQDNs\) that are reserved for you : you can make them point to the public IP of your choice, and they are usuall updatable atomatically through an API or a utility pogram.  Many models of "Internet routers" support auto-updating DDNS services.
+
 ## DNS
 
 **Domain Name System** : the way machines are named in the Internet
@@ -88,6 +92,10 @@ The **most widely used communication protocols, based on IP** at the "network" l
 ## **ISP**
 
 **Internet Service Provider**
+
+## IT
+
+**Information Technology** : everything "computer-related"...
 
 ## LAN
 
