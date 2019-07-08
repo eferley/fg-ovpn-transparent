@@ -1,36 +1,40 @@
-# AWS terminology -WIP
+# AWS acronyms
 
-Acronyms
+## AWS
 
-AWS
+**Amazon Web Services** : a set of cloud services offered by Amazon, starting at the **IaaS** level, with more and more **PaaS** offers appearing over the years.
 
-AZ
+## AZ
 
-EBS
+**Availability Zone** : a \(set of\) datacenter\(s\) in an **AWS Region**.  All AZs in a region are physically/electrically independent, but linked through VERY high speed physical links.  
+See a nice interactive map at : [https://www.infrastructure.aws/](https://www.infrastructure.aws/)
 
-EBS volume
+## EBS
 
-EBS snapshot
+**Elastic Block Store** : basically your virtual disks in the AWS cloud  
+**EBS volume** : a "virtual disk"  
+**EBS snapshot** : a point-in-time image of an EBS volume
 
-EC2
+## EC2
 
-EC2 AMI
+**Elastic Cloud Compute** : the service providing virtual servers in the AWS cloud  
+**EC2 AMI** : an **EC2 Amazon Machine Image** is like a backup of the system disk from which you can create a new virtual server  
+**EC2 Instance** : a virtual server \(you create one or more from an EC2 AMI\)
 
-EC2 instance
+## IAM
 
-IAM
+**Identity & Access Management** : The cross-the-board service behind "all things security-related" in the AWS cloud
 
-S3
+## Region
 
-S3 bucket
+An **AWS Region** is a set of interconnected **AZs** \(Availability Zones\), all located in a geographical area.  
+See a nice interactive map at : [https://www.infrastructure.aws/](https://www.infrastructure.aws/)
 
-VPC
+## S3
 
+**Simple Storage Service** : as the name implies... 🤣 
 
+## VPC
 
-Terminology
-
-Start and Stop an AWS EC2 instance
-
-Launch/Terminate an AWS EC2 instance
+**Virtual Private Cloud** : a set of virtual networks and devices \(gateways, firewalls\) defined in an **AWS Region** for one account.
 

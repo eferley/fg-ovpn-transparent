@@ -49,8 +49,8 @@
 
 ## Appendixes
 
-* [Acronyms and definitions -WIP](appendixes/acronyms-and-definitions.md)
-* [AWS terminology -WIP](appendixes/aws-terminology.md)
+* [Acronyms and definitions](appendixes/acronyms-and-definitions.md)
+* [AWS acronyms](appendixes/aws-terminology.md)
 * [AWS admin user + API access key](appendixes/aws-user-with-api-keys.md)
 * [AWS, DNS, DDNS, CRL...](appendixes/aws-and-other-considerations.md)
 * [Possible \(?\) developments](appendixes/future-possible-developments.md)

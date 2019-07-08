@@ -1,4 +1,4 @@
-# Acronyms and definitions -WIP
+# Acronyms and definitions
 
 Here is a list of numerous acronyms used throughout this document.
 
