@@ -2,7 +2,7 @@
 
 Here is a list of numerous acronyms used throughout this document.
 
-AWS-specific acronyms and terminology is developed in a [separate topic](aws-terminology.md).
+AWS-specific acronyms and terminology have a [separate topic](aws-terminology.md).
 
 ## CA
 
@@ -27,11 +27,13 @@ The usual basic parameters managed by DHCP servers are : IP address, network mas
 Depending on context :
 
 * **Dungeon Master** = the GM in a D&D game.
-* **Direct Message** \(also called PM=Private Message\) on forums and on-line chat platform
+* **Direct Message** \(also called **PM**=Private Message\) on forums and on-line chat platforms
 
 ## DNS
 
 **Domain Name System** : the way machines are named in the Internet
+
+See also : **FQDN**
 
 ## FG
 
@@ -41,12 +43,17 @@ Depending on context :
 
 Depending on context :
 
-* **Fantasy Grounds College** : a fantastic group of FG fans \(GMs and players\) providing voluntary help about FG \(see the [More Help](https://zeferby.gitbook.io/transparent-openvpn-for-fantasy-grounds/#fantasy-grounds-college) topic\)
+* **Fantasy Grounds College** : a fantastic group of FG fans \(GMs and players\) providing voluntary help and training about FG \(see the [More Help](https://zeferby.gitbook.io/transparent-openvpn-for-fantasy-grounds/#fantasy-grounds-college) topic\)
 * **Fantasy Grounds "Classic"** : the current major version of FG \(v3.x\)
 
 ## FGU
 
 **Fantasy Grounds "Unity"** : the next major version of FG planned to be released at the end of 2019. See the **very** successful launch of the FGU KickStarter project at [https://www.kickstarter.com/projects/smiteworks/fantasy-grounds-unity](https://www.kickstarter.com/projects/smiteworks/fantasy-grounds-unity)
+
+## FQDN
+
+**Fully Qualified Domain Name** : a complete DNS name, where no part has been omitted.  
+When browsing the Internet \(as opposed to private intranets\), you always use FQDNs.
 
 ## Gateway
 
@@ -54,7 +61,7 @@ See **Router**
 
 ## GM
 
-**Game Master** \(usually called DM for D&D\).
+**Game Master** \(usually called **DM** for D&D\).
 
 ## **IaaS / PaaS / SaaS**
 
@@ -84,7 +91,7 @@ The **most widely used communication protocols, based on IP** at the "network" l
 
 ## LAN
 
-**Local Area Network** : local network where every device is connected on a shared physical cabling system like Ethernet with a central hub or switch device \(the wireless variant is a WLAN\).  LAN is now used as a generic term both for "physical" LAN and WLAN.
+**Local Area Network** : local network where every device is connected on a shared physical cabling system like Ethernet with a central hub or switch device \(the wireless variant is a **WLAN**\).  LAN is now used as a generic term both for "physical" LAN and WLAN.
 
 _**A device connected to a LAN should have a "Private IP" address**_
 
@@ -111,6 +118,10 @@ Your "home" network is a LAN \(and most likely a WLAN\).
 ## PF
 
 **PathFinder** : a well known RPG
+
+## **PM**
+
+**Private Message** on forums and on-line chat platforms \(also call **DM**=Direct Message\)
 
 ## Router
 
@@ -162,7 +173,7 @@ Your "home" network is a LAN \(and most likely a WLAN\).
 
 ## WLAN
 
-**Wireless LAN = Wireless Local Area Network** : a LAN where every device is connected on a shared wireless domain \(identified by its SSID\) instead of using physical cables.  Your average "home" network is a generally WLAN.
+**Wireless LAN = Wireless Local Area Network** : a LAN where every device is connected on a shared wireless domain \(identified by its **SSID**\) instead of using physical cables.  Your average "home" network is generally a WLAN.
 
 
 
