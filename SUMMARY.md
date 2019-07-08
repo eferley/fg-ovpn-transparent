@@ -61,7 +61,7 @@
 * [Fantasy Grounds Discord](https://discord.gg/dbuQvgG)
 * [FG College Web](https://fantasygroundscollege.net/)
 * [FG College Discord](https://discord.gg/Ew6nYyw)
-* [Our Discord](https://discord.gg/6s6WCuZ)
+* [Our "EU" Discord](https://discord.gg/6s6WCuZ)
 * [OpenVPN](https://openvpn.net/)
 * [AWS](https://aws.amazon.com/)
 

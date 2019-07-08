@@ -45,7 +45,7 @@ To find out about **everything you ever wanted to learn about Fantasy Grounds, a
 
 ![](.gitbook/assets/fgc-banner_w200.png)
 
-FGC is a fantastic group of FG fans \(GMs and players\) providing voluntary help about FG, and can be joined :
+FGC is a fantastic group of FG fans \(GMs and players\) providing voluntary help and training about FG, and can be joined :
 
 * on Discord : [https://discord.gg/Ew6nYyw](https://discord.gg/Ew6nYyw)
 * on the website : [https://fantasygroundscollege.net/](https://fantasygroundscollege.net/)
@@ -56,7 +56,7 @@ FGC is a fantastic group of FG fans \(GMs and players\) providing voluntary help
 
 ![](.gitbook/assets/teameutransition200.png)
 
-We are a fan-driven Fantasy Grounds help and gaming place for FGC offsprings \(especially from EU-like timezones\).  You'll find us on Discord here : [https://discord.gg/6s6WCuZ](https://discord.gg/6s6WCuZ)
+We are a fan-driven Fantasy Grounds help and gaming place created by FGC offsprings \(especially from EU-like timezones\).  You'll find us on Discord here : [https://discord.gg/6s6WCuZ](https://discord.gg/6s6WCuZ)
 
 
 
