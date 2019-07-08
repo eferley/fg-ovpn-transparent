@@ -23,13 +23,15 @@ Be sure to 👍 **allow incoming communications to your TCP 1802, or better yet*
 
 _Here is an example of Windows 7 firewall rules authorizing **any kind of incoming connection to the Fantasy Grounds program**, with TCP+UDP protocols and the "ALL" value for networks, adresses and ports parameters \(W7 Firewall "advanced" view\) :_
 
-![W7 &quot;All Incoming&quot; rules example for F.G. ](../.gitbook/assets/image%20%28118%29.png)
+![W7 &quot;All Incoming&quot; rules example for F.G. ](../.gitbook/assets/image%20%28135%29.png)
 
-_**TODO : Other screenshots needed here**_
+_**TODO : W10 screenshots needed here**_
 
 ## Barrier 3 👹 : Third-party protection software
 
 If you are using **any kind of  third-party anti- malware/virus/threat protection software**, chances are that you also need to 👍 **enable incoming communications for FG in these**, **or else...** 👎 
 
-_**TODO : Other screenshots needed here ?**_
+_**TODO : Other screenshots needed here ??**_
+
+
 
