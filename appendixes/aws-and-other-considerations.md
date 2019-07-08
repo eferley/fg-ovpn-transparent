@@ -1,4 +1,4 @@
-# AWS and other considerations
+# AWS, DNS, DDNS, CRL...
 
 ## **AWS considerations**
 
