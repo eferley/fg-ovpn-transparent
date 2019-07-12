@@ -6,6 +6,10 @@ These first 3 points relate to the configuration of the GM's machine/OS.
 _**Breaking these barriers** should be enough to **successfully host a game for players** located **in your own home network**, even if you are in a no-go situation for remote player access._
 {% endhint %}
 
+{% hint style="info" %}
+If you have a third-party protection software installed, it _**may**_ "take over" some settings from Windows 10 itself : you may then find them in the third-party software settings.
+{% endhint %}
+
 ## Barrier 1 😡 : Windows 10 "public/private" network setting
 
 Windows 10 has a setting to classify each network it is connected to as :
@@ -14,10 +18,6 @@ Windows 10 has a setting to classify each network it is connected to as :
 * or "private" \(read : "safe"\)
 
 Windows 10 will prevent incoming connections from "public" networks, including Fantasy Grounds, so be sure to 👍 **tag your current W10 network connection as "private"**, **or else...** 👎 
-
-{% hint style="info" %}
-If you have a third-party protection software installed, it may "take over" that setting from Windows 10 itself : you would then find the "public/private" toggle in the third party settings.
-{% endhint %}
 
 _**TODO : W10 screenshots needed here**_
 
