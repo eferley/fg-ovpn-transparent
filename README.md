@@ -2,7 +2,7 @@
 description: fg/ovpn blurb by ZeFerby
 ---
 
-# A "transparent" OpenVPN setup for Fantasy Grounds
+# Fantasy Grounds - Port Forwarding and a "transparent" OpenVPN setup
 
 This document will describe a solution for GMs \(Game Masters\) to publish their FG virtual table to remote players through an ad-hoc "GM-only" VPN, hosted on a small AWS \(Amazon Web Services\) Linux server.
 

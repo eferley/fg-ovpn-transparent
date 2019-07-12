@@ -1,6 +1,6 @@
 # Table of contents
 
-* [A "transparent" OpenVPN setup for Fantasy Grounds](README.md)
+* [Fantasy Grounds - Port Forwarding and a "transparent" OpenVPN setup](README.md)
 
 ## General
 
