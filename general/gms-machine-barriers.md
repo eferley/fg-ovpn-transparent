@@ -15,6 +15,10 @@ Windows 10 has a setting to classify each network it is connected to as :
 
 Windows 10 will prevent incoming connections from "public" networks, including Fantasy Grounds, so be sure to 👍 **tag your current W10 network connection as "private"**, **or else...** 👎 
 
+{% hint style="info" %}
+If you have a third-party protection software installed, it may "take over" that setting from Windows 10 itself : you would then find the "public/private" toggle in the third party settings.
+{% endhint %}
+
 _**TODO : W10 screenshots needed here**_
 
 ## Barrier 2 👿 : OS-managed firewall

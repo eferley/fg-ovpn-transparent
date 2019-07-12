@@ -65,7 +65,7 @@ We are a fan-driven Fantasy Grounds help and gaming place created by FGC offspri
 
 ![](.gitbook/assets/fantasy-grounds.png)
 
-* website : [https://www.fantasygrounds.com/](https://www.fantasygrounds.com/)
+* Website and Forums : [https://www.fantasygrounds.com/](https://www.fantasygrounds.com/)
 * Discord server : [https://discord.gg/dbuQvgG](https://discord.gg/dbuQvgG)
 * Steam discussions : [https://steamcommunity.com/app/252690/discussions/](https://steamcommunity.com/app/252690/discussions/)
 
