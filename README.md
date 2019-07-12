@@ -49,6 +49,7 @@ FGC is a fantastic group of FG fans \(GMs and players\) providing voluntary help
 
 * on Discord : [https://discord.gg/Ew6nYyw](https://discord.gg/Ew6nYyw)
 * on the website : [https://fantasygroundscollege.net/](https://fantasygroundscollege.net/)
+* the Knowledge Base : [https://fgc-kb.fantasygroundscollege.net/](https://fgc-kb.fantasygroundscollege.net/)
 
 
 
