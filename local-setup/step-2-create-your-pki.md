@@ -14,7 +14,7 @@ As first step we'll duplicate the whole contents of our **`new-PKI`** folder int
 
 ![Copy all from the source](../.gitbook/assets/image%20%2873%29.png)
 
-![Paste to the target](../.gitbook/assets/image%20%28136%29.png)
+![Paste to the target](../.gitbook/assets/image%20%28141%29.png)
 
 {% hint style="info" %}
 We'll now more or less follow the instructions you can read in the README.txt file, except that :
@@ -260,7 +260,7 @@ dir
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-![Looks like we&apos;re in the right place !](../.gitbook/assets/image%20%28129%29.png)
+![Looks like we&apos;re in the right place !](../.gitbook/assets/image%20%28132%29.png)
 
 Then once we know we have arrived at the right place, **the VERY FIRST COMMAND** we'll type is :
 
@@ -301,11 +301,13 @@ Let's use **the "killer" command script**, give **the Y answer THIS ONE TIME**, 
 .\NEVER-AGAIN-DANGER-clean-all.bat
 ```
 
-**This deletes any pre-existing data in your PKI keys folder and initializes the PKI "database" :**
+**This DELETES any pre-existing data in your PKI keys folder and initializes the PKI "database" :**
 
 ![THE ONE TIME : &quot;Y&quot; answer](../.gitbook/assets/image%20%2869%29.png)
 
-![](../.gitbook/assets/image%20%28168%29.png)
+![A brand new PKI, initialized/erased by the killer command script](../.gitbook/assets/image%20%28173%29.png)
+
+
 
 
 
@@ -328,7 +330,7 @@ Let's call our CA : **my-fg-ovpn-ca**, _keeping our good prefixing habit_.
 
 This creates the PKI Certificate Authority's own self-signed certificate \(**ca.crt**\) and private key \(**ca.key**\) in the **`MY-FG-OVPN-PKI-KEYS`** sub-folder.
 
-![](../.gitbook/assets/image%20%28159%29.png)
+![](../.gitbook/assets/image%20%28164%29.png)
 
 Since we are here within our own PKI, we only have one CA so these simple filenames are fine. But :
 
@@ -362,7 +364,7 @@ Easy, but may take a long time depending on your computer !
 .\build-dh.bat
 ```
 
-![Beginning of the DH file creation](../.gitbook/assets/image%20%28108%29.png)
+![Beginning of the DH file creation](../.gitbook/assets/image%20%28110%29.png)
 
 ...time passes...finally :
 
@@ -370,7 +372,7 @@ Easy, but may take a long time depending on your computer !
 
 This has generated the [**Diffie-Hellman-Merkel key exchange**](https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange) parameter file that will be used to initiate encryption sessions.
 
-![](../.gitbook/assets/image%20%28155%29.png)
+![](../.gitbook/assets/image%20%28160%29.png)
 
 {% hint style="danger" %}
 **Our server will need to have our DH file named as "configuration name"-dh2048.pem**
@@ -430,7 +432,7 @@ This creates 3 files in your keys folder, with the name you typed on the command
 * **my-fg-ovpn-srv.key** : the server private key
 * **my-fg-ovpn-srv.csr** : the "certificate signing request" used during the process
 
-![](../.gitbook/assets/image%20%28174%29.png)
+![](../.gitbook/assets/image%20%28179%29.png)
 
 {% hint style="info" %}
 These files should **already be properly named**, so we'll keep them as they are:
@@ -449,15 +451,15 @@ Being used to D&D, i already called my clients subfolders my-fg-ovpn-dm01/02, so
 .\build-key.bat my-fg-ovpn-dm01
 ```
 
-![Create, sign, commit : my-fg-ovpn-dm01 for one GM](../.gitbook/assets/image%20%28167%29.png)
+![Create, sign, commit : my-fg-ovpn-dm01 for one GM](../.gitbook/assets/image%20%28172%29.png)
 
 **Do the same thing with my-fg-ovpn-dm02...**
 
-![Create, sign, commit : my-fg-ovpn-dm02 for a second GM](../.gitbook/assets/image%20%28133%29.png)
+![Create, sign, commit : my-fg-ovpn-dm02 for a second GM](../.gitbook/assets/image%20%28137%29.png)
 
 You should now have :
 
-![](../.gitbook/assets/image%20%28116%29.png)
+![](../.gitbook/assets/image%20%28119%29.png)
 
 
 
@@ -478,7 +480,7 @@ But to create that CRL, **we need one client certificate to be revoked, so "DM02
 .\revoke-full.bat my-fg-ovpn-dm02
 ```
 
-![Revoke poor DM02 !](../.gitbook/assets/image%20%28157%29.png)
+![Revoke poor DM02 !](../.gitbook/assets/image%20%28162%29.png)
 
 You can see on the above screenshot :
 
@@ -503,7 +505,7 @@ _**After all, DM01 was here first, and he's not a sharer...**_
 
 As soon as you have revoked the \(_probably innocent_\) my-fg-ovpn-dm02 during the previous step, your PKI \(re-\)generated the **CRL**=_**Certificate Revocation List**_ under the basic name of **crl.pem :**
 
-![](../.gitbook/assets/image%20%2893%29.png)
+![](../.gitbook/assets/image%20%2894%29.png)
 
 {% hint style="danger" %}
 **Our server will need to have the CRL named as "configuration name"-crl.pem**
@@ -549,7 +551,7 @@ We'll create this key with the right filename, in our keys sub-folder :
 openvpn.exe --genkey --secret MY-FG-OVPN-PKI-KEYS\my-fg-ovpn-ta.key
 ```
 
-![](../.gitbook/assets/image%20%28115%29.png)
+![](../.gitbook/assets/image%20%28117%29.png)
 
 Nothing fancy, it just creates the last key file we were missing in our security arsenal. Here is the complete list of files in our keys sub-folder :
 

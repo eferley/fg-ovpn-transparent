@@ -6,7 +6,7 @@ You now know the Public IP for your server : you will use it to connect your Ope
 
 Right-click your OpenVPN GUI, and "Edit Config" on your connection menu :
 
-![Edit Config to write the public IP](../.gitbook/assets/image%20%28109%29.png)
+![Edit Config to write the public IP](../.gitbook/assets/image%20%28111%29.png)
 
 Remember the **`<OpenVPN Server Public IP or FQDN>`** placeholder at line 6 ? Replace it with your server's pubic IP that you copied previously in the EC2 Console :
 
@@ -14,11 +14,11 @@ Remember the **`<OpenVPN Server Public IP or FQDN>`** placeholder at line 6 ? Re
 
 Now **close+save**, right-click again and "**Connect**" !
 
-![](../.gitbook/assets/image%20%2888%29.png)
+![](../.gitbook/assets/image%20%2889%29.png)
 
 You'll see a log flowing in a window....🥁🥁 _...aaaannnnndddd..._ 🥁🥁 
 
-![Yeah !](../.gitbook/assets/image%20%2896%29.png)
+![Yeah !](../.gitbook/assets/image%20%2897%29.png)
 
 ### ![](../.gitbook/assets/zeferby_dino_64%20%281%29.png) 👏 🎆🧨💃 🕺 **Bravo ! Cheers ! CongratZ !**  🕺 💃 🧨 🎆 👏 ![](../.gitbook/assets/zeferby_dino_64%20%281%29.png) 
 
@@ -52,7 +52,7 @@ Let's open a new command prompt window and try a few commands :
 
 Let's have a quick look at our server various IPs :
 
-![](../.gitbook/assets/image%20%28119%29.png)
+![](../.gitbook/assets/image%20%28122%29.png)
 
 **`ping 172.31.10.45`** : pings the server's ethernet LAN adapter **private IP in AWS**
 
@@ -74,7 +74,7 @@ We want to authorized inbound ping requests, which are in reality ICMP echo requ
 
 Let's **Save**, then go back to our EC2 instance details to check it applies :
 
-![Yep ! Now pingable from anywhere](../.gitbook/assets/image%20%2887%29.png)
+![Yep ! Now pingable from anywhere](../.gitbook/assets/image%20%2888%29.png)
 
 Let's retry our ping on the public IP to check we have the replies...ok ✅ 
 
@@ -102,7 +102,7 @@ This is a **Windows 7 \(FR\)** with an **older OpenVPN \(2.2.2, 32-bit\)**, but 
 
 ![An older OpenVPN \(2.2.2\)](../.gitbook/assets/image%20%2832%29.png)
 
-![ping results still ok on my Windows 7](../.gitbook/assets/image%20%28127%29.png)
+![ping results still ok on my Windows 7](../.gitbook/assets/image%20%28130%29.png)
 
 So here I am, connected to the VPN server and with Fantasy Grounds eagerly waiting for players to connect :
 
@@ -114,7 +114,7 @@ Let's try this command in our command prompt :
 netstat -ano | find "1802"
 ```
 
-![FG process 16100 listening on ALL my connections](../.gitbook/assets/image%20%28173%29.png)
+![FG process 16100 listening on ALL my connections](../.gitbook/assets/image%20%28178%29.png)
 
 We can see above that our "**GM FG**" has the Windows Process ID 16100, and is **listening to TCP 1802 on ALL IPs from ALL connected network adapters \(the 0.0.0.0 on the left\),** _**including our VPN Private IP**_
 
@@ -122,9 +122,9 @@ We can see above that our "**GM FG**" has the Windows Process ID 16100, and is *
 
 Now let's open a _**second Fantasy Grounds as a player on the same machine**_, and _**Join Game**_ on _**localhost**_ as Host address \(**localhost means "myself" and is the special private IPv4 address 127.0.0.1**\)
 
-![Player connection to localhost](../.gitbook/assets/image%20%28101%29.png)
+![Player connection to localhost](../.gitbook/assets/image%20%28103%29.png)
 
-![](../.gitbook/assets/image%20%28148%29.png)
+![](../.gitbook/assets/image%20%28153%29.png)
 
 That works as expected : nothing fancy here, but if we retry our last command, we see how FG networking works :
 
@@ -174,11 +174,11 @@ And if you then retry our netstat command, you'll see all these connections arri
 
 So here is an example of 2 connections, **from 2 players with a Demo version of FG** to my GM FG virtual table **through the OpenVPN port-forwarding server** :
 
-![](../.gitbook/assets/image%20%28160%29.png)
+![](../.gitbook/assets/image%20%28165%29.png)
 
 The player connections seen on my GM FG machine :
 
-![](../.gitbook/assets/image%20%2891%29.png)
+![](../.gitbook/assets/image%20%2892%29.png)
 
 {% hint style="info" %}
 Our GM FG sees **ALL the "port-forwarded" player connections** coming in :
@@ -191,13 +191,17 @@ _Note : I have FG Ultimate license so I can host any combination of licensed/dem
 
 
 
-### What if it fails ?
+## What if it fails ?
 
-![](../.gitbook/assets/zeferby_dino_64%20%281%29.png) _**What ? How ? When ? Where ? You have a real failure ? Like this one ?**_
+![](../.gitbook/assets/zeferby_dino_64%20%281%29.png) _**What ? How ? When ? Where ? You have a real failure ? Like this one with a "player" FG ? Or worse, you can't even connect with your OpenVPN client to your shiny new server ?**_
 
-![](../.gitbook/assets/image%20%2886%29.png)
+![](../.gitbook/assets/image%20%2887%29.png)
 
-![](../.gitbook/assets/zeferby_dino_64%20%281%29.png) _**Maybe you forgot**_ [_**what you should always remember**_](../general/vpn-solutions.md#always-remember) _**? Ok,10 seconds to**_ 😭_**...**_
+
+
+### ![](../.gitbook/assets/zeferby_dino_64%20%281%29.png) FG : _**Maybe you forgot**_ [_**what you should always remember**_](../general/vpn-solutions.md#always-remember) _**?**_
+
+_**Ok,10 seconds to**_ 😭_**...**_
 
 {% hint style="info" %}
 ...Now **recheck everything for your GM machine's Barriers 1-3**, remembering that FG inbound connections will come to your GM FG through **the VPN connection**, which Windows \(rightfully\) considers to be a **DIFFERENT network than your usual home network.**
@@ -210,7 +214,33 @@ _Note : I have FG Ultimate license so I can host any combination of licensed/dem
 * **AND** the server **Private IPv4** in your AWS VPC \(172.31.10.45 in this demo\)
 {% endhint %}
 
-_...and if you still can't make this work, then ask for help with the links at the beginning of this document..._
+
+
+### **OpenVPN :** CRLF ? Check the startup log of your OpenVPN server instance
+
+In the **Instances** section of the **EC2 Console**, use this right-click contextual menu :
+
+![Getting the system log, including the startup log](../.gitbook/assets/image%20%28118%29.png)
+
+That should give you \(**several minutes after** the instance is launched\) something like this...
+
+![Beginning of the system log](../.gitbook/assets/image%20%2899%29.png)
+
+After 450 to 500 lines, if you encounter the following error message, it means your _****_**`fgovpn001-init.sh`** _**was saved with the CRLF mode**_ for End-Of-Line control characters _**instead of LF**_ :
+
+![Error example : init script saved with CRLF mode](../.gitbook/assets/image%20%28140%29.png)
+
+In this example, because of a rogue **CR** character \(^M\) at the end of the very first line, **the init script did NOT execute AT ALL**, so OpenVPN is not even installed on your \(useless\) virtual server !
+
+> In the above example, don't be confused by the following line 502 \("_UserData script finished_"\).
+>
+> The very last thing that the UserData script tried to do was running fgovpn001-init.sh \(line 499\), so the error actually comes from that file, not from the UserData script \(it has been cleansed of any CRs by importing it in the _web editor_ in the AWS Console\).
+
+=&gt; [**Correct the error**](../aws-setup-step-by-step/4.7-filling-the-bucket.md#important-save-files-in-lf-unix-format) by saving **fgovpn001-init.sh in LF mode** in your **`my-fg-ovpn-s3`** local sub-folder, re-transfer the file to S3 to overwrite the one you previously stored, **Terminate** \(=destroy\) your current instance \(right-click / _**Instance State**_ / _**Terminate**_\), and then **launch** a brand new one !
+
+
+
+_...finally, if you still can't make this work, then **ask for help** with the links at the beginning of this document..._
 
  _****_
 
@@ -226,7 +256,7 @@ Anyway, this came out because in the AWS region we used, we did not have the usu
 
 ![](../.gitbook/assets/image%20%283%29.png)
 
-So just to be sure, we'll disable this setting and that will give us an opportunity to do it by creating a new version of our Launch Template.
+Just to be sure, we'll disable this setting and that will give us an opportunity to experiment with creating a new version of our Launch Template.
 
 ### The Launch Template v2
 
@@ -241,9 +271,9 @@ We go to the Launch Templates section of the EC2 Console and click "**Create lau
 
 ![...enter a version description and select original version as source](../.gitbook/assets/image%20%2878%29.png)
 
-Then we go to the bottom, expand **Advanced details** and put the **T2/T3 Unlimited** setting to _**Disabled**_ :
+Then we go to the bottom, expand **Advanced details** and put the **T2/T3 Unlimited** setting to _**Disable**_ :
 
-![Disable T2/T3 Unlimited](../.gitbook/assets/image%20%28117%29.png)
+![Disable T2/T3 Unlimited](../.gitbook/assets/image%20%28120%29.png)
 
 And now we can click the final "_**Create launch template**_" button :
 
@@ -251,7 +281,7 @@ And now we can click the final "_**Create launch template**_" button :
 
 Here we are :
 
-![](../.gitbook/assets/image%20%28124%29.png)
+![](../.gitbook/assets/image%20%28127%29.png)
 
 Now let's **make this new version the default** version of our Launch Template, because _**the original one is currently still the default one**_ :
 

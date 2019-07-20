@@ -68,7 +68,7 @@ So we'll save the .ovpn file above to **`T:\fg-ovpn\MY-FG-OVPN\my-fg-ovpn-client
 
 Which gives :
 
-![OpenVPN Client parameters for my-fg-ovpn-dm01](../.gitbook/assets/image%20%28107%29.png)
+![OpenVPN Client parameters for my-fg-ovpn-dm01](../.gitbook/assets/image%20%28109%29.png)
 
 {% hint style="success" %}
 **Your "distribution folder" for my-fg-ovpn-dm01 is complete...**
@@ -135,7 +135,7 @@ Let's now switch to the _**user view of OpenVPN**_, which is what you'll use in 
 
 When we use it for **the first time**, the result is "a bit" **anticlimatic**... 😬 
 
-![](../.gitbook/assets/image%20%2892%29.png)
+![](../.gitbook/assets/image%20%2893%29.png)
 
 After you close this dialog, you don't see anything new about OpenVPN on your screen. 😡 
 
@@ -143,13 +143,13 @@ After you close this dialog, you don't see anything new about OpenVPN on your sc
 
 Ok, let's move on to the **notification icons** on the bottom right of the desktop, where you'll finally discover something new :
 
-![](../.gitbook/assets/image%20%28152%29.png)
+![](../.gitbook/assets/image%20%28157%29.png)
 
 I'll choose to have this notification icon _always visible_, so it will now always be on my taskbar.
 
 Let's **Right-click** it :
 
-![](../.gitbook/assets/image%20%2889%29.png)
+![](../.gitbook/assets/image%20%2890%29.png)
 
 A quick look at the default settings :
 
@@ -171,7 +171,7 @@ Now let's have a look at the folders in my Windows personal storage \(that we se
 
 ![Let&apos;s copy from the client distributions...](../.gitbook/assets/image%20%2858%29.png)
 
-![...and paste to our own &quot;live&quot; client setup.](../.gitbook/assets/image%20%28153%29.png)
+![...and paste to our own &quot;live&quot; client setup.](../.gitbook/assets/image%20%28158%29.png)
 
 {% hint style="success" %}
 **There we are ! All set and ready to connect. Just right-click the OpenVPN GUI again :**
