@@ -8,6 +8,8 @@ start/stop vs. launch/terminate
 
 AWS AMIs, EBS volumes and snapshots 
 
+Public IP and Elastic IP
+
 cost impacts/usefulness vs. situation
 
 ### Spot instances
@@ -20,5 +22,5 @@ CRL refresh
 
 ## Naming the server
 
-DNS, DDNS, ddclient, route53
+DNS, DDNS, ddclient, route53, Public IP / Elastic IP
 
