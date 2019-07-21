@@ -12,17 +12,17 @@ To use CBES3 we need an [**AWS user authorized on our S3 bucket with** AWS "**Ac
 
 We'll give a _**Display name**_ to our S3 "storage account" and our AWS _**Access Key**_ and _**Secret Key**_ :
 
-![](../.gitbook/assets/image%20%28144%29.png)
+![](../.gitbook/assets/image%20%28143%29.png)
 
 A quick click on "_**Test Connection**_" to check the access is granted, then the _**OK**_ button takes us to our list of _**Registered Accounts**_, that we can close.
 
-![](../.gitbook/assets/image%20%2866%29.png)
+![](../.gitbook/assets/image%20%2868%29.png)
 
 ## The "Double Explorer" GUI
 
 On the **left side** of the main GUI window, after a 🔄 **refresh of "my computer"**, we navigate to **our source folder** :
 
-![](../.gitbook/assets/image%20%28168%29.png)
+![](../.gitbook/assets/image%20%28167%29.png)
 
 On the **right side** we select our **S3 "storage account"**, which will show us our single, lonely, empty bucket :
 
@@ -30,7 +30,7 @@ On the **right side** we select our **S3 "storage account"**, which will show us
 
 Let's **double-click it** and we'll be **ready to drag-and-drop** :
 
-![](../.gitbook/assets/image%20%2845%29.png)
+![](../.gitbook/assets/image%20%2847%29.png)
 
 {% hint style="success" %}
 **==&gt; S3 bucket ready !**
@@ -40,7 +40,7 @@ Let's **double-click it** and we'll be **ready to drag-and-drop** :
 
 The result as seen in the AWS S3 Console :
 
-![](../.gitbook/assets/image%20%28156%29.png)
+![](../.gitbook/assets/image%20%28155%29.png)
 
 
 

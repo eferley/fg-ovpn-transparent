@@ -19,15 +19,15 @@ Well, because :
 
 So we go to the **EC2 Console** -&gt; **Instances** and we **"Terminate"** our instance :
 
-![Terminating = erradication !](../.gitbook/assets/image%20%2865%29.png)
+![Terminating = erradication !](../.gitbook/assets/image%20%2867%29.png)
 
 A quick confirmation dialog, and then our instance goes...
 
-![](../.gitbook/assets/image%20%2822%29.png)
+![](../.gitbook/assets/image%20%2823%29.png)
 
 And after about 1 minute...
 
-![](../.gitbook/assets/image%20%2823%29.png)
+![](../.gitbook/assets/image%20%2824%29.png)
 
 From that point, it is as if it had never existed...and after some time \(1H or so ?\) it will have _completely disappeared from your EC2 console_.
 

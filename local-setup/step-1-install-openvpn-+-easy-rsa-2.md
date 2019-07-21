@@ -26,16 +26,16 @@ _Easy-RSA 2 is developed by the same team as OpenVPN._
 
 So, we download and save the installer from [https://openvpn.net/community-downloads/](https://openvpn.net/community-downloads/) for our version of Windows \(I have built a small temporary Windows 2012R2 to "impersonate" the GM FG machine for this demo\) into the folder we previously created at **`T:\fg-ovpn\source-install`** :
 
-![](../.gitbook/assets/image%20%2896%29.png)
+![](../.gitbook/assets/image%20%2897%29.png)
 
 ...and we execute, authorizing it to do its job through the **Yes** on the "User Access Control" dialog...  
 
 
-![](../.gitbook/assets/image%20%2848%29.png)
+![](../.gitbook/assets/image%20%2850%29.png)
 
 ...making sure to **select "Easy-RSA 2 Certificate Management Scripts"** :
 
-![](../.gitbook/assets/image%20%28129%29.png)
+![](../.gitbook/assets/image%20%28128%29.png)
 
 ...AND **allowing the creation of the virtual network card** with the "**Install**" button :
 
@@ -45,7 +45,7 @@ So, we download and save the installer from [https://openvpn.net/community-downl
 Finally, we'll have our **complete installation result** looking like this \(depends on Windows version AND the version of OpenVPN\) :
 {% endhint %}
 
-![](../.gitbook/assets/image%20%28149%29.png)
+![](../.gitbook/assets/image%20%28148%29.png)
 
 > **Tech Blurb :**
 >
@@ -55,7 +55,7 @@ Finally, we'll have our **complete installation result** looking like this \(dep
 
 Let's have a look at the installation folders in **`Program Files`** :
 
-![](../.gitbook/assets/image%20%28131%29.png)
+![](../.gitbook/assets/image%20%28130%29.png)
 
 
 
@@ -76,7 +76,7 @@ We'll then use it to initialize our own PKI in its own folder .  This way, even 
 1. copy all files from **`<OpenVPN Installation>\easy-rsa`** to your **`new-PKI`** folder
 2. then copy these \(or all, if you want\) files from **`<OpenVPN Installation>\bin`** to **`new-PKI`** as well
 
-![Copy from easy-rsa to new-PKI](../.gitbook/assets/image%20%2867%29.png)
+![Copy from easy-rsa to new-PKI](../.gitbook/assets/image%20%2869%29.png)
 
 ![Copy from bin to new-PKI](../.gitbook/assets/image%20%28107%29.png)
 
@@ -84,7 +84,7 @@ We'll then use it to initialize our own PKI in its own folder .  This way, even 
 **Your autonomous "ready-to-duplicate" `new-PKI` folder is now complete :**
 {% endhint %}
 
-![](../.gitbook/assets/image%20%2831%29.png)
+![](../.gitbook/assets/image%20%2833%29.png)
 
 
 

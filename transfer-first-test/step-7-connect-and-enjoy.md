@@ -10,15 +10,15 @@ Right-click your OpenVPN GUI, and "Edit Config" on your connection menu :
 
 Remember the **`<OpenVPN Server Public IP or FQDN>`** placeholder at line 6 ? Replace it with your server's pubic IP that you copied previously in the EC2 Console :
 
-![](../.gitbook/assets/image%20%2827%29.png)
+![](../.gitbook/assets/image%20%2829%29.png)
 
 Now **close+save**, right-click again and "**Connect**" !
 
-![](../.gitbook/assets/image%20%2889%29.png)
+![](../.gitbook/assets/image%20%2890%29.png)
 
 You'll see a log flowing in a window....🥁🥁 _...aaaannnnndddd..._ 🥁🥁 
 
-![Yeah !](../.gitbook/assets/image%20%2897%29.png)
+![Yeah !](../.gitbook/assets/image%20%2898%29.png)
 
 ### ![](../.gitbook/assets/zeferby_dino_64%20%281%29.png) 👏 🎆🧨💃 🕺 **Bravo ! Cheers ! CongratZ !**  🕺 💃 🧨 🎆 👏 ![](../.gitbook/assets/zeferby_dino_64%20%281%29.png) 
 
@@ -58,7 +58,7 @@ Let's have a quick look at our server various IPs :
 
 **`ping 13.53.45.99`** : pings the server's **Public IP**
 
-![First ping tests](../.gitbook/assets/image%20%2824%29.png)
+![First ping tests](../.gitbook/assets/image%20%2825%29.png)
 
 Hummm...The server does not reply to our ping on its Public IP. Why ? 🤔 
 
@@ -70,15 +70,15 @@ Let's add a rule to our Security Group : you can **click its name in the left co
 
 We want to authorized inbound ping requests, which are in reality ICMP echo requests, so our new rule will be typed "_**Custom ICMP rule - IPv4**_", with protocol "_**Echo Request**_", from source "_**0.0.0.0/0**_" :
 
-![](../.gitbook/assets/image%20%2862%29.png)
+![](../.gitbook/assets/image%20%2864%29.png)
 
 Let's **Save**, then go back to our EC2 instance details to check it applies :
 
-![Yep ! Now pingable from anywhere](../.gitbook/assets/image%20%2888%29.png)
+![Yep ! Now pingable from anywhere](../.gitbook/assets/image%20%2889%29.png)
 
 Let's retry our ping on the public IP to check we have the replies...ok ✅ 
 
-![ping to public IP is now ok](../.gitbook/assets/image%20%2854%29.png)
+![ping to public IP is now ok](../.gitbook/assets/image%20%2856%29.png)
 
 ### Fantasy Grounds
 
@@ -88,7 +88,7 @@ Now let's start Fantasy Grounds and **create a test campaign** with any ruleset 
 Let's **not** play with the _**server alias**_ : the _**Connection test**_ will keep failing, **that's expected !**
 {% endhint %}
 
-![](../.gitbook/assets/image%20%2859%29.png)
+![](../.gitbook/assets/image%20%2861%29.png)
 
 {% hint style="info" %}
 I had to switch to **my own FG machine** for that, so i :
@@ -100,13 +100,13 @@ I had to switch to **my own FG machine** for that, so i :
 This is a **Windows 7 \(FR\)** with an **older OpenVPN \(2.2.2, 32-bit\)**, but I'm connecting fine :
 {% endhint %}
 
-![An older OpenVPN \(2.2.2\)](../.gitbook/assets/image%20%2832%29.png)
+![An older OpenVPN \(2.2.2\)](../.gitbook/assets/image%20%2834%29.png)
 
-![ping results still ok on my Windows 7](../.gitbook/assets/image%20%28130%29.png)
+![ping results still ok on my Windows 7](../.gitbook/assets/image%20%28129%29.png)
 
 So here I am, connected to the VPN server and with Fantasy Grounds eagerly waiting for players to connect :
 
-![A &quot;blank&quot; D&amp;D5e virtual table](../.gitbook/assets/image%20%2847%29.png)
+![A &quot;blank&quot; D&amp;D5e virtual table](../.gitbook/assets/image%20%2849%29.png)
 
 Let's try this command in our command prompt :
 
@@ -114,7 +114,7 @@ Let's try this command in our command prompt :
 netstat -ano | find "1802"
 ```
 
-![FG process 16100 listening on ALL my connections](../.gitbook/assets/image%20%28178%29.png)
+![FG process 16100 listening on ALL my connections](../.gitbook/assets/image%20%28177%29.png)
 
 We can see above that our "**GM FG**" has the Windows Process ID 16100, and is **listening to TCP 1802 on ALL IPs from ALL connected network adapters \(the 0.0.0.0 on the left\),** _**including our VPN Private IP**_
 
@@ -124,11 +124,11 @@ Now let's open a _**second Fantasy Grounds as a player on the same machine**_, a
 
 ![Player connection to localhost](../.gitbook/assets/image%20%28103%29.png)
 
-![](../.gitbook/assets/image%20%28153%29.png)
+![](../.gitbook/assets/image%20%28152%29.png)
 
 That works as expected : nothing fancy here, but if we retry our last command, we see how FG networking works :
 
-![FG : GM + 1 player](../.gitbook/assets/image%20%2872%29.png)
+![FG : GM + 1 player](../.gitbook/assets/image%20%2873%29.png)
 
 * the GM FG is still LISTENING on 0.0.0.0:1802 \(Process ID16100, **line1**\)
 * the player FG \(**line 3**\) :
@@ -150,11 +150,11 @@ This is all well and good, but what you want is **players connecting to your ser
 
 **Let's try !**
 
-![Connecting to the server as a player from the Internet](../.gitbook/assets/image%20%2828%29.png)
+![Connecting to the server as a player from the Internet](../.gitbook/assets/image%20%2830%29.png)
 
 _\*\*\*\*_![](../.gitbook/assets/zeferby_dino_64%20%281%29.png) _**Aarrgghh !!!...Well, actually : Yeah !!!**_ 🎆👯💃🧨 _**It works !!!** \(though it looks disappointing...\)_
 
-![It looks like a Fail but it is a Pass !](../.gitbook/assets/image%20%2857%29.png)
+![It looks like a Fail but it is a Pass !](../.gitbook/assets/image%20%2859%29.png)
 
 ## Houston, we have liftoff !
 
@@ -174,11 +174,11 @@ And if you then retry our netstat command, you'll see all these connections arri
 
 So here is an example of 2 connections, **from 2 players with a Demo version of FG** to my GM FG virtual table **through the OpenVPN port-forwarding server** :
 
-![](../.gitbook/assets/image%20%28165%29.png)
+![](../.gitbook/assets/image%20%28164%29.png)
 
 The player connections seen on my GM FG machine :
 
-![](../.gitbook/assets/image%20%2892%29.png)
+![](../.gitbook/assets/image%20%2893%29.png)
 
 {% hint style="info" %}
 Our GM FG sees **ALL the "port-forwarded" player connections** coming in :
@@ -195,7 +195,7 @@ _Note : I have FG Ultimate license so I can host any combination of licensed/dem
 
 ![](../.gitbook/assets/zeferby_dino_64%20%281%29.png) _**What ? How ? When ? Where ? You have a real failure ? Like this one with a "player" FG ? Or worse, you can't even connect with your OpenVPN client to your shiny new server ?**_
 
-![](../.gitbook/assets/image%20%2887%29.png)
+![](../.gitbook/assets/image%20%2888%29.png)
 
 
 
@@ -228,7 +228,7 @@ That should give you \(**several minutes after** the instance is launched\) some
 
 After 450 to 500 lines, if you encounter the following error message, it means your _****_**`fgovpn001-init.sh`** _**was saved with the CRLF mode**_ for End-Of-Line control characters _**instead of LF**_ :
 
-![Error example : init script saved with CRLF mode](../.gitbook/assets/image%20%28140%29.png)
+![Error example : init script saved with CRLF mode](../.gitbook/assets/image%20%28139%29.png)
 
 In this example, because of a rogue **CR** character \(^M\) at the end of the very first line, **the init script did NOT execute AT ALL**, so OpenVPN is not even installed on your \(useless\) virtual server !
 
@@ -236,7 +236,7 @@ In this example, because of a rogue **CR** character \(^M\) at the end of the ve
 >
 > The very last thing that the UserData script tried to do was running fgovpn001-init.sh \(line 499\), so the error actually comes from that file, not from the UserData script \(it has been cleansed of any CRs by importing it in the _web editor_ in the AWS Console\).
 
-=&gt; [**Correct the error**](../aws-setup-step-by-step/4.7-filling-the-bucket.md#important-save-files-in-lf-unix-format) by saving **fgovpn001-init.sh in LF mode** in your **`my-fg-ovpn-s3`** local sub-folder, re-transfer the file to S3 to overwrite the one you previously stored, **Terminate** \(=destroy\) your current instance \(right-click / _**Instance State**_ / _**Terminate**_\), and then **launch** a brand new one !
+=&gt; [**Correct the error**](../aws-setup-step-by-step/4.7-filling-the-bucket.md#important-save-files-in-lf-unix-format) by saving **fgovpn001-init.sh in LF mode** in your **`my-fg-ovpn-s3`** local sub-folder, re-transfer the file to S3 to overwrite the one you previously stored, **Terminate** \(=destroy\) your current instance \(right-click / _**Instance State**_ / _**Terminate**_\) like shown in [Step 8](step-8-destroy-terminate-after-use.md#we-break-our-new-toy), and then **launch** a brand new one !
 
 
 
@@ -267,9 +267,9 @@ We go to the Launch Templates section of the EC2 Console and click "**Create lau
 * enter a version description
 * select the existing version as source
 
-![New template version, select our template...](../.gitbook/assets/image%20%2842%29.png)
+![New template version, select our template...](../.gitbook/assets/image%20%2844%29.png)
 
-![...enter a version description and select original version as source](../.gitbook/assets/image%20%2878%29.png)
+![...enter a version description and select original version as source](../.gitbook/assets/image%20%2879%29.png)
 
 Then we go to the bottom, expand **Advanced details** and put the **T2/T3 Unlimited** setting to _**Disable**_ :
 
@@ -285,19 +285,19 @@ Here we are :
 
 Now let's **make this new version the default** version of our Launch Template, because _**the original one is currently still the default one**_ :
 
-![](../.gitbook/assets/image%20%2849%29.png)
+![](../.gitbook/assets/image%20%2851%29.png)
 
 So we check the line is selected \(blue square on the left\) and use the **Actions** button :
 
-![](../.gitbook/assets/image%20%2833%29.png)
+![](../.gitbook/assets/image%20%2835%29.png)
 
 Nothing mysterious there...
 
-![](../.gitbook/assets/image%20%2868%29.png)
+![](../.gitbook/assets/image%20%2826%29.png)
 
 Finally we're done :
 
-![](../.gitbook/assets/image%20%2835%29.png)
+![](../.gitbook/assets/image%20%2837%29.png)
 
 
 

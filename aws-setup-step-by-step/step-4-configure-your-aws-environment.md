@@ -35,7 +35,7 @@ There are [_**hundreds of videos**_](https://www.youtube.com/results?search_quer
 😁 **Ah ! There you are ! And you're an Admin ! And you're at the AWS Management Console !  
 Great ! \(**_**also, but**_©_**Zacchaeus : Jolly Good !**_**\)**
 
-![The AWS Management Console](../.gitbook/assets/image%20%2895%29.png)
+![The AWS Management Console](../.gitbook/assets/image%20%2896%29.png)
 
 This is the "home" of your AWS management console : you can **manage your account** with the menu titled with your "IAM username" @ "account name", **choose an "AWS Region"** with the menu to the right of it, and **access the service management consoles** for all AWS services.
 

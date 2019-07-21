@@ -148,7 +148,7 @@ If you have a new AWS account you'll be able to **run a small server for free 24
 
 If your AWS account is older than 1 year or you have multiple AWS servers running, whatever...
 
-**Then you will incurr small running costs for your server and storage, but this solution is designed so that these costs are minimal, and probably neglectable for most.**
+**Then you will incur small running costs for your server and storage, but this solution is designed so that these costs are minimal, and probably neglectable for most.**
 
 Choosing the **cheapest AWS server type**, which **is more than adequate** for that task :
 
