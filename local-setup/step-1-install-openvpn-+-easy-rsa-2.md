@@ -84,7 +84,7 @@ We'll then use it to initialize our own PKI in its own folder .  This way, even 
 **Your autonomous "ready-to-duplicate" `new-PKI` folder is now complete :**
 {% endhint %}
 
-![](../.gitbook/assets/image%20%2833%29.png)
+![](../.gitbook/assets/image%20%2834%29.png)
 
 
 

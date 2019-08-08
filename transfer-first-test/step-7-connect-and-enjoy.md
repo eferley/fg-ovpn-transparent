@@ -100,7 +100,7 @@ I had to switch to **my own FG machine** for that, so i :
 This is a **Windows 7 \(FR\)** with an **older OpenVPN \(2.2.2, 32-bit\)**, but I'm connecting fine :
 {% endhint %}
 
-![An older OpenVPN \(2.2.2\)](../.gitbook/assets/image%20%2834%29.png)
+![An older OpenVPN \(2.2.2\)](../.gitbook/assets/image%20%2835%29.png)
 
 ![ping results still ok on my Windows 7](../.gitbook/assets/image%20%28129%29.png)
 
@@ -267,7 +267,7 @@ We go to the Launch Templates section of the EC2 Console and click "**Create lau
 * enter a version description
 * select the existing version as source
 
-![New template version, select our template...](../.gitbook/assets/image%20%2844%29.png)
+![New template version, select our template...](../.gitbook/assets/image%20%2845%29.png)
 
 ![...enter a version description and select original version as source](../.gitbook/assets/image%20%2879%29.png)
 
@@ -289,7 +289,7 @@ Now let's **make this new version the default** version of our Launch Template, 
 
 So we check the line is selected \(blue square on the left\) and use the **Actions** button :
 
-![](../.gitbook/assets/image%20%2835%29.png)
+![](../.gitbook/assets/image%20%2836%29.png)
 
 Nothing mysterious there...
 
@@ -297,7 +297,7 @@ Nothing mysterious there...
 
 Finally we're done :
 
-![](../.gitbook/assets/image%20%2837%29.png)
+![](../.gitbook/assets/image%20%2838%29.png)
 
 
 

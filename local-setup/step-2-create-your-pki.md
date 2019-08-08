@@ -28,7 +28,7 @@ We'll now more or less follow the instructions you can read in the README.txt fi
 
 Let's create a sub-folder into our own PKI folder, to store this particular PKI's "database" of certificates and keys, that we'll call **`MY-FG-OVPN-PKI-KEYS`** :
 
-![](../.gitbook/assets/image%20%2846%29.png)
+![](../.gitbook/assets/image%20%2847%29.png)
 
 
 
@@ -213,7 +213,7 @@ This way, when we run this "killer" command script file, we'll have a **warning 
 
 ...and just to be safe, we'll **rename `clean-all.bat` to `NEVER-AGAIN-DANGER-clean-all.bat`** !
 
-![Renaming THE &quot;killer&quot; command](../.gitbook/assets/image%20%2845%29.png)
+![Renaming THE &quot;killer&quot; command](../.gitbook/assets/image%20%2846%29.png)
 
 {% hint style="info" %}
 \_\_![](../.gitbook/assets/zeferby_dino_64%20%281%29.png) _What ? Sorry ? Are you kidding me ? **Did I ever fall into that trap**, instantly killing a PKI that had been used for 3 years with 50+ certificates ? With an out of date backup ?..._
@@ -555,7 +555,7 @@ openvpn.exe --genkey --secret MY-FG-OVPN-PKI-KEYS\my-fg-ovpn-ta.key
 
 Nothing fancy, it just creates the last key file we were missing in our security arsenal. Here is the complete list of files in our keys sub-folder :
 
-![](../.gitbook/assets/image%20%2840%29.png)
+![](../.gitbook/assets/image%20%2841%29.png)
 
 
 

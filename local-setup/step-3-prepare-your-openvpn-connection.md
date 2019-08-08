@@ -20,7 +20,7 @@ In the first part we are looking at things _**as the PKI owner.**_  Then we'll s
 
 So, let's head over to **`T:\fg-ovpn\MY-FG-OVPN\my-fg-ovpn-clients\my-fg-ovpn-dm01`**, one of the folders we prepared long ago.  It should currently be empty :
 
-![](../.gitbook/assets/image%20%2836%29.png)
+![](../.gitbook/assets/image%20%2837%29.png)
 
 We'll begin by creating the **OpenVPN connection parameter file** : **`my-fg-ovpn-dm01.ovpn`**
 
@@ -121,7 +121,7 @@ verb 4
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-![](../.gitbook/assets/image%20%2831%29.png)
+![](../.gitbook/assets/image%20%2832%29.png)
 
 
 
@@ -177,7 +177,7 @@ Now let's have a look at the folders in my Windows personal storage \(that we se
 **There we are ! All set and ready to connect. Just right-click the OpenVPN GUI again :**
 {% endhint %}
 
-![](../.gitbook/assets/image%20%2843%29.png)
+![](../.gitbook/assets/image%20%2844%29.png)
 
 When your OpenVPN server is on-line and you know its **Public IP** :
 

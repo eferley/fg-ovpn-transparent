@@ -30,7 +30,7 @@ On the **right side** we select our **S3 "storage account"**, which will show us
 
 Let's **double-click it** and we'll be **ready to drag-and-drop** :
 
-![](../.gitbook/assets/image%20%2847%29.png)
+![](../.gitbook/assets/image%20%2848%29.png)
 
 {% hint style="success" %}
 **==&gt; S3 bucket ready !**

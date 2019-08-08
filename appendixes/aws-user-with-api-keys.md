@@ -22,7 +22,7 @@ Let's go on with "**Next: Tags**". I don't use tags here, so I click "**Next: Re
 
 Here I check the details are what I want and click "**Create user**"...
 
-![](../.gitbook/assets/image%20%2848%29.png)
+![Newly created administrator IAM User](../.gitbook/assets/image%20%2831%29.png)
 
 Now I **download** the \(ugly\) **credentials.csv** file for reference \(it contains the password and the programmatic Access "Key ID" + "Secret Key"\) **before clicking "Close" !**
 
