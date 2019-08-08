@@ -68,7 +68,7 @@ Let's add a rule to our Security Group : you can **click its name in the left co
 
 ![](../.gitbook/assets/image%20%2818%29.png)
 
-We want to authorized inbound ping requests, which are in reality ICMP echo requests, so our new rule will be typed "_**Custom ICMP rule - IPv4**_", with protocol "_**Echo Request**_", from source "_**0.0.0.0/0**_" :
+We want to authorize **inbound** _ping requests_, which are in reality _ICMP echo requests_, so our new rule will be typed "_**Custom ICMP rule - IPv4**_", with protocol "_**Echo Request**_", from source "_**0.0.0.0/0**_" :
 
 ![](../.gitbook/assets/image%20%2864%29.png)
 
