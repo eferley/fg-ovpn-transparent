@@ -485,10 +485,10 @@ But to create that CRL, **we need one client certificate to be revoked, so "DM02
 You can see on the above screenshot :
 
 * _**why we kept the original ca.crt and ca.key files, visibly used there...**_ 👀 
-* the Easy-RAS utility checking that a session negociation initiated on behalf of **my-fg-ovpn-dm02** **actually fails because the certificate is revoked, which is what we want !** 👍 
+* the Easy-RSA utility checks that a session negociation initiated on behalf of **my-fg-ovpn-dm02** **actually fails because the certificate is revoked, which is what we want !** 👍 
 
 {% hint style="info" %}
-**This process** does not delete files : it **marks them as revoked \(= invalid\) in the PKI "database", and includes in the immediately \(re-\)generated CRL \(Certificate Revocation List\).**
+**This process** does not delete files : it **marks them as revoked \(= invalid\) in the PKI "database", and includes them in the immediately \(re-\)generated CRL \(Certificate Revocation List\).**
 {% endhint %}
 
 
