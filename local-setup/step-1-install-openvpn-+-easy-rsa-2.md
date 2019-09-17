@@ -81,10 +81,42 @@ We'll then use it to initialize our own PKI in its own folder .  This way, even 
 ![Copy from bin to new-PKI](../.gitbook/assets/image%20%28107%29.png)
 
 {% hint style="success" %}
-**Your autonomous "ready-to-duplicate" `new-PKI` folder is now complete :**
+**Your autonomous "ready-to-duplicate" `new-PKI` folder is now \(nearly\) complete :**
 {% endhint %}
 
 ![](../.gitbook/assets/image%20%2834%29.png)
+
+## Adjust the CRL lifetime
+
+{% hint style="warning" %}
+There is one issue with this standard configuration : the lifetime of the CRL \([Certificate Revocation List](step-2-create-your-pki.md#your-initial-certification-revocation-list)\) is by default only 30 days, and since our VPN server checks the CRL for evey connection request, _**it will refuse all connections 30 days after the last CRL update...**_ 💩 
+{% endhint %}
+
+Since we likely won't be revoking certificates very often, **let's just give the CRL a lifetime of 10 years**, just like the rest of our PKI.
+
+So we edit **`openssl-1.0.0.cnf`** in a text editor \(even _Right click + Edit_ with the very limited Windows Notepad is sufficient for this file\) as follows : around line 55 you will find :
+
+{% code-tabs %}
+{% code-tabs-item title="Line to be changed" %}
+```text
+default_crl_days= 30			# how long before next CRL
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+and replace the 30 with 3650 like this :
+
+{% code-tabs %}
+{% code-tabs-item title="Edited line" %}
+```text
+default_crl_days= 3650			# how long before next CRL
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+{% hint style="success" %}
+Then save and close **`openssl-1.0.0.cnf`** and you're done !
+{% endhint %}
 
 
 
