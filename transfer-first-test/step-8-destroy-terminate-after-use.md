@@ -16,6 +16,8 @@ Well, because :
 
 * **when we are not hosting** a game, **we don't need it**
 * if we are **out of the Free Tier** bounds, we want to **keep our costs as low as possible**
+* we'll be sure **we can re-create our environment in a matter of minutes** in the unlikely event of catastrophic failure
+* it is a good starting point to explore, later on, the [AWS Spot offer](https://aws.amazon.com/ec2/spot) for the long term.
 
 So we go to the **EC2 Console** -&gt; **Instances** and we **"Terminate"** our instance :
 

@@ -22,6 +22,12 @@ One drawback of this setup is **under-utilization** : it uses a **complete serve
 
 However we have one issue for FG "Classic" : **FG "Join Game" connects exclusively to TCP 1802** on the target server, and I didn't find anything where you can override this behaviour, and since **with only 1 public IP, there can be only 1 "listener" on TCP 1802 for inbound connections...** 💩 
 
+{% hint style="info" %}
+**The solution exposed below is still valid, but I think the new section** [**Lifting the "1 GM at-a-time" restriction**](../simultaneous-games-fgc-1-vpn-server/untitled.md) **provides a more elegant/easy to use solution.**
+
+**It relies on the ability to use another TCP port than 1802 when launching FG "Classic", which I finally discovered after 2 years using the program...** 🤪 
+{% endhint %}
+
 ### **Multiple Public IPs**
 
 {% hint style="info" %}

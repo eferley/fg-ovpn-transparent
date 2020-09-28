@@ -10,6 +10,12 @@ Let's begin with :
 
 * [how to open a command line](https://www.digitalcitizen.life/7-ways-launch-command-prompt-windows-7-windows-8) with your version of Windows
 * [how to show file extensions](https://www.howtohaven.com/system/show-file-extensions-in-windows-explorer.shtml) in Windows Explorer
+* [how to set your Windows connections to "private" or "public"](https://www.digitalcitizen.life/how-set-your-networks-location-private-or-public-windows-10)
+
+Also useful :
+
+* [how to create shortcuts](https://www.digitalcitizen.life/how-create-shortcuts) in Windows
+* [how to pin shortcuts](https://www.digitalcitizen.life/how-pin-special-windows-shortcuts-taskbar) to the Windows Taskbar
 
 **It may also be a good idea to know/learn** [how to show hidden/system files](https://helpx.adobe.com/x-productkb/global/show-hidden-files-folders-extensions.html) in Windows Explorer as well...
 
@@ -69,7 +75,5 @@ I suggest you **ONLY** use **CAPITAL** letters on your **local Windows** machine
 
 **CAPITAL LETTERS = YOUR MOST PRECIOUS LOCAL FOLDERS**.
 
-{% embed url="https://youtu.be/Iz-8CSa9xj8" %}
-
-
+{% embed url="https://youtu.be/lkR7adjetd8" %}
 

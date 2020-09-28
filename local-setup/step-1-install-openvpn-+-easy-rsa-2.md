@@ -20,7 +20,7 @@ As exposed in the [Tools](../proposed-solution/tools.md) section, we absolutely 
 
 _Easy-RSA 2 is developed by the same team as OpenVPN._
 
-**Windows installation packages for OpenVPN include Easy-RSA 2**.
+**Windows installation packages for OpenVPN already include Easy-RSA 2**.
 
 
 
@@ -69,7 +69,7 @@ We'll then use it to initialize our own PKI in its own folder .  This way, even 
 
 > **Tech Blurb :**
 >
-> Also by creating all PKIs \(only 1 is needed for our setup\) by duplicating this source folder content later on, we have the ability to tweak script files or even the openssl configuration file **used for that specific PKI** if needed, without impacting others.
+> Also by creating all PKIs \(only 1 is needed for our setup\) by duplicating this source folder contents later on, we have the ability to tweak script files or even the openssl configuration file **used for that specific PKI** if needed, without impacting others.
 
 
 
@@ -86,7 +86,7 @@ We'll then use it to initialize our own PKI in its own folder .  This way, even 
 
 ![](../.gitbook/assets/image%20%2834%29.png)
 
-## Adjust the CRL lifetime
+## Adjust the CRL \(Certificate Revocation List\) lifetime
 
 {% hint style="warning" %}
 There is one issue with this standard configuration : the lifetime of the CRL \([Certificate Revocation List](step-2-create-your-pki.md#your-initial-certification-revocation-list)\) is by default only 30 days, and since our VPN server checks the CRL for evey connection request, _**it will refuse all connections 30 days after the last CRL update...**_ 💩 
@@ -96,23 +96,19 @@ Since we likely won't be revoking certificates very often, **let's just give the
 
 So we edit **`openssl-1.0.0.cnf`** in a text editor \(even _Right click + Edit_ with the very limited Windows Notepad is sufficient for this file\) as follows : around line 55 you will find :
 
-{% code-tabs %}
-{% code-tabs-item title="Line to be changed" %}
+{% code title="Line to be changed" %}
 ```text
 default_crl_days= 30			# how long before next CRL
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 and replace the 30 with 3650 like this :
 
-{% code-tabs %}
-{% code-tabs-item title="Edited line" %}
+{% code title="Edited line" %}
 ```text
 default_crl_days= 3650			# how long before next CRL
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 {% hint style="success" %}
 Then save and close **`openssl-1.0.0.cnf`** and you're done !

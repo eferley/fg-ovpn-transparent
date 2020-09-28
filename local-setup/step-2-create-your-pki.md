@@ -1,12 +1,14 @@
 # Step 2 : Create your own PKI
 
-{% hint style="info" %}
+{% hint style="warning" %}
 Properly creating the PKI is the **fundamental anchor of your setup's security !**
 {% endhint %}
 
 {% hint style="danger" %}
 **A number of files we'll create in this section will have to be named starting with the "configuration name" we chose in Step 0 :** _**my-fg-ovpn**_ **in this demo.**
 {% endhint %}
+
+
 
 ## Duplicate from the `new-PKI`
 
@@ -44,14 +46,12 @@ So we'll **rename init-config.bat** to **DONE-DANGER-init-config.bat and FORGET 
 
 ![Renaming a &quot;once only&quot; command](../.gitbook/assets/image%20%2822%29.png)
 
-
-
 ## Edit vars.bat
 
 We now have to **edit the vars.bat file for it to meet our requirements** :
 
 * we **comment out \(or delete\)** the lines playing with the **PATH** to ensure the commands use the version of executable binary programs that we have in our PKI folder, and none other \(lines 7 and 10 below; only line 7 needs editing since line 10 is already commented out with "**`rem`** "\)
-* we set **HOME** to the full path of the root folder for our PKI; everything the Easy-RSA commands will do later on will happen from that location : this is the **`T:\fg-ovpn\MY-FG_OVPN\MY_FG_OVPN_PKI`** folder \(line 12 below\)
+* we set **HOME** to the full path of the root folder for our PKI; everything the Easy-RSA commands will do later on will happen from that location : this is the **`T:\fg-ovpn\MY-FG_OVPN\MY_FG_OVPN_PKI`** folder \(line 12 below\) for our sample
 * we set **KEY\_DIR** to the name of the sub-folder where we want our certificates and keys to be stored : this is the **`MY-FG-OVPN-PKI-KEYS`** we created earlier
 * we give some default values for our future certificates in the list of **set KEY\_xxxx** commands at the end of the file.
 
@@ -67,8 +67,7 @@ So we edit vars.bat in a text editor \(even _Right click + Edit_ with the very l
 
 Supposing you start **from the original content below** \(sample as of OpenVPN v2.4.7\),
 
-{% code-tabs %}
-{% code-tabs-item title="Original vars.bat BEFORE we edit it" %}
+{% code title="Original vars.bat BEFORE we edit it" %}
 ```text
 @echo off
 rem Edit this variable to point to
@@ -121,8 +120,7 @@ set PKCS11_MODULE_PATH=changeme
 set PKCS11_PIN=1234
 
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ...then you should **end up with this kind of minimal final result** :
 
@@ -136,8 +134,7 @@ set PKCS11_PIN=1234
 _\*\*\*\*_![](../.gitbook/assets/zeferby_dino_64%20%281%29.png)  😛 _**Yes of course ! The HOME full path to your own PKI may be different than this demo, as well as your**_ 🇫🇷 _**KEY\_COUNTRY etc... default values at the end of the file**_
 {% endhint %}
 
-{% code-tabs %}
-{% code-tabs-item title="Valid minimalist content for vars.bat" %}
+{% code title="Valid minimalist content for vars.bat" %}
 ```text
 @echo off
 
@@ -159,8 +156,7 @@ set PKCS11_MODULE_PATH=unused
 set PKCS11_PIN=1234
 
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 
 
@@ -185,8 +181,7 @@ And we'll **add this last line at the end of the file** :
 
 The **resulting clean-all.bat** file should be :
 
-{% code-tabs %}
-{% code-tabs-item title="Edited clean-all.bat" %}
+{% code title="Edited clean-all.bat" %}
 ```text
 @echo off
 choice /C YN /T 10 /D n /M "This will ERASE THE PKI AT %HOME% ...Still want to do this ??"
@@ -206,8 +201,7 @@ copy serial.start %d%\serial.
 :End
 
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 This way, when we run this "killer" command script file, we'll have a **warning and Y/N choice**, with the "No I don't want to kill my own innocent PKI" answer selected by default after 10 seconds...
 
@@ -241,36 +235,30 @@ _**=&gt; Last reference to "**_[_**Check that you know/learn**_](step-0-preparat
 
 So we open a command line prompt window and we position ourselves in the right **folder for our PKI**. In my demo this is :**`T:\fg-ovpn\MY-FG_OVPN\MY_FG_OVPN_PKI`** 
 
-{% code-tabs %}
-{% code-tabs-item title="Reposition to our own PKI" %}
+{% code title="Reposition to our own PKI" %}
 ```text
 T:
 CD \fg-ovpn\MY-FG_OVPN\MY-FG-OVPN-PKI
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 A quick check to verify this is the right place :
 
-{% code-tabs %}
-{% code-tabs-item title="Verify the contents of the folder" %}
+{% code title="Verify the contents of the folder" %}
 ```text
 dir
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ![Looks like we&apos;re in the right place !](../.gitbook/assets/image%20%28131%29.png)
 
 Then once we know we have arrived at the right place, **the VERY FIRST COMMAND** we'll type is :
 
-{% code-tabs %}
-{% code-tabs-item title="VERY FIRST COMMAND" %}
+{% code title="VERY FIRST COMMAND" %}
 ```text
 .\vars.bat
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 {% hint style="info" %}
 This will setup the "**environment variables**" that you specified earlier, and these will remain **available for other commands until you close that specific command line prompt window**.
@@ -306,8 +294,6 @@ Let's use **the "killer" command script**, give **the Y answer THIS ONE TIME**, 
 ![THE ONE TIME : &quot;Y&quot; answer](../.gitbook/assets/image%20%2870%29.png)
 
 ![A brand new PKI, initialized/erased by the killer command script](../.gitbook/assets/image%20%28172%29.png)
-
-
 
 
 
@@ -393,7 +379,7 @@ This has generated the [**Diffie-Hellman-Merkle key exchange**](https://en.wikip
 Easy again !
 
 {% hint style="danger" %}
-**Our server will need to have his certificate file named "configuration name"-srv.crt \(and similarly for the key and certificate request\)**
+**Our server will need to have it's certificate file named "configuration name"-srv.crt \(and similarly for the key and certificate request\)**
 
 **\("configuration name" =** _**my-fg-ovpn**_ **in this demo\)**
 {% endhint %}
@@ -468,7 +454,7 @@ You should now have :
 Our next step will be to **initialize a Certificate Revocation List \(CRL\) for our OpenVPN server** to systematically check before authorizing a connection.
 
 {% hint style="info" %}
-The **CRL** will be your way of ensuring that older **certificates**, that you may have distributed in the past and **revoke/invalidate at some point, are really blocked**.
+The **CRL** will be your way of ensuring that older **certificates**, that you may have distributed in the past and **revoked/invalidated at some point in time, are really blocked**.
 {% endhint %}
 
 
@@ -503,7 +489,7 @@ _**After all, DM01 was here first, and he's not a sharer...**_
 
 ## Your initial Certification Revocation List
 
-As soon as you have revoked the \(_probably innocent_\) my-fg-ovpn-dm02 during the previous step, your PKI \(re-\)generated the **CRL**=_**Certificate Revocation List**_ under the basic name of **crl.pem :**
+As soon as you have revoked the \(_probably innocent_\) my-fg-ovpn-dm02 during the previous step, your PKI \(re-\)generated the **CRL**=_**Certificate Revocation List**_ with the basic name of **crl.pem :**
 
 ![](../.gitbook/assets/image%20%2895%29.png)
 
@@ -514,7 +500,7 @@ As soon as you have revoked the \(_probably innocent_\) my-fg-ovpn-dm02 during t
 {% endhint %}
 
 {% hint style="warning" %}
-**=&gt;** We'll **copy+paste+rename** the CRL from **crl.pem** to **my-fg-ovpn-crl.pem :**
+**=&gt;** We'll **copy+paste/rename** the CRL from **crl.pem** to **my-fg-ovpn-crl.pem :**
 {% endhint %}
 
 ![Uniquely named CRL](../.gitbook/assets/image%20%286%29.png)

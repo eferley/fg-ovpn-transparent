@@ -47,6 +47,19 @@
 
 * [Regular Usage Pattern](use-your-server/untitled.md)
 
+## Simultaneous FG Classic games / 1 VPN Server <a id="simultaneous-games-fgc-1-vpn-server"></a>
+
+* [Lifting the "1 GM at-a-time" restriction](simultaneous-games-fgc-1-vpn-server/untitled.md)
+
+## FGU : Fantasy Grounds Unity
+
+* [FGU vs. FGC networking](fgu-fantasy-grounds-unity/fgu-vs.-fgc-networking.md)
+* [FGU Networking / Game hosting modes](fgu-fantasy-grounds-unity/untitled.md)
+
+## Simultaneous FGC+FGU games / 1 VPN Server <a id="simultaneous-fgc-fgu-games-1-vpn-server"></a>
+
+* [Why not support both ?](simultaneous-fgc-fgu-games-1-vpn-server/untitled.md)
+
 ## Appendixes
 
 * [Acronyms and definitions](appendixes/acronyms-and-definitions.md)

@@ -8,21 +8,21 @@ We'll detail a ~~_very boring_~~ step-by-step complete setup process in the foll
 
 Blocs of "code", like the 2 sample tabs below, can be copy/pasted with the small button at the top-right corner.⚠ Use a [proper text editor](tools.md#your-text-editor-of-choice) to paste, **not Windows Notepad if you want to avoid pain !** ⚠ 
 
-{% code-tabs %}
-{% code-tabs-item title="Plain text sample.txt" %}
+{% tabs %}
+{% tab title="Plain text sample.txt" %}
 ```text
 This is a 
 sample block of plain text "code"
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="Linux shell script sample.sh" %}
+{% tab title="Linux shell script sample.sh" %}
 ```bash
 #!/bin/bash
 /usr/local/my-awesome-script.sh
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 **\(local\)** steps are things done entirely in your own local machine. We'll begin playing with AWS at Step 4.
 

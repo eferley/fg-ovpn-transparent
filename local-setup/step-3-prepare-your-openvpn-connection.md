@@ -24,8 +24,7 @@ So, let's head over to **`T:\fg-ovpn\MY-FG-OVPN\my-fg-ovpn-clients\my-fg-ovpn-dm
 
 We'll begin by creating the **OpenVPN connection parameter file** : **`my-fg-ovpn-dm01.ovpn`**
 
-{% code-tabs %}
-{% code-tabs-item title="my-fg-ovpn-dm01.ovpn" %}
+{% code title="my-fg-ovpn-dm01.ovpn" %}
 ```text
 client
 float
@@ -48,18 +47,17 @@ tls-auth my-fg-ovpn-ta.key 1
 comp-lzo
 verb 4
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 _**This is a text file that you'll have to save in the above folder.**_
 
 Let's have a look at this config file :
 
 * Lines beginning with **`#`** or **`;`** are commented and have no impact on the connection configuration.
-* **lines 14 to 18** show that our OpenVPN client will **need several additional files** to work; they have all been created during the previous step
+* **lines 14 to 18** show that our OpenVPN client will **need several additional files** to work; these files have been created during the previous steps
 * **line 6** is where we'll need to put the **Public IP of the OpenVPN server** \(or its DNS name, if it has one\) _**Since we don't yet know this Public IP, we'll leave the &lt;placeholder&gt; there for now**_
 
-So we'll save the .ovpn file above to **`T:\fg-ovpn\MY-FG-OVPN\my-fg-ovpn-clients\my-fg-ovpn-dm01`**, and also copy/paste there from **`T:\fg-ovpn\MY-FG_OVPN\MY_FG_OVPN_PKI\MY-FG-OVPN-PKI-KEYS`** :
+So we'll save the .ovpn file above in **`T:\fg-ovpn\MY-FG-OVPN\my-fg-ovpn-clients\my-fg-ovpn-dm01`**, and also copy/paste there, from **`T:\fg-ovpn\MY-FG_OVPN\MY_FG_OVPN_PKI\MY-FG-OVPN-PKI-KEYS`** :
 
 * **my-fg-ovpn-ca.crt** : the public certificate for our Certification Authority _&lt;&lt;== NOT client-specific_
 * **my-fg-ovpn-ta.key** : the shared TLS Authentication security key    _&lt;&lt;== NOT client-specific_
@@ -94,8 +92,7 @@ You can :
 
 _**DM02's setup :**_
 
-{% code-tabs %}
-{% code-tabs-item title="my-fg-ovpn-dm02.ovpn" %}
+{% code title="my-fg-ovpn-dm02.ovpn" %}
 ```text
 client
 float
@@ -118,8 +115,7 @@ tls-auth my-fg-ovpn-ta.key 1
 comp-lzo
 verb 4
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ![](../.gitbook/assets/image%20%2832%29.png)
 

@@ -22,7 +22,7 @@ You'll see a log flowing in a window....🥁🥁 _...aaaannnnndddd..._ 🥁🥁
 
 ### ![](../.gitbook/assets/zeferby_dino_64%20%281%29.png) 👏 🎆🧨💃 🕺 **Bravo ! Cheers ! CongratZ !**  🕺 💃 🧨 🎆 👏 ![](../.gitbook/assets/zeferby_dino_64%20%281%29.png) 
 
-_**You are now officially a geek : you're both a VPN client AND a VPN operator, all in 1 person !**_ 
+_**You are now officially a geek : you're both, a VPN client AND a VPN operator, all in 1 person !**_ 
 
 _So bookmark this and come back after you have properly celebrated this major event in your life..._
 
@@ -271,7 +271,7 @@ We go to the Launch Templates section of the EC2 Console and click "**Create lau
 
 ![...enter a version description and select original version as source](../.gitbook/assets/image%20%2879%29.png)
 
-Then we go to the bottom, expand **Advanced details** and put the **T2/T3 Unlimited** setting to _**Disable**_ :
+Then we go to the bottom, expand **Advanced details** and switch the **T2/T3 Unlimited** setting to _**Disable**_ :
 
 ![Disable T2/T3 Unlimited](../.gitbook/assets/image%20%28120%29.png)
 

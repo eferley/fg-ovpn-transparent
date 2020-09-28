@@ -6,9 +6,9 @@ Thankfully, if you find yourself in a NO-GO situation, and **as long as your can
 
 There are **multiple commercial offers for VPN \(=Virtual Private Network\) services** available nowadays.
 
-Many of them are targetted at : either hiding your own public IP address, or gaining full access to the Internet in countries where the government imposes harsh restrictions.
+Many of them are targetted at either hiding your own public IP address for privacy reasons, or gaining full access to the Internet in countries where the government imposes harsh restrictions.
 
-Others provide one or multiple kinds of "real" VPNs functionnality like "closed VPNs".
+Others provide one or multiple kinds of "real" VPN functionnality like "closed VPNs".
 
 **Some of them** \(like [Hamachi](https://www.vpn.net/), which is well known in the gaming sphere\) **provide a free tier**.
 
@@ -36,6 +36,7 @@ My personnal preference, both as a GM and as a player, is to avoid using that ki
 
 * **it implies that all players install the same VPN software and setup their access to the specific game or GM VPN**
 * _for Hamachi specifically_ : it maintains a permanent set of networking parameters in my machine, even when not in active use, that sometimes interfere with my own \(rather complex\) network settings: i am often connected to 2 or 3 other VPNs at a time for work, and my laptop also supports local networks for virtual machines all the while...
+* there _may_ be advertising spam with some VPN suppliers...
 * I have my own VPN servers 🤣 
 
 But "**closed" VPNs are a very valid option for a GM** :
@@ -75,7 +76,7 @@ What we propose in the following sections is :
 It does require some initial setup effort, which then makes it a no-brainer to start/stop/destroy/recreate **your** _**very own Amazing Port-Forwarding OpenVPN-Powered Fantasy Grounds Hosting**_ **solution** 🙃 
 
 {% hint style="info" %}
-If you are tech-savvy and want to discover more/advanced options, the **OpenVPN + Linux iptables combination has nearly endless possibilities**.
+If you are tech-savvy and want to discover more/advanced options, be sure to explore the **OpenVPN + Linux** [**iptables**](http://www.netfilter.org/) **combination : it has nearly endless possibilities**.
 
 I have used **OpenVPN** since 2004 both for professional and personal usage in various server and/or client configurations \(with some machines being both multi-servers and multi-clients\), on Linux/Windows/Android, and it is **to this day by far my preferred VPN foundation**, including for mobile platforms.
 

@@ -1,10 +1,12 @@
 # Some NO-GO Situations
 
-Unfortunately there are **situations where you can't break some of barriers 4 to 6 "as is".** Some common ones are listed below :
-
 {% hint style="info" %}
-**Most of them come down to the inability to have the proper port forwarding rule applied on ALL NAT/PAT routers between you and the Internet.**
+**Applies to** : FGC \(+ FGU in LAN mode\)
 {% endhint %}
+
+Unfortunately there are **situations where you can't break some of barriers 4 to 6 "as is".** Some common ones are listed below.  Most of them come down to the **inability to have the proper port forwarding rule applied on at least one NAT/PAT router** between you and the Internet.
+
+
 
 ### No unique IPv4 public address per subscriber \("IPv6 Internet connection"\)
 
@@ -26,7 +28,7 @@ You will then be **unable to apply a port forwarding rule in that router**, so..
 
 ### Public/shared Internet access
 
-Sometimes if you are a "**GM on the road**", you'll need to use a kind of **public/shared access** to the Internet \(hotel room, internet cafe, etc...\), which means that here also you will **not have admin access to the NAT/PAT router**, and once again :
+Sometimes if you are a "**GM on the road**", you'll need to use a kind of **public/shared access** to the Internet \(hotel room, internet cafe, cell phone internet access, etc...\), which means that here also you will **not have admin access to the NAT/PAT router**, and once again :
 
 {% hint style="danger" %}
 You will be **unable to apply a port forwarding rule in that router**, so...bad luck !
@@ -37,6 +39,6 @@ You will be **unable to apply a port forwarding rule in that router**, so...bad 
 You may not always be able to "open ports" or add "exceptions" on the firewalls between your GM FG program and the Internet, even if proper port forwarding rules have been setup. This is generally true when you are in a **protected/corporate network environment**.
 
 {% hint style="danger" %}
-If **a firewall you don't control blocks incoming connections to TCP 1802**, it's also a **NO-GO for FG game hosting**.
+If **a firewall you don't control blocks incoming connections to TCP 1802**, it's also a **NO-GO for FG "Classic" game hosting**.
 {% endhint %}
 

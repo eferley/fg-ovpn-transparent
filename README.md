@@ -4,11 +4,41 @@ description: fg/ovpn blurb by ZeFerby
 
 # Fantasy Grounds - Port Forwarding and a "transparent" OpenVPN setup
 
-This document will describe a solution for GMs \(Game Masters\) to publish their FG virtual table to remote players through an ad-hoc "GM-only" VPN, hosted on a small AWS \(Amazon Web Services\) Linux server.
+{% hint style="info" %}
+This document, initially written in June 2019 for FG "Classic", is now being updated \(September 2020\) for :
+
+* **simultaneous** GMs/games through a **single VPN server for FGC/FGU/FGC+FGU**
+* **FG "Unity" hosting games in LAN mode**
+
+For these use cases, specific sections have been added before appendixes.
+{% endhint %}
+
+**FGU = Fantasy Grounds Unity vs. FGC = Fantasy Grounds Classic :**
+
+With **FGU**, hosting a game in **"Cloud" mode** should be **ok for all GMs**, whatever their specific network situation, **without needing any kind of VPN**.
+
+However, if for any reason \(platform unavailable, broken Internet routes, privacy concerns, whatever...\) you want to host an **FGU** game in **LAN mode** :
+
+* it is the same kind of networking topology and constraints as FGC
+* the **default** protocol/port for **FGU** is **UDP** 1802 while **FGC** uses **TCP** 1802
+
+{% hint style="info" %}
+Most of what I wrote in this document for **FGC = FG "Classic" \(and the TCP protocol\)** can be transposed to **FGU = FG "Unity"** hosting in **LAN mode \(and the UDP protocol\).**
+{% endhint %}
+
+{% hint style="success" %}
+**FGU** game hosting in **CLOUD mode should** be totally straightforward in all networking situations and **not need any kind of port forwarding or VPN** \(except if some countries block traffic to the Unity servers...\)
+{% endhint %}
+
+
+
+This document will describe a solution for GMs \(Game Masters\) to publish their Fantasy Grounds virtual table to remote players through an ad-hoc "GM-only" VPN, hosted on a small AWS \(Amazon Web Services\) Linux server.
+
+
 
 _**But first...**_
 
-## Do you _really_ need a VPN for ![](.gitbook/assets/fg35.png) Fantasy Grounds ![](.gitbook/assets/fg35.png) ?
+## Do you _really_ need a VPN for ![](.gitbook/assets/fg35.png) Fantasy Grounds "Classic" ![](.gitbook/assets/fg35.png) ?
 
 {% hint style="success" %}
 **Most GMs do not need to use a VPN** to successfully share their virtual table for players
@@ -26,7 +56,7 @@ There are however situations where **a VPN may be needed on the GM's side** :
 4. **upstream "closed" firewall**
 
 {% hint style="warning" %}
-Also : **if you are a player and your GM is using a "closed VPN" offer like Hamachi, you will have to be a member of the same VPN as the GM to join his game.**
+Also : **if you are a player and your GM is using a "closed VPN" offer like Hamachi, you will have to be a member of the same VPN as the GM to join the game.**
 {% endhint %}
 
 {% hint style="success" %}

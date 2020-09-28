@@ -35,7 +35,9 @@ Relying on **a hosted virtual machine which can accept TCP 1802** incoming conne
 * **FG Alias and "Connection test" will not work** \(like most other VPN-based solutions\) : you'll have to either rely on DNS, or give the public IP of your VPN server to your players, instead of an FG alias
 * **1 GM-at-a-time** : with this setup having **only 1 public IP address**, only **1 GM at a time can be the target of the port forwarding rule** \(using such a server for multiple GMs, still 1 at a time, can be done with "time sharing", using any kind of booking/scheduling, but it still remains "1-at-a-time"\)
 
-
+{% hint style="info" %}
+We have since added the [Lifting the "1 GM at-a-time" restriction](../simultaneous-games-fgc-1-vpn-server/untitled.md) section, but even though it is easy to use, it is not 100% transparent for players.
+{% endhint %}
 
 ## Implementation
 
@@ -51,8 +53,8 @@ Relying on **a hosted virtual machine which can accept TCP 1802** incoming conne
 Keeping parameters and scripts in S3 **enables you to destroy \(AWS calls that "terminate"\) and re-create your virtual server at will.**
 {% endhint %}
 
-{% hint style="info" %}
-That helps **bringing the running costs down to nearly $0 if you are outside of the AWS free tier bounds**, and the server startup delay \(create vs. start\) is very small.
+{% hint style="success" %}
+That helps **bringing the running costs down to nearly $0 if you are already outside of the AWS free tier bounds**, and the server startup delay \(create vs. start\) is very small.
 
 If you prefer, you can also **start/stop the virtual server**, keeping its "hard disk" storage between multiple uses instead of having it destroyed, but if you are outside of the AWS free tier you may incurr a small monthly cost, and this server should not store any data anyway, so...
 {% endhint %}
@@ -63,7 +65,7 @@ If you prefer, you can also **start/stop the virtual server**, keeping its "hard
 
 Using a **Public Key Infrastructure \(PKI\) with its own Certificate Authority \(CA\) is the best option for security**.  It adds some overhead to our setup process, but it brings many advantages...
 
-If you are wary about security issues, read this excerpt from the OpenVPN web site "How-To" at :   
+If you are wary about security issues, read this excerpt from the OpenVPN web site "How-To" from :   
 [https://openvpn.net/community-resources/how-to/\#setting-up-your-own-certificate-authority-ca-and-generating-certificates-and-keys-for-an-openvpn-server-and-multiple-clients](https://openvpn.net/community-resources/how-to/#setting-up-your-own-certificate-authority-ca-and-generating-certificates-and-keys-for-an-openvpn-server-and-multiple-clients)
 
 > ### SETTING UP YOUR OWN CERTIFICATE AUTHORITY \(CA\) AND GENERATING CERTIFICATES AND KEYS FOR AN OPENVPN SERVER AND MULTIPLE CLIENTS <a id="setting-up-your-own-certificate-authority-ca-and-generating-certificates-and-keys-for-an-openvpn-server-and-multiple-clients"></a>
@@ -92,7 +94,7 @@ We'll take advantage of these benefits to keep the core security \(the PKI\) off
 
 Building the PKI will be done with **Easy-RSA 2** which should come bundled with OpenVPN \(see [Tools](https://zeferby.gitbook.io/transparent-openvpn-for-fantasy-grounds/our-openvpn-based-solution/tools)\).
 
-{% hint style="info" %}
+{% hint style="success" %}
 You can backup or transfer the contents of your PKI folder to another storage after it is complete.  I find it convenient to also keep it in my own machine in case i need to quickly disable some certificates to deny acces to an existing certificate
 {% endhint %}
 
@@ -112,7 +114,7 @@ Some **important security parameters will be stored there**, so make sure **NOT*
 If you want to manage the contents of your S3 bucket with the **free version of CloudBerry Explorer for S3** \(see [Tools](tools.md)\), you must **not enable encryption** on your bucket.
 {% endhint %}
 
-{% hint style="info" %}
+{% hint style="success" %}
 If you manage your S3 bucket contents with a **licenced version of CloudBerry Explorer for S3, and/or** with the **AWS management console, you can use encryption**.
 {% endhint %}
 
@@ -123,7 +125,7 @@ If you manage your S3 bucket contents with a **licenced version of CloudBerry Ex
 * the minimal amount of **security parameters**, ⚠ _**including the OpenVPN server** "public certificate" and **"private key"**_ ⚠ so, once again, in case you didn't hear me, make sure that you...
 
 {% hint style="danger" %}
-📢 **KEEP THIS S3 STORAGE "BUCKET" PRIVATE !!!** 📢 
+\*\*\*\*📢 **KEEP THIS S3 STORAGE "BUCKET" PRIVATE !!!** 📢 
 {% endhint %}
 
 🧐 **You've been warned... Don't come back crying...** 😭 
