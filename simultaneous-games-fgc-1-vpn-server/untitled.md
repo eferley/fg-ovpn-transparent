@@ -4,7 +4,7 @@ What if you have **multiple GMs that need the VPN to host games** ? For example,
 
 There are several ways to manage such situations, that we'll explore below :
 
-* **1-at-a-time /N :** _**Time-sharing**_ a single VPN Server + GM connection/certificate
+* **1-at-a-time /N :** _**Time-sharing**_ a single VPN Server + single GM connection/certificate
 * **Nx 1-at-a-time :** Each GM creates his _**own VPN server**_ following this guide
 * **1x N-at-a-time :** Single VPN Server + Nx _**GM-dedicated connections/certificates**_
 
@@ -16,12 +16,12 @@ Remember that [**each GM has to check his/her own machine**](../general/gms-mach
 
 
 
-## **1-at-a-time /N :** _**Time-sharing**_ a single VPN Server + GM connection/certificate
+## **1-at-a-time /N :** _**Time-sharing**_ a single VPN Server + single GM connection/certificate
 
 You share with other GMs the hard work you have already done following this guide :
 
 * you distribute [the same set of OpenVPN parameters and credentials](../local-setup/step-3-prepare-your-openvpn-connection.md#my-fg-ovpn-dm01) to all you GM friends
-* each of them [installs OpenVPN client](../local-setup/step-1-install-openvpn-+-easy-rsa-2.md) _**NB: They do NOT need to install EasyRSA2 or setup a PKI, only OpenVPN itself is required**_
+* each of them [installs OpenVPN client](../local-setup/step-1-install-openvpn-+-easy-rsa-2.md) _**NB:** They do **NOT** need to install EasyRSA2 or setup a PKI, **only OpenVPN itself is required**_
 * each of them [installs the set of parameters](../local-setup/step-3-prepare-your-openvpn-connection.md#openvpn-gui) that you supplied
 
 👍 **Pros :**
@@ -33,7 +33,7 @@ You share with other GMs the hard work you have already done following this guid
 
 * **STILL 1-AT-A-TIME !**
 * replacing the certificate requires installing the new set of parameters for all GMs
-* **your own availability**, required to start/launch the server and communicate the new Public IP if it only runs on-demand, as opposed to 24x7
+* **your own availability**, required to start/launch the server and communicate the new Public IP **if it only runs on-demand**, as opposed to 24x7
 * **time-sharing organization**, usage planning and timezone errors, colliding time slots - **2 GMs connected at the same time =&gt; broken FG sessions** - one day or another you'll encounter issues like those :
 
 ![Overlapping sessions](../.gitbook/assets/gms-collision01.png)
