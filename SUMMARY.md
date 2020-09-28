@@ -54,7 +54,6 @@
 ## FGU : Fantasy Grounds Unity
 
 * [FGU vs. FGC networking](fgu-fantasy-grounds-unity/fgu-vs.-fgc-networking.md)
-* [FGU Networking / Game hosting modes](fgu-fantasy-grounds-unity/untitled.md)
 
 ## Simultaneous FGC+FGU games / 1 VPN Server <a id="simultaneous-fgc-fgu-games-1-vpn-server"></a>
 

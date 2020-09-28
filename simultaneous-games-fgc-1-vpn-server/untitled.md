@@ -85,7 +85,7 @@ it requires **additional work to setup**, and it is **not 100% transparent for p
 _This solution became possible when I finally understood how to run FG Classic on a custom TCP port...  
 It **only** took me a bit more than 2 years after starting using the program !..._
 
-![GM: Ok ZeFerby, gimme an Investigation roll...\(sigh\)...again...\(sigh\)](../.gitbook/assets/image%20%28187%29.png)
+![GM: Ok ZeFerby, gimme an Investigation roll...\(sigh\)...again...\(sigh\)](../.gitbook/assets/image%20%28191%29.png)
 
-![GM: Finally!!! You find this info about the p flag, hidden under a loose floorboard in the FG Forums...](../.gitbook/assets/image%20%28188%29.png)
+![GM: Finally!!! You find this info about the p flag, hidden under a loose floorboard in the FG Forums...](../.gitbook/assets/image%20%28192%29.png)
 
