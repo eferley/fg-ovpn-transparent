@@ -8,7 +8,7 @@
 
 With **FGU in Cloud mode** :
 
-Everyone \(GM+players\) is a client, using outgoing connections to the cloud server infrastructure and there is no requirement to accept incoming connections on the GM's machine at the network transport layer \(with the delicate/dreaded NAT boundary crossing\) :
+Everyone \(GM+players\) is a client, using outgoing connections to the cloud server infrastructure and there is no requirement to accept incoming connections on the GM's machine at the network transport layer \(with the delicate/dreaded NAT boundary crossing\).
 
 {% hint style="success" %}
 **There is no need for \(static\) port forwarding or VPN**  for **FGU in Cloud mode** 🙌 
@@ -16,13 +16,15 @@ Everyone \(GM+players\) is a client, using outgoing connections to the cloud ser
 
 However it does add a dependency on the availability and reachability of the Unity cloud platform from the GM and the players...which is generally ok ! ..._except for the rare case when it isn't..._
 
+_Also, Unity networking is IPv6-aware, but we won't_ ~~_open that can of worms_~~ _explore this aspect...it is sufficient to tell that it should work with "all" Internet Access Providers around Ze world..._
+
 {% hint style="success" %}
 With FGU networking, SmiteWorks has reached **a great turning point for the ease of use of Fantasy Grounds,** for an overwhelming majority of users ! 👏 
 
 ...and of course let's not forget the **native support of Mac/Linux platforms**...and **LOS**...and...
 {% endhint %}
 
-_Let's hope that within a few years, when FGU remains the only version of FG in use, this blurb will have reached a great turning point towards being totally useless !_ 😂 
+_Let's hope that within a few years, when FGU remains the only version of FG in use, this blurb will have reached a great turning point towards being totally useless !_ 😂 _Unfortunately for now experience shows there are  still a number of situations where it can help._
 
 ## Difference \#2: UDP vs TCP
 
@@ -30,7 +32,7 @@ _Let's hope that within a few years, when FGU remains the only version of FG in 
 * **FGU** uses the **UDP** protocol
 
 {% hint style="warning" %}
-This is also true for **FGU in LAN mode** =&gt; we'll have to **adapt firewall rules / port forwarding** to take UDP into account for that use case
+This is also true for **FGU in LAN mode** =&gt; we'll have to **adapt firewall & port forwarding rules** to take UDP into account for that use case
 {% endhint %}
 
 ## **Difference \#3 : Port number selection**
