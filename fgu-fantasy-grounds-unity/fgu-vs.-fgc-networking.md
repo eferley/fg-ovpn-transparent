@@ -37,9 +37,9 @@ This is also true for **FGU in LAN mode** =&gt; we'll have to **adapt firewall &
 
 ## **Difference \#3 : Port number selection**
 
-* **FGC**: **command-line flag** required for non-default port, **when starting FGC "launcher"**
-* **FGU LAN mode** : entry box **available on screen** in launcher, **persisted** to connections history
 * **FGU Cloud mode** : not relevant
+* **FGU LAN mode** : entry box **available on screen** in launcher, **persisted** to connections history
+* **FGC**: **command-line flag** required for non-default port, **when starting FGC "launcher"**
 
 ###  For FGU - Cloud mode
 
