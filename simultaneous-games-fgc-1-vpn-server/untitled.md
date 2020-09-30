@@ -61,7 +61,7 @@ The main issue here is that some \(most ?\) of the **other GMs may not be as gee
 
 ## **1x N-at-a-time :** Single VPN Server + Nx _**GM-dedicated connections/certificates**_
 
-This option is quite neat as it enables to run multiple simultaneous FG games for several GMs at the same time through the one and only VPN Server you already created, but :
+This option is quite neat as it enables several GMs to **run multiple simultaneous FG games at the same time** through the one and only VPN Server you already created, but :
 
 {% hint style="warning" %}
 it requires **additional work to setup**, and it is **not 100% transparent for players.**
@@ -71,6 +71,13 @@ it requires **additional work to setup**, and it is **not 100% transparent for p
 **It is mostly suitable for a community with several GMs, running mid- to long-term FGC games \(campaigns\)** since the extra complexity is managed up-front, once and for all.
 {% endhint %}
 
+This solution **extends our current setup** by :
+
+* creating **individual GM certificates** in our PKI
+* transparently forwarding FG traffic to and from each **specific GM** for **a specific FG port**
+
+
+
 👍 **Pros :**
 
 * **removes the burden of time-sharing organization** The GMs with dedicated connections can _host FGC games at any time_ \(while the VPN server is running\) _without fear of collision_ with other games They can even forget to close their VPN connection without harming other GMs' game sessions...
@@ -79,13 +86,13 @@ it requires **additional work to setup**, and it is **not 100% transparent for p
 
 👎 **Cons :**
 
-* it needs you to **dive deeper into the OpenVPN configuration** We'll detail this with step-by-step instructions in next pages
+* it needs you to **dive deeper into the OpenVPN server configuration** We'll detail this with step-by-step instructions in next pages
 * it requires **GMs and Players** to create and use a **customized shortcut to FGC** \(for ease of use\) to run Fantasy Grounds Classic on a specific TCP port, different than the standard TCP 1802 Creating a specific shortcut to the FG program _should not be an issue_ to play with a specific GM for multiple sessions in an _on-going campaign_; but it could be _awkward for 1-shot games_
 
 _This solution became possible when I finally understood how to run FG Classic on a custom TCP port...  
 It **only** took me a bit more than 2 years after starting using the program !..._
 
-![GM: Ok ZeFerby, gimme an Investigation roll...\(sigh\)...again...\(sigh\)](../.gitbook/assets/image%20%28191%29.png)
+![GM: Ok ZeFerby, gimme an Investigation roll...\(sigh\)...again...\(sigh\)](../.gitbook/assets/image%20%28192%29.png)
 
-![GM: Finally!!! You find this info about the p flag, hidden under a loose floorboard in the FG Forums...](../.gitbook/assets/image%20%28192%29.png)
+![GM: Finally!!! You find this info about the p flag, hidden under a loose floorboard in the FG Forums...](../.gitbook/assets/image%20%28193%29.png)
 

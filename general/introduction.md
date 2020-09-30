@@ -5,7 +5,7 @@
 **This chapter -and most of this document- focuses on FG "Classic"** \(as opposed to ~~the future release of~~ FG "Unity", currently ~~planned for the end of 2019~~ in Early Access as of september 2020\) on a Microsoft **Windows machine**.
 
 {% hint style="info" %}
-FG **Unity / Classic** have **different** communication methods.   - see [FGU vs. FGC networking](../fgu-fantasy-grounds-unity/fgu-vs.-fgc-networking.md)
+FG **Unity / Classic** have **different** communication methods.   - see [FGU vs. FGC networking](../simultaneous-games-fgc-1-vpn-server/fgu-vs.-fgc-networking.md)
 {% endhint %}
 
 The current release of FG \("Classic"\) as of this writing is ~~v3.3.7~~  v3.3.8, but **all versions of FG "Classic" should work in the same way**.
@@ -45,8 +45,8 @@ And ~~finally~~ we'll introduce **VPN solutions** and more specifically the non-
 **Added sections will then go into more advanced setups for FGC and/or FGU :**
 
 * [Lifting the "1 GM at-a-time" restriction](../simultaneous-games-fgc-1-vpn-server/untitled.md)
-* [FGU vs. FGC networking](../fgu-fantasy-grounds-unity/fgu-vs.-fgc-networking.md)
-* [Why not support both ?](../simultaneous-fgc-fgu-games-1-vpn-server/untitled.md)
+* [FGU vs. FGC networking](../simultaneous-games-fgc-1-vpn-server/fgu-vs.-fgc-networking.md)
+* [Why not support both ?](../simultaneous-games-fgc-1-vpn-server/untitled-1.md)
 {% endhint %}
 
 {% hint style="success" %}

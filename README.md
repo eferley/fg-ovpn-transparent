@@ -27,7 +27,7 @@ Most of what I wrote in this document for **FGC = FG "Classic" \(and the TCP pro
 {% endhint %}
 
 {% hint style="success" %}
-**FGU** game hosting in **CLOUD mode should** be totally straightforward in all networking situations and **not need any kind of port forwarding or VPN** \(except if some countries block traffic to the Unity servers...\)
+**FGU** game hosting in **CLOUD mode should** be totally straightforward in all networking situations and **not require any kind of port forwarding or VPN** \(except if some countries block traffic to the Unity servers...\)
 {% endhint %}
 
 
