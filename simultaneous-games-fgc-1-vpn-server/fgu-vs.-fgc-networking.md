@@ -105,7 +105,7 @@ For example, to run FGC on TCP port 1809, one would :
 * either start it from a command line prompt with : `"C:\Program Files (x86)\Fantasy Grounds\FantasyGrounds.exe" -p1809`
 * or create a Windows shortcut to FG, and edit it's properties to add  `-p1809` at the end of the "Target" field
 
-On Windows, that gives \(this is French version\) :
+On Windows, that gives \(French version\) :
 
 ![A shortcut to FG &quot;Classic&quot; with port TCP1809](../.gitbook/assets/image%20%28188%29.png)
 
