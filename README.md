@@ -1,5 +1,7 @@
 ---
-description: fg/ovpn blurb by ZeFerby
+description: >-
+  fg/ovpn blurb by ZeFerby
+  (https://zeferby.gitbook.io/transparent-openvpn-for-fantasy-grounds/)
 ---
 
 # Fantasy Grounds - Port Forwarding and a "transparent" OpenVPN setup
