@@ -53,7 +53,9 @@
 * [FGU vs. FGC networking](simultaneous-games-fgc-1-vpn-server/fgu-vs.-fgc-networking.md)
 * [VPNs for both FGC + FGU \(LAN mode\)](simultaneous-games-fgc-1-vpn-server/untitled-1.md)
 
-## Simultaneous FGC+FGU games / 1 VPN Server <a id="simultaneous-fgc-fgu-games-1-vpn-server"></a>
+## Upgrading our setup for "N-at-a-time", FGC/FGU <a id="upgrading-to-n-at-a-time"></a>
+
+* [Untitled](upgrading-to-n-at-a-time/untitled.md)
 
 ## Appendixes
 

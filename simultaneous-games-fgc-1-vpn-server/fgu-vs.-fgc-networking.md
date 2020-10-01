@@ -19,14 +19,14 @@ However it does add a dependency on the **availability and reachability of the U
 _Also, Unity networking is **IPv6-aware**, but we won't_ ~~_open that can of worms_~~ _explore this aspect...it is sufficient to tell that it should work with "all" Internet Access Providers around Ze world..._
 
 {% hint style="success" %}
-With FGU networking, SmiteWorks has reached **a great turning point for the ease of use of Fantasy Grounds,** for an overwhelming majority of users ! 👏 
+With FGU networking, SmiteWorks has reached **a great milestone for increased ease of use of Fantasy Grounds,** for an overwhelming majority of users ! 👏 
 
-...and of course let's not forget the **native support of Mac/Linux platforms**...and **LOS**...and...
+...and of course let's not forget the **native support of Mac/Linux platforms**...and **LOS**...etc...
 {% endhint %}
 
-_Let's hope that within a few years, when FGU remains the only version of FG in use, this blurb will have reached a great turning point towards being totally useless !_ 😂 _Unfortunately for now, experience shows there are  still a number of situations where it can help._
+_Let's hope that within a few years, when FGU remains the only version of FG in use, this blurb will have reached a great milestone towards being totally useless !_ 😂 _Unfortunately for now, experience shows there are still a number of situations where it can help._
 
-## Difference \#2: UDP vs TCP
+## Difference \#2: UDP vs TCP protocol
 
 * **FGC** uses the **TCP** protocol
 * **FGU** uses the **UDP** protocol
@@ -34,6 +34,8 @@ _Let's hope that within a few years, when FGU remains the only version of FG in 
 {% hint style="warning" %}
 This is also true for **FGU in LAN mode** =&gt; we'll have to **adapt firewall & port forwarding rules** to take **UDP** into account for that use case
 {% endhint %}
+
+**NB**: This is for the **game session** itself;  FGU still uses TCP to reach the Unity Lobby, and to manage the update process from SmiteWorks servers.
 
 ## **Difference \#3 : Port number selection**
 
@@ -45,11 +47,11 @@ This is also true for **FGU in LAN mode** =&gt; we'll have to **adapt firewall &
 
 **You don't need to select a specific port**, since the connection to Unity platform is dynamically auto-negociating this for you \(**both for the GM and for the players**\).
 
-In **Cloud mode**, all the network plumbing between the GM and the players is handled within the Unity cloud server infrastructure \(of which the GM FGU and the players FGU are clients\), and **the UDP port entry box on GM FGU launcher screen is NOT taken into account** \(in the following example, the Cloud-mode game will **not** use UDP 1805, even though I typed this port number\) :
+In **Cloud mode**, all the network plumbing between the GM and the players is handled within the Unity cloud server infrastructure \(of which the GM FGU and the players FGU are clients\), and **the \(UDP\) port entry box on GM FGU launcher screen is NOT taken into account** \(in the following example, the Cloud-mode game will **not** use UDP 1805, even though I typed this port number\) :
 
 ![](../.gitbook/assets/image%20%28187%29.png)
 
-_**NB:** The only difference between "public" and "private" games in Cloud mode is that players will directly see all public games listed in the lobby, while they need to know the GM name to connect to private games.  Both public and private games can be protected by a password._
+_**NB:** The difference between "public" and "private" games in Cloud mode is that players will see all public games listed in the lobby, while they need to "Join By GM Name" to connect to private games.  Both public and private games can be protected by a password._
 
 After a player has successfully connected, the **players' connection history persists relevant information** to easily reconnect for next session \(the password stays hidden\) :
 
@@ -59,7 +61,7 @@ After a player has successfully connected, the **players' connection history per
 
 ### For FGU - LAN mode
 
-The **GM FGU** is a server, listening to the **port number** you enter on the **lauch screen \(UDP\) port entry box** \(default = UDP 1802\).  The following example shows an FGU game run in LAN mode on non-default port UDP 1805 :
+The **GM FGU** is a server, listening to the **\(UDP\) port number** you enter on the **lauch screen port entry box** \(default = UDP 1802\).  The following example shows an FGU game run in LAN mode on non-default port UDP 1805 :
 
 ![](../.gitbook/assets/image%20%28195%29.png)
 
@@ -77,19 +79,23 @@ After a player has successfully connected to a specific LAN-mode game, the **con
 
 ### For FG "Classic"
 
-FG "Classic" works roughly in the same way \(on TCP\) as FGU-LAN mode \(on UDP\) :
+FG "Classic" networking works roughly in the same way \(on TCP\) as FGU-LAN mode \(on UDP\) :
 
 * the **GM FGC** is a server =&gt; has to **listen to incoming connections on a specific \(TCP\) port**
 * the players FGC are clients, using direct outgoing connections to the GM FGC public IP/Port
 
 _FG\(C\) features the "Server Alias" system, which works reasonably well to both hide the public IP address of the GM, and stay persistent when the GM public IP changes - but it does not mandatorily work for edge-case network situations \(especially VPNs\)._
 
-**FGC has NO entry box to select a TCP port on the launcher screen, either for the GM or players**.  It also cannot persist a specific TCP port in the player's connection history.
+{% hint style="danger" %}
+**FGC uses TCP 1802 by default, and has NO entry box to select a TCP port on the launcher screen, either for the GM or players**.
 
-But **FGC supports a "command-line flag" to specify a TCP port when running the FG launcher** : **-p**_**NNNN**_
+It also cannot persist a specific TCP port in the player's connection history.
+{% endhint %}
 
 {% hint style="success" %}
-The main advantage of that in our context is to **enable running multiple concurrent FG Classic games through a single IP address** \(read: a single VPN server\)
+But **FGC supports a "command-line flag" to specify a TCP port number when running the FG launcher** : **-p**_**NNNN**_
+
+This will enable us to **run multiple concurrent FG Classic games through a single IP address** \(read: a single VPN server\)
 {% endhint %}
 
 {% hint style="warning" %}
@@ -105,7 +111,7 @@ For example, to run FGC on TCP port 1809, one would :
 * either start it from a command line prompt with : `"C:\Program Files (x86)\Fantasy Grounds\FantasyGrounds.exe" -p1809`
 * or create a Windows shortcut to FG, and edit it's properties to add  `-p1809` at the end of the "Target" field
 
-On Windows, that gives \(French version\) :
+On Windows, that gives \(French version here, "Target" = "Cible"\) :
 
 ![A shortcut to FG &quot;Classic&quot; with port TCP1809](../.gitbook/assets/image%20%28188%29.png)
 

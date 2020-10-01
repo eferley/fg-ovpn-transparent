@@ -42,11 +42,9 @@ Then we'll talk about some no-go situations that relate to the last 3 barriers a
 And ~~finally~~ we'll introduce **VPN solutions** and more specifically the non-intrusive "transparent" setup we present in the rest of this document, and how it enables a GM to overcome these barriers **when port forwarding is not an option**.
 
 {% hint style="info" %}
-**Added sections will then go into more advanced setups for FGC and/or FGU :**
+**Added sections will then go into a more advanced setup for FGC and/or FGU, starting with :**
 
 * [Lifting the "1 GM at-a-time" restriction](../simultaneous-games-fgc-1-vpn-server/untitled.md)
-* [FGU vs. FGC networking](../simultaneous-games-fgc-1-vpn-server/fgu-vs.-fgc-networking.md)
-* [Why not support both ?](../simultaneous-games-fgc-1-vpn-server/untitled-1.md)
 {% endhint %}
 
 {% hint style="success" %}

@@ -2,6 +2,8 @@
 
 {% hint style="info" %}
 **Applies to** : FGC \(+ FGU in LAN mode\)
+
+Default ports : FG "Classic" = TCP 1802, FG "Unity" = UDP 1802
 {% endhint %}
 
 The last 3 points relate to your Internet connection.  **Most GMs** have a single "Internet router" and **do not have to bother about Barrier 6.**

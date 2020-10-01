@@ -6,11 +6,13 @@ There are several ways to manage such situations, that we'll explore below :
 
 * **1-at-a-time /N :** _**Time-sharing**_ a single VPN Server + single GM connection/certificate
 * **Nx 1-at-a-time :** Each GM creates his _**own VPN server**_ following this guide
-* **1x N-at-a-time :** Single VPN Server + Nx _**GM-dedicated connections/certificates**_
+* **N-at-a-time :** Single VPN Server + Nx _**GM-dedicated connections/certificates**_
 
+{% hint style="info" %}
+**Shared installations will preferably run 24x7**, to avoid requiring the server owner availability \(for start/stop or launch/terminate actions\)
+{% endhint %}
 
-
-{% hint style="warning" %}
+{% hint style="danger" %}
 Remember that [**each GM has to check his/her own machine**](../general/gms-machine-barriers.md) for "Barriers 1 to 3"
 {% endhint %}
 
@@ -59,16 +61,21 @@ The main issue here is that some \(most ?\) of the **other GMs may not be as gee
 
 
 
-## **1x N-at-a-time :** Single VPN Server + Nx _**GM-dedicated connections/certificates**_
+## **N-at-a-time :** Single VPN Server + Nx _**GM-dedicated connections/certificates**_
 
-This option is quite neat as it enables several GMs to **run multiple simultaneous FG games at the same time** through the one and only VPN Server you already created, but :
+This option is quite neat as it enables several GMs to **run multiple simultaneous FG games \(N at a time\)** **through the one and only VPN Server** you already created, but :
 
 {% hint style="warning" %}
-it requires **additional work to setup**, and it is **not 100% transparent for players.**
+* It requires **additional work to setup**
+* It is **not 100% transparent for players.**
 {% endhint %}
 
 {% hint style="success" %}
 **It is mostly suitable for a community with several GMs, running mid- to long-term FGC games \(campaigns\)** since the extra complexity is managed up-front, once and for all.
+{% endhint %}
+
+{% hint style="info" %}
+To support multiple concurrent games going through our small VPN server, which has **only ONE Public IP**, we'll use a **different communication port for each GM**.
 {% endhint %}
 
 This solution **extends our current setup** by :
@@ -76,12 +83,10 @@ This solution **extends our current setup** by :
 * creating **individual GM certificates** in our PKI
 * transparently forwarding FG traffic to and from each **specific GM** for **a specific FG port**
 
-
-
 👍 **Pros :**
 
-* **removes the burden of time-sharing organization** The GMs with dedicated connections can _host FGC games at any time_ \(while the VPN server is running\) _without fear of collision_ with other games They can even forget to close their VPN connection without harming other GMs' game sessions...
-* **compatible with the original "1-at-a-time" setup, which remains 100% transparent for players** You can have both GM-dedicated specific connections and still maintain the time-shared setup you already created
+* **removes the burden of time-sharing organization** The GMs with dedicated connections can _host FGC games **at any time**_ \(while the VPN server is running\) _**without fear of collision**_ with other games.  They can even forget to close their VPN connection...
+* **compatible with the original "1-at-a-time" setup, which remains 100% transparent for players** You can have both : GM-dedicated specific connections **and** time-shared setup you already created
 * **gives more control over security** by having specific connections/certificates per GM
 
 👎 **Cons :**
@@ -90,9 +95,9 @@ This solution **extends our current setup** by :
 * it requires **GMs and Players** to create and use a **customized shortcut to FGC** \(for ease of use\) to run Fantasy Grounds Classic on a specific TCP port, different than the standard TCP 1802 Creating a specific shortcut to the FG program _should not be an issue_ to play with a specific GM for multiple sessions in an _on-going campaign_; but it could be _awkward for 1-shot games_
 
 _This solution became possible when I finally understood how to run FG Classic on a custom TCP port...  
-It **only** took me a bit more than 2 years after starting using the program !..._
+It **only** took me a bit more than 2 years after starting using the program, to find this info !..._
 
-![GM: Ok ZeFerby, gimme an Investigation roll...\(sigh\)...again...\(sigh\)](../.gitbook/assets/image%20%28192%29.png)
+![GM: \(sigh\)...Ok ZeFerby, give me another Investigation roll...\(sigh\)...](../.gitbook/assets/image%20%28192%29.png)
 
 ![GM: Finally!!! You find this info about the p flag, hidden under a loose floorboard in the FG Forums...](../.gitbook/assets/image%20%28193%29.png)
 

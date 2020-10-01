@@ -33,7 +33,7 @@ This would be the **regular usage pattern** when running the server **only when 
 
 As you can guess, the management of the changing public IP can become a pain, especially if the server is shared with other GMs \(see following sections\) and has to be started multiple times a week...
 
-This can lead you to trade some _**cost optimization**_ for _**ease of use**_ and run you server 24x7, even when you are out of the Free Tier bounds - be sure to **check the cost minimizing techniques** I mentioned earlier : [Amazon Web Services](../proposed-solution/amazon-web-services.md#minimizing-aws-costs-when-you-step-outside-the-free-tier)
+This can lead you to trade some _**cost optimization**_ for _**ease of use**_ and run you server 24x7, even when you are out of the Free Tier bounds - be sure to **check the cost minimizing techniques** I mentioned earlier : [Amazon Web Services - Minimizing AWS costs when you step outside the Free Tier](../proposed-solution/amazon-web-services.md#minimizing-aws-costs-when-you-step-outside-the-free-tier)
 
 
 

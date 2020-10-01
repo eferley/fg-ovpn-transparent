@@ -85,7 +85,7 @@ After you are **out of the AWS Free Tier**, you can **choose a smaller \(= cheap
 
 #### Use "Spot" instances
 
-Check the available [Spot Instances](https://aws.amazon.com/ec2/spot) offer from AWS for your AWS Region : it generally gives the lowest possible price point.
+Check the available [Spot Instances](https://aws.amazon.com/ec2/spot) offer from AWS for your AWS Region : it generally gives the **lowest possible price point**.
 
 {% hint style="success" %}
 One of my OpenVPN servers is a **"Spot" t3.nano** **running 24x7** **for &lt;2.5$/month**.

@@ -13,7 +13,7 @@ This document, initially written in June 2019 for FG "Classic", is now being upd
 For these use cases, specific sections have been added before appendixes.
 {% endhint %}
 
-**FGU = Fantasy Grounds Unity vs. FGC = Fantasy Grounds Classic :**
+**FGU = Fantasy Grounds Unity** vs. **FGC = Fantasy Grounds Classic :**
 
 With **FGU**, hosting a game in **"Cloud" mode** should be **ok for all GMs**, whatever their specific network situation, **without needing any kind of VPN**.
 

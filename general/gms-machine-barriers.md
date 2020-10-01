@@ -2,6 +2,8 @@
 
 {% hint style="info" %}
 **Applies to** : FGC \(+ FGU in LAN mode\)
+
+Default ports : FG "Classic" = TCP 1802, FG "Unity" = UDP 1802
 {% endhint %}
 
 These first 3 points relate to the configuration of the GM's machine/OS.
@@ -38,7 +40,7 @@ _Here is an example of Windows 7 firewall rules authorizing **any kind of incomi
 _**TODO : W10 screenshots needed here**_
 
 {% hint style="info" %}
-I would advise authorizing the Fantasy Grounds program \("Classic" and/or "Unity"\) for ALL incoming connections, instead of specifically TCP 1802 \(FGC\) or UDP 1802 \(FGU\).
+I would advise **authorizing the Fantasy Grounds program \("Classic" and/or "Unity"\) for ALL incoming connections**, instead of specifically TCP 1802 \(FGC\) or UDP 1802 \(FGU\).
 
 That will enable using alternate ports for use cases like "multiple FGC+FGU games with 1 VPN server" - see [Lifting the "1 GM at-a-time" restriction](../simultaneous-games-fgc-1-vpn-server/untitled.md) and following sections.
 {% endhint %}

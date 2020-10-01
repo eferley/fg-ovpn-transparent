@@ -50,11 +50,11 @@ Given the new popularity of VPN services, **this is a battlefield** ! Just googl
 
 {% hint style="warning" %}
 Be cautious about several points :
-{% endhint %}
 
-* subscribing to any VPN service offer implies _**some trust**_ from you in the service company...
+* subscribing to any VPN service offer implies _**some trust**_ in the service company...
 * VPN service offers **do not mandatorily have an available/reliable free tier**
-* VPN service offers **do not mandatorily support forwarding TCP 1802**
+* VPN service offers **do not mandatorily support port forwarding**
+{% endhint %}
 
 ## Your own 1 GM-only VPN server based on industry standards
 
@@ -83,6 +83,10 @@ I have used **OpenVPN** since 2004 both for professional and personal usage in v
 Quite a number of commercial VPN offers either rely on, or support OpenVPN.
 
 If you want to know more about OpenVPN, read the Howto at [https://openvpn.net/community-resources/how-to/](https://openvpn.net/community-resources/how-to/) and more generally browse the useful docs and articles available at [https://openvpn.net/community-resources/](https://openvpn.net/community-resources/)
+{% endhint %}
+
+{% hint style="info" %}
+For a **community with multiple GMs**, start with the 1-GM-at-a-time setup, then continue with the new sections starting at [Lifting the "1 GM at-a-time" restriction](../simultaneous-games-fgc-1-vpn-server/untitled.md)
 {% endhint %}
 
 ## Always remember...
